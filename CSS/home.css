@@ -1,6 +1,8 @@
 body {
-    margin: 0;
-    color: #1A8FE3;
+    margin-left: 10%;
+    margin-top: 0;
+    width: 80%;
+    color: #272D2D;
     font-size: 17px;
 }
 
@@ -12,7 +14,6 @@ body {
 
 .navbar-logo {
     height: 60px;
-    margin-left: 10px;
     display: inline-block;
 }
 
@@ -31,4 +32,21 @@ body {
 .nav-items:hover {
     color: white;
     background-color: #4747D1;
+}
+
+.slideshow {
+    height: 500px;
+}
+
+.slide {
+    transition: all 0.3s;
+    display: none;
+    width: 0px;
+    background-color: gainsboro;
+    height: 100%;
+}
+
+.vis {
+    display: block;
+    width: 100%;
 }
