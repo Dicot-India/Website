@@ -40,9 +40,27 @@ body {
     font-size: 20px;
 }
 
-.nav-items:hover {
+.nav-items-1 {
+    display: inline-block;
+    height: Calc(100% - 15px);
+    vertical-align: top;
+    padding-top: 15px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.5s;
+    margin: 0;
+    font-size: 20px;
+}
+
+.nav-items-1:hover {
     color: white;
     background-color: #4747D1;
+}
+
+.nav-items:hover {
+    color: white;
+    background-color: #272D2D;
 }
 
 .slideshow {
@@ -105,11 +123,12 @@ body {
     transition: all 0.7s;
 }
 .dot:hover {
-    background-color: #4747D1;
+    background-color: #272D2D;
 }
 
 .filled {
-    background-color: #FFFFFF;
+    background-color: #4747D1;
+    border-color: #4747D1;
 }
 
 .short {
@@ -146,6 +165,10 @@ body {
     float: left;
     margin-top: 50px;
     text-align: center;
+}
+
+.intrest {
+    color: #4747D1;
 }
 
 .answer {
