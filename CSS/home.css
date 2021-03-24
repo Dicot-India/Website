@@ -4,7 +4,7 @@ body {
     font-size: 17px;
     font-family: sans-serif;
     /* The image used */
-    background: url("dotted.png") repeat;
+    background: url("../Images/dotted.png") repeat;
     position: absolute;
     /* Center and scale the image nicely */
     background-position: center;
@@ -124,6 +124,7 @@ body {
 }
 .dot:hover {
     background-color: #272D2D;
+    border-color: #272D2D;
 }
 
 .filled {
@@ -178,7 +179,10 @@ body {
 }
 
 .products-section {
-    padding-top: 20px;
+    padding-top: 50px;
+    background: url("../Images/windmill.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 .pheader {
@@ -213,4 +217,45 @@ body {
     top: 50%;
     position: relative;
     transform: translate( 0%, -50%);
+}
+
+.divider1 {
+    width: 80%;
+    margin-top: 100px;
+    border-top: 1px #272D2D solid;
+}
+
+.also{
+    height: 300px;
+    margin-top: 50px;
+}
+
+.a-head {
+    font-size: 40px;
+    text-align: center;
+}
+
+.a-content {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.clients-speak {
+    height: 400px;
+    width: 100%;
+    background-color: #272D2D;
+    color: #E5E5E5;
+}
+
+.client-heading {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.client-img {
+    display: inline-block;
 }
