@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@700;900&family=Source+Sans+Pro&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin-top: 0;
     color: #272D2D;
@@ -211,11 +216,11 @@ body {
 }
 
 .vc-logo-container {
-    margin-left: 25%;
+    margin-left: 10%;
     display: block;
     cursor: pointer;
     width: 20%;
-    margin-right: 0;
+    margin-right: 10%;
 }
 
 .vg {
@@ -234,6 +239,7 @@ body {
 .divider1 {
     width: 80%;
     color: #272D2D;
+    margin-left: 10%;
 }
 
 .also{
@@ -271,8 +277,12 @@ body {
 }
 
 .client {
-    height: Calc(100% - 90px);
+    height: Calc(100% - 115px);
     width: 100%;
+    display: none;
+}
+
+.client-active {
     display: flex;
 }
 
@@ -310,4 +320,28 @@ body {
     margin-left: 15%;
     width: 60%;
     font-size: 23px;
+}
+
+.dots-2 {
+    margin-left: 50%;
+}
+
+.dot2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px #272D2D solid;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.dot2:hover {
+    background-color: #272D2D;
+    border-color: #272D2D;
+}
+
+.filled-2 {
+    background-color: #4747D1;
+    border-color: #4747D1;
 }
