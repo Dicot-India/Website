@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@700;900&family=Source+Sans+Pro&display=swap');
+
 body {
     margin-top: 0;
     color: #272D2D;
@@ -38,6 +40,8 @@ body {
     transition: all 0.5s;
     margin: 0;
     font-size: 20px;
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 700;
 }
 
 .nav-items-1 {
@@ -51,6 +55,8 @@ body {
     transition: all 0.5s;
     margin: 0;
     font-size: 20px;
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 700;
 }
 
 .nav-items-1:hover {
@@ -88,13 +94,19 @@ body {
     text-align: center;
     padding-top: 15px;
     border-radius: 30px;
-    color: white;
+    color: #272D2D;
     position: absolute;
     transition: all 0.7s;
 }
 
-.ss-btn:hover {
+.left-btn:hover {
     background-color: #4747D1;
+    color: #FFFFFF;
+}
+
+.right-btn:hover {
+    background-color: #272D2D;
+    color: #FFFFFF;
 }
 
 .left-btn {
@@ -179,7 +191,7 @@ body {
 }
 
 .products-section {
-    padding-top: 50px;
+    padding-top: 40px;
     background: url("../Images/windmill.jpg");
     background-size: 100%;
     background-attachment: fixed;
@@ -187,8 +199,8 @@ body {
 
 .pheader {
     width: 100%;
-    font-family: 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 64px;
     text-align: center;
 }
 
@@ -207,22 +219,21 @@ body {
 }
 
 .vg {
-    font-size: 50px;
+    font-size: 90px;
     font-family: Impact;
     cursor: pointer;
     margin-left: 15%;
 }
 
 .vg-alignment {
-    top: 50%;
+    top: 57%;
     position: relative;
     transform: translate( 0%, -50%);
 }
 
 .divider1 {
     width: 80%;
-    margin-top: 100px;
-    border-top: 1px #272D2D solid;
+    color: #272D2D;
 }
 
 .also{
@@ -233,6 +244,7 @@ body {
 .a-head {
     font-size: 40px;
     text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .a-content {
@@ -274,10 +286,21 @@ body {
 .client-img-container {
     height: 200px;
     width: 200px;
-    margin-left: 50%;
+    margin-right: 0;
+    margin-left: auto;
     background-color: #4747D1;
     border-radius: 50%;
     margin-top: 20%;
+}
+
+.abt-client {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: 50px;
+    text-align: right;
+    color: #1a8fe3;
+    font-size: 20px;
+    font-style: oblique;
 }
 
 .quote {
@@ -286,4 +309,5 @@ body {
     position: relative;
     margin-left: 15%;
     width: 60%;
+    font-size: 23px;
 }
