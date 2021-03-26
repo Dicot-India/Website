@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    color: #272D2D;
 }
 
 body {
@@ -192,12 +193,12 @@ body {
 .answer {
     width: 75%;
     margin-left: 20%;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .products-section {
     padding-top: 40px;
-    background: url("../Images/windmill.jpg");
+    background: url("../Images/windmill.jpg") no-repeat;
     background-size: 100%;
     background-attachment: fixed;
 }
@@ -216,15 +217,19 @@ body {
 }
 
 .vc-logo-container {
-    margin-left: 10%;
+    margin-left: 20%;
     display: block;
     cursor: pointer;
     width: 20%;
-    margin-right: 10%;
+    margin-right: 7%;
+}
+
+.logo-vc {
+    width: 300px;
 }
 
 .vg {
-    font-size: 90px;
+    font-size: 55px;
     font-family: Impact;
     cursor: pointer;
     margin-left: 15%;
@@ -274,6 +279,7 @@ body {
     padding-top: 30px;
     width: 100%;
     height: 60px;
+    color: #272D2D;
 }
 
 .client {
