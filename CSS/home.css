@@ -96,23 +96,23 @@ body {
     width: 50px;
     height: 35px;
     cursor: pointer;
-    opacity: 80%;
     text-align: center;
     padding-top: 15px;
     border-radius: 30px;
-    color: #272D2D;
     position: absolute;
     transition: all 0.7s;
 }
 
 .left-btn:hover {
     background-color: #4747D1;
-    color: #FFFFFF;
+    box-shadow: 0px 0px 3px #272D2D;
+    color: white;
 }
 
 .right-btn:hover {
     background-color: #272D2D;
-    color: #FFFFFF;
+    box-shadow: 0px 0px 3px #272D2D;
+    color: white;
 }
 
 .left-btn {
@@ -367,7 +367,8 @@ body {
 }
 
 .inquire:hover {
-    box-shadow: 3px 0px 2px #272D2D;
+    box-shadow: 0px 0px 5px #272D2D;
+    transition: all 0.3s linear;
 }
 
 .loader {
@@ -406,14 +407,69 @@ body {
     -webkit-filter: blur(8px) grayscale(7%);
 }
 
-/* .brlur-2 {
-    width: 100%;
-    height: 100vh;
-    /* background: url("../Images/dotted.png") repeat; 
-    opacity: 0.1;
+.social-right {
+    top: 50vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    filter: blur(8px) grayscale(7%);
-    -webkit-filter: blur(8px) grayscale(7%);
-} */
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.hanging-social {
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
+.hanging-social:hover {
+    box-shadow: 0px 0px 5px #272D2D;
+}
+
+.linkedin-icon {
+    background-color: #007bb5;
+    text-align: center;
+}
+
+.fa-linkedin {
+    font-size: 30px !important;
+    color: white;
+    margin-top: 5px;
+}
+
+.facebook-icon {
+    background-color: #3d5a98;
+}
+
+.fa-facebook {
+    font-size: 30px !important;
+    color: white;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.instagram-icon {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    text-align: center;
+}
+
+.fa-instagram {
+    font-size: 30px !important;
+    color: white;
+    margin-top: 5px;
+}
+
+.twitter-icon {
+    background-color: #55acee;
+    text-align: center;
+}
+
+.fa-twitter {
+    font-size: 30px !important;
+    color: white;
+    margin-top: 5px;
+}
