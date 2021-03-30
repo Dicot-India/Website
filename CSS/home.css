@@ -331,8 +331,8 @@ body {
 }
 
 .dot2{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     border: 1px #272D2D solid;
     display: inline-block;
@@ -521,34 +521,42 @@ body {
 }
 
 .footer {
-    height: 600px;
+    height: 400px;
     background-color: #272D2D;
-    width: Calc(80% - 10px);
+    width: 80%;
     margin-left: 10%;
-    padding: 5px;
     margin-right: 10%;
     background-image: linear-gradient(45deg, #4747d1 25%, #1a8fe3 25%, #1a8fe3 50%, #4747d1 50%, #4747d1 75%, #1a8fe3 75%, #1a8fe3 100%);
     background-size: 56.57px 56.57px;
 }
 
-.footer-container {
+.footer-container, .upper {
     background: #272D2D;
-    height: 600px;
-    width: Calc(80% -10px);
+    height: 400px;
+    width: 98%;
+    margin-left: 1%;
     color: whitesmoke;
+    overflow: hidden;
+}
+
+.upper {
+    display: flex;
+    height: 80%;
+    width: 100%;
 }
 
 .quick-links {
-    display: inline-block;
-    height: 100%;
-    margin-left: 30px;
+    display: block;
+    height: 80%;
+    margin-left: 5%;
     margin-top: 20px;
+    width: 25%;
 }
 
 .quick-links-header {
     color: whitesmoke;
     font-family: 'Martel Sans', sans-serif;
-    font-size: 35px;
+    font-size: 25px;
 }
 
 .quick-list a{
@@ -559,6 +567,69 @@ body {
 .quick-links ul {
     list-style-type: none;
     margin-left: 30px;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
+    line-height: 35px;
+}
+
+.interest-2 {
+    color: #1a8fe3;
+}
+
+.contact-details, .product-links {
+    display: block;
+    height: 80%;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 20%;
+}
+
+.fa-envelope-o, .fa-phone {
+    color: white;
+    height: 22px;
+}
+
+.contact-inner {
+    margin-left: 30px;
+}
+
+.contact-inner a{
+    text-decoration: none;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.contact-heads {
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+    width: 100%;
+}
+
+.product-links {
+    margin-left: 15%;
+}
+
+.link-container a {
+    color: white;
+    text-decoration: none;
+    line-height: 35px;
+    margin-left: 30px;
+}
+
+.copyright-info {
+    color: white;
+    padding-left: 7%;
+    margin-top: 2%;
+    padding-top: 10px;
+    border-top: 3px solid #4747D1;
+    background-color: #3737a1;
+    height: 18%;
+}
+
+.copyright-info a {
+    text-decoration: none;
+    color: white;
 }
