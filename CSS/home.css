@@ -90,6 +90,25 @@ body {
     width: 100%;
 }
 
+#s1 {
+    background-image: url("../Images/arm.png");
+    background-size: 100% 700px;
+    background-repeat: no-repeat;
+}
+
+#s2 {
+    background-image: url("../Images/iot.png");
+    background-size: 102% 700px;
+    background-repeat: no-repeat;
+}
+
+#s3 {
+    background-image: url("../Images/VisionC.png");
+    background-size: auto 500px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
 .ss-btn {
     width: 50px;
     height: 35px;
