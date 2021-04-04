@@ -198,9 +198,16 @@ body {
     line-height: 40px;
 }
 
-.smaller {
-    font-size: 25px;
+.short p {
+    font-size: 17px;
     color: white;
+}
+
+.logo-letters {
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-weight: 900;
 }
 
 .highlight {
@@ -213,7 +220,7 @@ body {
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
-    font-family:'Arial Narrow Bold', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 100%); 
 }
@@ -225,7 +232,7 @@ body {
 .answer {
     width: 75%;
     margin-left: 15%;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .clients-speak {
@@ -749,14 +756,22 @@ textarea::-moz-placeholder {
     }
     
     .navbar {
-        position: fixed;
         z-index: 100;
+        position: fixed;
+    }
+
+    .short {
+        padding-top: 65px;
     }
 
     .answer {
         width: 80%;
         margin-left: 10%;
         font-size: 17px;
+    }
+
+    .social-right {
+        z-index: 99;
     }
 
     .footer {
@@ -789,7 +804,7 @@ textarea::-moz-placeholder {
 
     .navbar {
         position: fixed;
-        z-index: 100;
+        z-index: 101;
         display: flex;
     }
 
@@ -802,11 +817,20 @@ textarea::-moz-placeholder {
     }
 
     .short {
-        font-size: 20px;
+        padding-top: 65px;
+        font-size: 25px;
+    }
+
+    .logo-letters {
+        font-size: 25px;
+    }
+
+    .short p {
+        font-size: 15px;
     }
 
     .highlight {
-        font-size: 22px;
+        font-size: 27px;
     }
     
     .answer {
@@ -819,45 +843,59 @@ textarea::-moz-placeholder {
         font-size: 30px;
     }
 
-    .client-active {
-        display: block;
+    .clients-speak {
+        height: auto;
+    }
+
+    .client {
+        width: 100%;
+        height: 250px;
+        display:contents;
     }
 
     .client-img {
-        width: 100%;
-        height: 150px;
+        width: 150px;
     }
 
     .client-img-container {
         height: 100px;
         width: 100px;
-        margin-top: 20px;
-        margin-left: 50%;
-        margin-right: auto;
-        transform: translate(-50%, 0);
     }
 
-    .abt-client {
-        text-align: center;
-        margin-left: 50%;
-        margin-right: auto;
-        transform: translate(-50%, 0);
-        font-size: 15px;
+    #cimg1 {
+        background-size: 100px auto;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    .quote {
-        font-size: 15px;
-        padding-top: 10px;
-        margin-left: 50%;
-        transform: translate(-50%, 0);
-        height: auto;
+    #cimg2 {
+        background-size: 100px auto;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
-    .dots-2 {
-        width: 65px;
-        margin-top: -20px;
-        transform: translate(-50%, 0);
-        margin-right: auto;
+    #cimg3 {
+        background-size: 100px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #cimg4 {
+        background-size: 90px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #cimg5 {
+        background-size: 100px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #cimg6 {
+        background-size: 100px auto;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .inquire {
