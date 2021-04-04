@@ -270,6 +270,43 @@ body {
     transform: translate( -50%, -65%);
 }
 
+#cimg1 {
+    background: url("../Images/Tata_Steel.png");
+}
+
+#cimg2 {
+    background: url("../Images/Bharat_Heavy_Electricals_Limited-Logo.wine.png");
+    background-size: 200px 200px;
+}
+
+#cimg3 {
+    background: url("../Images/375px-Bharat_Electronics_logo.svg.png");
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cimg4 {
+    background: url("../Images/eent-logo.png");
+    background-size: 180px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cimg5 {
+    background: url("../Images/Micon_logo1[1657].png");
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cimg6 {
+    background: url("../Images/kelviron.png");
+    background-size: 200px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .inquire {
     padding-left: 12px;
     padding-right: 12px;
