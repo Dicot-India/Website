@@ -16,7 +16,25 @@
     background: #272D2D;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
   
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #272D2D; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4747D1; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1a8fe3; 
+}
 
 body {
     margin-top: 0;

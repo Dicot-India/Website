@@ -19,21 +19,21 @@
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
   /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
+::-webkit-scrollbar-track {
+    background: #272D2D; 
+}
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #4747D1; 
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #1a8fe3; 
   }
 
 body {
@@ -267,7 +267,7 @@ body {
     background-color: #4747D1;
     border-radius: 50%;
     margin-top: 50%;
-    transform: translate( -50%, -75%);
+    transform: translate( -50%, -65%);
 }
 
 .inquire {
