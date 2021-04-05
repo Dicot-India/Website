@@ -49,7 +49,6 @@ function totop() {
 
 var mybutton = document.getElementsByClassName("to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -62,4 +61,21 @@ function scrollFunction() {
 
 function to_download() {
     location.href = "#download";
+}
+
+
+function inq() {
+    var form = document.getElementById("inquire");
+
+    if (form.className == "inq-form"){
+        form.className += " inq-disp";
+    }
+    else{
+        form.className = "inq-form";
+    }
+}
+
+function close_inq() {
+    var form = document.getElementById("inquire");
+    form.className = "inq-form";
 }
