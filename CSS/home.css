@@ -41,9 +41,6 @@ body {
     color: #272D2D;
     font-size: 17px;
     font-family: sans-serif;
-    /* background: url("../Images/dotted.png") repeat; */
-    position: absolute;
-    /* background-position: center; */
 }
 
 .bg {
@@ -926,6 +923,14 @@ textarea::-moz-placeholder {
     .navbar {
         position: fixed;
         z-index: 100;
+    }
+
+    .nav-items {
+        font-size: 17px;
+    }
+
+    .nav-items-1 {
+        font-size: 17px;
     }
 
     .slideshow {

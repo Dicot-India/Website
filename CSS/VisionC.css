@@ -41,7 +41,6 @@ body {
     color: #272D2D;
     font-size: 17px;
     font-family: sans-serif;
-    position: absolute;
 }
 
 .bg {
@@ -271,18 +270,6 @@ body {
     }
 }
 
-.short {
-    width: 100%;
-    background-color: #272D2D;
-    color: White;
-    text-align: center;
-    font-size: 25px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-family:'Arial Narrow Bold', sans-serif;
-    line-height: 40px;
-}
-
 .highlight {
     font-size: 30px;
     font-weight: bold;
@@ -298,13 +285,14 @@ body {
     background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 100%); 
 }
 
+.visionc-logo {
+    width: 100%;
+    margin-top: -100px;
+}
+
 .question {
     width: 20%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
     float: left;
-    margin-top: 50px;
-    text-align: center;
 }
 
 .intrest {
@@ -317,160 +305,13 @@ body {
     font-size: 20px;
 }
 
-.products-section {
-    padding-top: 40px;
-    background: url("../Images/windmill.jpg") no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-}
-
-.pheader {
-    width: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 64px;
-    text-align: center;
-}
-
-.products-container {
-    margin-left: 0;
-    width: 100%;
-    display: flex;
-}
-
-.vc-logo-container {
-    margin-left: 20%;
-    display: block;
-    cursor: pointer;
-    width: 20%;
-    margin-right: 7%;
-}
-
-.logo-vc {
-    width: 300px;
-}
-
-.vg {
-    font-size: 55px;
-    font-family: Impact;
-    cursor: pointer;
-    margin-left: 15%;
-}
-
-.vg-alignment {
-    top: 57%;
-    position: relative;
-    transform: translate( 0%, -50%);
-}
-
-.divider1 {
-    width: 80%;
-    color: #272D2D;
-    margin-left: 10%;
-}
-
-.also{
-    height: 300px;
-    margin-top: 50px;
-}
-
-.a-head {
-    font-size: 40px;
-    text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.a-content {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 50px;
-    text-align: center;
+.answer span {
+    font-weight: 600;
     font-size: 25px;
 }
 
-.clients-speak {
-    height: 500px;
-    width: 100%;
-    background-color: #FFFFFF;
-    color: #272D2D;
-}
-
-.client-heading {
-    font-size: 40px;
-    text-align: center;
-    padding-top: 30px;
-    width: 100%;
-    height: 60px;
-    color: #272D2D;
-}
-
-.client {
-    height: Calc(100% - 115px);
-    width: 100%;
-    display: none;
-}
-
-.client-active {
-    display: flex;
-}
-
-.client-img {
-    display: block;
-    width: 30%;
-    height: 80%;
-    margin-right: 0;
-}
-
-.client-img-container {
-    height: 200px;
-    width: 200px;
-    margin-right: 0;
-    margin-left: auto;
-    background-color: #4747D1;
-    border-radius: 50%;
-    margin-top: 20%;
-}
-
-.abt-client {
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: 50px;
-    text-align: right;
-    color: #1a8fe3;
-    font-size: 20px;
-    font-style: oblique;
-}
-
-.quote {
-    height: 40%;
-    padding-top: 5%;
-    position: relative;
-    margin-left: 15%;
-    width: 60%;
-    font-size: 23px;
-}
-
-.dots-2 {
-    margin-left: 50%;
-}
-
-.dot2{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px #272D2D solid;
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.7s;
-}
-
-.dot2:hover {
-    background-color: #272D2D;
-    border-color: #272D2D;
-}
-
-.filled-2 {
-    background-color: #4747D1;
-    border-color: #4747D1;
+.answer ul {
+    margin-left: 10%;
 }
 
 .inquire {
@@ -919,12 +760,24 @@ textarea::-moz-placeholder {
         z-index: 100;
     }
 
-    .slideshow {
+    .nav-items {
+        font-size: 17px;
+    }
+
+    .nav-items-1 {
+        font-size: 17px;
+    }
+
+    .top {
         height: 400px;
     }
 
-    #s1, #s2, #s3 {
-        background-size: 100%;
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .get-started {
+        margin-top: 50px;
     }
 
     .question {
@@ -933,41 +786,18 @@ textarea::-moz-placeholder {
         margin-top: 0;
         font-size: 35px;
     }
+
+    .visionc-logo {
+        width: 40%;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        margin-bottom: -50px;
+    }
     
     .answer {
         width: 80%;
         margin-left: 10%;
         font-size: 17px;
-    }
-
-    .pheader {
-        font-size: 35px;
-    }
-
-    .products-section {
-        background: rgb(103,146,152);
-        background: linear-gradient(180deg, rgba(103,146,152,1) 0%, rgba(135,153,159,1) 17%, rgba(157,150,122,1) 54%, rgba(164,143,104,1) 69%, rgba(173,129,99,1) 76%, rgba(168,111,84,1) 84%, rgba(153,102,90,1) 91%, rgba(80,89,99,1) 100%); 
-    }
-
-    .vc-logo-container {
-        margin-left: 20%;
-    }
-
-    .logo-vc{
-        width: 200px;
-    }
-
-    .vg {
-        font-size: 35px;
-        margin-left: 13%;
-    }
-
-    .a-head {
-        font-size: 35px;
-    }
-
-    .a-content {
-        font-size: 20px;
     }
 
     .footer {
@@ -1008,24 +838,41 @@ textarea::-moz-placeholder {
         display: block;
     }
 
-    .nav-items, .nav-items-1, .to-top, .ss-btn {
+    .nav-items, .nav-items-1, .to-top {
         display: none;
     }
 
-    .slideshow {
-        height: 250px;
+    .top {
+        height: 270px;
     }
 
-    #s1, #s2, #s3 {
-        background-size: 100% 100%;
+    .title {
+        font-size: 25px;
     }
 
-    .short {
+    .subtitle {
         font-size: 20px;
+    }
+
+    .get-started {
+        font-size: 17px;
+        margin-top: 20px;
+        margin-bottom: 7px;
+    }
+
+    .gs-btn {
+        font-size: 15px;
     }
 
     .highlight {
         font-size: 22px;
+    }
+
+    .visionc-logo {
+        width: 240px;
+        margin-left: 20%;
+        transform: translate(0, 0);
+        margin-right: auto;
     }
 
     .question {
@@ -1039,82 +886,6 @@ textarea::-moz-placeholder {
         width: 80%;
         margin-left: 10%;
         font-size: 17px;
-    }
-
-    .pheader {
-        font-size: 30px;
-    }
-
-    .products-section {
-        padding-top: 20px;
-        background: rgb(103,146,152);
-        background: linear-gradient(180deg, rgba(103,146,152,1) 0%, rgba(135,153,159,1) 17%, rgba(157,150,122,1) 54%, rgba(164,143,104,1) 69%, rgba(173,129,99,1) 76%, rgba(168,111,84,1) 84%, rgba(153,102,90,1) 91%, rgba(80,89,99,1) 100%);
-    }
-
-    .vc-logo-container {
-        margin-left: 10%;
-    }
-
-    .logo-vc{
-        width: 150px;
-    }
-
-    .vg {
-        font-size: 25px;
-        margin-left: 13%;
-    }
-
-    .a-head {
-        font-size: 30px;
-    }
-
-    .a-content {
-        font-size: 20px;
-    }
-
-    .client-heading {
-        font-size: 30px;
-    }
-
-    .client-active {
-        display: block;
-    }
-
-    .client-img {
-        width: 100%;
-        height: 150px;
-    }
-
-    .client-img-container {
-        height: 100px;
-        width: 100px;
-        margin-top: 20px;
-        margin-left: 50%;
-        margin-right: auto;
-        transform: translate(-50%, 0);
-    }
-
-    .abt-client {
-        text-align: center;
-        margin-left: 50%;
-        margin-right: auto;
-        transform: translate(-50%, 0);
-        font-size: 15px;
-    }
-
-    .quote {
-        font-size: 15px;
-        padding-top: 10px;
-        margin-left: 50%;
-        transform: translate(-50%, 0);
-        height: auto;
-    }
-
-    .dots-2 {
-        width: 65px;
-        margin-top: -20px;
-        transform: translate(-50%, 0);
-        margin-right: auto;
     }
 
     .inquire {
