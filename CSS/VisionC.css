@@ -710,6 +710,7 @@ textarea::-moz-placeholder {
     border-radius: 5px;
     color: white;
     overflow: hidden;
+    display: none;
 }
 
 .fi {

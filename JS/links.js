@@ -41,3 +41,25 @@ function to_instagram() {
 function to_twitter() {
     location.href = "https://www.twitter.com/DicotIndia";
 }
+
+function totop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+var mybutton = document.getElementsByClassName("to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton[0].style.display = "block";
+    } else {
+        mybutton[0].style.display = "none";
+    }
+}
+
+function to_download() {
+    location.href = "#download";
+}

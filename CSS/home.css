@@ -757,6 +757,7 @@ textarea::-moz-placeholder {
     border-radius: 5px;
     color: white;
     overflow: hidden;
+    display: none;
 }
 
 .fi {
@@ -775,7 +776,7 @@ textarea::-moz-placeholder {
     cursor: pointer;
 }
 
-.fi::before {
+.fi::after {
     content: "";
     position: absolute;
     background: #272D2D;
@@ -787,7 +788,7 @@ textarea::-moz-placeholder {
     transition: top 0.3s ease-in;
 }
 
-.fi:hover::before {
+.fi:hover::after {
     top: 0;
   }
 
