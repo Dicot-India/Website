@@ -361,6 +361,77 @@ body {
     box-shadow: 0px 10px 10px #272D2D;
 }
 
+.download {
+    height: 290px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.download-header {
+    font-size: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+.requirements {
+    margin-left: 5%;
+    margin-top: 30px;
+    width: 60%;
+    margin-right: 0%;
+    display: block;
+}
+
+.requirement-head {
+    font-size: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+.requirements ul {
+    list-style-type: none;
+    margin-top: 15px;
+    margin-left: 5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+.download-btn {
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4747D1;
+    cursor: pointer;
+    width: 200px;
+    color: white;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.win-dwn {
+    width: 15px;
+}
+
+.download-btn::before {
+    content: "";
+    position: absolute;
+    background: #272D2D;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    z-index: -1;
+    transition: bottom 0.3s ease-in;
+}
+
+.download-btn:hover::before {
+    bottom: 0;
+}
+
 .inquire {
     padding-left: 12px;
     padding-right: 12px;
@@ -857,7 +928,7 @@ textarea::-moz-placeholder {
 
     .showcase {
         width: 400px;
-        margin-left: 50%;
+        margin-left: Calc(50% - 200px);
     }
 
     .footer {
@@ -965,6 +1036,10 @@ textarea::-moz-placeholder {
         margin-top: 20px;
         transform: translate(0, 0);
         margin-left: 15%;
+    }
+
+    .download-btn {
+        margin-top: 4px;
     }
 
     .inquire {
