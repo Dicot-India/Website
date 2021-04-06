@@ -1,25 +1,25 @@
 function to_home() {
-    location.href = "home.html";
+    location.href = "home.html";//"http://www.dicot.in/";
 }
 
 function to_about() {
-    location.href = "about.html";
+    location.href = "about.html";//"http://www.dicot.in/about.html";
 }
 
 function to_vc() {
-    location.href = "VisionC.html";
+    location.href = "VisionC.html";//"http://www.dicot.in/VisionC.html";
 }
 
 function to_vg() {
-    location.href = "VGraphic.html";
+    location.href = "VGraphic.html";//"http://www.dicot.in/VGraphic.html";
 }
 
 function to_vw() {
-    location.href = "coming.html";
+    location.href = "coming.html";//"http://www.dicot.in/coming.html";
 }
 
 function to_contact() {
-    location.href = "contact.html";
+    location.href = "contact.html";//"http://www.dicot.in/contact.html";
 }
 
 function to_vwlogin() {
@@ -63,6 +63,13 @@ function to_download() {
     location.href = "#download";
 }
 
+function download_vc() {
+    location.href = "http://www.dicot.in/Vision_C_setup.exe";
+}
+
+function download_vg() {
+    location.href = "http://www.dicot.in/VGraphicsetup.exe";
+}
 
 function inq() {
     var form = document.getElementById("inquire");
