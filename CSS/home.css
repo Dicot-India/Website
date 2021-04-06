@@ -185,14 +185,29 @@ body {
 
 .slideshow {
     height: 500px;
+    overflow: hidden;
 }
 
 .slide {
-    transition: all 0.5s;
+    transition: all 0.5s ease-out;
     display: none;
     width: 0px;
     background-color: #E5E5E5;
     height: 100%;
+    animation: animateright 0.6s ease-in;
+    position: relative;
+}
+
+@keyframes animateright {
+    0% {
+        right: -80%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
 }
 
 .vis {
@@ -942,6 +957,18 @@ textarea::-moz-placeholder {
         background-size: 100%;
     }
 
+    .left-btn, .right-btn {
+        top: 200px;
+    }
+
+    .right-btn{
+        right: Calc(3% + 10px);
+    }
+
+    .left-btn{
+        left: Calc(3% + 10px);
+    }
+
     .question {
         width: 100%;
         float: none;
@@ -1031,8 +1058,13 @@ textarea::-moz-placeholder {
         height: 250px;
     }
 
-    #s1, #s2, #s3 {
+    #s1, #s2 {
         background-size: 100% 100%;
+        top: 60px;
+    }
+
+    #s3 {
+        top: 60px;
     }
 
     .short {
