@@ -183,6 +183,40 @@ body {
     transform: rotate(45deg) translate(-11px, -8px);
 }
 
+.m-nav-li{
+    width: 100%;
+    height: Calc(100vh - 60px);
+    position: fixed;
+    display: none;
+    background: #272D2D;
+    opacity: 0.8;
+    top: 60px;
+}
+
+.m-nav-li a {
+    color: white;
+    text-decoration: none;
+}
+
+.m-nav-li ul {
+    list-style-type: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.m-nav-li li {
+    color: white;
+}
+
+.ps {
+    font-size: 15px;
+}
+
+.m-nav-disp {
+    display: block;
+}
+
+
 .short {
     width: 100%;
     background-color: #272D2D;

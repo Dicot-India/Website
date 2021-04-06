@@ -86,3 +86,15 @@ function close_inq() {
     var form = document.getElementById("inquire");
     form.className = "inq-form";
 }
+
+function m_menu() {
+    var m = document.getElementsByClassName("m-nav-btn");
+    if (m[0].classList.contains("change")){
+        m[0].className = "m-nav-btn";
+        document.getElementsByClassName("m-nav-li")[0].className = "m-nav-li";
+    }
+    else {
+        m[0].className += " change";
+        document.getElementsByClassName("m-nav-li")[0].className += " m-nav-disp";
+    }
+}
