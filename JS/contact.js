@@ -3,3 +3,7 @@ function sss() {
     document.getElementsByClassName("footer")[0].className += " unblur";
     document.getElementsByClassName("loader")[0].className += " unloader";
 }
+
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+}

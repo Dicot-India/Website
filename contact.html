@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Dicot | Home</title>
+    <title>Dicot | Contact Us</title>
 
     <meta charset="utf-8">
     <meta name="description"
@@ -17,11 +17,34 @@
     <link rel="icon" href="./Images/logo_2_dicot_D.png">
     <script rel="text/javascript" src="./JS/contact.js"></script>
     <script rel="text/javascript" src="./JS/links.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179640044-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'UA-179640044-2');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PKQ4L8L');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body onload="sss()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKQ4L8L" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="bg">
         <div class="navbar">
             <a href="http://www.dicot.in"><img src="./Images/logo_2_dicot.svg" class="navbar-logo" alt="Dicot logo"></a>
@@ -57,12 +80,14 @@
                 <div class="inquire-header">
                     Contact Us
                 </div>
-                <form action="#">
+                <form id="cu-form" method="POST" action="./PHP/contact.php" >
                     <input type="text" id="name" placeholder="Name*"><br>
                     <input type="email" id="email" placeholder="Email*"><br>
                     <input type="tel" id="tel" placeholder="Contact no. (with country code)"><br>
                     <textarea class="tarea" id="text-ans" maxlength="162" rows="6" cols="12" placeholder="Message*"></textarea>
-                    <button type="submit" class="submit-btn" id="submit-btn">Send</button>
+                    <div ></div>
+                    <button class="submit-btn g-recaptcha alignmentc" data-sitekey="6LfPhJsaAAAAABCjqNsXC2rOtSXLxUEeAxksA6va" data-callback='onSubmit' 
+        data-action='submit' type="submit" id="submit-btn">Send</button>
                     <br>
                 </form>
             </div>
