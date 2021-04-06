@@ -1,6 +1,11 @@
 var myIndex = 0;
 
 function sss() {
+
+    document.getElementsByClassName("bg")[0].className += " unblur";
+    document.getElementsByClassName("footer")[0].className += " unblur";
+    document.getElementsByClassName("loader")[0].className += " unloader";
+    
     carousel();
 
     function carousel() {
@@ -78,4 +83,19 @@ function to_slide(bindex) {
     myIndex = bindex + 1;
     x[bindex].className += " vis";
     y[bindex].className += " filled";
+}
+
+function cop(sindex) {
+    var x = document.getElementsByClassName("client");
+    var y = document.getElementsByClassName("dot2");
+
+    for (i = 0; i < x.length; i++) {
+        x[i].className = "client";
+    }
+    for (j = 0; j < y.length; j++) {
+        y[j].className = "dot2";
+    }
+
+    x[sindex].className += " client-active";
+    y[sindex].className += " filled-2";
 }

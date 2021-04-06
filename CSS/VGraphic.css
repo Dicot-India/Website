@@ -710,6 +710,18 @@ textarea::-moz-placeholder {
     color: white;
     overflow: hidden;
     display: none;
+    animation: fromtop 0.6s ease-in-out;
+}
+
+@keyframes fromtop {
+    0%{
+        top: -500px;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
 }
 
 .fi {

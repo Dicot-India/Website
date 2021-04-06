@@ -428,6 +428,7 @@ body {
     height: Calc(100% - 115px);
     width: 100%;
     display: none;
+    animation: animateright 0.6s ease-in;
 }
 
 .client-active {
@@ -525,6 +526,18 @@ body {
     box-shadow: 0px 0px 5px #272D2D;
     overflow: hidden;
     display: none;
+    animation: fromtop 0.6s ease-in-out;
+}
+
+@keyframes fromtop {
+    0%{
+        top: -500px;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
 }
 
 .inq-disp {
