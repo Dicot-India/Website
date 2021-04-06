@@ -225,6 +225,7 @@ body {
     margin-top: 15px;
     transition: all 0.3s;
     display: block;
+    background-color: transparent;
 }
 
 #name:focus {
@@ -239,6 +240,7 @@ body {
     margin-left: 20%;
     font-size: 20px;
     transition: all 0.3s;
+    background-color: transparent;
     display: block;
 }
 
@@ -256,6 +258,7 @@ body {
     transition: all 0.3s;
     display: block;
     font-family: sans-serif;
+    background-color: transparent;
 }
 
 #tel:focus {
@@ -272,6 +275,7 @@ body {
     font-size: 20px;
     resize: none;
     border-radius: 10px;
+    background-color: transparent;
 }
 
 #text-ans:focus {
