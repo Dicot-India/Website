@@ -483,6 +483,7 @@ body {
     background-color: #4747D1;
     border-radius: 50%;
     margin-top: 20%;
+    overflow: hidden;
 }
 
 .abt-client {
