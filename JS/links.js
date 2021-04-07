@@ -98,3 +98,23 @@ function m_menu() {
         document.getElementsByClassName("m-nav-li")[0].className += " m-nav-disp";
     }
 }
+
+function validation() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var tel = document.getElementById("tel").value;
+    var msg = document.getElementById("text-ans").value;
+    var err_msg = document.getElementById("err-msg");
+    var text;
+
+    if ((name.length > 4) && (email.indexOf("@") > 0) && (!isNaN(tel)) && (tel.length == 10) && (msg.length > 10)) {
+        text = "Thank you! We will get in touch with you soon!";
+        err_msg.innerHTML = text;
+        return true;
+    }
+    else {
+        text = "Enter all the required feilds in correct manner";
+        err_msg.innerHTML = text;
+        return false;
+    }
+}
