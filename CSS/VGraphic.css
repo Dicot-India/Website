@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     color: #272D2D;
+    outline: none;
 }
 
 ::-moz-selection { 
