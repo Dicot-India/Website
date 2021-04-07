@@ -110,7 +110,10 @@ function validation() {
     if ((name.length > 4) && (email.indexOf("@") > 0) && (!isNaN(tel)) && (tel.length == 10) && (msg.length > 10)) {
         text = "Thank you! We will get in touch with you soon!";
         err_msg.innerHTML = text;
-        return true;
+        var data = {
+            name: name, email: email, tel: tel, msg: msg
+        };
+        $.post("../PHP/contact.php", data);
     }
     else {
         text = "Enter all the required feilds in correct manner";
