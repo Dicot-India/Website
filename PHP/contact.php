@@ -6,6 +6,6 @@
     $subject = "Inquiry";
     $message = $first_name . " contact no: " . $_POST['tel'] . " Email: " . $from . " wrote the following:" . "\n\n" . $_POST['textans'];
 
-    $headers = "From:" . $from;
+    $headers = "From:" . $to;
     mail($to,$subject,$message,$headers);
 ?>
