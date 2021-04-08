@@ -107,17 +107,22 @@ function validation() {
     var err_msg = document.getElementById("err-msg");
     var text;
 
-    if ((name.length > 4) && (email.indexOf("@") > 0) && (!isNaN(tel)) && (tel.length == 10) && (msg.length > 10)) {
-        text = "Thank you! We will get in touch with you soon!";
-        err_msg.innerHTML = text;
+    if ((name.length > 4) && (email.indexOf("@") > 0) && (!isNaN(tel)) && (tel.length > 10) && (msg.length > 10)) {
         var data = {
-            name: name, email: email, tel: tel, msg: msg
+            name: name, email: email, tel: tel, textans: msg
         };
-        $.post("../PHP/contact.php", data);
-        return true;
+        $.post("./PHP/contact.php", data);
+        text = "Thanks for reaching out! We will contact you soon!";
+        err_msg.innerHTML = text;
+        console.log("mail sent");
+        document.getElementById("name").value = '';
+        document.getElementById("email").value = '';
+        document.getElementById("tel").value = '';
+        document.getElementById("text-ans").value = '';
+        return false;
     }
     else {
-        text = "Enter all the required feilds in correct manner";
+        text = "*Enter all the required fields in correct format";
         err_msg.innerHTML = text;
         return false;
     }
