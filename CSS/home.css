@@ -614,13 +614,14 @@ body {
 }
 
 .err-message {
-    background-color: #fe8b8e;
+    color: #fe8b8e;
     width: 60%;
     margin-left: 20%;
     margin-top: 15px;
     display: block;
     height: auto;
     transition: all 0.5s ease;
+    text-align: center;
 }
 
 #name {

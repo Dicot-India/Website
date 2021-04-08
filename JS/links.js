@@ -114,6 +114,7 @@ function validation() {
             name: name, email: email, tel: tel, msg: msg
         };
         $.post("../PHP/contact.php", data);
+        return true;
     }
     else {
         text = "Enter all the required feilds in correct manner";
