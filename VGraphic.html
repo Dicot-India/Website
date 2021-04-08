@@ -161,7 +161,8 @@
         <div class="close" onclick="close_inq()">
             x
         </div>
-        <form action="#">
+        <form onsubmit="return validation()">
+            <div id="err-msg" class="err-msg"></div>
             <input type="text" id="name" placeholder="Name*"><br>
             <input type="email" id="email" placeholder="Email*"><br>
             <input type="tel" id="tel" placeholder="Contact no. (with country code)"><br>

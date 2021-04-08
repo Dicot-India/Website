@@ -92,7 +92,8 @@
                 <div class="inquire-header">
                     Contact Us
                 </div>
-                <form id="cu-form" method="POST" action="./PHP/contact.php" >
+                <form onsubmit="return validation()" >
+                    <div id="err-msg" class="err-msg"></div>
                     <input type="text" id="name" placeholder="Name*"><br>
                     <input type="email" id="email" placeholder="Email*"><br>
                     <input type="tel" id="tel" placeholder="Contact no. (with country code)"><br>

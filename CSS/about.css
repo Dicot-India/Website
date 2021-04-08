@@ -429,6 +429,17 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.err-message {
+    color: #fe8b8e;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 15px;
+    display: block;
+    height: auto;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
 #name {
     border: none;
     border-bottom: 2px solid #ccc;
