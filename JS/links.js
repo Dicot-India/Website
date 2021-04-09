@@ -118,7 +118,8 @@ function validation() {
         document.getElementById("name").value = '';
         document.getElementById("email").value = '';
         document.getElementById("tel").value = '';
-        document.getElementById("text-ans").value = '';
+        document.getElementById("text-ans").value = ''; 
+            
         return false;
     }
     else {
