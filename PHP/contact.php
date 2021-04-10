@@ -1,10 +1,12 @@
 <?php 
-    require 'src/Exception.php';
-    require 'src/PHPMailer.php';
-    require 'src/SMTP.php';
     
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
+
+    require 'src/Exception.php';
+    require 'src/PHPMailer.php';
+    require 'src/SMTP.php';
 
     $mail = new PHPMailer(true);
     $mail->IsSMTP();
@@ -24,15 +26,15 @@
     $from = $_POST['email'];
     $first_name = $_POST['name'];
 
-    $subject = "Inquiry Dicot";
-    $message = "Message: " . $_POST['textans'];
+    $subject = "Inquiry Dicot from " . $first_name;
+    $message = " Name: ". $first_name . " Email: " . $from . " Contact No.: " . $_POST['tel'] . " Message: " . $_POST['textans'];
     $headers = "From:" . $from;
 
 /*     email($to,$subject,$message,$headers); */
-    $mail->setFrom($from, $first_name);
+    $mail->SetFrom($from, $first_name);
     $mail->addAddress('sales@dicot.in', 'Sales Team');
     $mail->Subject = $subject;
-    $mail->AltBody=$message;
+    $mail->Body=$message;
     if(!$mail->send())
     {
         echo "Didn't send mail!";
