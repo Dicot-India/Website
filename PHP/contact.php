@@ -23,6 +23,7 @@
     $to = "sales@dicot.in"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $first_name = $_POST['name'];
+<<<<<<< HEAD
     $subject = "Inquiry";
     $message = "Message:" . "\n\n" . $_POST['textans'];
     $mail->setFrom($from, $first_name);
@@ -38,4 +39,12 @@
 
     $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
     imap_close($imapStream);
+=======
+    $subject = "Inquiry Dicot";
+    $message = $first_name . " contact no: " . $_POST['tel'] . " Email: " . $from . " wrote the following:" . "\n\n" . $_POST['textans'];
+
+    $headers = "From:" . $from;
+
+    email($to,$subject,$message,$headers);
+>>>>>>> 29dfee27e885dff3d923e456c11918249c0dbfce
 ?>
