@@ -220,6 +220,7 @@ body {
     width: 100%;
     padding-top: 40px;
     height: Calc(100vh - 500px);
+    min-height: 460px;
 }
 
 .plate {
