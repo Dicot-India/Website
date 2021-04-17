@@ -1148,14 +1148,15 @@ textarea::-moz-placeholder {
 
     .quick-links {
         height: auto;
-        width: 100%;
+        width: 75%;
+        margin-left: 25%;
     }
 
     .contact-details, .product-links {
         display: block;
         height: auto;
-        width: 100%;
-        margin-left: 5%;
+        width: 75%;
+        margin-left: 25%;
     }
 
     .quick-links-header {
@@ -1167,7 +1168,7 @@ textarea::-moz-placeholder {
     }
 
     .product-links {
-        margin-left: 5%;
+        margin-left: 25%;
     }
 
     .ph {
