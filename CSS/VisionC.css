@@ -432,7 +432,7 @@ body {
     font-size: 20px;
 }
 
-.download-btn {
+.vc-download-btn {
     padding: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -451,7 +451,7 @@ body {
     width: 15px;
 }
 
-.download-btn::before {
+.vc-download-btn::before {
     content: "";
     position: absolute;
     background: #272D2D;
@@ -463,7 +463,7 @@ body {
     transition: bottom 0.3s ease-in;
 }
 
-.download-btn:hover::before {
+.vc-download-btn:hover::before {
     bottom: 0;
 }
 
@@ -1097,7 +1097,7 @@ textarea::-moz-placeholder {
         margin-left: 15%;
     }
 
-    .download-btn {
+    .vc-download-btn {
         margin-top: 4px;
     }
 
