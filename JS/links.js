@@ -67,6 +67,10 @@ function download_vc() {
     location.href = "http://www.dicot.in/Vision_C_setup.exe";
 }
 
+function download_vce() {
+    location.href = "http://www.dicot.in/Vision_CE_setup.exe";
+}
+
 function download_vg() {
     location.href = "http://www.dicot.in/VGraphicsetup.exe";
 }

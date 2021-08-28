@@ -445,6 +445,7 @@ body {
     position: relative;
     margin-left: 50%;
     transform: translate(-50%, 0);
+    margin-top: 10px;
 }
 
 .win-dwn {
@@ -1098,7 +1099,11 @@ textarea::-moz-placeholder {
     }
 
     .vc-download-btn {
-        margin-top: 4px;
+        margin-top: 15px;
+    }
+
+    .download {
+        height: 400px;
     }
 
     .inquire {
