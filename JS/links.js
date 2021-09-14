@@ -64,7 +64,7 @@ function to_download() {
 }
 
 function download_vc() {
-    location.href = "http://www.dicot.in/Vision_C_setup.exe";
+    location.href = "./Vision_C_setup.exe";
 }
 
 function download_vce() {
