@@ -64,7 +64,7 @@ function to_download() {
 }
 
 function download_vc() {
-    location.href = "Vision_C_setup.exe";
+    location.href = "setup.exe";
 }
 
 function download_vce() {
