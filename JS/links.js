@@ -1,25 +1,25 @@
 function to_home() {
-    location.href = "home.html";//"http://www.dicot.in/";
+    location.href = "home.html"; //"http://www.dicot.in/";
 }
 
 function to_about() {
-    location.href = "about.html";//"http://www.dicot.in/about.html";
+    location.href = "about.html"; //"http://www.dicot.in/about.html";
 }
 
 function to_vc() {
-    location.href = "VisionC.html";//"http://www.dicot.in/VisionC.html";
+    location.href = "VisionC.html"; //"http://www.dicot.in/VisionC.html";
 }
 
 function to_vg() {
-    location.href = "VGraphic.html";//"http://www.dicot.in/VGraphic.html";
+    location.href = "VGraphic.html"; //"http://www.dicot.in/VGraphic.html";
 }
 
 function to_vw() {
-    location.href = "coming.html";//"http://www.dicot.in/coming.html";
+    location.href = "coming.html"; //"http://www.dicot.in/coming.html";
 }
 
 function to_contact() {
-    location.href = "contact.html";//"http://www.dicot.in/contact.html";
+    location.href = "contact.html"; //"http://www.dicot.in/contact.html";
 }
 
 function to_vwlogin() {
@@ -49,7 +49,7 @@ function totop() {
 
 var mybutton = document.getElementsByClassName("to-top");
 
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -78,10 +78,9 @@ function download_vg() {
 function inq() {
     var form = document.getElementById("inquire");
 
-    if (form.className == "inq-form"){
+    if (form.className == "inq-form") {
         form.className += " inq-disp";
-    }
-    else{
+    } else {
         form.className = "inq-form";
     }
 }
@@ -93,11 +92,10 @@ function close_inq() {
 
 function m_menu() {
     var m = document.getElementsByClassName("m-nav-btn");
-    if (m[0].classList.contains("change")){
+    if (m[0].classList.contains("change")) {
         m[0].className = "m-nav-btn";
         document.getElementsByClassName("m-nav-li")[0].className = "m-nav-li";
-    }
-    else {
+    } else {
         m[0].className += " change";
         document.getElementsByClassName("m-nav-li")[0].className += " m-nav-disp";
     }
@@ -112,21 +110,14 @@ function validation() {
     var text;
 
     if ((name.length > 4) && (email.indexOf("@") > 0) && (!isNaN(tel)) && (tel.length > 10) && (msg.length > 10)) {
-        var data = {
-            name: name, email: email, tel: tel, textans: msg
-        };
-        $.post("./PHP/contact.php", data);
         text = "Thanks for reaching out! We will contact you soon!";
         err_msg.innerHTML = text;
-        console.log("mail sent");
         document.getElementById("name").value = '';
         document.getElementById("email").value = '';
         document.getElementById("tel").value = '';
-        document.getElementById("text-ans").value = ''; 
-            
+        document.getElementById("text-ans").value = '';
         return false;
-    }
-    else {
+    } else {
         text = "*Enter all the required fields in correct format";
         err_msg.innerHTML = text;
         return false;
