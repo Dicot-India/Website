@@ -6,10 +6,8 @@
     <title>Dicot | VGraphic</title>
 
     <meta charset="utf-8">
-    <meta name="description"
-        content="Vision C, VisionC, vision c, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, Dicot, Dicot India">
-    <meta name="keywords"
-        content="Vision C, VisionC, vision c, Visionc, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, scada, mis, das, Dicot, Dicot India">
+    <meta name="description" content="Vision C, VisionC, vision c, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, Dicot, Dicot India">
+    <meta name="keywords" content="Vision C, VisionC, vision c, Visionc, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, scada, mis, das, Dicot, Dicot India">
     <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
 
@@ -23,7 +21,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179640044-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-179640044-2');
@@ -153,12 +154,12 @@
         <div class="close" onclick="close_inq()">
             x
         </div>
-        <form onsubmit="return validation()">
+        <form action="https://send.pageclip.co/RrhbucBImH3ihb4rvLpN8L39bB7nHVr6/inquiry" method="POST">
             <div id="err-msg" class="err-message"></div>
-            <input type="text" id="name" placeholder="Name*"><br>
-            <input type="email" id="email" placeholder="Email*"><br>
-            <input type="tel" id="tel" placeholder="Contact no*. (with country code)"><br>
-            <textarea class="tarea" id="text-ans" maxlength="200" rows="6" cols="12" placeholder="Message*"></textarea>
+            <input type="text" name="name" id="name" placeholder="Name*"><br>
+            <input type="email" name="email" id="email" placeholder="Email*"><br>
+            <input type="tel" name="number" id="tel" placeholder="Contact no*. (with country code)"><br>
+            <textarea class="tarea" name="message" id="text-ans" maxlength="200" rows="6" cols="12" placeholder="Message*"></textarea>
             <button type="submit" class="submit-btn" id="submit-btn">Send</button>
             <br>
         </form>
@@ -244,7 +245,7 @@
         </div>
 
     </div>
-
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 
 </html>
