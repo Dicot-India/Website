@@ -3,23 +3,23 @@ function to_home() {
 }
 
 function to_about() {
-    location.href = "about.html"; //"http://www.dicot.in/about.html";
+    location.href = "about"; //"http://www.dicot.in/about.html";
 }
 
 function to_vc() {
-    location.href = "VisionC.html"; //"http://www.dicot.in/VisionC.html";
+    location.href = "VisionC"; //"http://www.dicot.in/VisionC.html";
 }
 
 function to_vg() {
-    location.href = "VGraphic.html"; //"http://www.dicot.in/VGraphic.html";
+    location.href = "VGraphic"; //"http://www.dicot.in/VGraphic.html";
 }
 
 function to_vw() {
-    location.href = "coming.html"; //"http://www.dicot.in/coming.html";
+    location.href = "coming"; //"http://www.dicot.in/coming.html";
 }
 
 function to_contact() {
-    location.href = "contact.html"; //"http://www.dicot.in/contact.html";
+    location.href = "contact"; //"http://www.dicot.in/contact.html";
 }
 
 function to_vwlogin() {
@@ -64,11 +64,11 @@ function to_download() {
 }
 
 function download_vc() {
-    location.href = "./VisionCsetup.exe";
+    location.href = "VisionCsetup.exe";
 }
 
 function download_vg() {
-    location.href = "http://15.207.243.5/VGraphicsetup.exe";
+    location.href = "VGsetup.exe";
 }
 
 function inq() {
