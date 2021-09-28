@@ -64,11 +64,7 @@ function to_download() {
 }
 
 function download_vc() {
-    location.href = "http://15.207.243.5/setup.exe";
-}
-
-function download_vce() {
-    location.href = "http://15.207.243.5/Vision_CE_setup.exe";
+    location.href = "./VisionCsetup.exe";
 }
 
 function download_vg() {
