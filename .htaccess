@@ -1,10 +1,4 @@
 Options +FollowSymlinks
 RewriteEngine on
 DirectoryIndex home.html
-RewriteCond %{HTTP_HOST} ^dicot.in [NC]
-RewriteRule ^home.html$ http://dicot.in/ [R=301,L]
-RewriteCond %{HTTP_HOST} ^www.dicot.in [NC]
-RewriteRule ^home.html$ http://www.dicot.in/ [R=301,L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
+Redirect 301 /home.html https://dicot.tech/
