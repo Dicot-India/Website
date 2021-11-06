@@ -2,8 +2,13 @@ Options +FollowSymlinks
 RewriteEngine on
 DirectoryIndex home.html
 Redirect 301 /home.html https://dicot.tech/
-Redirect 301 /contact.html https://dicot.tech/contact
-Redirect 301 /coming.html https://dicot.tech/coming
-Redirect 301 /about.html https://dicot.tech/about
-Redirect 301 /VisionC.html https://dicot.tech/VisionC
-Redirect 301 /VGraphic.html https://dicot.tech/VGraphic
+Redirect 301 /contact.html https://dicot.tech/contact.html
+Redirect 301 /coming.html https://dicot.tech/coming.html
+Redirect 301 /about.html https://dicot.tech/about.html
+Redirect 301 /VisionC.html https://dicot.tech/VisionC.html
+Redirect 301 /VGraphic.html https://dicot.tech/VGraphic.html
+Redirect 301 /contact https://dicot.tech/contact.html
+Redirect 301 /coming https://dicot.tech/coming.html
+Redirect 301 /about https://dicot.tech/about.html
+Redirect 301 /VisionC https://dicot.tech/VisionC.html
+Redirect 301 /VGraphic https://dicot.tech/VGraphic.html
