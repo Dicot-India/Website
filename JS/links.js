@@ -64,11 +64,11 @@ function to_download() {
 }
 
 function download_vc() {
-    location.href = "VisionCsetup.exe";
+    location.href = "https://dicot.in/VisionCsetup.exe";
 }
 
 function download_vg() {
-    location.href = "VGsetup.exe";
+    location.href = "https://dicot.in/VGsetup.exe";
 }
 
 function inq() {
