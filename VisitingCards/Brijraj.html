@@ -51,7 +51,7 @@
             <li>
               <i
                 class="fab fa-twitter"
-                onclick="window.location.href = 'https://twitter.com/BRaolji?t=rUxFs3Tw1u8u-Cg4Lh5RzA&s=09'"
+                onclick="window.location.href = 'https://twitter.com/BRaolji'"
               ></i>
             </li>
             <li>
@@ -61,8 +61,8 @@
               ></i>
             </li>
           </ul>
-          <span class="vcardd">
-            <a href="" download="V-Card" class="download-btn">
+          <span class="vcardd" onclick="vcfdownload()">
+            <a download="V-Card" class="download-btn">
               <i class="fa fa-download"></i>
             </a>
           </span>
@@ -70,4 +70,9 @@
       </div>
     </div>
   </body>
+  <script>
+    function vcfdownload(){
+      location.href="https://dicot.tech/VisitingCards/brijraj.vcf";
+    }
+  </script>
 </html>

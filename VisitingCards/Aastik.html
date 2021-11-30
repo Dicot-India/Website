@@ -61,8 +61,8 @@
               ></i>
             </li>
           </ul>
-          <span class="vcardd">
-            <a href="" download="V-Card" class="download-btn">
+          <span class="vcardd" onclick="vcfdownload()">
+            <a download="V-Card" class="download-btn">
               <i class="fa fa-download"></i>
             </a>
           </span>
@@ -70,4 +70,9 @@
       </div>
     </div>
   </body>
+  <script>
+    function vcfdownload(){
+      location.href="https://dicot.tech/VisitingCards/aastik.vcf";
+    }
+  </script>
 </html>
