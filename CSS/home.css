@@ -250,19 +250,19 @@ body {
 }
 
 #s1 {
-    background-image: url("../Images/arm.png");
+    background-image: url("../Images/arm.svg");
     background-size: 100% 700px;
     background-repeat: no-repeat;
 }
 
 #s2 {
-    background-image: url("../Images/iot.png");
+    background-image: url("../Images/iot.svg");
     background-size: 102% 700px;
     background-repeat: no-repeat;
 }
 
 #s3 {
-    background-image: url("../Images/VisionC.png");
+    background-image: url("../Images/visionc.svg");
     background-size: auto 500px;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -374,7 +374,7 @@ body {
 
 .products-section {
     padding-top: 40px;
-    background: url("../Images/windmill.jpg") no-repeat;
+    background: url("../Images/windmill.svg") no-repeat;
     background-size: 100%;
     background-attachment: fixed;
 }
