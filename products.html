@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta name="description"
-        content="Vision C, VisionC, vision c, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, Dicot, Dicot India">
+        content="">
     <meta name="keywords"
         content="Vision C, VisionC, vision c, Visionc, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, scada, mis, das, Dicot, Dicot India">
     <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1, user-scalable=no">
@@ -15,10 +15,7 @@
 
     <link rel="stylesheet" href="./CSS/products.css">
     <link rel="icon" href="./Images/logo_2_dicot_D.png">
-    <script rel="text/javascript" src="./JS/VisionC.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script rel="text/javascript" src="./JS/links.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script rel="text/javascript" src="./locationdetect.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179640044-2"></script>
     <script>
@@ -32,6 +29,7 @@
         gtag('config', 'UA-179640044-2');
     </script>
     <!-- Google Tag Manager -->
+
 </head>
 
 <body>
@@ -133,7 +131,7 @@
                     </p>
                     <div class="b-option">
                         <button class="buyBtn">Buy</button>
-                        <span class="plan-price" id="basic-price">{Price}</span>
+                        <span class="plan-price" id="plus-price">{Price}</span>
                     </div>
                 </div>
 
@@ -149,7 +147,7 @@
 
                     <div class="b-option">
                         <button class="buyBtn">Buy</button>
-                        <span class="plan-price" id="basic-price">{Price}</span>
+                        <span class="plan-price" id="pro-price">{Price}</span>
                     </div>
                 </div>
 
@@ -163,8 +161,7 @@
                         Support: Premium
                     </p>
                     <div class="b-option">
-                        <button class="buyBtn custom-plan">Get Quote
-                        </button>
+                        <button class="buyBtn custom-plan" onclick="get_quote()">Get Quote</button>
                     </div>
                 </div>
 
@@ -418,6 +415,10 @@
 
         function download_vg() {
             location.href = "https://dicot.in/VGsetup.exe";
+        }
+
+        function get_quote() {
+                location.href = "https://dicot.tech/contact.html";
         }
     </script>
 </body>
