@@ -2887,4 +2887,4 @@ if (country == "India") {
   $pro_p.textContent = "$249.99";
 }
 
-prompt("Please enter country: " + country);
+var new_country = prompt("Please enter country: " + country);
