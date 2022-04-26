@@ -762,16 +762,20 @@ a{
         height: 200px;
     }
 
+    .container-5 {
+        padding-bottom: 50px;
+    }
+
     .container-5-title {
         font-size: 2em;
     }
 
     .container-5-data {
-        max-height: 200px;
+        height: 200px;
     }
 
     .container-5-data-imager {
-        width: 150px;
+        height: 150px;
         right: 0;
     }
 
@@ -784,12 +788,12 @@ a{
 
     .container-5-data-subtr {
         top: 110px;
-        font-size: 1.1em;
+        font-size: 1em;
         left: 10%;
     }
 
     .container-5-data-imagel {
-        width: 150px;
+        height: 150px;
         left: 5%;
     }
 
@@ -801,7 +805,7 @@ a{
 
     .container-5-data-subtl {
         top: 100px;
-        font-size: 1.1em;
+        font-size: 1em;
         right: 0%;
     }
 
