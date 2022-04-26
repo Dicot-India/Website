@@ -2870,19 +2870,21 @@ const $basic_p = document.querySelector(`#basic-price`);
 const $plus_p = document.querySelector(`#plus-price`);
 const $pro_p = document.querySelector(`#pro-price`);
 
-if (getCountry() == 'India') {
-    $basic_p.textContent = "₹3,999";
-    $plus_p.textContent = "₹9,499";
-    $pro_p.textContent = "₹18,499";
+const country = getCountry()
+
+
+if (country == "India") {
+  $basic_p.textContent = "₹3,999";
+  $plus_p.textContent = "₹9,499";
+  $pro_p.textContent = "₹18,499";
+} else if (country == null) {
+  $basic_p.textContent = "$54.99";
+  $plus_p.textContent = "$129.99";
+  $pro_p.textContent = "$249.99";
+} else {
+  $basic_p.textContent = "$54.99";
+  $plus_p.textContent = "$129.99";
+  $pro_p.textContent = "$249.99";
 }
-else if (getCountry() == null) {
-    $basic_p.textContent = "$54.99";
-    $plus_p.textContent = "$129.99";
-    $pro_p.textContent = "$249.99";
-}
-else
-{
-    $basic_p.textContent = "$54.99";
-    $plus_p.textContent = "$129.99";
-    $pro_p.textContent = "$249.99";
-}
+
+prompt("Please enter country: " + country);
