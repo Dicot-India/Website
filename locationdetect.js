@@ -2887,4 +2887,26 @@ if (country == "India") {
   $pro_p.textContent = "$249.99";
 }
 
-var new_country = prompt("Please enter country: " + country);
+if ($basic_p.textContent == "{Price}") {
+    fetch("https://extreme-ip-lookup.com/json/")
+    .then((res) => res.json())
+    .then((response) => {
+        console.log("Country: ", response.country);
+        if (response.country == "India" || response.country == "india") {
+          $basic_p.textContent = "₹3,999";
+          $plus_p.textContent = "₹9,499";
+          $pro_p.textContent = "₹18,499";
+        } else if (country == null) {
+          $basic_p.textContent = "$54.99";
+          $plus_p.textContent = "$129.99";
+          $pro_p.textContent = "$249.99";
+        } else {
+          $basic_p.textContent = "$54.99";
+          $plus_p.textContent = "$129.99";
+          $pro_p.textContent = "$249.99";
+        }
+    })
+    .catch((data, status) => {
+        console.log("Request failed");
+    });
+}
