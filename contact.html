@@ -3,23 +3,26 @@
 
 <head>
 
-    <title>Dicot | Contact Us</title>
+    <title>Contact Us | Dicot Innovations Private Limited</title>
 
     <meta charset="utf-8">
-    <meta name="description"
-        content="Best in class SCADA and mini-SCADA">
+    <meta name="description" content="">
     <meta name="keywords"
         content="Vision C, VisionC, vision c, Visionc, Visionc, visionc, vision C, visionC, VGraphic, Vgraphic, vgraphic, SCADA, MIS, DAS, scada, mis, das, Dicot, Dicot India">
     <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="HandheldFriendly" content="true">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./CSS/contact.css">
     <link rel="icon" href="./Images/logo_2_dicot_D.png">
-    <script rel="text/javascript" src="./JS/contact.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script rel="text/javascript" src="./JS/links.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function onSubmit(token) {
+            //sitekey: '6Lf_yJgfAAAAAPqLdZbUErH97vuDEI2fN_cUF0ts',
+            document.getElementById("contact-form").submit();
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179640044-2"></script>
     <script>
@@ -33,148 +36,265 @@
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 
-<body onload="sss()">
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKQ4L8L" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="bg">
-        <div class="navbar">
-            <a href="http://www.dicot.in"><img src="./Images/logo_2_dicot.svg" class="navbar-logo" alt="Dicot logo"></a>
-            <div class="nav-items-1" onclick="to_home()">
-                Home
-            </div>
-            <div class="nav-items" onclick="to_about()">
-                About
-            </div>
-            <div class="nav-items drop">
-                Products <span class="ar-down">&#9660;</span>
-                <div class="dropdown-content">
-                    <a href="VisionC.html">Vision C</a>
-                    <a href="VGraphic.html">VGraphic</a>
-                    <a href="coming.html">Vision Web</a>
-                    <a href="coming.html">Vision IoT</a>
-                </div>
-            </div>
-            <div class="nav-items" onclick="to_contact()">
-                Contact
-            </div>
-            <div class="nav-items" onclick="to_vw()">
-                Vision Web
-            </div>
-            <div class="m-nav-btn" onclick="m_menu()">
-                <div id="bar1"></div>
-                <div id="bar2" class="bar"></div>
-                <div id="bar3" class="bar"></div>
-            </div>
-            <div class="m-nav-li">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li>Products</li>
-                    <li><a href="VisionC.html" class="ps">Vision C</a></li>
-                    <li><a href="VGraphic.html" class="ps">VGraphic</a></li>
-                    <li><a href="coming.html" class="ps">Vision Web</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="coming.html">Vision Web : login</a></li>
-                </ul>
-            </div>
+    <nav>
+        <div class="logo">
+            <img class="logoimg" data-src="Assets/images/Logo.svg" alt="Dicot" />
         </div>
-        
-        <div class="contact-container">
-            <div class="inq-form">
-                <div class="inquire-header">
-                    Contact Us
+        <div class="nav-items">
+            <span><a href="home.html">Home</a></span>
+            <span><a href="#">About</a></span>
+            <span><a href="VisionC.html">Products</a></span>
+            <span><a href="contact.html">Contact</a></span>
+            <span><a href="https://blog.dicot.tech">Blog</a></span>
+        </div>
+        <button class="hamburger" onclick="showmenu()">
+            <img data-src="Assets/images/hamburger.png" />
+        </button>
+    </nav>
+    <div class="mobmenu" id="mobmenu">
+        <span><a href="home.html">Home</a></span>
+        <span><a href="#">About</a></span>
+        <span><a href="VisionC.html">Products</a></span>
+        <span><a href="contact.html">Contact</a></span>
+        <span><a href="https://blog.dicot.tech">Blog</a></span>
+    </div>
+    
+    <div class="second">
+        <div class="container-1">
+            <h1 class="container-text">Contact us</h1>
+        </div>
+    
+        <div class="container-2">
+    
+            <div class="c2-s c-l">
+                <div>
+                    <h2 class="c2-s-title">Head office</h2>
                 </div>
-                <form action="https://send.pageclip.co/RrhbucBImH3ihb4rvLpN8L39bB7nHVr6/contact_form" class="pageclip-form" method="POST">
-                    <div id="err-msg" class="err-message"></div>
-                    <input type="text" id="name" name="Person" placeholder="Name*"><br>
-                    <input type="email" id="email" name="Email" placeholder="Email*"><br>
-                    <input type="tel" id="tel" name="Phone number" placeholder="Contact no*. (with country code)"><br>
-                    <textarea class="tarea" id="text-ans" name="message" maxlength="162" rows="6" cols="12" placeholder="Message*"></textarea>
-                    <div ></div>
-                    <button class="submit-btn pageclip-form__submit" type="submit" id="submit-btn">Send</button>
+                <div class="c2-address">
+                    Dicot Innovations Pvt. Ltd.
                     <br>
+                    28, Earth Bungalows,
+                    Nr. Titanium tower, Corporate road,
+                    Prahladnagar, Ahmedabad,
+                    Gujarat, India
+                    <br>
+                    Pincode: 380015
+                </div>
+                <div class="c2-email">
+                    <a href="mailto:hello@dicot.in">hello@dicot.in</a>
+                </div>
+                <div class="c2-number">
+                    <a href="tel:+919328006290">+91-932-800-6290</a>
+                </div>
+            </div>
+    
+            <div class="c2-s c-r">
+                <form id="contact-form" action="">
+                    <h2 class="c2-s-title">Get in touch</h2>
+                    <div class="c-form">
+                        <div class="line-1">
+                            <input type="text" id="firstname" name="fname" placeholder="First Name" required>
+                            <input type="text" id="lastname" name="lname" placeholder="Last Name" required>
+                            <input type="tel" name="contact-no" id="contact-no" placeholder="Contact Number"
+                                pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}/" required title="Please enter valid phone number">
+                        </div>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                        <textarea id="message" name="message" placeholder="Message" style="height: 150px;"
+                            required></textarea>
+                    </div>
+                    <input type="submit" class="submit-button g-recaptcha" value="Send"
+                        data-sitekey="6Lf_yJgfAAAAAPqLdZbUErH97vuDEI2fN_cUF0ts" data-callback='onSubmit'
+                        data-action='submit' />
                 </form>
             </div>
         </div>
-
-    </div>
-
-    <div class="social-right">
-        <div class="linkedin-icon hanging-social" onclick="to_linkedin()">
-            <i class="fa fa-linkedin"></i>
-        </div>
-        <div class="facebook-icon hanging-social" onclick="to_facebook()">
-            <i class="fa fa-facebook"></i>
-        </div>
-        <div class="instagram-icon hanging-social" onclick="to_instagram()">
-            <i class="fa fa-instagram"></i>
-        </div>
-        <div class="twitter-icon hanging-social" onclick="to_twitter()">
-            <i class="fa fa-twitter"></i>
-        </div>
-    </div>
-
-    <div class="to-top" onclick="totop()">
-        <button class="fi">
-            &#9650;
-        </button>
-    </div>
-    <div class="brlur unloader"></div>
-    <div class="loader"></div>
-    <div class="footer">
-        <div class="footer-container">
-            <div class="upper">
-                <div class="quick-links">
-                    <div class="quick-links-header">
-                        <span class="interest-2">Q</span>uick links
+    
+        <div class="container-3">
+            <h2 class="c3-title">Distributors</h2>
+            <br>
+            <div class="distributors">
+                <div class="distributor">
+                    <h3 class="c3-st">Gandhinagar</h3>
+                    <div class="c3-tel">
+                        <a href="tel:+919428407592">+91-94284-07592</a>
                     </div>
-                    <ul class="quick-list">
-                        <li><a href="http://eepurl.com/hdYRq5">Newsletter</a></li>
-                        <li><a href="http://blog.dicot.tech">Blog</a></li>
-                        <li><a href="coming.html">FAQ</a></li>
-                        <li><a href="coming.html">Careers</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="contact-details">
-                    <div class="quick-links-header">
-                        <span class="interest-2">C</span>ontact Us
+                    <div class="c3-email">
+                        <a href="mailto:radicaltechart@gmail.com">radicaltechart@gmail.com</a>
                     </div>
-                    <div class="contact">
-                        <div class="contact-inner">
-                            <div class="contact-heads"><span class="fa fa-envelope-o"></span>&nbsp;Email</div>
-                            <a href="mailto:sales@dicot.in">sales@dicot.in</a><br>
-                            <a href="mailto:support@dicot.in">support@dicot.in</a><br>
-                            <a href="mailto:hr@dicot.in">hr@dicot.in</a>
-                            <br>
-                            <br>
-                            <div class="contact-heads"><span class="fa fa-phone"></span>&nbsp;Phone No.</div>
-                            <span class="ph">+91 932 800 6290</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-links">
-                    <div class="quick-links-header">
-                        <span class="interest-2">P</span>roducts
-                    </div>
-                    <div class="link-container">
-                        <a href="VisionC.html">Vision C</a>
-                        <br>
-                        <a href="VGraphic.html">VGraphic</a>
-                        <br>
-                        <a href="coming.html">Vision Web</a>
+                    <div class="c3-address">
+                        Radical Techart Solution Private Limited<br>
+                        B-315, Swagat Rainforest 2, <br>
+                        beside Spices and Herbs Restaurant,<br>
+                        Gandhinagar, Gujarat 382421
                     </div>
                 </div>
             </div>
-
-            <div class="copyright-info">
-                Copyright © 2021 <a href="http://dicot.in">dicot.in</a> All Rights Reserved.
-            </div>
         </div>
     </div>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    
+    <footer class="footer">
+        <div class="footer-part1">
+            <div class="footer-part1-s1">
+                <img data-src="Assets/images/dicot.svg" alt="">
+                <div class="footer-part1-data3-2">
+                    <div class="social">
+                        <a href="https://twitter.com/dicot_tech" target="_blank"><img
+                                data-src="Assets/images/TwitterButtoon.svg" alt="Twitter"></a>
+                        <a href="https://facebook.com/tech.dicot" target="_blank"><img
+                                data-src="Assets/images/FacebookButton.svg" alt="Facebook"></a>
+                        <a href="https://linkedin.com/company/dicot-tech" target="_blank"><img
+                                data-src="Assets/images/LinkedInButton.svg" alt="Linkedin"></a>
+                        <a href="https://instagram.com/dicot.tech" target="_blank"><img
+                                data-src="Assets/images/InstaButton.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-part1-s2">
+    
+                <h3 class="footer-s2-title">
+                    Contact Us
+                </h3>
+                <div class="compdetail">
+                    <img class="footer-detailicon" data-src="Assets/images/Location.svg" alt="">
+                    <div class="footer-s2-detailtext">
+                        Dicot Innovations Pvt. Ltd.<br />
+                        28, Earth Bungalows,<br />
+                        Nr. Titanium tower, Corporate road,<br />
+                        Prahladnagar, Ahmedabad,<br />
+                        Gujarat, India<br />
+                        Pincode: 380015
+                    </div>
+                </div>
+    
+    
+                <div class="compdetail">
+                    <img class="footer-detailicon" data-src="Assets/images/Mail.svg" alt="">
+                    <div class="footer-s2-detailtext"><a href="mailto:hello@dicot.in">hello@dicot.in</a></div>
+                </div>
+    
+    
+                <div class="compdetail">
+                    <img class="footer-detailicon" data-src="Assets/images/Call.svg" alt="">
+                    <div class="footer-s2-detailtext"><a href="tel:+919328006290">+91-932-800-6290</a></div>
+                </div>
+            </div>
+    
+            <div class="footer-part1-s3">
+                <h3 class="footer-s3-title">
+                    Quick Links
+                </h3>
+                <div class="footer-qlink">
+                    <a href="#">Career</a>
+                </div>
+                <div class="footer-qlink">
+                    <a href="VisionC.html">Downloads</a>
+                </div>
+                <div class="footer-qlink">
+                    <a href="#">Tutorials</a>
+                </div>
+                <div class="footer-qlink">
+                    <a href="#">News</a>
+                </div>
+                <div class="footer-qlink">
+                    <a href="#">Vision Web</a>
+                </div>
+            </div>
+            <div class="footer-part1-s4">
+                <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark"
+                    href="https://twitter.com/dicot_tech?ref_src=twsrc%5Etfw">Tweets by dicot_tech</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+    
+        <div class="footer-part2">
+            <div class="footer-rights">
+                Copyright © 2022 dicot.in and dicot.tech All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    
+    <button class="btt" id="btt" onclick="topFunction()">
+        <img data-src="Assets/images/BTTButtop.svg" />
+    </button>
+    
+    <script>
+        function signup() {
+            window.open('http://eepurl.com/hUzsQf', '_blank');
+        }
+        var mybutton = document.getElementById("btt");
+        var mobmenu = document.getElementById("mobmenu");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function showmenu() {
+            if (mobmenu.style.display == "none") {
+                mobmenu.style.display = "flex";
+            }
+            else {
+                mobmenu.style.display = "none"
+            }
+        }
+    </script>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
+    <script>
+        (function () {
+            var elements = document.querySelectorAll('img[data-src]');
+            var index = 0;
+            var lazyLoad = function () {
+                if (index >= elements.length) return;
+                var item = elements[index];
+                if ((this.scrollY + this.innerHeight) > item.offsetTop) {
+                    var src = item.getAttribute("data-src");
+                    item.src = src;
+                    item.addEventListener('load', function () {
+                        item.removeAttribute('data-src');
+                    });
+                    index++;
+                    lazyLoad();
+                }
+            };
+            var init = function () {
+                window.addEventListener('scroll', lazyLoad);
+                lazyLoad();
+            };
+            return init();
+        })();
+    </script>
+
 </body>
 
 </html>
