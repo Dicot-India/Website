@@ -2875,6 +2875,11 @@ if (getCountry() == 'India') {
     $plus_p.textContent = "₹9,499";
     $pro_p.textContent = "₹18,499";
 }
+else if (getCountry() == null) {
+    $basic_p.textContent = "$54.99";
+    $plus_p.textContent = "$129.99";
+    $pro_p.textContent = "$249.99";
+}
 else
 {
     $basic_p.textContent = "$54.99";
