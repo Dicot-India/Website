@@ -4,7 +4,6 @@
     box-sizing: border-box;
     font-family: 'Roboto';
     overflow-x: hidden;
-    overflow-y: visible;
 }
 
 html {
@@ -34,6 +33,7 @@ nav{
     position: fixed;
     z-index: 1000;
     background-color: #fff;
+    overflow:hidden;
 }
 
 .logo{
