@@ -6,7 +6,7 @@ const $pro_p = document.querySelector(`#pro-price`);
 const getVisitorCountry = () => {
   return new Promise((resolve, reject) => {
     window
-      .fetch("https://ip2c.org/self")
+      .fetch("https://ip2c.org/?self")
       .then((response) => response.text())
       .then((data) => {
         const [status, country] = String(data).split(";");
