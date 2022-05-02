@@ -106,7 +106,7 @@
                         Support: Standard
                     </p>
                     <div class="b-option">
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="Basic()">Buy</button>
                         <span class="plan-price" id="basic-price">{Price}</span>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                         Support: Standard
                     </p>
                     <div class="b-option">
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="Plus()">Buy</button>
                         <span class="plan-price" id="plus-price">{Price}</span>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                     </p>
                     
                     <div class="b-option">
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="Pro()">Buy</button>
                         <span class="plan-price" id="pro-price">{Price}</span>
                     </div>
                 </div>
@@ -342,6 +342,18 @@
             } else {
                 mybutton.style.display = "none";
             }
+        }
+
+        function Basic(){
+            window.open('https://rzp.io/l/pB6TNKZ', '_blank');
+        }
+
+        function Plus() {
+                window.open('https://rzp.io/l/SwO5BsOQ9', '_blank');
+        }
+
+        function Plus() {
+                window.open('https://rzp.io/l/flxL8kA4', '_blank');
         }
         
         // When the user clicks on the button, scroll to the top of the document
