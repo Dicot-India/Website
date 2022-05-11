@@ -213,24 +213,28 @@ a{
     width: auto;
 }
 
-.Vision_Web {
+.D-Stick {
     display: flex;
     flex-direction: column;
 }
 
-.vwebabout {
+.ds-about {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.vweb-features {
+.ds-features {
     width: 60%;
     background-color: #A8DADC;
     padding: 50px;
 }
 
-.r-col-vweb {
+.inner-f {
+    margin-left: 40%;
+}
+
+.r-col-ds {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,7 +242,7 @@ a{
     width: 40%;
 }
 
-.vw_Logo {
+.ds_Logo {
     width: 50%;
 }
 
@@ -251,13 +255,7 @@ a{
     margin-top: -40px;
 }
 
-.vw-arrow {
-    position: absolute;
-    right: 5%;
-    top: 1450px;
-}
-
-.v-web-pricing {
+.ds-pricing {
     height: 300px;
     text-align: center;
     display: flex;
@@ -266,14 +264,18 @@ a{
     color: #4747d1;
 }
 
-.v-web-pricing h2 {
+#dstick {
+    margin-top: 0;
+}
+
+.ds-pricing h2 {
     font-size: 30px;
 }
 
 .vgraphic {
     display: flex;
     width: 100%;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .vg-c-l {
@@ -303,6 +305,14 @@ a{
     background-color: #A8DADC;
 }
 
+.vg-c-r ul {
+    margin-left: 20px;
+}
+
+.ds-features ul {
+    margin-left: 20px;
+}
+
 .vgraphic-requirements {
     margin-top: 20px;
 }
@@ -311,7 +321,45 @@ a{
     width: 60%;
 }
 
+.Vision-Web {
+    display: flex;
+    flex-direction: column;
+}
 
+.vw-about {
+    display: flex;
+}
+
+.r-col-vw {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vw-features {
+    width: 60%;
+    padding: 50px;
+    background-color: #A8DADC;
+}
+
+.vw-features ul {
+    margin-left: 20px;
+}
+
+.vw-pricing {
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4747d1;
+}
+
+.vw-pricing h2 {
+    font-size: 30px;
+}
 
 .container-7{
     position: relative;
@@ -366,7 +414,6 @@ a{
 .footer{
     position: relative;
     width: 100%;
-    min-height: 500px;
     background: #0A0A28;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
     display: flex;
@@ -494,7 +541,7 @@ a{
 .footer-part2{
     padding-top: 16px;
     width: 100%;
-    height: 60px;
+    height: 80px;
     background: #333333;
 }
 
@@ -606,27 +653,31 @@ a{
         width: 30px;
     }
 
-    .vw_Logo, .VCLogo, .vgraphicLogo {
+    .vw_Logo, .VCLogo, .vgraphicLogo, .ds_Logo {
         width: 100%;
     }
 
-    .vc-c-r, .vweb-features {
+    .vc-c-r, .vw-features, .ds-features {
         font-size: 18px;
     }
 
-    .visioncabout {
+    .visioncabout, .vw-about {
         flex-direction: column;
     }
 
-    .vwebabout {
+    .ds-about {
         flex-direction: column-reverse;
     }
+
+    .inner-f {
+        margin-left: 0;
+    }
     
-    .vc-c-l, .vc-c-r, .vweb-features, .r-col-vweb {
+    .vc-c-l, .vc-c-r, .vw-features, .r-col-vw, .r-col-ds, .ds-features {
         width: 100%;
     }
 
-    .vc-c-l, .r-col-vweb {
+    .vc-c-l, .r-col-vw, .r-col-ds {
         margin-bottom: 20px;
     }
 
