@@ -191,11 +191,7 @@ a{
     align-items: center;
 }
 
-#mantra {
-    width: 190px;
-}
-
-#aniket {
+#mantra, #aniket, #jeet {
     width: 190px;
 }
 
