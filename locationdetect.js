@@ -1,9 +1,10 @@
-const $basic_p = document.querySelector(`#basic-price`);
-const $plus_p = document.querySelector(`#plus-price`);
-const $pre_m = document.querySelector(`#prem-price`);
-const $pre_a = document.querySelector(`#prea-price`);
-const $post_p = document.querySelector(`#post-price`);
-const $user_p = document.querySelector(`#user-price`);
+const $basic_p = document.getElementById(`basic-price`);
+const $plus_p = document.getElementById(`plus-price`);
+const $pro_p = document.getElementById(`pro-price`);
+const $pre_m = document.getElementById(`prem-price`);
+const $pre_a = document.getElementById(`prea-price`);
+const $post_p = document.getElementById(`post-price`);
+const $user_p = document.getElementById(`user-price`);
 
 
 const getVisitorCountry = () => {
