@@ -94,10 +94,11 @@ a{
 
 .banner {
     padding: 125px 10% 100px 10%;
-    background-color: #A8DADC;
+    /*background-color: #A8DADC;*/
     color: #0A0A28;
     font-family: 'Roboto';
     font-size: 20px;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
 }
 
 .banner h1 {
@@ -115,6 +116,7 @@ a{
 .container-1 {
     width: 100%;
     padding: 50px 0 50px 0;
+    box-shadow: rgb(0, 0, 0, 0.56) 0px 0px 7px 5px;
 }
 
 .container-1 h2 {
@@ -124,16 +126,34 @@ a{
     font-family: 'Sora';
 }
 
+.brand-support{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    padding-top: 70px;
+    width: 100%;
+}
+
+.backing {
+    width: 200px;
+}
+
 .container-2 {
-    background-color: #A8DADC;
+    /* background-color: #A8DADC; */
+    /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%); */
+    background: linear-gradient(to right top, #845ec2, #676bc9, #4976cb, #297ec8, #0885c1, #008dc0, #0094bc, #009bb8, #00a6b7, #00b1af, #00baa1, #22c28d);
+    color: #fff;
 }
 
 .container-2 img {
     border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.56);
 }
 
 .board {
     border-radius: 0px !important;
+    box-shadow: none !important;
 }
 
 .team {
@@ -185,10 +205,11 @@ a{
     flex-wrap: wrap;
 }
 
-.teammember {
+.team-member {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
 #mantra, #aniket, #jeet {
@@ -200,7 +221,6 @@ a{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-shadow: rgb(139, 139, 139) 0px 0px 7px 5px;
     padding: 30px 0 30px 0;
 }
 
@@ -545,6 +565,7 @@ a{
 
     .photo {
         width: 170px;
+        box-shadow: 0px 0px 36px 0px rgba(0,0,0,1);
     }
 
     .team-member img {
