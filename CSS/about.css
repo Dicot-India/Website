@@ -116,6 +116,7 @@ a{
 .container-1 {
     width: 100%;
     padding: 50px 0 50px 0;
+    box-shadow: rgb(0, 0, 0, 0.56) 0px 0px 7px 5px;
 }
 
 .container-1 h2 {
@@ -123,6 +124,19 @@ a{
     text-align: center;
     font-size: 36px;
     font-family: 'Sora';
+}
+
+.brand-support{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    padding-top: 70px;
+    width: 100%;
+}
+
+.backing {
+    width: 200px;
 }
 
 .container-2 {
@@ -207,7 +221,6 @@ a{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-shadow: rgb(139, 139, 139) 0px 0px 7px 5px;
     padding: 30px 0 30px 0;
 }
 
