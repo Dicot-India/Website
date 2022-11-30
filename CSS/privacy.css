@@ -177,6 +177,11 @@ h2 {
     height: 40px;
 }
 
+.social img{
+    width: 35px;
+    height: 35px;
+}
+
 .social a{
     cursor: pointer;
 }

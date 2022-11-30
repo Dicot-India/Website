@@ -228,6 +228,11 @@ input[type=submit] {
     cursor: pointer;
 }
 
+.social img{
+    width: 35px;
+    height: 35px;
+}
+
 .footer-part1-s2{
     position: relative;
     width: 30%;
