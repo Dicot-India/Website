@@ -156,7 +156,7 @@ a {
     padding-top: 150px;
     color: #0A0A28;
     background-color: rgba(4, 56, 115, 1);
-    border-radius:5px  0px 0px 5px;
+    border-radius: 5px 0px 0px 5px;
 
 }
 
@@ -254,9 +254,9 @@ a {
     transition-property: transform;
 }
 
-    .plan:hover {
-        transform: scale(1.1);
-    }
+.plan:hover {
+    transform: scale(1.1);
+}
 
 .plan-name {
     width: 100%;
@@ -320,7 +320,7 @@ a {
 }
 
 .ds-features {
-    
+
     width: 60%;
     color: white;
     border-radius: 0px 5px 5px 0px;
@@ -329,24 +329,24 @@ a {
 }
 
 .inner-f {
-    
+
     margin-left: 40%;
 }
 
-.inner-f h2{
+.inner-f h2 {
     font-family: Galano-semibold;
     margin-bottom: 5px;
 }
 
-.inner-f ul{
+.inner-f ul {
     list-style: none;
 }
 
-    .inner-f ul li {
-        font-family: 'Inter', sans-serif;
-        display: flex;
-        gap: 10px;
-    }
+.inner-f ul li {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 10px;
+}
 
 .r-col-ds {
     display: flex;
@@ -432,13 +432,14 @@ a {
     margin-top: 20px;
 }
 
-.vgraphic-requirements h2{
+.vgraphic-requirements h2 {
     color: white;
 }
 
-.vgraphic-requirements ul li{
+.vgraphic-requirements ul li {
     color: white;
 }
+
 .vgraphicLogo {
     width: 60%;
 }
@@ -467,28 +468,28 @@ a {
     border-radius: 5px 0px 0px 5px;
 }
 
-    .vw-features h2 {
-        font-family: Galano-semibold;
-        margin-bottom: 5px;
-        color: white;
-    }
+.vw-features h2 {
+    font-family: Galano-semibold;
+    margin-bottom: 5px;
+    color: white;
+}
 
-    .vw-features ul {
-        margin-left: 20px;
-        list-style: none;
-        color: white;
-       
-    }
+.vw-features ul {
+    margin-left: 20px;
+    list-style: none;
+    color: white;
 
-        .vw-features ul li {
-            display: flex;
-            gap: 5px;
-            font-family: 'Inter', sans-serif;
-        }
+}
+
+.vw-features ul li {
+    display: flex;
+    gap: 5px;
+    font-family: 'Inter', sans-serif;
+}
 
 .vw-pricing {
     margin-top: 45px;
-   margin-bottom: 45px;
+    margin-bottom: 45px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -507,7 +508,7 @@ a {
     color: black;
     height: 200px;
     border-radius: 10px;
-    width:  250px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -533,8 +534,8 @@ a {
     gap: 20px;
     margin: 15px;
 
-    
-    
+
+
 }
 
 
@@ -546,9 +547,7 @@ a {
     color: #0A0A28;
 }
 
-    .container-7-title h2 {
-    
-    }
+.container-7-title h2 {}
 
 .JoinBtn {
     padding: 10px;
@@ -566,8 +565,8 @@ a {
     position: absolute;
     width: 180px;
     height: 50px;*/
-    /*left: 55%;*/
-    /*top: 52%;
+/*left: 55%;*/
+/*top: 52%;
     border-radius: 5px;
     font-family: 'Roboto';
     font-style: normal;
@@ -678,15 +677,17 @@ a {
 
 .footer-s2-detailtext {
     position: relative;
-    margin-left: 10px;
+    margin-left: 5px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 14px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     text-decoration: none;
 }
+
+
 
 .footer-part1-s3 {
     position: relative;
