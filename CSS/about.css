@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,16 +11,16 @@ html {
 }
 
 img {
-  opacity: 1;
-  transition: opacity 1s;
+    opacity: 1;
+    transition: opacity 1s;
 }
- 
+
 img[data-src] {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* navbar */
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -33,10 +33,10 @@ nav{
     position: fixed;
     z-index: 1000;
     background-color: #fff;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.logo{
+.logo {
     padding-left: 10%;
 }
 
@@ -46,14 +46,14 @@ nav{
     width: 70%;
 }
 
-.nav-items span a{
+.nav-items span a {
     color: #000000;
     font-family: 'Roboto';
     font-size: 20px;
     text-decoration: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000000;
 }
@@ -85,7 +85,7 @@ a{
     padding: 3px;
 }
 
-.mobmenu span a{
+.mobmenu span a {
     color: #000000;
     font-family: 'Roboto';
     font-size: 20px;
@@ -126,7 +126,7 @@ a{
     font-family: 'Sora';
 }
 
-.brand-support{
+.brand-support {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -150,7 +150,7 @@ a{
 
 .container-2 img {
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.56);
 }
 
 .board {
@@ -214,7 +214,9 @@ a{
     padding: 10px;
 }
 
-#mantra, #aniket, #jeet {
+#mantra,
+#aniket,
+#jeet {
     width: 190px;
 }
 
@@ -255,13 +257,13 @@ a{
     margin: 0 20px 0 20px;
 }
 
-.container-7{
+.container-7 {
     position: relative;
     width: 100%;
     height: 355px;
 }
 
-.container-7-title{
+.container-7-title {
     position: absolute;
     left: 4.6%;
     top: 45%;
@@ -273,7 +275,7 @@ a{
     color: #0A0A28;
 }
 
-.JoinBtn{
+.JoinBtn {
     position: absolute;
     width: 180px;
     height: 50px;
@@ -289,9 +291,10 @@ a{
     border: none;
     color: #FFFFFF;
     cursor: pointer;
-    
+
 }
-.container-7-text{
+
+.container-7-text {
     position: absolute;
     left: 42%;
     top: 37.5%;
@@ -304,7 +307,7 @@ a{
 }
 
 /* footer */
-.footer{
+.footer {
     position: relative;
     width: 100%;
     background: #0A0A28;
@@ -313,11 +316,11 @@ a{
     flex-direction: column;
 }
 
-.footer a{
+.footer a {
     color: #FFFFFF;
 }
 
-.footer-part1{
+.footer-part1 {
     position: relative;
     width: 100%;
     height: 440px;
@@ -326,7 +329,7 @@ a{
     justify-content: space-around;
 }
 
-.footer-part1-s1{
+.footer-part1-s1 {
     position: relative;
     width: 20%;
     height: 440px;
@@ -336,7 +339,7 @@ a{
     width: 80%;
 }
 
-.social{
+.social {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -344,22 +347,22 @@ a{
     height: 40px;
 }
 
-.social a{
+.social a {
     cursor: pointer;
 }
 
-.social img{
+.social img {
     width: 35px;
     height: 35px;
 }
 
-.footer-part1-s2{
+.footer-part1-s2 {
     position: relative;
     width: 30%;
     height: 440px;
 }
 
-.footer-s2-title{
+.footer-s2-title {
     position: relative;
     margin-left: 8%;
     margin-top: 60px;
@@ -379,32 +382,32 @@ a{
     width: 100%;
 }
 
-.footer-detailicon{
+.footer-detailicon {
     position: relative;
     width: 30px;
     height: 30px;
     margin-left: 8%;
 }
 
-.footer-s2-detailtext{
+.footer-s2-detailtext {
     position: relative;
     margin-left: 10px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 14px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.footer-part1-s3{
+.footer-part1-s3 {
     position: relative;
     width: 20%;
     height: 440px;
 }
 
-.footer-s3-title{
+.footer-s3-title {
     position: relative;
     margin-left: 8%;
     margin-top: 60px;
@@ -416,7 +419,7 @@ a{
     color: #FFFFFF;
 }
 
-.footer-qlink{
+.footer-qlink {
     position: relative;
     width: 100%;
     left: 8%;
@@ -429,21 +432,21 @@ a{
     color: #FFFFFF;
 }
 
-.footer-part1-s4{
+.footer-part1-s4 {
     position: relative;
     width: 20%;
     height: 440px;
     padding-top: 10px;
 }
 
-.footer-part2{
+.footer-part2 {
     padding-top: 16px;
     width: 100%;
     height: 80px;
     background: #333333;
 }
 
-.footer-rights{
+.footer-rights {
     position: relative;
     width: 90%;
     margin-left: 10%;
@@ -456,7 +459,7 @@ a{
     color: #FFFFFF;
 }
 
-.btt{
+.btt {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -467,7 +470,7 @@ a{
     display: none;
 }
 
-.chat{
+.chat {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -492,7 +495,7 @@ a{
         display: flex;
     }
 
-    .social img{
+    .social img {
         width: 30px;
     }
 
@@ -539,7 +542,7 @@ a{
         display: none;
     }
 
-    .logoimg{
+    .logoimg {
         width: 150px;
     }
 
@@ -572,7 +575,7 @@ a{
 
     .photo {
         width: 170px;
-        box-shadow: 0px 0px 36px 0px rgba(0,0,0,1);
+        box-shadow: 0px 0px 36px 0px rgba(0, 0, 0, 1);
     }
 
     .team-member img {
@@ -634,15 +637,15 @@ a{
         height: auto;
     }
 
-    
-    .footer-part1-s1 img{
+
+    .footer-part1-s1 img {
         margin-left: 10%;
     }
-    
-    .footer-part1-data3-2{
+
+    .footer-part1-data3-2 {
         margin-left: 10%;
     }
-    
+
     .footer-part1-s2 {
         width: 80%;
         margin-left: 10%;
