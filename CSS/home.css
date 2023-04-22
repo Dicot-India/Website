@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,16 +9,16 @@ html {
 }
 
 img {
-  opacity: 1;
-  transition: opacity 1s;
+    opacity: 1;
+    transition: opacity 1s;
 }
- 
+
 img[data-src] {
-  opacity: 0;
+    opacity: 0;
 }
 
 /* navbar */
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -33,7 +33,7 @@ nav{
     background-color: #fff;
 }
 
-.logo{
+.logo {
     padding-left: 10%;
 }
 
@@ -43,14 +43,14 @@ nav{
     width: 70%;
 }
 
-.nav-items span a{
+.nav-items span a {
     color: #000000;
     font-family: 'Roboto';
     font-size: 20px;
     text-decoration: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000000;
 }
@@ -82,7 +82,7 @@ a{
     padding: 3px;
 }
 
-.mobmenu span a{
+.mobmenu span a {
     color: #000000;
     font-family: 'Roboto';
     font-size: 20px;
@@ -90,7 +90,7 @@ a{
 }
 
 /* BANNER */
-.banner{
+.banner {
     position: relative;
     width: 100%;
     min-height: 500px;
@@ -98,7 +98,7 @@ a{
     z-index: 100;
 }
 
-.ProductName{
+.ProductName {
     position: absolute;
     min-width: 148px;
     right: -1%;
@@ -113,7 +113,7 @@ a{
     transform: rotate(90deg);
 }
 
-.title{
+.title {
     position: absolute;
     left: 8.3%;
     top: 40%;
@@ -128,7 +128,7 @@ a{
     color: #000;
 }
 
-.tagline{
+.tagline {
     position: absolute;
     left: 6%;
     top: 55%;
@@ -142,7 +142,7 @@ a{
 }
 
 /* computer image */
-.computer{
+.computer {
     position: absolute;
     max-width: 500px;
     right: 5%;
@@ -152,7 +152,7 @@ a{
 }
 
 /* container - 4 */
-.container-4{
+.container-4 {
     position: relative;
     width: 100%;
     height: 500px;
@@ -161,7 +161,7 @@ a{
 }
 
 
-.chartimg{
+.chartimg {
     position: absolute;
     width: 100%;
     left: 0px;
@@ -169,13 +169,13 @@ a{
 }
 
 /* container-5 */
-.container-5{
+.container-5 {
     position: relative;
     width: 100%;
 }
 
 
-.container-5-title{
+.container-5-title {
     position: relative;
     width: 100%;
     top: 10px;
@@ -188,20 +188,21 @@ a{
     color: #000000;
 }
 
-.container-5-data{
+.container-5-data {
     position: relative;
     width: 100%;
     display: block;
     height: 400px;
 }
 
-.container-5-data-imager{
+.container-5-data-imager {
     position: absolute;
     right: 14%;
     top: 3%;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.container-5-data-titler{
+
+.container-5-data-titler {
     position: absolute;
     width: 80%;
     height: 42px;
@@ -214,7 +215,8 @@ a{
     letter-spacing: 0.1em;
     color: #000000;
 }
-.container-5-data-subtr{
+
+.container-5-data-subtr {
     position: absolute;
     width: 40%;
     left: 18%;
@@ -229,13 +231,14 @@ a{
 
 }
 
-.container-5-data-imagel{
+.container-5-data-imagel {
     position: absolute;
     left: 18%;
     top: 3%;
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.container-5-data-titlel{
+
+.container-5-data-titlel {
     position: absolute;
     width: 50%;
     height: 42px;
@@ -251,7 +254,8 @@ a{
     color: #000000;
 
 }
-.container-5-data-subtl{
+
+.container-5-data-subtl {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -266,14 +270,14 @@ a{
 }
 
 /* container-6 */
-.container-6{
+.container-6 {
     position: relative;
     width: 100%;
     height: 500px;
     background: #A8DADC;
 }
 
-.container-6-title{
+.container-6-title {
     position: relative;
     width: 100%;
     top: 24px;
@@ -286,7 +290,7 @@ a{
     color: #0A0A28;
 }
 
-.qcontainer{
+.qcontainer {
     width: 100%;
     position: relative;
     height: calc(100% - 3em - 24px);
@@ -296,7 +300,7 @@ a{
     justify-content: space-around;
 }
 
-.container-6-sub{
+.container-6-sub {
     background-color: #0A0A28;
     width: 30%;
     height: 80%;
@@ -315,7 +319,7 @@ a{
     align-items: center;
 }
 
-.container-6-CName{
+.container-6-CName {
     font-family: 'Roboto';
     display: block;
     font-style: normal;
@@ -326,7 +330,7 @@ a{
     color: #FFFFFF;
 }
 
-.container-6-pos{
+.container-6-pos {
     display: block;
     font-family: 'Roboto';
     font-style: normal;
@@ -337,7 +341,7 @@ a{
     width: 100%;
 }
 
-.container-6-quote{
+.container-6-quote {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -355,16 +359,17 @@ a{
     overflow: hidden;
 }
 
-.cphoto img{
+.cphoto img {
     width: 100%;
 }
 
-.container-7{
+.container-7 {
     position: relative;
     width: 100%;
     height: 355px;
 }
-.container-7-title{
+
+.container-7-title {
     position: absolute;
     left: 4.6%;
     top: 45%;
@@ -376,7 +381,7 @@ a{
     color: #0A0A28;
 }
 
-.JoinBtn{
+.JoinBtn {
     position: absolute;
     width: 180px;
     height: 50px;
@@ -392,9 +397,10 @@ a{
     border: none;
     color: #FFFFFF;
     cursor: pointer;
-    
+
 }
-.container-7-text{
+
+.container-7-text {
     position: absolute;
     left: 42%;
     top: 37.5%;
@@ -407,7 +413,7 @@ a{
 }
 
 /* footer */
-.footer{
+.footer {
     position: relative;
     width: 100%;
     background: #0A0A28;
@@ -416,11 +422,11 @@ a{
     flex-direction: column;
 }
 
-.footer a{
+.footer a {
     color: #FFFFFF;
 }
 
-.footer-part1{
+.footer-part1 {
     position: relative;
     width: 100%;
     height: 440px;
@@ -429,7 +435,7 @@ a{
     justify-content: space-around;
 }
 
-.footer-part1-s1{
+.footer-part1-s1 {
     position: relative;
     width: 20%;
     height: 440px;
@@ -439,7 +445,7 @@ a{
     width: 80%;
 }
 
-.social{
+.social {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -447,22 +453,22 @@ a{
     height: 40px;
 }
 
-.social a{
+.social a {
     cursor: pointer;
 }
 
-.social img{
+.social img {
     width: 35px;
     height: 35px;
 }
 
-.footer-part1-s2{
+.footer-part1-s2 {
     position: relative;
     width: 30%;
     height: 440px;
 }
 
-.footer-s2-title{
+.footer-s2-title {
     position: relative;
     margin-left: 8%;
     margin-top: 60px;
@@ -482,32 +488,32 @@ a{
     width: 100%;
 }
 
-.footer-detailicon{
+.footer-detailicon {
     position: relative;
     width: 30px;
     height: 30px;
     margin-left: 8%;
 }
 
-.footer-s2-detailtext{
+.footer-s2-detailtext {
     position: relative;
     margin-left: 10px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
-    font-size: 1.25em;
+    font-size: 14px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.footer-part1-s3{
+.footer-part1-s3 {
     position: relative;
     width: 20%;
     height: 440px;
 }
 
-.footer-s3-title{
+.footer-s3-title {
     position: relative;
     margin-left: 8%;
     margin-top: 60px;
@@ -519,7 +525,7 @@ a{
     color: #FFFFFF;
 }
 
-.footer-qlink{
+.footer-qlink {
     position: relative;
     width: 100%;
     left: 8%;
@@ -532,21 +538,21 @@ a{
     color: #FFFFFF;
 }
 
-.footer-part1-s4{
+.footer-part1-s4 {
     position: relative;
     width: 20%;
     height: 440px;
     padding-top: 10px;
 }
 
-.footer-part2{
+.footer-part2 {
     padding-top: 16px;
     width: 100%;
     height: 80px;
     background: #333333;
 }
 
-.footer-rights{
+.footer-rights {
     position: relative;
     width: 90%;
     margin-left: 10%;
@@ -559,7 +565,7 @@ a{
     color: #FFFFFF;
 }
 
-.btt{
+.btt {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -570,7 +576,7 @@ a{
     display: none;
 }
 
-.chat{
+.chat {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -585,24 +591,28 @@ a{
     .logo {
         padding-left: 1%;
     }
+
     .computer {
         width: 25%;
         right: 8%;
     }
+
     .ProductName {
         letter-spacing: 0.1em;
         font-size: 1.25em;
     }
+
     .title {
         font-size: 1.5em;
         letter-spacing: 0.1em;
     }
+
     .tagline {
         font-size: 1.25em;
         letter-spacing: 0.1em;
     }
 
-    .container-5 img{
+    .container-5 img {
         max-width: 300px;
         min-width: 200px;
     }
@@ -668,7 +678,7 @@ a{
         display: flex;
     }
 
-    .social img{
+    .social img {
         width: 30px;
     }
 
@@ -715,7 +725,7 @@ a{
         display: none;
     }
 
-    .logoimg{
+    .logoimg {
         width: 150px;
     }
 
@@ -816,11 +826,11 @@ a{
     .container-6 {
         height: 1300px;
     }
-    
+
     .container-6-title {
         font-size: 2em;
     }
-    
+
     .qcontainer {
         flex-direction: column;
         justify-content: space-around;
@@ -871,15 +881,15 @@ a{
         height: auto;
     }
 
-    
-    .footer-part1-s1 img{
+
+    .footer-part1-s1 img {
         margin-left: 10%;
     }
-    
-    .footer-part1-data3-2{
+
+    .footer-part1-data3-2 {
         margin-left: 10%;
     }
-    
+
     .footer-part1-s2 {
         width: 80%;
         margin-left: 10%;

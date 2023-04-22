@@ -143,13 +143,13 @@ a {
 }
 
 .vc-c-r {
-  width: 70%;
-  /* background-color: #043873; */
-  padding: 50px;
-  padding-top: 150px;
-  color: #0a0a28;
-  background-color: rgba(4, 56, 115, 1);
-  border-radius: 5px 0px 0px 5px;
+    width: 70%;
+    /* background-color: #043873; */
+    padding: 50px;
+    padding-top: 150px;
+    color: #0A0A28;
+    background-color: rgba(4, 56, 115, 1);
+    border-radius: 5px 0px 0px 5px;
 }
 
 .visionc-features {
@@ -241,7 +241,7 @@ a {
 }
 
 .plan:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .plan-name {
@@ -308,31 +308,31 @@ a {
 }
 
 .ds-features {
-  width: 60%;
-  color: white;
-  border-radius: 0px 5px 5px 0px;
-  background-color: rgba(4, 56, 115, 1);
-  padding: 50px;
+    width: 60%;
+    color: white;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgba(4, 56, 115, 1);
+    padding: 50px;
 }
 
 .inner-f {
-  margin-left: 40%;
+
+    margin-left: 40%;
 }
 
 .inner-f h2 {
-  font-family: Galano-semibold;
-  margin-bottom: 5px;
+    font-family: Galano-semibold;
+    margin-bottom: 5px;
 }
 
 .inner-f ul {
-  list-style: none;
+    list-style: none;
 }
 
 .inner-f ul li {
-  font-family: "Inter", sans-serif;
-  display: flex;
-  gap: 10px;
-}
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    gap: 10px;
 
 .r-col-ds {
   display: flex;
@@ -418,12 +418,13 @@ a {
 }
 
 .vgraphic-requirements h2 {
-  color: white;
+    color: white;
 }
 
 .vgraphic-requirements ul li {
-  color: white;
+    color: white;
 }
+
 .vgraphicLogo {
   width: 60%;
 }
@@ -446,39 +447,40 @@ a {
 }
 
 .vw-features {
-  width: 60%;
-  padding: 50px;
-  background-color: rgba(4, 56, 115, 1);
-  border-radius: 5px 0px 0px 5px;
+    width: 60%;
+    padding: 50px;
+    background-color: rgba(4, 56, 115, 1);
+    border-radius: 5px 0px 0px 5px;
 }
 
 .vw-features h2 {
-  font-family: Galano-semibold;
-  margin-bottom: 5px;
-  color: white;
+    font-family: Galano-semibold;
+    margin-bottom: 5px;
+    color: white;
 }
 
 .vw-features ul {
-  margin-left: 20px;
-  list-style: none;
-  color: white;
+    margin-left: 20px;
+    list-style: none;
+    color: white;
+
 }
 
 .vw-features ul li {
-  display: flex;
-  gap: 5px;
-  font-family: "Inter", sans-serif;
+    display: flex;
+    gap: 5px;
+    font-family: 'Inter', sans-serif;
 }
 
 .vw-pricing {
-  margin-top: 45px;
-  margin-bottom: 45px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-  color: black;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    color: black;
 }
 
 .vw-pricing h2 {
@@ -486,19 +488,19 @@ a {
 }
 
 .vwplan {
-  background-color: white;
-  padding: 20px;
-  color: black;
-  height: 200px;
-  border-radius: 10px;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
-  transform: translateZ(0);
-  transition-duration: 0.3s;
-  transition-property: transform;
+    background-color: white;
+    padding: 20px;
+    color: black;
+    height: 200px;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
 }
 
 .vwplan:hover {
@@ -510,12 +512,12 @@ a {
 }
 
 .container-7 {
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  gap: 20px;
-  margin: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px;
+    margin: 15px;
 }
 
 .container-7-title {
@@ -526,15 +528,39 @@ a {
   color: #0a0a28;
 }
 
+
+.container-7-title h2 {}
+
 .JoinBtn {
-  padding: 10px;
-  color: white;
-  background-color: #4f9cf9;
-  border: none;
-  width: 180px;
-  height: 50px;
-  border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: #4F9CF9;
+    border: none;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
 }
+
+
+
+/*.JoinBtn {
+    position: absolute;
+    width: 180px;
+    height: 50px;*/
+/*left: 55%;*/
+/*top: 52%;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+    background-color: #E63946;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}*/
 
 
 .container-7-text {
@@ -633,16 +659,18 @@ a {
 }
 
 .footer-s2-detailtext {
-  position: relative;
-  margin-left: 10px;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 1.25em;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  text-decoration: none;
+    position: relative;
+    margin-left: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    text-decoration: none;
 }
+
+
 
 .footer-part1-s3 {
   position: relative;
