@@ -112,6 +112,10 @@ a {
     padding: 50px 0 50px 0;
 }
 
+.c2-s-title {
+    margin-top: 5px;
+}
+
 .c-l {
     width: 30%;
     font-size: 20px;
@@ -214,7 +218,7 @@ input[type=submit] {
 .footer-part1-s1 {
     position: relative;
     width: 20%;
-    height: 440px;
+    height: 460px;
 }
 
 .footer-part1-s1 img {
@@ -241,7 +245,7 @@ input[type=submit] {
 .footer-part1-s2 {
     position: relative;
     width: 30%;
-    height: 440px;
+    height: 460px;
 }
 
 .footer-s2-title {
@@ -261,6 +265,7 @@ input[type=submit] {
     flex-direction: row;
     justify-content: flex-start;
     margin-top: 10px;
+    align-items: center;
     width: 100%;
 }
 
@@ -384,7 +389,7 @@ input[type=submit] {
     }
 
     .footer-s2-detailtext {
-        font-size: 1em;
+        font-size: 0.75em;
     }
 
     .footer-part1-s3 {
