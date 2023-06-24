@@ -308,7 +308,6 @@ a {
 
 /* footer */
 .footer {
-    position: relative;
     width: 100%;
     background: #0A0A28;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
@@ -321,7 +320,6 @@ a {
 }
 
 .footer-part1 {
-    position: relative;
     width: 100%;
     height: 440px;
     display: flex;
@@ -330,7 +328,6 @@ a {
 }
 
 .footer-part1-s1 {
-    position: relative;
     width: 20%;
     height: 440px;
 }
@@ -357,13 +354,11 @@ a {
 }
 
 .footer-part1-s2 {
-    position: relative;
     width: 30%;
-    height: 440px;
+    overflow: hidden;
 }
 
 .footer-s2-title {
-    position: relative;
     margin-left: 8%;
     margin-top: 60px;
     font-family: 'Roboto';
@@ -383,14 +378,12 @@ a {
 }
 
 .footer-detailicon {
-    position: relative;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-left: 8%;
 }
 
 .footer-s2-detailtext {
-    position: relative;
     margin-left: 10px;
     font-family: 'Roboto';
     font-style: normal;
@@ -402,13 +395,11 @@ a {
 }
 
 .footer-part1-s3 {
-    position: relative;
     width: 20%;
     height: 440px;
 }
 
 .footer-s3-title {
-    position: relative;
     margin-left: 8%;
     margin-top: 60px;
     font-family: 'Roboto';
@@ -420,7 +411,6 @@ a {
 }
 
 .footer-qlink {
-    position: relative;
     width: 100%;
     left: 8%;
     margin-top: 30px;
@@ -433,7 +423,6 @@ a {
 }
 
 .footer-part1-s4 {
-    position: relative;
     width: 20%;
     height: 440px;
     padding-top: 10px;
@@ -442,7 +431,7 @@ a {
 .footer-part2 {
     padding-top: 16px;
     width: 100%;
-    height: 80px;
+    height: 50px;
     background: #333333;
 }
 
