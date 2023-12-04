@@ -606,22 +606,30 @@ a {
         flex-direction: column;
     }
 
-    .footer-top{
+    .footer-top {
         flex-direction: column;
         gap: 2vh;
-    }
-
-    .footer-mid{
+        align-self: center;
+      }
+    
+      .footer-social-icons {
+        gap: 10px;
+      }
+    
+      .footer-mid {
         flex-direction: column;
-        gap: 2vh;
-    }
-
-    .footer-mid-right-section{
+        gap: 3vh;
+        padding: 1.5rem;
+      }
+    
+      .footer-mid-right-section {
         flex-direction: column;
-    }
-
-    .footer-low {
+        grid-area: 3vh;
+      }
+    
+      .footer-low {
         flex-direction: column;
         padding: 1rem 2rem;
-    }
+        gap: 2rem;
+      }
 }
