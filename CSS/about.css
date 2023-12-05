@@ -517,13 +517,23 @@ a {
   bottom: 30px;
 }
 
+.scrollUpBtn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 0);
+  z-index: 5;
+}
+
 /* Media Query for Responsiveness */
 
 @media only screen and (max-width: 769px) {
   .pageWrapper {
     padding: 1rem;
   }
-
 
   .nav-items {
     display: none;
