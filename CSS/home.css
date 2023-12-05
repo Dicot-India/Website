@@ -609,11 +609,14 @@ a {
     .footer-top{
         flex-direction: column;
         gap: 2vh;
+        align-self: center;
+        align-items: flex-start;
     }
 
     .footer-mid{
         flex-direction: column;
         gap: 2vh;
+        padding: 1.5rem;
     }
 
     .footer-mid-right-section{
@@ -623,5 +626,6 @@ a {
     .footer-low {
         flex-direction: column;
         padding: 1rem 2rem;
+        grid-area: 2rem;
     }
 }
