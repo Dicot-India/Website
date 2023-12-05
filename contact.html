@@ -100,7 +100,7 @@
                                 </select>
                                 <input type="tel" name="contact-no"
                                     id="contact-no" placeholder="Number"
-                                    pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}/"
+                                    pattern="[0-9]{10}"
                                     required
                                     title="Please enter valid phone number">
                                 </div>
@@ -178,7 +178,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="container-4">
                 <div class="container-4-titles">
                     <h1 class="container-4-title">Join Our Monthly IIoT Newsletter</h1>
@@ -187,7 +187,7 @@
                             IIoT And Much More</h2>
                     </div>
                 </div>
-                <div class="button">
+                <div class="button" onclick="signup()">
                     <input type="submit" value="Join Now" class="btn">
                 </div>
             </div>
@@ -327,27 +327,27 @@
     </button> -->
 
             <script>
-        // function signup() {
-        //     window.open('http://eepurl.com/hUzsQf', '_blank');
-        // }
-        // var mybutton = document.getElementById("btt");
-        // var mobmenu = document.getElementById("mobmenu");
-        // // When the user scrolls down 20px from the top of the document, show the button
-        // window.onscroll = function () { scrollFunction() };
+        function signup() {
+            window.open('http://eepurl.com/hUzsQf', '_blank');
+        }
+        var mybutton = document.getElementById("btt");
+        var mobmenu = document.getElementById("mobmenu");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
 
-        // function scrollFunction() {
-        //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        //         mybutton.style.display = "block";
-        //     } else {
-        //         mybutton.style.display = "none";
-        //     }
-        // }
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
 
         // When the user clicks on the button, scroll to the top of the document
-        // function topFunction() {
-        //     document.body.scrollTop = 0;
-        //     document.documentElement.scrollTop = 0;
-        // }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
 
         function showmenu() {
             if (mobmenu.style.display == "none") {

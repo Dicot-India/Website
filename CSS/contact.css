@@ -512,14 +512,23 @@ input[type=submit] {
         gap:10px;
     }
 
+    .container-4{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5vh;
+    }
+    
     .footer-top {
         flex-direction: column;
         gap: 2vh;
+        align-items: flex-start;
+        align-self: auto;
     }
 
     .footer-mid {
         flex-direction: column;
         gap: 2vh;
+        padding: 1.5rem;
     }
 
     .footer-mid-right-section {
@@ -529,5 +538,6 @@ input[type=submit] {
     .footer-low {
         flex-direction: column;
         padding: 1rem 2rem;
+        gap: 2rem;
     }
 }
