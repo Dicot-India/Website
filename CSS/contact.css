@@ -452,6 +452,16 @@ input[type=submit] {
     line-height: normal;
 }
 
+.scrollUpBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+    z-index: 5;
+}
 /* Media Query for Responsiveness */
 
 @media only screen and (max-width: 1280px) {
