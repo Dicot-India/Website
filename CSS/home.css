@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -545,6 +546,18 @@ a {
     bottom: 30px;
 }
 
+
+.scrollUpBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+    z-index: 5;
+}
+
 @media only screen and (max-width: 768px) {
 
     .logo {
@@ -579,6 +592,11 @@ a {
 
     .supporting-organizations-logo{
         width: 70%;
+    }
+
+    .container1Img{
+        display: flex;
+        justify-content: center;
     }
 
     .container-2-images{
@@ -626,6 +644,6 @@ a {
     .footer-low {
         flex-direction: column;
         padding: 1rem 2rem;
-        grid-area: 2rem;
+        gap: 2rem;
     }
 }

@@ -75,28 +75,28 @@
     <div class="container-1">
       <h1 class="container-1-title">Backed By</h1>
       <div class="container-1-images">
-        <div>
+        <div class="container1Img">
           <img
             class="supporting-organizations-logo"
             src="Assets/images/image 1.png"
             alt="make in india"
           />
         </div>
-        <div>
+        <div class="container1Img">
           <img
             class="supporting-organizations-logo"
             src="Assets/images/sui.png"
             alt="startupindia"
           />
         </div>
-        <div>
+        <div class="container1Img">
           <img
             class="supporting-organizations-logo"
             src="Assets/images/i-hub.png"
             alt="ihub"
           />
         </div>
-        <div>
+        <div class="container1Img">
           <img
             class="supporting-organizations-logo"
             src="Assets/images/WF-Logo.png"
@@ -362,11 +362,38 @@
         </div>
       </div>
     </footer>
-
+    <button class="scrollUpBtn" id="btt" onclick="topFunction()">
+      <img src="Assets/images/scrollUp.svg" alt="" srcset="" />
+    </button>
     <script>
       function signup() {
         window.open("http://eepurl.com/hUzsQf", "_blank");
       }
+
+      var mybutton = document.getElementById("btt");
+      var mobmenu = document.getElementById("mobmenu");
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
       function showmenu() {
         if (mobmenu.style.display == "none") {
           mobmenu.style.display = "flex";
@@ -434,5 +461,21 @@
         document.body.appendChild(css);
       };
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
   </body>
 </html>
