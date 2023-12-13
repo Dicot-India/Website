@@ -17,7 +17,7 @@
       name="description"
       content="Dicot deals in IIoT softwares such as SCADA, Data Logging Software, Data Acquisition Software, Remote Monitoring for acquisition of factory data. Dicot also deals into IoT gateways."
     />
-    <link rel="icon" href="./Assets/images/Favicon.png" />
+    <link rel="icon" href="/Assets/images/Favicon.ico">
     <meta
       http-equiv="Cache-control"
       content="public, max-age=31536000, immutable"
@@ -45,21 +45,21 @@
         <button aria-label="Menu" class="hamburger" onclick="showmenu()">
           <img src="Assets/images/hamburger.png" alt="Menu Icon" />
         </button>
-        <div class="mobmenu" id="mobmenu">
-          <span><a href="#">Home</a></span>
-          <span><a href="about.html">About</a></span>
-          <span><a href="products.html">Products</a></span>
-          <span><a href="contact.html">Contact</a></span>
-          <span><a href="https://blog.dicot.tech">Blog</a></span>
-          <span
-            ><a href="https://vision-web.tech" target="_blank" class="vWebLogin"
-              >Vision Web Login</a
-            ></span
-          >
-        </div>
       </div>
     </nav>
-
+    <div class="mobmenu" id="mobmenu">
+      <div class="closeButtonRow">
+        <button aria-label="Close Menu" class="closeButton" onclick="hidemenu()">
+          <img src="Assets/images/close.svg" alt="Close Menu Button">
+        </button>
+      </div>
+      <span><a href="#">Home</a></span>
+      <span><a href="about.html">About</a></span>
+      <span><a href="products.html">Products</a></span>
+      <span><a href="contact.html">Contact</a></span>
+      <span><a href="https://blog.dicot.tech">Blog</a></span>
+      <span><a href="https://vision-web.tech" target="_blank" >Vision Web Login</a></span>
+    </div>
     <div class="banner">
       <h1 class="black-text">REIMAGINING</h1>
       <h1
@@ -110,15 +110,15 @@
       <div class="container-2-main">
         <h1 class="container-2-title">Why We Are The Best?</h1>
         <div class="container-2-images">
-          <div>
+          <div class="container-2-card">
             <img src="Assets/images/timer.png" alt="timer" />
             <p class="inner-text">Superfast support</p>
           </div>
-          <div>
+          <div class="container-2-card">
             <img src="Assets/images/lettering ui text.png" alt="ui" />
             <p class="inner-text">Simplest UI</p>
           </div>
-          <div>
+          <div class="container-2-card">
             <img src="Assets/images/updates icon.png" alt="update" />
             <p class="inner-text">Regular Update</p>
           </div>
@@ -187,7 +187,7 @@
     <div class="container-4">
       <h1 class="container-4-title">Services</h1>
       <div class="container-4-mid">
-        <div>
+        <div class="container-4-cards">
           <img src="Assets/images/drone flying with package.png" />
           <h1 class="container-4-mid-content-head">OEM/White Labelling</h1>
           <p class="container-4-mid-content">
@@ -196,7 +196,7 @@
 
           <a href="#" class="container-4-mid-content">Get in Touch</a>
         </div>
-        <div>
+        <div class="container-4-cards">
           <img src="Assets/images/young man got an idea.png" />
           <h1 class="container-4-mid-content-head">IIoT Consultation</h1>
           <p class="container-4-mid-content">
@@ -206,7 +206,7 @@
 
           <a href="#" class="container-4-mid-content">Get in Touch</a>
         </div>
-        <div>
+        <div class="container-4-cards">
           <img src="Assets/images/design composition.png" />
           <h1 class="container-4-mid-content-head">Designing</h1>
           <p class="container-4-mid-content">
@@ -222,14 +222,12 @@
     <div class="container-5">
       <div class="container-5-titles">
         <h1 class="container-5-title">Join Our Monthly IIoT Newsletter</h1>
-        <div>
-          <h2 class="container-5-subtitle">
-            Get Updates About All Things IIoT And Much More
-          </h2>
-        </div>
+        <h2 class="container-5-subtitle">
+          Get Updates About All Things IIoT And Much More
+        </h2>
       </div>
       <div class="button" onclick="signup()">
-        <input type="submit" value="Join Now" class="btn" />
+        Join Now
       </div>
     </div>
 
@@ -246,14 +244,14 @@
           </a>
           <a href="https://linkedin.com/company/dicot-tech" target="_blank">
             <img
-              src="Assets/images/LInkedin.svg"
+              src="Assets/images/Linkedin.svg"
               alt="Linkedin"
               class="social-icon"
             />
           </a>
           <a href="https://youtube.com/@dicot" target="_blank">
             <img
-              src="Assets/images/Youtube.svg"
+              src="Assets/images/youtube.svg"
               alt="YouTube"
               class="social-icon"
             />
@@ -367,7 +365,7 @@
     </button>
     <script>
       function signup() {
-        window.open("http://eepurl.com/hUzsQf", "_blank");
+        window.open("https://zcmp.in/Xgc6", "_blank");
       }
 
       var mybutton = document.getElementById("btt");
@@ -395,11 +393,17 @@
       }
 
       function showmenu() {
-        if (mobmenu.style.display == "none") {
-          mobmenu.style.display = "flex";
-        } else {
+        mobmenu.style.display = "flex";
+        setTimeout(function () {
+          mobmenu.classList.add("show");
+        }, 50); // You can adjust the delay as needed
+      }
+
+      function hidemenu() {
+        mobmenu.classList.remove("show");
+        setTimeout(function () {
           mobmenu.style.display = "none";
-        }
+        }, 500); // Adjust the delay to match the transition duration
       }
 
       var TxtRotate = function (el, toRotate, period) {
