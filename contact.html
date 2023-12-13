@@ -21,207 +21,275 @@
 
 <body>
     <nav>
-        <div class="logo">
-            <img class="logoimg" data-src="Assets/images/Logo.svg" alt="Dicot" />
+        <div class="nav-inner">
+            <div class="logo">
+                <img class="logoimg" src="./Assets/images/Logo.svg" alt="Dicot" />
+            </div>
+            <div class="nav-items">
+                <span><a href="#">Home</a></span>
+                <span><a href="about.html">About</a></span>
+                <span><a href="products.html">Products</a></span>
+                <span><a href="contact.html">Contact</a></span>
+                <span><a href="https://blog.dicot.tech">Blog</a></span>
+                <span><a href="https://vision-web.tech" target="_blank" class="vWebLogin">Vision Web Login</a></span>
+            </div>
+            <button aria-label="Menu" class="hamburger" onclick="showmenu()">
+                <img src="./Assets/images/hamburger.png" alt="Menu Icon" />
+            </button>
         </div>
-        <div class="nav-items">
-            <span><a href="home.html">Home</a></span>
-            <span><a href="about.html">About</a></span>
-            <span><a href="products.html">Products</a></span>
-            <span><a href="#">Contact</a></span>
-            <span><a href="https://blog.dicot.tech">Blog</a></span>
-        </div>
-        <button class="hamburger" aria-label="Menu" onclick="showmenu()">
-            <img data-src="Assets/images/hamburger.png" alt="Menu Icon" />
-        </button>
     </nav>
     <div class="mobmenu" id="mobmenu">
-        <span><a href="home.html">Home</a></span>
+        <div class="closeButtonRow">
+            <button aria-label="Close Menu" class="closeButton" onclick="hidemenu()">
+                <img data-src="./Assets/images/close.svg" alt="Close Menu Button">
+            </button>
+        </div>
+        <span><a href="#">Home</a></span>
         <span><a href="about.html">About</a></span>
         <span><a href="products.html">Products</a></span>
-        <span><a href="#">Contact</a></span>
+        <span><a href="contact.html">Contact</a></span>
         <span><a href="https://blog.dicot.tech">Blog</a></span>
+        <span><a href="https://vision-web.tech" target="_blank">Vision Web Login</a></span>
     </div>
 
-    <div class="second">
-        <div class="container-1">
-            <h1 class="container-text">Contact us</h1>
-        </div>
-
-        <div class="container-2">
-
-            <div class="c2-s c-l">
-                <div>
-                    <h2 class="c2-s-title"> Postal Address</h2>
-                </div>
-                <div class="c2-address">
-                    Dicot Innovations Pvt. Ltd. A-805,<br />
-                    Siddhi Vinayak Towers,Off S. G. Road,<br />
-                    B/H. DCP Office and Adani CNG Pump,<br />
-                    Makarba, Ahmedabad GUJARAT INDIA<br />
-
-                    Pincode : 380 051
-                </div>
-
-
-                <div class="c2-email">
-                    <a href="mailto:hello@dicot.in">hello@dicot.in</a>
-                </div>
-                <div class="c2-number">
-                    <a href="tel:+917949185398">+91-7949185398</a>
-                </div>
-
-
+    <div class="container-2">
+        <div class="c2-s c-l">
+            <div>
+                <h2 class="c2-s-title"> Reach Us</h2>
+                <h2 class="c2-s-subtitle">Ahmedabad</h2>
+            </div>
+            <div class="c2-address">
+                Dicot Innovations Pvt. Ltd.<br />
+                A-805,Siddhi Vinayak Towers,<br />
+                Off S. G. Road, b/h DCP Office,<br />
+                Makarba, Ahmedabad,<br />
+                Gujarat India 380051
             </div>
 
+            <div class="c2-email">
+                <a href="mailto:hello@dicot.in">hello@dicot.in</a>
+            </div>
+            <div class="c2-number">
+                <a href="tel:+917949185398">+91-7949185398</a>
+            </div>
 
-            <div class="c2-s c-r">
-                <form id="contact-form" action="https://send.pageclip.co/RrhbucBImH3ihb4rvLpN8L39bB7nHVr6/contact-form"
-                    class="pageclip-form" method="post">
-                    <h2 class="c2-s-title">Get in touch</h2>
-                    <div class="c-form">
-                        <div class="line-1">
-                            <input type="text" id="firstname" name="fname" placeholder="First Name" required>
-                            <input type="text" id="lastname" name="lname" placeholder="Last Name" required>
-                            <input type="tel" name="contact-no" id="contact-no" placeholder="Contact Number"
-                                pattern="[0-9]{5}[-][0-9]{7}[-][0-9]{1}/" required
-                                title="Please enter valid phone number">
-                        </div>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
-                        <input type="text" name="subject" id="subject" placeholder="Subject">
-                        <textarea id="message" name="message" placeholder="Message" style="height: 150px;"
-                            required></textarea>
-                    </div>
-                    <input type="submit" class="submit-button g-recaptcha" value="Send"
-                        data-sitekey="6Lf_yJgfAAAAAPqLdZbUErH97vuDEI2fN_cUF0ts" data-callback='onSubmit'
-                        data-action='submit' />
-                </form>
+            <div class="c2-location">
+                <span class="c2-location-loc">Location: </span>
+                <a href="https://maps.app.goo.gl/9dq1yFbrY6qcJqct6" target="_blank"><u>Google
+                        Map</u></a> |
+                <a href="https://www.mappls.com/v3jwp1" target="_blank"><u>Map My India</u></a>
             </div>
         </div>
 
-        <div class="container-3">
-            <h2 class="c3-title">Distributors</h2>
-            <br>
-
-            <div class="distributors">
-                <div class="distributor">
-                    <h3 class="c3-st">Ahmedabad</h3>
-                    <div class="c3-tel">
-                        <a href="tel:+919428407592">+91-97234-62290</a>
+        <div class="c2-s c-r">
+            <form id="contact-form" action="https://send.pageclip.co/RrhbucBImH3ihb4rvLpN8L39bB7nHVr6/contact-form"
+                class="pageclip-form" method="post">
+                <h2 class="c2-s-title">Get in touch</h2>
+                <div class="c-form">
+                    <div class="line-1">
+                        <input type="text" id="firstname" name="fname" placeholder="First Name" required>
+                        <input type="text" id="lastname" name="lname" placeholder="Last Name" required>
                     </div>
-                    <div class="c3-email">
-                        <a href="mailto:sales@miconindia.com">sales@miconindia.com</a>
+                    <div class="line-2">
+                        <select>
+                            <option>+91</option>
+                            <option>+1</option>
+                            <option>+93</option>
+                        </select>
+                        <input type="tel" name="contact-no" id="contact-no" placeholder="Number" pattern="[0-9]{10}"
+                            required title="Please enter valid phone number">
                     </div>
-                    <div class="c3-address">
-                        Micon Automation Systems Private Limited<br>
-                        A-814, Siddhi Vinayak Towers, <br>
-                        Off S. G. Road, B/H. DCP Office,<br>
-                        Ahmedabad, Gujarat, India 380051
-                    </div>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea id="message" name="message" placeholder="Message" style="height: 150px;"
+                        required></textarea>
                 </div>
-                <div class="distributor">
-                    <h3 class="c3-st">Delhi</h3>
-                    <div class="c3-tel">
-                        <a href="tel:01141067733">011-41067733</a>
-                    </div>
-                    <div class="c3-tel">
-                        <a href="tel:+918882750888">+91 888 275 0888</a>
-                    </div>
-                    <div class="c3-email">
-                        <a href="mailto:sales@snoox.in">sales@snoox.in</a>
-                    </div>
-                    <div class="c3-address">
-                        Snoox Automation Private Limited<br>
-                        E-66&67, Office No:-7, 1st Floor, <br>
-                        Guru Nanak Pura,<br>
-                        New Delhi, Delhi, India 110058
-                    </div>
+                <input type="submit" class="submit-button g-recaptcha" value="Send"
+                    data-sitekey="6Lf_yJgfAAAAAPqLdZbUErH97vuDEI2fN_cUF0ts" data-callback='onSubmit'
+                    data-action='submit' />
+            </form>
+        </div>
+    </div>
+
+    <div class="container-3">
+        <h2 class="c3-title">Channel Partners</h2>
+
+        <div class="distributors">
+            <div class="distributor">
+                <h3 class="c3-st">Ahmedabad</h3>
+                <div class="c3-address">
+                    Micon Automation Systems Private Limited<br>
+                    A-814, Siddhi Vinayak Towers, <br>
+                    Off S. G. Road, B/H. DCP Office,<br>
+                    Ahmedabad, Gujarat, India 380051
+                </div>
+                <div class="c3-tel">
+                    <a href="tel:+919428407592">+91-97234-62290</a>
+                </div>
+                <div class="c3-email">
+                    <a href="mailto:sales@miconindia.com"><u>sales@miconindia.com</u></a>
                 </div>
             </div>
+            <div class="distributor">
+                <h3 class="c3-st">Delhi</h3>
+                <div class="c3-address">
+                    Snoox Automation Private Limited<br>
+                    E-66&67, Office No:-7, 1st Floor, <br>
+                    Guru Nanak Pura,<br>
+                    New Delhi, Delhi, India 110058
+                </div>
+                <div class="c3-tel">
+                    <a href="tel:01141067733">011-41067733</a>
+                </div>
+                <div class="c3-tel">
+                    <a href="tel:+918882750888">+91 888 275 0888</a>
+                </div>
+                <div class="c3-email">
+                    <a href="mailto:sales@snoox.in"><u>sales@snoox.in</u></a>
+                </div>
+            </div>
+            <div class="distributor">
+                <h3 class="c3-st">Gandhinagar</h3>
+                <div class="c3-address">
+                    Radical TechArt Soultions Pvt. Ltd.<br />
+                    B- 315, Swagat Rainforest 2,<br />
+                    beside Spices and Herbs<br />
+                    Restaurant, Gandhinagar, Gujarat<br />
+                    382421
+                </div>
+                <div class="c3-tel">
+                    <a href="tel:+919724278409">+91-97242-78409</a>
+                </div>
+                <div class="c3-email">
+                    <a href="mailto:radicaltechart@gmail.com"><u>radicaltechart@gmail.com</u></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-5">
+        <div class="container-5-titles">
+            <h1 class="container-5-title">Join Our Monthly IIoT Newsletter</h1>
+            <h2 class="container-5-subtitle">
+                Get Updates About All Things IIoT And Much More
+            </h2>
+        </div>
+        <div class="button" onclick="signup()">
+            Join Now
         </div>
     </div>
 
     <footer class="footer">
-        <div class="footer-part1">
-            <div class="footer-part1-s1">
-                <img data-src="Assets/images/dicot.svg" alt="">
-                <div class="footer-part1-data3-2">
-                    <div class="social">
-                        <a href="https://twitter.com/dicot_tech" target="_blank"><img
-                                data-src="Assets/images/TwitterButtoon.svg" alt="Twitter"></a>
-                        <a href="https://facebook.com/dicot.tech" target="_blank"><img
-                                data-src="Assets/images/FacebookButton.svg" alt="Facebook"></a>
-                        <a href="https://linkedin.com/company/dicot-tech" target="_blank"><img
-                                data-src="Assets/images/LinkedInButton.svg" alt="Linkedin"></a>
-                        <a href="https://instagram.com/dicot.tech" target="_blank"><img
-                                data-src="Assets/images/InstaButton.svg" alt="Instagram"></a>
-                        <a href="https://youtube.com/@dicot" target="_blank"><img data-src="Assets/images/youtube.svg"
-                                alt="YouTube"></a>
+        <div class="footer-top">
+            <span class="follow-text">Follow Dicot</span>
+            <div class="footer-social-icons">
+                <a href="https://instagram.com/dicot.tech" target="_blank">
+                    <img data-src="./Assets/images/Instagram.svg" alt="Instagram" class="social-icon" />
+                </a>
+                <a href="https://linkedin.com/company/dicot-tech" target="_blank">
+                    <img data-src="./Assets/images/Linkedin.svg" alt="Linkedin" class="social-icon" />
+                </a>
+                <a href="https://youtube.com/@dicot" target="_blank">
+                    <img data-src="./Assets/images/youtube.svg" alt="YouTube" class="social-icon" />
+                </a>
+                <a href="https://threads.net/@dicot.tech" target="_blank">
+                    <img data-src="./Assets/images/Threads.svg" alt="Threads" class="social-icon" />
+                </a>
+                <a href="https://twitter.com/dicot_tech" target="_blank">
+                    <img data-src="./Assets/images/X.svg" alt="X" class="social-icon" />
+                </a>
+                <a href="https://facebook.com/dicot.tech" target="_blank">
+                    <img data-src="./Assets/images/Facebook.svg" alt="Facebook" class="social-icon" />
+                </a>
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="footer-mid-p1">
+                <div class="detail-container">
+                    <h4 class="footer-mid-header">Dicot Innovations Private Limited</h4>
+
+                    <div class="company-details">
+                        <div class="footer-s2-detailtext">
+                            A-805, Siddhi Vinayak Towers,<br />
+                            Off S. G. Road, B/H. DCP Office,<br />
+                            Makarba, Ahmedabad,<br />
+                            Gujarat, India 380051
+                        </div>
+                    </div>
+                    <div class="compdetail">
+                        <div class="footer-s2-detailtext">
+                            <a href="mailto:hello@dicot.tech">hello@dicot.tech</a>
+                        </div>
+                    </div>
+                    <div class="compdetail">
+                        <div class="footer-s2-detailtext">
+                            <a href="tel:+917949185398">+91-7949185398</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-part1-s2">
-
-                <h3 class="footer-s2-title">
-                    Contact Us
-                </h3>
-                <div class="compdetail">
-                    <img class="footer-detailicon" data-src="Assets/images/Location.svg" alt="">
-                    <div class="footer-s2-detailtext">
-                        Dicot Innovations Pvt. Ltd. A-805,<br />
-                        Siddhi Vinayak Towers,Off S. G. Road,<br />
-                        B/H. DCP Office and Adani CNG Pump,<br />
-                        Makarba, Ahmedabad GUJARAT INDIA<br />
-                        Pincode: 380 051
+            <div class="footer-mid-right-section">
+                <div class="footer-mid-p">
+                    <h3 class="footer-mid-header">Company</h3>
+                    <div class="footer-qlink">
+                        <a href="#">Career</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="products.html">Downloads</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="#">News</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="#">Distribution Network</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="#">Customer Stories</a>
                     </div>
                 </div>
-
-
-                <div class="compdetail">
-                    <img class="footer-detailicon" data-src="Assets/images/Mail.svg" alt="">
-                    <div class="footer-s2-detailtext"><a href="mailto:hello@dicot.in">hello@dicot.in</a></div>
+                <div class="footer-mid-p">
+                    <h3 class="footer-mid-header">What's New</h3>
+                    <div class="footer-qlink">
+                        <a href="#">Vision C</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="#">Vision Web</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="#">VGraphic</a>
+                    </div>
                 </div>
-
-
-                <div class="compdetail">
-                    <img class="footer-detailicon" data-src="Assets/images/Call.svg" alt="">
-                    <div class="footer-s2-detailtext"><a href="tel:+917949185398">+91-7949185398</a></div>
-                </div>
-            </div>
-
-            <div class="footer-part1-s3">
-                <h3 class="footer-s3-title">
-                    Quick Links
-                </h3>
-                <div class="footer-qlink">
-                    <a href="#">Career</a>
-                </div>
-                <div class="footer-qlink">
-                    <a href="products.html">Downloads</a>
-                </div>
-                <div class="footer-qlink">
-                    <a href="#">Tutorials</a>
-                </div>
-                <div class="footer-qlink">
-                    <a href="#">News</a>
-                </div>
-                <div class="footer-qlink">
-                    <a href="https://vision-web.tech">Vision Web</a>
+                <div class="footer-mid-p">
+                    <h3 class="footer-mid-header">Stay in touch</h3>
+                    <div class="footer-qlink">
+                        <a href="mailto:support@dicot.tech?subject=Hi, I need some assistance!">Technical
+                            Support</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="https://reddit.com/r/Dicot" target="_blank">Community</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="https://whatsapp.com/channel/0029Va9zKGNFsn0jZ1TYtQ1D" target="_blank">WhatsApp
+                            Channel</a>
+                    </div>
+                    <div class="footer-qlink">
+                        <a href="https://t.me/+8N2nkr-DmwA5NjA1" target="_blank">Telegram Channel</a>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="footer-part2">
-            <div class="footer-rights">
-                Copyright © 2023 dicot.in and dicot.tech. All Rights Reserved. <a href="privacypolicy.html">Privacy
-                    Policy &nbsp;|</a><a href="TandC.html">&nbsp;Terms&nbsp;|</a><a href="randc.html">&nbsp;Refund
-                    Policy</a>
+        <div class="footer-low">
+            <div class="low-p1">© Dicot Innovations 2023</div>
+            <div class="low-p2">
+                <a href="TandC.html">Terms of use</a>
+                <a href="privacypolicy.html">Privacy Policy</a>
+                <a href="randc.html">Refund Policy</a>
             </div>
         </div>
     </footer>
-
-    <button class="btt" id="btt" onclick="topFunction()">
-        <img data-src="Assets/images/BTTButtop.svg" />
+    <button class="scrollUpBtn" id="btt" onclick="topFunction()">
+        <img src="Assets/images/scrollUp.svg" alt="" srcset="" />
     </button>
 
     <script>
@@ -248,16 +316,20 @@
         }
 
         function showmenu() {
-            if (mobmenu.style.display == "none") {
-                mobmenu.style.display = "flex";
-            }
-            else {
-                mobmenu.style.display = "none"
-            }
+            mobmenu.style.display = "flex";
+            setTimeout(function () {
+                mobmenu.classList.add("show");
+            }, 50); // You can adjust the delay as needed
+        }
+
+        function hidemenu() {
+            mobmenu.classList.remove("show");
+            setTimeout(function () {
+                mobmenu.style.display = "none";
+            }, 500); // Adjust the delay to match the transition duration
         }
     </script>
 
-    <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
@@ -269,7 +341,6 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-    <!--End of Tawk.to Script-->
 
     <script>
         (function () {
@@ -296,7 +367,21 @@
         })();
     </script>
 
+
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
