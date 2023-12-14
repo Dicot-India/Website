@@ -119,7 +119,7 @@ a {
 
 .mobmenu span a {
     color: #000000;
-    font-family: "Roboto";
+    font-family: "Inter",sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
