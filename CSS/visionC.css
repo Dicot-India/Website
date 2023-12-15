@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans:wght@200&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+img {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
+/* navbar */
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    width: 80%;
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    background: #ffffff80;
+    box-shadow: 0px 0px 10px 0px rgba(158, 158, 158, 0.25);
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.nav-items span a {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.hamburger {
+    width: 1.5rem;
+    display: none;
+    background-color: transparent;
+    border: none;
+}
+
+.mobmenu span {
+    width: 100%;
+    text-align: right;
+    padding: 0 20% 0 0;
+    opacity: 0;
+    /* Start with 0 opacity */
+    transform: translateY(20px);
+    /* Start position */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.mobmenu.show span {
+    opacity: 1;
+    /* End with full opacity when the menu is shown */
+    transform: translateY(0);
+    /* End position when the menu is shown */
+}
+
+.mobmenu span a {
+    color: #000000;
+    font-family: "Roboto";
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.container {
+    padding: 7rem 5% 0rem 5%;
+}
+
+.container-header {
+    text-align: center;
+    color: #0A0A28;
+    font-family: 'Inter', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.container-1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c1-image img {
+    width: 70vw;
+}
+
+.container-2 {
+    margin-top: 20px;
+}
+
+.c2-header {
+    text-align: center;
+    color: #0A0A28;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+
+.table-container {
+    border-radius: 0.625rem;
+    background: #0A0A28;
+}
+
+.table-header {
+    margin-top: 25px;
+    text-align: center;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+table {
+    border: 1px solid white;
+    font-family: 'Inter', sans-serif;
+}
+
+td,
+th {
+    color: white;
+}
+
+.dot {
+    /* height: 50px; */
+    width: 50px;
+    background-color: #00A711;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-inner {
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+
+    .logoimg {
+        width: 120px;
+    }
+
+
+    .nav-items {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger img {
+        width: 30px;
+    }
+}
