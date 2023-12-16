@@ -190,6 +190,7 @@ a {
     font-style: normal;
     font-weight: 300;
     padding: 1rem 0;
+    line-height: 150%;
 }
 
 .container-5 {
@@ -419,6 +420,7 @@ a {
 
     .c-text {
         text-align: center;
+        line-height: normal;
     }
 
     .container-5 {
