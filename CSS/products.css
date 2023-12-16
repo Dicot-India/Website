@@ -165,8 +165,14 @@ a {
     gap: 2rem;
 }
 
+.c-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .c-image img {
-    margin-top: 10px;
     width: 40vw;
 }
 
@@ -178,12 +184,12 @@ a {
 }
 
 .c-text {
-    margin: 25px 10px 0 10px;
     color: #000;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 300;
+    padding: 1rem 0;
 }
 
 .container-5 {
@@ -398,9 +404,13 @@ a {
         gap: 1rem;
     }
 
+    .c-header {
+        font-size: 2.5rem;
+    }
+
     .c-image img {
-        width: 50vw;
-        margin-left: 40px;
+        padding-top: 0.5rem;
+        width: 70vw;
     }
 
     .right {
