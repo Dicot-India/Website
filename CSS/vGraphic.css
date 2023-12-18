@@ -188,7 +188,7 @@ table {
     width: 100%;
     font-family: 'Inter', sans-serif;
     border-collapse: collapse;
-
+    padding: 9rem;
 }
 
 td,
@@ -218,8 +218,6 @@ th {
     display: flex;
 }
 
-
-
 .dot {
     height: 20px;
     width: 20px;
@@ -232,20 +230,6 @@ th {
     width: 20px;
     background-color: #A70000;
     border-radius: 50%;
-}
-
-.container-3 {
-    margin-top: 20px;
-}
-
-.c3-header {
-    text-align: center;
-    color: #0A0A28;
-    font-size: 40px;
-    font-family: 'inter', sans-serif;
-    font-weight: 400;
-    text-transform: capitalize;
-    word-wrap: break-word
 }
 
 .container-3 {
@@ -273,65 +257,10 @@ th {
     gap: 10%;
     flex: 1 0 0;
     align-self: stretch;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; 
 }
 
 .c3-head {
-    color: #000;
-    text-align: center;
-    font-family: 'Plus Jakarta Sans';
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: capitalize;
-}
-
-.c3-cards img {
-    width: 100%;
-}
-
-.robo {
-    height: 25vh;
-}
-
-.c3-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    width: 25%;
-}
-
-.container-4 {
-    display: flex;
-    flex-direction: column;
-    gap: 5vh;
-    padding: 10vh 8%;
-}
-
-.c4-title {
-    color: #0a0a28;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: capitalize;
-}
-
-.c4-mid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
-    flex: 1 0 0;
-    align-self: stretch;
-    flex-wrap: nowrap;
-}
-
-.c4-head {
     color: #000;
     text-align: center;
     font-family: 'Plus Jakarta Sans';
@@ -343,7 +272,7 @@ th {
 }
 
 
-.c4-cards {
+.c3-cards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,7 +280,7 @@ th {
     width: 20%;
 }
 
-.c4-cards img {
+.c3-cards img {
     width: 70px;
 }
 
@@ -373,7 +302,7 @@ th {
 }
 
 
-.container-5 {
+.container-4 {
     border-top: 1px solid #A5A5A5;
     display: flex;
     justify-content: center;
@@ -383,14 +312,14 @@ th {
     padding: 10vh 5%;
 }
 
-.c5-titles {
+.c4-titles {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
 }
 
-.c5-title {
+.c4-title {
     color: #0a0a28;
     text-align: center;
     font-family: "Inter", sans-serif;
@@ -401,7 +330,7 @@ th {
     text-transform: capitalize;
 }
 
-.c5-subtitle {
+.c4-subtitle {
     color: #5e5e5e;
     text-align: center;
     font-family: "Inter", sans-serif;
@@ -585,50 +514,26 @@ th {
         padding-left: 2rem;
     }
 
-
-    .container-3 {
-        padding: 0;
+    .c3-mid {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .c3-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .c3-head {
-        width: 80vw;
-    }
-
-    .c3-mid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .robo {
-        height: auto;
-    }
-
-    .c4-mid {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .c4-cards {
         width: 100%;
         gap: 0.5rem;
     }
 
-    .container-5 {
+    .container-4 {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .c5-title {
+    .c4-title {
         font-size: 1.5rem;
     }
 
-    .c5-subtitle {
+    .c4-subtitle {
         font-size: 1rem;
     }
 
