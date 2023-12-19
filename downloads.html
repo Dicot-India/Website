@@ -40,6 +40,11 @@
             </button>
         </nav>
         <div class="mobmenu" id="mobmenu">
+            <div class="closeButtonRow">
+                <button aria-label="Close Menu" class="closeButton" onclick="hidemenu()">
+                  <img src="./Assets/images/close.svg" alt="Close Menu Button">
+                </button>
+              </div>
             <span><a href="home.html">Home</a></span>
             <span><a href="about.html">About</a></span>
             <span><a href="products.html">Products</a></span>
@@ -259,6 +264,14 @@
                 mobmenu.style.display = "none"
             }
         }
+
+        function hidemenu() {
+        mobmenu.classList.remove("show");
+        setTimeout(function () {
+          mobmenu.style.display = "none";
+        }, 500); // Adjust the delay to match the transition duration
+      }
+
     </script>
 
         <!--Start of Tawk.to Script-->
