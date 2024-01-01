@@ -25,6 +25,7 @@ logs
 .vscode
 .idea
 *.code-workspace
+.vs
 
 # others
 *.env.local
