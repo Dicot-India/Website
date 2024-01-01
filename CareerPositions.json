@@ -1,24 +1,14 @@
 {
     "Positions": [
         {
+            "Position":"Sales & Marketing",
+            "JobDescription":"Job Description: Cold Calls and Emails, Follow-ups, Social Media Marketing, Support Coordination",
+            "Link":"https://forms.gle/rKU7kfUnX4vkswsc9"
+        },
+        {
             "Position":"Hardware Development Intern",
-            "JobDescription": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda vel nam ad a animi beatae. Excepturi commodi non magni beatae vitae fugit. Aspernatur, officia nisi nulla soluta beatae nemo cupiditate?",
-            "Link":"#"
-        },
-        {
-            "Position":"Software Engineer",
-            "JobDescription":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda vel nam ad a animi beatae. Excepturi commodi non magni beatae vitae fugit. Aspernatur, officia nisi nulla soluta beatae nemo cupiditate?",
-            "Link":"#"
-        },
-        {
-            "Position":"Senior Software Developer",
-            "JobDescription":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda vel nam ad a animi beatae. Excepturi commodi non magni beatae vitae fugit. Aspernatur, officia nisi nulla soluta beatae nemo cupiditate?",
-            "Link":"#"
-        },
-        {
-            "Position":"Human Resourse",
-            "JobDescription":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda vel nam ad a animi beatae. Excepturi commodi non magni beatae vitae fugit. Aspernatur, officia nisi nulla soluta beatae nemo cupiditate?",
-            "Link":"#"
+            "JobDescription": "Job Description: Design and develop various PCBs for networking devices, Design and develop new connector designs, Develop embedded software for the networking device",
+            "Link":"https://forms.gle/2so9AnSNNcWXvbCc6"
         }
     ]
 }
