@@ -3,17 +3,19 @@
 
 <head>
 
-  <title>Products | Dicot Innovations Private Limited</title>
+  <title>License Generator | Dicot Innovations Private Limited</title>
   <meta charset="utf-8">
   <meta name="keywords"
     content="Vision C, Vision Web, vgraphic, Dicot, Dicot India, Data Logging, Data Acquisition, IIoT, IoT, Data, Cloud, Remote Monitoring, Factory Data">
   <meta name="description"
     content="The three major products of the company are Vision C, Vision Web and VGraphic. There is a different use-case of each of the mentioned software.">
-  <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
   <meta name="HandheldFriendly" content="true">
-  <link rel="stylesheet" href="./CSS/products.css">
+  <link rel="stylesheet" href="./CSS/licenceGenerator.css">
   <link rel="icon" href="./Assets/images/Favicon.png">
   <meta http-equiv="Cache-control" content="public, max-age=31536000, immutable">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 
 <body>
@@ -52,76 +54,30 @@
   <div class="container">
     <div class="container-inner">
       <div class="c-header">
-        Vision C
+        Vision C Trial License Generator
       </div>
-      <div class="subcontainer">
-        <div class="c-image">
-          <img src="./Assets/images/Vision C.png" alt="visionC" />
+
+      <form id="licenseForm" method="post">
+        <input type="text" id="uvc" name="uvc" pattern="[A-Za-z0-9]{12}" placeholder="UVC">
+        <div class="emailContainer">
+          <input type="email" id="email" name="email" placeholder="Email">
+          <button type="button" class="verify-text" id="emailVerifyText" onclick="verifyModelOpen()">Verify</button>
         </div>
-        <div class="right">
-          <div class="c-text">
-            Vision C is a powerful mini-SCADA software that offers a wide range of features. One of its notable features
-            is its support for protocols such as Modbus RTU, AIBUS, and Modbus TCP/IP. With zero development time and
-            cost, Vision C provides a hassle-free experience for users. It also boasts a simple UI with live online
-            trend monitoring.
-            <br><br>
-            Additionally, Vision C supports multiple COM ports and Ethernet, allowing for flexible connectivity options.
-            The software ensures secure data recording with encryption and offers the convenience of generating PDF
-            reports. Users can customize their access levels, ensuring a personalized experience. Regular software
-            updates and AI optimizations further enhance the performance of Vision C.<br><br>
-          </div>
-          <div class="button" onclick="visionC()">
-            Know More
-          </div>
+        <div class="flexrow">
+          <input type="option" id="country" name="country" />
         </div>
-      </div>
-    </div>
-    <div class="container-inner">
-      <div class="c-header">
-        Vision Web
-      </div>
-      <div class="subcontainer">
-        <div class="c-image">
-          <img src="/Assets/images/VISION WEB.png" alt="visionWeb" />
+        <div class="buttonContainer">
+          <button id="generateBtn" class="generatebtn button" type="button" onclick="generateLicense()">Generate</button>
         </div>
-        <div class="right">
-          <div class="c-text">
-            Vision Web, a groundbreaking web-based mini-SCADA system, transforms industrial operations with innovative
-            features and a mere 100ms latency. Prioritizing user-friendly design, it slashes development time and costs,
-            setting a new standard in industrial software. The interface seamlessly blends simplicity and
-            sophistication, accommodating unlimited tags for unparalleled flexibility. Real-time insights, secure
-            user-level control, and robust API access make Vision Web a game-changer in Industrial IoT and SCADA
-            solutions, ensuring optimal performance for enterprises.<br><br>
-          </div>
-          <div class="button" onclick="visionWeb()">
-            Know More
-          </div>
+        <div class="licenseKeyContainer">
+          <label for="licenseKey">License Key:</label>
+          <input type="text" id="licenseKey" name="licenseKey">
+          <button type="button" class="copy-to-clip" id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
         </div>
-      </div>
-    </div>
-    <div class="container-inner">
-      <div class="c-header">
-        VGraphic
-      </div>
-      <div class="subcontainer">
-        <div class="c-image">
-          <img src="/Assets/images/VGraphic.png" alt="vgraphic" />
-        </div>
-        <div class="right">
-          <div class="c-text">
-            VGraphic the ultimate CSV to graph converter. Effortlessly turn raw data into visually compelling graphs
-            with this user-friendly software. Customize and enhance your visualizations, apply filters, and print
-            directly from the tool. Perfect for analysts, business professionals, and researchers, VGraphic is your
-            go-to solution for powerful and easy data visualization. Where data meets design, VGraphic delivers insights
-            at your fingertips.<br><br>
-          </div>
-          <div class="button" onclick="vGraphic()">
-            Know More
-          </div>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
+
   <div class="container-5">
     <div class="container-5-titles">
       <h1 class="container-5-title">Join Our Monthly IIoT Newsletter</h1>
@@ -245,6 +201,19 @@
     <img data-src="./Assets/images/scrollUp.svg" alt data-srcset />
   </button>
 
+  <div class="model" id="model">
+    <div class="model-form">
+      <div class="modelCloseContainer">
+        <button class="closeModelButton" onclick="closeModel()">
+          <img class="modelClose" src="./Assets/images/close.svg" alt="Close">
+        </button>
+      </div>
+      <h1>Enter OTP</h1>
+      <input type="password" id="otp" class="otp-input">
+      <button class="button" onclick="verifyOTP()">Submit</button>
+    </div>
+  </div>
+
   <script>
     function signup() {
       window.open('http://eepurl.com/hUzsQf', '_blank');
@@ -351,6 +320,177 @@
       location.href = "https://dicot.tech/contact.html";
     }
   </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+  <script>
+    // Initialize the intlTelInput plugin
+    var input = document.querySelector("#country");
+    var iti = window.intlTelInput(input, {
+      initialCountry: "IN",
+      separateDialCode: true,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+
+    // Populate the country code dropdown
+    var countryDropdown = document.getElementById("country");
+    var countryList = iti.getCountries();
+    for (var i = 0; i < countryList.length; i++) {
+      var option = document.createElement("option");
+      option.value = countryList[i];
+      option.text = iti.getCountryData()[countryList[i]].name;
+      countryDropdown.add(option);
+    }
+
+    // Set the selected country code in the hidden input field for form submission
+    input.addEventListener('countrychange', function (e) {
+      var selectedCountry = iti.getSelectedCountryData();
+      document.getElementById("country").value = selectedCountry.iso2;
+    });
+
+    // Function to handle email verification
+    function verifyEmail() {
+      var email = document.getElementById("email").value;
+
+      function validateEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+
+
+      }
+      if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return false
+      }
+
+      else {
+        fetch("http://13.127.24.164:8000/EmailVerification?email=" + email, {
+          method: "post",
+          mode: "no-cors", headers: {
+            "Content-Type": "application/json"
+          },
+
+        }).catch((error) => {
+          console.log(error);
+        });
+        return true
+
+      }
+
+    }
+
+    async function verifyOTP() {
+      var otp = document.getElementById("otp").value;
+      const response = await fetch("http://13.127.24.164:8000/verifyOtp", {
+        method: "post",
+        mode: "cors", headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          otp: otp
+        })
+      }).catch((error) => {
+        console.log(error);
+      });
+
+      if (!response.ok) {
+        alert('Incorrect OTP Entered')
+      }
+      else {
+        document.getElementById("email").disabled = true;
+        closeModel();
+        document.getElementById("generateBtn").classList.add("showGenerate");
+      }
+    }
+
+    function verifyModelOpen() {
+      const isValidEmail = verifyEmail();
+      if (isValidEmail) {
+        const model = document.getElementById("model");
+        model.classList.add("showModel");        
+      }
+      else {
+        alert(isValidEmail)
+      }
+    }
+
+    function closeModel() {
+      const model = document.getElementById("model");
+      model.classList.remove("showModel");
+    }
+
+    async function generateLicense() {
+      let uvc = document.getElementById("uvc").value;
+      let email = document.getElementById("email").value;
+      let country = document.getElementById("country").value;
+
+      if (uvc.trim() === '') {
+        alert('UVC field must not be empty.');
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+      }
+
+      if (country.trim() === '' || !validateMobileNumber(country)) {
+        alert('Mobile Number must be of 10 digits.');
+        return;
+      }
+
+      verifyUVC(email, uvc, country);
+    }
+
+    async function verifyUVC(email, UVC, country) {
+
+      const urlencoded = new URLSearchParams();
+      urlencoded.append("email", email);
+      urlencoded.append("UVC", UVC);
+      urlencoded.append("phone", country);
+
+      const response = await fetch("http://13.127.24.164:5000/license", {
+        method: "post",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: urlencoded,
+      }).catch((error) => {
+        console.log(error);
+      });
+
+      const responseData = await response.json();
+      if (!response.ok) {
+        alert(responseData.error);
+
+      } else {
+        // Handle success, if needed
+        const licenseField = document.getElementById("licenseKey");
+        licenseField.value = responseData.license_key;
+        licenseField.setAttribute("readonly", "true")
+        document.getElementById("generateBtn").classList.remove("showGenerate");
+
+      }
+    }
+
+
+    function validateEmail(email) {
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    function validateMobileNumber(mobileNumber) {
+      var mobileNumberRegex = /^\d{10}$/;
+      return mobileNumberRegex.test(mobileNumber);
+    }
+
+    function copyToClipboard(){
+      const licenseField = document.getElementById("licenseKey");
+      licenseField.select();
+      navigator.clipboard.writeText(licenseField.value);
+    };
+
+  </script>
+
 </body>
 
 </html>

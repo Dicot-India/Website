@@ -1,11 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans:wght@200&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
 
 html {
     scroll-behavior: smooth;

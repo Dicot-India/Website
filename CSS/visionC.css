@@ -355,13 +355,21 @@ th {
     width: 70px;
 }
 
+.btnWrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
     display: flex;
     padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
     color: #fff;
-    text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     font-weight: 300;
@@ -370,8 +378,15 @@ th {
     cursor: pointer;
     width: 150px;
     align-self: center;
+    border: none;
 }
 
+.trialLicense{
+    font-family: 'Plus Jakarta Sans';
+    /* color: red; */
+    text-decoration: underline;
+    font-weight: 600;
+}
 
 .container-5 {
     border-top: 1px solid #A5A5A5;

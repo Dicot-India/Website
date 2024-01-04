@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans:wght@200&display=swap");
 
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 html {
@@ -57,7 +57,7 @@ nav {
     text-decoration: none;
 }
 
-a {
+a{
     text-decoration: none;
     color: #000000;
 }
@@ -132,151 +132,32 @@ a {
     text-decoration: none;
 }
 
-.container-2 {
+.container {
+    padding: 7rem 5% 0rem 5%;
+}
+
+.container-inner {
+    margin-top: 2rem;
+    padding: 1rem 3rem 2rem 3rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-around;
-    padding: 7rem 0 30px 0;
-}
-
-.c2-s-title {
-    margin-top: 5px;
-    color: #0A0A28;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.c2-s-subtitle {
-    color: #000;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 10px;
-}
-
-.c-l {
-    width: 30%;
-    font-size: 20px;
-}
-
-.c-r {
-    width: 50%;
-}
-
-.c-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.line-1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.line-1 input {
-    width: 19rem;
-    border-radius: 0.625rem;
-    background: #E6E6E6;
-    font-family: 'Inter', sans-serif;
-}
-
-h2 {
-    font-size: 30px;
-    font-family: 'Sora';
-}
-
-.line-2 {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.9375rem;
-    align-self: stretch;
-}
-
-.line-2 input {
-    width: 100%;
-}
-
-.c-form select {
-    color: #8D8D8D;
-    font-family: 'Inter',sans-serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    margin: 10px 0 10px 0;
-    display: flex;
-    padding: 0.6875rem 1.1875rem;
-    justify-content: center;
     align-items: center;
-    gap: 1.1875rem;
-    border-radius: 0.625rem;
-    background: #E6E6E6;
-    border: 1px solid #b8b8b8;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    flex-direction: column;
 }
 
-.c-form input,
-textarea {
-    font-size: 20px;
-    padding: 10px 5px 10px 5px;
-    margin: 10px 0 10px 0;
-    border-radius: 5px;
-    border: 1px solid #b8b8b8;
-    border-radius: 0.625rem;
-    background: #E6E6E6;
-}
-
-input[type=submit] {
-    background-color: #2D5BFF;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.c2-address,
-.c2-email,
-.c2-number,
-.c2-location {
-    margin-top: 30px;
-}
-
-.container-3 {
-    padding-left: 10%;
-    padding-bottom: 60px;
-    padding-top: 30px;
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.distributors {
+.c-header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 5%;
-}
-
-.c3-title {
+    justify-content: center;
     color: #000;
+    text-align: center;
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-}
-
-.c3-tel,
-.c3-email,
-.c3-address {
-    margin-top: 10px;
+    text-transform: capitalize;
 }
 
 .container-5 {
@@ -318,17 +199,19 @@ input[type=submit] {
 }
 
 .button {
+    width: 10rem;
+    height: 3rem;
     display: flex;
     padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
     color: #fff;
     text-align: center;
-    font-family: "Inter", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 1rem;
     font-weight: 300;
     text-transform: capitalize;
-    border-radius: 0.625rem;
+    border-radius: 0.2rem;
     background: #4747d1;
     cursor: pointer;
 }
@@ -339,9 +222,8 @@ input[type=submit] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    align-self: stretch;
     background-color: #e8e8e8;
+    width: 100%;
 }
 
 .footer-top {
@@ -446,7 +328,8 @@ input[type=submit] {
     font-weight: 400;
 }
 
-.scrollUpBtn{
+
+.scrollUpBtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -457,11 +340,7 @@ input[type=submit] {
     z-index: 5;
 }
 
-@media only screen and (max-width: 1280px) {
-    .logo {
-        padding-left: 1%;
-    }
-}
+/* Media Query for Responsiveness */
 
 @media only screen and (max-width: 800px) {
     .logo {
@@ -484,35 +363,13 @@ input[type=submit] {
         width: 30px;
     }
 
-    .container-2 {
+    .subcontainer {
         flex-direction: column;
+        gap: 1rem;
     }
 
-    .c-l,
-    .c-r {
-        width: 80%;
-        margin-left: 10%;
-        margin-top: 30px;
-    }
-
-    .line-1 {
-        flex-direction: column;
-    }
-
-    .line-1 input {
-        width: 100%;
-    }
-
-    .line-2 {
-        flex-direction: row;
-    }
-
-    .line-2 input{
-        width: 100%;
-    }
-
-    .distributors{
-        gap:10px;
+    .c-header {
+        font-size: 2.5rem;
     }
 
     .container-5 {
@@ -527,7 +384,7 @@ input[type=submit] {
     .container-5-subtitle {
         font-size: 1rem;
     }
-    
+
     .footer-top {
         flex-direction: column;
         gap: 1rem;
@@ -549,8 +406,186 @@ input[type=submit] {
     .low-p2 {
         font-size: .75rem;
     }
-    
+
     .scrollUpBtn {
         bottom: 10vh;
     }
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+#licenseForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem;
+    background-color: #fff;
+    width: 60%;
+    gap: 1rem;
+}
+
+.emailContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.generatebtn{
+    flex-direction: row-reverse;
+    height: 2.3rem;
+    padding: 2px;
+    border: none;
+    display: none;
+}
+
+.showGenerate{
+    display: flex;
+}
+
+
+#copyButton{
+    cursor: pointer;
+}
+
+#mobile{
+    width: 40%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.verify-text {
+    border: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.copy-to-clip{
+    font-family: 'Plus Jakarta Sans';
+    border: none;
+    background: none;
+    /* text-decoration: underline; */
+    color: red;
+    /* text-decoration: underline; */
+    font-weight: 600;
+}
+
+#country {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e8e8e8;
+    box-sizing: border-box;
+}
+
+#email{
+    width: 50%;
+}
+
+#uvc {
+    width: 100% !important;
+}
+
+
+#licenseKey {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.buttonContainer{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+input:focus {
+    outline: none;
+}
+
+.licenseKeyContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 100%;
+}
+
+.copy-to-clip {
+    text-align: right;
+}
+
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.model-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 20%;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.modelCloseContainer{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modelClose{
+    width: 1.5rem;
+    position: relative;
+    right: 0 !important;
+}
+
+.showModel {
+    display: flex;
+}
+
+.closeModelButton{
+    border: none;
+    background: none;
+    cursor: pointer;
+
 }
