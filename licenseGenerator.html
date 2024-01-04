@@ -67,7 +67,7 @@
           <input type="option" id="country" name="country" />
         </div>
         <div class="buttonContainer">
-          <button id="generateBtn" class="generatebtn button" type="button" onclick="generateLicense()">Generate</button>
+          <button id="generateBtn" class="generatebtn" type="button" onclick="generateLicense()">Generate</button>
         </div>
         <div class="licenseKeyContainer">
           <label for="licenseKey">License Key:</label>
@@ -267,60 +267,42 @@
         mobmenu.style.display = "none";
       }, 500); // Adjust the delay to match the transition duration
     }
-  </script>
 
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
-
-  <script>
-    (function () {
-      var elements = document.querySelectorAll('img[data-src]');
-      var index = 0;
-      var lazyLoad = function () {
-        if (index >= elements.length) return;
-        var item = elements[index];
-        if ((this.scrollY + this.innerHeight) > item.offsetTop) {
-          var src = item.getAttribute("data-src");
-          item.src = src;
-          item.addEventListener('load', function () {
-            item.removeAttribute('data-src');
-          });
-          index++;
+        var elements = document.querySelectorAll('img[data-src]');
+        var index = 0;
+        var lazyLoad = function () {
+          if (index >= elements.length) return;
+          var item = elements[index];
+          if ((this.scrollY + this.innerHeight) > item.offsetTop) {
+            var src = item.getAttribute("data-src");
+            item.src = src;
+            item.addEventListener('load', function () {
+              item.removeAttribute('data-src');
+            });
+            index++;
+            lazyLoad();
+          }
+        };
+        var init = function () {
+          window.addEventListener('scroll', lazyLoad);
           lazyLoad();
+        };
+        return init();
+      })();
+      function download_vc() {
+          location.href = "https://dicot.in/VisionCsetup.exe";
         }
-      };
-      var init = function () {
-        window.addEventListener('scroll', lazyLoad);
-        lazyLoad();
-      };
-      return init();
-    })();
-  </script>
-  <script>
-    function download_vc() {
-      location.href = "https://dicot.in/VisionCsetup.exe";
-    }
 
-    function download_vg() {
-      location.href = "https://dicot.in/VGsetup.exe";
-    }
+        function download_vg() {
+          location.href = "https://dicot.in/VGsetup.exe";
+        }
 
-    function get_quote() {
-      location.href = "https://dicot.tech/contact.html";
-    }
-  </script>
-
+        function get_quote() {
+          location.href = "https://dicot.tech/contact.html";
+        }
+      </script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
   <script>
     // Initialize the intlTelInput plugin
@@ -406,7 +388,7 @@
       const isValidEmail = verifyEmail();
       if (isValidEmail) {
         const model = document.getElementById("model");
-        model.classList.add("showModel");        
+        model.classList.add("showModel");
       }
       else {
         alert(isValidEmail)
@@ -483,13 +465,26 @@
       return mobileNumberRegex.test(mobileNumber);
     }
 
-    function copyToClipboard(){
+    function copyToClipboard() {
       const licenseField = document.getElementById("licenseKey");
       licenseField.select();
       navigator.clipboard.writeText(licenseField.value);
     };
-
   </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 
 </body>
 

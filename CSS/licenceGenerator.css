@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Plus+Jakarta+Sans:wght@200&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -57,7 +57,7 @@ nav {
     text-decoration: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: #000000;
 }
@@ -194,15 +194,25 @@ a{
     width: 100%;
 }
 
-.generatebtn{
-    flex-direction: row-reverse;
+.generatebtn {
     height: 2.3rem;
-    padding: 2px;
+    padding: 1rem 2rem;
     border: none;
     display: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    border-radius: 0.2rem;
+    background: #4747d1;
+    cursor: pointer;
 }
 
-.showGenerate{
+.showGenerate {
     display: flex;
 }
 
@@ -210,7 +220,7 @@ a{
     width: 100% !important;
 }
 
-#email{
+#email {
     width: 50%;
 }
 
@@ -221,7 +231,7 @@ a{
     box-sizing: border-box;
 }
 
-.buttonContainer{
+.buttonContainer {
     width: 100%;
     flex-direction: row;
     justify-content: flex-end;
@@ -241,7 +251,7 @@ a{
     font-weight: bold;
 }
 
-.copyToClip{
+.copyToClip {
     font-family: 'Plus Jakarta Sans';
     border: none;
     background: none;
@@ -251,7 +261,7 @@ a{
     text-align: right;
 }
 
-#copyButton{
+#copyButton {
     cursor: pointer;
 }
 
@@ -461,14 +471,14 @@ a{
     padding: 1rem;
 }
 
-.modelCloseContainer{
+.modelCloseContainer {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
 }
 
-.closeModelButton{
+.closeModelButton {
     border: none;
     background: none;
     cursor: pointer;
@@ -478,7 +488,7 @@ a{
     display: flex;
 }
 
-.modelClose{
+.modelClose {
     width: 1.5rem;
     position: relative;
     right: 0 !important;
@@ -512,7 +522,7 @@ a{
         gap: 1rem;
     }
 
-    .container-inner{
+    .container-inner {
         padding: 1rem 2rem;
     }
 
@@ -520,16 +530,16 @@ a{
         font-size: 1.5rem;
     }
 
-    #licenseForm{
+    #licenseForm {
         width: 90%;
         padding: 1rem 0;
     }
 
-    #country{
+    #country {
         width: 100%;
     }
 
-    .button{
+    .button {
         width: 6rem;
         height: 2rem;
         font-size: 0.75rem;
@@ -581,7 +591,7 @@ h2 {
 }
 
 
-#mobile{
+#mobile {
     width: 40%;
 }
 
