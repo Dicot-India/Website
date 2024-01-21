@@ -344,19 +344,35 @@
       }
       else {
         console.log("sending otp");
-        fetch("http://13.127.24.164:8000/EmailVerification?email=" + email, {
-          method: "post",
-          mode: "cors", headers: {
-            "Content-Type": "application/json"
-          },
-        }).catch((error) => {
-          console.log(error);
-        }).then((response) => {
-          console.log(response);
-          return true;
-        })
+        // fetch("http://13.127.24.164:8000/EmailVerification?email=" + email, {
+        //   method: "post",
+        //   mode: "cors", headers: {
+        //     "Content-Type": "application/json"
+        //   },
+        // }).catch((error) => {
+        //   console.log(error);
+        // }).then((response) => {
+        //   console.log(response);
+        //   return true;
+        // })
+        makeJsonpRequest(email);
       }
     }
+
+    function makeJsonpRequest(email) {
+        const script = document.createElement('script');
+        const url = `http://13.127.24.164:8000/EmailVerification?email=${email}&callback=handleResponse`;
+
+        script.src = url;
+        document.head.appendChild(script);
+
+        // Clean up the script tag to avoid memory leaks
+        script.onload = () => document.head.removeChild(script);
+        script.onerror = () => {
+          console.error('Error loading script.');
+          document.head.removeChild(script);
+        };
+      }
 
     async function verifyOTP() {
       var otp = document.getElementById("otp").value;
