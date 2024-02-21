@@ -303,6 +303,11 @@ th {
     width: 25%;
 }
 
+.video-frame {
+    height: 720px;
+    width: 100%;
+}
+
 .container-4 {
     display: flex;
     flex-direction: column;
@@ -355,7 +360,7 @@ th {
     width: 70px;
 }
 
-.btnWrapper{
+.btnWrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -381,7 +386,7 @@ th {
     border: none;
 }
 
-.trialLicense{
+.trialLicense {
     font-family: 'Plus Jakarta Sans';
     /* color: red; */
     text-decoration: underline;

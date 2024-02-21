@@ -301,6 +301,10 @@ th {
     align-self: center;
 }
 
+.video-frame {
+    height: 720px;
+    width: 100%;
+}
 
 .container-4 {
     border-top: 1px solid #A5A5A5;
