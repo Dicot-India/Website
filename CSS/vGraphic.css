@@ -124,11 +124,11 @@ a {
 }
 
 .container-header {
-    padding: 7rem 5% 0rem 5%;
+    padding: 15vh 0 1rem 0;
     text-align: center;
     color: #0A0A28;
     font-family: 'Inter', sans-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
 }
 
@@ -140,25 +140,39 @@ a {
     align-items: center;
 }
 
+.c1-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .c1-image img {
-    width: 70vw;
+    box-shadow: 0px 0px 8px #bdbdbd;
+    border: 10px solid #fff;
+    width: 50%;
+    border-radius: 0.5rem;
 }
 
 .shadow {
-    width: 50vw;
+    width: 30%;
 }
 
 .container-2 {
-    padding: 2rem;
+    padding: 6rem;
 }
 
 .c2-header {
     text-align: center;
     color: #0A0A28;
     font-family: 'Inter', sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
-    padding: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
 }
 
 
@@ -297,17 +311,18 @@ th {
     border-radius: 0.625rem;
     background: #4747d1;
     cursor: pointer;
-    width: 150px;
+    width: 200px;
     align-self: center;
 }
 
 .video-frame {
+    padding: 3rem 10% 3rem 10%;
     height: 720px;
     width: 100%;
+    border-radius: 0.5rem;
 }
 
 .container-4 {
-    border-top: 1px solid #A5A5A5;
     display: flex;
     justify-content: center;
     align-items: center;
