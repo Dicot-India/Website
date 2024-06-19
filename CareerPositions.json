@@ -1,24 +1,29 @@
 {
     "Positions": [
-        {
-            "Position":"Sales & Marketing",
-            "JobDescription":"Job Description: Cold Calls and Emails, Follow-ups, Social Media Marketing, Support Coordination",
-            "Link":"https://forms.gle/rKU7kfUnX4vkswsc9"
-        },
-        {
-            "Position":"Hardware Development Intern",
-            "JobDescription": "Job Description: Design and develop various PCBs for networking devices, Design and develop new connector designs, Develop embedded software for the networking device",
-            "Link":"https://forms.gle/2so9AnSNNcWXvbCc6"
-        },
-        {
-            "Position":"UI/UX Intern",
-            "JobDescription": "Job Description: Design UI/UX of various products and social media posts",
-            "Link":"https://forms.gle/CXYqGbuzDZ4uLzuG6"
-        },
-        {
-            "Position":"Web Development Intern",
-            "JobDescription": "Job Description: Design and develop APIs, Front-end applications and UI/UX for some of our products",
-            "Link":"https://forms.gle/1eDoApD18YZUBS2L8"
-        }
+      {
+        "Position": "Sales & Marketing",
+        "JobDescription": "Job Description: Cold Calls and Emails, Follow-ups, Social Media Marketing, Support Coordination",
+        "Link": "https://forms.gle/rKU7kfUnX4vkswsc9"
+      },
+      {
+        "Position": "Founder's Office Intern",
+        "JobDescription": "Job Description: Documentation, PPt., Emails, Follow-ups, Support Coordination",
+        "Link": "https://forms.gle/y2BKwcRePZZMkFk78"
+      },
+      {
+        "Position": "Hardware Development Intern",
+        "JobDescription": "Job Description: Design and develop various PCBs for networking devices, Design and develop new connector designs, Develop embedded software for the networking device",
+        "Link": "https://forms.gle/2so9AnSNNcWXvbCc6"
+      },
+      {
+        "Position": "UI/UX Intern",
+        "JobDescription": "Job Description: Design UI/UX of various products and social media posts",
+        "Link": "https://forms.gle/CXYqGbuzDZ4uLzuG6"
+      },
+      {
+        "Position": "Web Development Intern",
+        "JobDescription": "Job Description: Design and develop APIs, Front-end applications and UI/UX for some of our products",
+        "Link": "https://forms.gle/1eDoApD18YZUBS2L8"
+      }
     ]
 }
