@@ -2,10 +2,17 @@
 
 // Create connection to the database
 function connectToDB() {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "autoexpo24";
+    require __DIR__ . '/vendor/autoload.php';
+
+    use Dotenv\Dotenv;
+
+    // Load .env file
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+    $servername = $_ENV['DB_HOST'];
+    $username =  $_ENV['DB_DATABASE'];
+    $password =$_ENV['DB_USERNAME'];
+    $dbname = $_ENV['DB_PASSWORD'];
     
     // Create a new mysqli connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,7 +29,7 @@ function connectToDB() {
 function insertData($conn, $companyName, $customerName, $phoneNo, $email, $product) {
     try{
         // Start building the SQL query
-        $query = "INSERT INTO inquries";
+        $query = "INSERT INTO Inquires";
         
         // Initialize the keys and values parts of the SQL query
         $key = "(Name, Company, Phone, Email";
