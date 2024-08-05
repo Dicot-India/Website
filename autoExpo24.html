@@ -70,9 +70,8 @@
         </div>
 
         <div class="c2-s c-r">
-            <form id="autoExpo24-form" method="post"
-                action="https://send.pageclip.co/1u2hCKL5TwLTilGuQUGOBSf2Ix59FatY/autoExpo24-form"
-                class="pageclip-form">
+            <form id="autoExpo24-form" method="post" action="#" onsubmit="submitForm(event)">
+                
                 <div class="c-form">
                     <div class="line-1">
                         <input type="text" id="companyName" name="companyName" class="cFormInput"
@@ -91,26 +90,26 @@
                     <label><b>Interested In</b></label>
                     <div class="productlist">
                         <div class="product">
-                            <input type="checkbox" name="dicotproduct[visionc]" id="visionc" class="productInput" />
+                            <input type="checkbox" name="dicotproduct[]" value="visionc" class="productInput" />
                             <label>
                                 Vision-C
                             </label>
 
                         </div>
                         <div class="product">
-                            <input type="checkbox" name="dicotproduct[visionweb]" id="visionweb" class="productInput" />
+                            <input type="checkbox" name="dicotproduct[]" value="visionweb" class="productInput" />
                             <label>
                                 Vision-Web
                             </label>
                         </div>
                         <div class="product">
-                            <input type="checkbox" name="dicotproduct[dstick]" id="dstick" class="productInput" />
+                            <input type="checkbox" name="dicotproduct[]" value="dstick" class="productInput" />
                             <label>
                                 D-Stick
                             </label>
                         </div>
                         <div class="product">
-                            <input type="checkbox" name="dicotproduct[otherremark]" id="otherremark" class="productInput" />
+                            <input type="checkbox" name="dicotproduct[]" value="otherremark" class="productInput" />
                             <label>
                                 Other Remark
                             </label>
@@ -118,7 +117,7 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit" class="pageclip-form__submit " id="button">
+                        <button type="submit" id="button">
                             <span>Send</span>
                         </button>
                     </div>
@@ -245,12 +244,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
     <script>
-        var form = document.querySelector('.pageclip-form')
-        Pageclip.form(form, {
-            onSubmit: function (event) { },
-            onResponse: function (error, response) { },
-            successTemplate: '<span>Thank you!</span>'
-        })
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var form = document.getElementById('autoExpo24-form');
+            var formData = new FormData(form);
+
+            fetch('formData.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json()) // Expect JSON response
+                .then(data => {
+                    if (data.success) {
+                        alert('Form submitted successfully!');
+                        form.reset(); // Optionally reset the form
+                    } else {
+                        alert('Error: ' + data.error); // Display error from PHP
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An unexpected error occurred.');
+                });
+        }
         // Initialize the intlTelInput plugin
         var input = document.querySelector("#contact-no");
         var iti = window.intlTelInput(input, {
