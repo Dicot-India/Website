@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://www.dicot.tech/products.html</loc>
+		<priority>1.00</priority>
+		<lastmod>2024-06-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/home.html</loc>
+		<priority>1.00</priority>
+		<lastmod>2024-06-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/about.html</loc>
+		<priority>1.00</priority>
+		<lastmod>2024-07-24</lastmod>
+	</url>
+	<url>
 		<loc>https://www.dicot.tech/visionWeb.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-19</lastmod>
@@ -26,11 +41,6 @@
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/products.html</loc>
-		<priority>1</priority>
-		<lastmod>2024-06-19</lastmod>
-	</url>
-	<url>
 		<loc>https://www.dicot.tech/privacypolicy.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-19</lastmod>
@@ -38,11 +48,6 @@
 	<url>
 		<loc>https://www.dicot.tech/licenseGenerator.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-06-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.dicot.tech/home.html</loc>
-		<priority>1</priority>
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
@@ -61,13 +66,13 @@
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/about.html</loc>
-		<priority>1</priority>
-		<lastmod>2024-07-24</lastmod>
-	</url>
-	<url>
 		<loc>https://www.dicot.tech/VisitingCards/Nandan.html</loc>
 		<priority>0.33</priority>
 		<lastmod>2022-04-25</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/blog/home.html</loc>
+		<priority>0.1</priority>
+		<lastmod>2024-08-15</lastmod>
 	</url>
 </urlset>
