@@ -214,7 +214,7 @@
             </div>
         </div>
     </footer>
-    <script defer src="./swiper-bundle.min.js"></script>
+    <script src="./swiper-bundle.min.js"></script>
 
     <script defer>
         function signup() {
@@ -255,10 +255,8 @@
                     <p>${card.JobDescription}</p>
                     <a class="button" target="_blank" href="${card.Link}">Apply</a>
                 </div>
-            `).join("");
+            `).join();
                         cardContainer.innerHTML = cardHTML;
-
-                        
                     }).then(()=>{
                         // Initialize Swiper after the cards have been inserted
                         var swiper = new Swiper(".c2-cards", {
