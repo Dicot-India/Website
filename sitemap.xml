@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.dicot.tech/products.html</loc>
+		<loc>https://www.dicot.tech/about.html</loc>
 		<priority>1.00</priority>
-		<lastmod>2024-06-19</lastmod>
+		<lastmod>2024-07-24</lastmod>
 	</url>
 	<url>
 		<loc>https://www.dicot.tech/home.html</loc>
@@ -11,42 +11,17 @@
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/about.html</loc>
+		<loc>https://www.dicot.tech/products.html</loc>
 		<priority>1.00</priority>
-		<lastmod>2024-07-24</lastmod>
-	</url>
-	<url>
-		<loc>https://www.dicot.tech/visionWeb.html</loc>
-		<priority>0.67</priority>
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/visionC.html</loc>
+		<loc>https://www.dicot.tech/careers.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-07-29</lastmod>
+		<lastmod>2024-09-20</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/vGraphic.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-06-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.dicot.tech/TandC.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-06-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.dicot.tech/randc.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-06-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.dicot.tech/privacypolicy.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-06-19</lastmod>
-	</url>
-	<url>
-		<loc>https://www.dicot.tech/licenseGenerator.html</loc>
+		<loc>https://www.dicot.tech/contact.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-19</lastmod>
 	</url>
@@ -56,12 +31,37 @@
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/contact.html</loc>
+		<loc>https://www.dicot.tech/licenseGenerator.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-19</lastmod>
 	</url>
 	<url>
-		<loc>https://www.dicot.tech/careers.html</loc>
+		<loc>https://www.dicot.tech/privacypolicy.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-06-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/randc.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-06-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/TandC.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-06-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/vGraphic.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-06-19</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/visionC.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-07-29</lastmod>
+	</url>
+	<url>
+		<loc>https://www.dicot.tech/visionWeb.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-19</lastmod>
 	</url>
@@ -72,7 +72,7 @@
 	</url>
 	<url>
 		<loc>https://www.dicot.tech/blog/home.html</loc>
-		<priority>0.1</priority>
+		<priority>0.10</priority>
 		<lastmod>2024-08-15</lastmod>
 	</url>
 </urlset>

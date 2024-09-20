@@ -238,35 +238,47 @@
 
         // Function to read a file
         function readFile(filePath) {
-            fetch(filePath)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Network response was not ok: ${response.statusText}`);
-                    }
-                    return response.json();
-                })
-                .then(fileContent => {
-                    var cardDataArray = fileContent.Positions;
-                    const cardContainer = document.getElementById('cardContainer');
-                    const cardHTML = cardDataArray.map(card => `<div class="c2-card-1 swiper-slide"><h2>${card.Position}</h2><p>${card.JobDescription}</p><a class="button" target="_blank" href="${card.Link}">Apply</a></div>`).join();
-                    cardContainer.innerHTML = cardHTML;
-                    var swiper = new Swiper(".c2-cards", {
-                        slidesPerView: 1,
-                        spaceBetween: 25,
-                        loop: true,
-                        pagination: {
-                            clickable: true,
-                        },
-                        navigation: {
-                            nextEl: ".c2-next",
-                            prevEl: ".c2-prev",
-                        },
+                fetch(filePath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Network response was not ok: ${response.statusText}`);
+                        }
+                        return response.json();
+                    })
+                    .then(fileContent => {
+                        var cardDataArray = fileContent.Positions;
+                        const cardContainer = document.getElementById('cardContainer');
+                        // Corrected join with empty string to avoid commas
+                        const cardHTML = cardDataArray.map(card => `
+                <div class="c2-card-1 swiper-slide">
+                    <h2>${card.Position}</h2>
+                    <p>${card.JobDescription}</p>
+                    <a class="button" target="_blank" href="${card.Link}">Apply</a>
+                </div>
+            `).join("");
+                        cardContainer.innerHTML = cardHTML;
+
+                        
+                    }).then(()=>{
+                        // Initialize Swiper after the cards have been inserted
+                        var swiper = new Swiper(".c2-cards", {
+                            slidesPerView: 1,
+                            spaceBetween: 25,
+                            loop: true,
+                            pagination: {
+                                clickable: true,
+                            },
+                            navigation: {
+                                nextEl: "#next",
+                                prevEl: "#prev",
+                            },
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error reading the file:', error);
                     });
-                })
-                .catch(error => {
-                    console.error('Error reading the file:', error);
-                });
-        }
+            }
+
 
         readFile('./CareerPositions.json');
     </script>
