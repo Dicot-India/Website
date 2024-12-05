@@ -217,6 +217,7 @@ nav {
 
 .c-image img {
     width: 40vw;
+    border-radius: 0.3rem;
 }
 
 .right {

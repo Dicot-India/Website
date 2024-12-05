@@ -196,6 +196,20 @@ a {
     text-transform: capitalize;
 }
 
+.c2-3 {
+    padding-left: 4.5rem;
+    display: flex;
+    gap: 3rem;
+    color: #000;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
 .container-3 {
     display: flex;
     justify-content: center;
