@@ -57,7 +57,11 @@
 
     <div class="container-1">
       <div class="c1-image">
-        <img src="./Assets/images/visions.png" alt="visionc" />
+        <img
+          src="./Assets/images/visions.png"
+          alt="visionc"
+          style="border-radius: 0.3rem"
+        />
       </div>
       <img class="shadow" src="./Assets/images/Rectangle 6.png" alt="shadow" />
     </div>
@@ -75,9 +79,7 @@
             </tr>
             <tr>
               <td class="table-desc">Tags</td>
-              <td class="table-data">
-                Up to 60000
-              </td>
+              <td class="table-data">Up to 60000</td>
             </tr>
             <tr>
               <td class="table-desc">Ports Supported</td>
@@ -105,7 +107,9 @@
             </tr>
             <tr>
               <td class="table-desc">Historical Database</td>
-              <td class="table-data">Postgres, 3rd party integration possible</td>
+              <td class="table-data">
+                Postgres, 3rd party integration possible
+              </td>
             </tr>
             <tr>
               <td class="table-desc">Reports</td>
@@ -117,9 +121,7 @@
             </tr>
             <tr>
               <td class="table-desc">Recipe</td>
-              <td class="table-data">
-                Unlimited
-              </td>
+              <td class="table-data">Unlimited</td>
             </tr>
             <tr>
               <td class="table-desc">Software Updates</td>
@@ -155,7 +157,9 @@
             </tr>
             <tr>
               <td class="table-desc">License</td>
-              <td class="table-data">Tag based, Separate Runtime and Development</td>
+              <td class="table-data">
+                Tag based, Separate Runtime and Development
+              </td>
             </tr>
           </table>
         </div>
@@ -167,17 +171,22 @@
       <div class="c4-mid">
         <div class="c4-cards">
           <img src="./Assets/images/simple-icons_windows.svg" />
-          <h1 class="c4-head">Windows XP (SP3)/Windows 7/Windows 10</h1>
+          <h1 class="c4-head">Windows 7/Windows 10</h1>
         </div>
         <div class="c4-cards">
           <img src="./Assets/images/cpu.svg" />
-          <h1 class="c4-head">P4 processor, 1ghz or higher, or an equivalent model</h1>
+          <h1 class="c4-head">
+            P4 processor, 1ghz or higher, or an equivalent model
+          </h1>
         </div>
         <div class="c4-cards">
           <img src="./Assets/images/ri_ram-2-fill.svg" />
           <h1 class="c4-head">Minimum 512 MB; 1GB Recommanded</h1>
         </div>
       </div>
+    </div>
+    <div class="btnWrapper">
+      <button class="button" onclick="download_vs()">Download</button>
     </div>
 
     <div class="container-5">
@@ -412,6 +421,11 @@
         };
         return init();
       })();
+    </script>
+    <script>
+      function download_vs() {
+        location.href = "https://dicot.tech/VisionS.iso";
+      }
     </script>
   </body>
 </html>
