@@ -238,6 +238,18 @@ a {
     text-transform: capitalize;
 }
 
+.softDownloadOption{
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
 .container-3 {
     display: flex;
     justify-content: center;
@@ -491,6 +503,10 @@ a {
 
     .hamburger img {
         width: 30px;
+    }
+
+    .softDownload{
+        width: 75%;
     }
 
     .container-4 {
