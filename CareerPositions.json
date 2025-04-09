@@ -1,9 +1,14 @@
 {
     "Positions": [
-      {
+      /*{
         "Position": "Sales & Marketing",
         "JobDescription": "Job Description: Cold Calls and Emails, Follow-ups, Social Media Marketing, Support Coordination",
         "Link": "https://forms.gle/rKU7kfUnX4vkswsc9"
+      },*/
+        {
+        "Position": "Sales & Marketing",
+        "JobDescription": "Job Description: Cold Calls and Emails, Follow-ups, Social Media Marketing, Support Coordination, Customer Visits",
+        "Link": "https://www.linkedin.com/jobs/view/4195459769/"
       },
       {
         "Position": "Founder's Office Intern",
