@@ -7,6 +7,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+.body {
+    padding-bottom: 4rem;
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -57,7 +62,44 @@ nav {
     text-decoration: none;
 }
 
-a {
+.staticFooter {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+}
+
+.staticText {
+    text-align: center;
+    padding: 1rem;
+    color: #CB0000;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+}
+
+.applyBtn {
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #CB0000;
+    border-bottom: 2px solid #CB0000;
+    background: transparent;
+
+}
+
+.applyText {
+    color: #CB0000;
+    text-decoration: none;
+}
+
+.navText {
     text-decoration: none;
     color: #000000;
 }
@@ -207,7 +249,7 @@ h2 {
 
 .c-form select {
     color: #8D8D8D;
-    font-family: 'Inter',sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 600;
@@ -234,7 +276,7 @@ textarea {
     background: #E6E6E6;
 }
 
-.line-1 input{
+.line-1 input {
     width: 50%;
 }
 
@@ -450,13 +492,13 @@ input[type=submit] {
     font-weight: 400;
 }
 
-.scrollUpBtn{
+.scrollUpBtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     position: fixed;
     left: 50%;
-    bottom: 30px;
+    bottom: 70px;
     transform: translate(-50%, 0);
     z-index: 5;
 }
@@ -511,12 +553,12 @@ input[type=submit] {
         flex-direction: row;
     }
 
-    .line-2 input{
+    .line-2 input {
         width: 72%;
     }
 
-    .distributors{
-        gap:10px;
+    .distributors {
+        gap: 10px;
     }
 
     .container-5 {
@@ -531,7 +573,7 @@ input[type=submit] {
     .container-5-subtitle {
         font-size: 1rem;
     }
-    
+
     .footer-top {
         flex-direction: column;
         gap: 1rem;
@@ -553,8 +595,16 @@ input[type=submit] {
     .low-p2 {
         font-size: .75rem;
     }
-    
+
     .scrollUpBtn {
         bottom: 10vh;
+    }
+
+    .staticText{
+        font-size: 1.2rem;
+    }
+
+    .applyBtn{
+        font-size: 1.2rem;
     }
 }

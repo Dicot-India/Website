@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
 }
 
+.body{
+    padding-bottom: 4rem;
+}
+
 img {
     opacity: 1;
     transition: opacity 1s;
@@ -53,7 +57,45 @@ nav {
     text-decoration: none;
 }
 
-a {
+
+.staticFooter{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+}
+
+.staticText{
+    text-align: center;
+    padding: 1rem;
+    color: #CB0000;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    
+}
+
+.applyBtn{
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #CB0000;
+    border-bottom: 2px solid #CB0000;
+    background: transparent;
+
+}
+
+.applyText{
+    color: #CB0000;
+    text-decoration: none;
+}
+
+.navText {
     text-decoration: none;
     color: #000000;
 }
@@ -560,7 +602,7 @@ a {
     cursor: pointer;
     position: fixed;
     left: 50%;
-    bottom: 30px;
+    bottom: 70px;
     transform: translate(-50%, 0);
     z-index: 5;
 }
@@ -583,6 +625,8 @@ a {
     .hamburger {
         display: block;
     }
+
+    
 
     .hamburger img {
         width: 30px;
@@ -692,5 +736,13 @@ a {
 
     .scrollUpBtn {
         bottom: 10vh;
+    }
+
+    .staticText{
+        font-size: 1.2rem;
+    }
+
+    .applyBtn{
+        font-size: 1.2rem;
     }
 }

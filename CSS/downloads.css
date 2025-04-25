@@ -196,6 +196,60 @@ a {
     text-transform: capitalize;
 }
 
+.c2-3 {
+    padding-left: 4.5rem;
+    display: flex;
+    gap: 3rem;
+    color: #000;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.downloadContainer{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.softDownload{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.softName{
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.softDownloadOption{
+    width: 100%;
+    color: #000;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
 .container-3 {
     display: flex;
     justify-content: center;
@@ -449,6 +503,10 @@ a {
 
     .hamburger img {
         width: 30px;
+    }
+
+    .softDownload{
+        width: 75%;
     }
 
     .container-4 {
