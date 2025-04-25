@@ -273,7 +273,7 @@ nav {
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -304,6 +304,7 @@ nav {
   display: flex;
   gap: 4rem;
   animation: marqueeAnimation 20s linear infinite;
+  --scroll-width: 1000px;
 }
 
 .clientImg {
