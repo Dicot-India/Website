@@ -33,315 +33,378 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-inner">
-      <div class="logo">
-        <img class="logoimg" src="Assets/images/Logo.svg" alt="Dicot" />
+  <div class="body">
+    <nav>
+      <div class="nav-inner">
+        <div class="logo">
+          <img class="logoimg" src="Assets/images/Logo.svg" alt="Dicot" />
+        </div>
+        <div class="nav-items">
+          <span><a class="navText" href="home.html">Home</a></span>
+          <span><a class="navText" href="about.html">About</a></span>
+          <span><a class="navText" href="products.html">Products</a></span>
+          <span><a class="navText" href="contact.html">Contact</a></span>
+          <span><a class="navText" href="https://blog.dicot.tech">Blog</a></span>
+          <span><a href="https://vision-web.tech" target="_blank" class="vWebLogin">Vision Web Login</a></span>
+        </div>
+        <button aria-label="Menu" class="hamburger" onclick="showmenu()">
+          <img src="./Assets/images/hamburger.png" alt="Menu Icon" />
+        </button>
       </div>
-      <div class="nav-items">
-        <span><a href="home.html">Home</a></span>
-        <span><a href="about.html">About</a></span>
-        <span><a href="products.html">Products</a></span>
-        <span><a href="contact.html">Contact</a></span>
-        <span><a href="https://blog.dicot.tech">Blog</a></span>
-        <span><a href="https://vision-web.tech" target="_blank" class="vWebLogin">Vision Web Login</a></span>
-      </div>
-      <button aria-label="Menu" class="hamburger" onclick="showmenu()">
-        <img src="./Assets/images/hamburger.png" alt="Menu Icon" />
-      </button>
-    </div>
-  </nav>
-  <div class="mobmenu" id="mobmenu">
-    <div class="closeButtonRow">
-      <button aria-label="Close Menu" class="closeButton" onclick="hidemenu()">
-        <img src="./Assets/images/close.svg" alt="Close Menu Button">
-      </button>
-    </div>
-    <span><a href="home.html">Home</a></span>
-    <span><a href="about.html">About</a></span>
-    <span><a href="products.html">Products</a></span>
-    <span><a href="contact.html">Contact</a></span>
-    <span><a href="https://blog.dicot.tech">Blog</a></span>
-    <span><a href="https://vision-web.tech" target="_blank">Vision Web Login</a></span>
-  </div>
-  <div class="banner">
-    <div class="Title">
-      <h1 class="aboutText">About DICOT</h1>
-      <h2 class="dctText">
-        <span class="head">DI</span><span class="normal">gital </span><span class="head">CO</span><span
-          class="normal">mmunication </span><span class="head">T</span><span class="normal">echnology</span>
-      </h2>
-    </div>
-    <div class="moto">Vision & Mission</div>
-    <div>
-      <p class="text">
-        DICOT was started to pioneer Industrial IoT democratization,
-        prioritizing universal factory data access. Our relentless evolution
-        focuses on refining data logging, remote monitoring, and IIoT
-        software economics. User feedback fuels our innovation, setting
-        industry standards. At DICOT, users are central; their needs drive
-        our cutting-edge solutions. Beyond technology, our commitment to
-        same-day support closure ensures seamless experiences.
-        <br /><br />
-        Join us at the forefront of Industrial IoT, where innovation meets
-        accessibility, shaping a future defined by connectivity and customer
-        satisfaction.
+    </nav>
+    <div class="staticFooter">
+      <p class="staticText">
+        We Are Looking For Partners Across The Globe.
+        <button class="applyBtn">
+          <a href="https://forms.gle/nEM8FH92WSQyTh4k8" target="_blank" class="applyText">Apply
+          </a>
+        </button>
+        Now!
       </p>
     </div>
-  </div>
-  <div class="container-1">
-    <h2 class="backedText">
-      <span class="head">Backed by</span>
-    </h2>
-    <div class="brand-support">
-      <img data-src="./Assets/images/i-hub.png" class="backing" />
-      <img data-src="./Assets/images/WF-Logo.png" class="backing" />
-      <img data-src="./Assets/images/sui.png" class="backing" />
-      <img class="backing" data-src="./Assets/images/image 1.png" alt="make in india" />
+    <div class="mobmenu" id="mobmenu">
+      <div class="closeButtonRow">
+        <button aria-label="Close Menu" class="closeButton" onclick="hidemenu()">
+          <img src="./Assets/images/close.svg" alt="Close Menu Button" />
+        </button>
+      </div>
+      <span><a class="navText" href="home.html">Home</a></span>
+      <span><a class="navText" href="about.html">About</a></span>
+      <span><a class="navText" href="products.html">Products</a></span>
+      <span><a class="navText" href="contact.html">Contact</a></span>
+      <span><a class="navText" href="https://blog.dicot.tech">Blog</a></span>
+      <span><a href="https://vision-web.tech" target="_blank">Vision Web Login</a></span>
     </div>
-  </div>
-  <div class="clientSection">
-    <div class="sectionHead">Our Esteemed Clientele</div>
-    <div class="marqueeContainer" id="marqueeContainer">
-      <div class="clientImgWrapper" id="marqueeContent">
-        <div class="clientImg">
-          <img class="client" style="height: 10rem;" data-src="./Assets/images/tata.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/bhel.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/isro.jpg" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/radical.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/micon.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/kelviron.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/yudian.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/ent.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/bharatElectronics.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/jubatu.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/atc.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/deepIndustry.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/logo-iisc.jpg" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/saclogo.png" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/sansellogo.jpeg" alt="" srcset="" />
-        </div>
-        <div class="clientImg">
-          <img class="client" data-src="./Assets/images/PIDMaxWell.jpg" alt="" srcset="" />
-        </div>
+    <div class="banner">
+      <div class="Title">
+        <h1 class="aboutText">About DICOT</h1>
+        <h2 class="dctText">
+          <span class="head">DI</span><span class="normal">gital </span><span class="head">CO</span><span
+            class="normal">mmunication </span><span class="head">T</span><span class="normal">echnology</span>
+        </h2>
+      </div>
+      <div class="moto">Vision & Mission</div>
+      <div>
+        <p class="text">
+          DICOT was started to pioneer Industrial IoT democratization,
+          prioritizing universal factory data access. Our relentless evolution
+          focuses on refining data logging, remote monitoring, and IIoT
+          software economics. User feedback fuels our innovation, setting
+          industry standards. At DICOT, users are central; their needs drive
+          our cutting-edge solutions. Beyond technology, our commitment to
+          same-day support closure ensures seamless experiences.
+          <br /><br />
+          Join us at the forefront of Industrial IoT, where innovation meets
+          accessibility, shaping a future defined by connectivity and customer
+          satisfaction.
+        </p>
       </div>
     </div>
-  </div>
-  <div class="directorSection">
-    <div class="sectionHead" style="font-weight: 700">Our Team</div>
-    <div class="sectionHead">Board of Directors</div>
-    <div class="personInfoWrapper">
-      <div class="personInfo">
-        <div class="photoWrapper">
-          <img data-src="./Assets/images/nandan.jpg" alt="" class="personImg" />
-        </div>
-        <div class="personName">Nandan Shukla</div>
-        <div class="personRole">CEO</div>
-      </div>
-      <div class="personInfo">
-        <div class="photoWrapper">
-          <img data-src="./Assets/images/darshana.png" alt="" class="personImg" />
-        </div>
-        <div class="personName">Darshana Shukla</div>
-        <div class="personRole">Director</div>
-      </div>
-    </div>
-  </div>
-  <div class="mentorSection">
-    <div class="sectionHead">Mentors</div>
-    <div class="personInfoWrapper">
-      <div class="personInfo">
-        <div class="photoWrapper">
-          <img data-src="./Assets/images/dharren.jpg" alt="" class="personImg" />
-        </div>
-        <div class="personName">Dharren Savla</div>
-        <div class="personRole">Director, Deep Industries Ltd.</div>
-      </div>
-      <div class="personInfo">
-        <div class="photoWrapper">
-          <img data-src="./Assets/images/person1.jpg" alt="" class="personImg" />
-        </div>
-        <div class="personName">Niket Gorakhia</div>
-        <div class="personRole">Director, Micon Automation</div>
-      </div>
-      <div class="personInfo">
-        <div class="photoWrapper">
-          <img data-src="./Assets/images/person2.jpg" alt="" class="personImg" />
-        </div>
-        <div class="personName">Parag Shukla</div>
-        <div class="personRole">Director, Micon Automation</div>
-      </div>
-      <div class="personInfo">
-        <div class="photoWrapper">
-          <img data-src="./Assets/images/sachin.jpg" alt="" class="personImg" />
-        </div>
-        <div class="personName">Sachin Soni</div>
-        <div class="personRole">Founder, Swastik Automation</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-5">
-    <div class="container-5-titles">
-      <h1 class="container-5-title">Join Our Monthly IIoT Newsletter</h1>
-      <h2 class="container-5-subtitle">
-        Get Updates About All Things IIoT And Much More
+    <div class="container-1">
+      <h2 class="backedText">
+        <span class="head">Backed by</span>
       </h2>
-    </div>
-    <div class="button" onclick="signup()">Join Now</div>
-  </div>
-
-  <footer class="footer">
-    <div class="footer-top">
-      <span class="follow-text">Follow Dicot</span>
-      <div class="footer-social-icons">
-        <a href="https://instagram.com/dicot.tech" target="_blank">
-          <img data-src="./Assets/images/Instagram.svg" alt="Insta" class="social-icon" />
-        </a>
-        <a href="https://linkedin.com/company/dicot-tech" target="_blank">
-          <img data-src="./Assets/images/Linkedin.svg" alt="Lkdn" class="social-icon" />
-        </a>
-        <a href="https://youtube.com/@dicot" target="_blank">
-          <img data-src="./Assets/images/youtube.svg" alt="YT" class="social-icon" />
-        </a>
-        <a href="https://threads.net/@dicot.tech" target="_blank">
-          <img data-src="./Assets/images/Threads.svg" alt="Thrds" class="social-icon" />
-        </a>
-        <a href="https://twitter.com/dicot_tech" target="_blank">
-          <img data-src="./Assets/images/X.svg" alt="X" class="social-icon" />
-        </a>
-        <a href="https://facebook.com/dicot.tech" target="_blank">
-          <img data-src="./Assets/images/Facebook.svg" alt="FB" class="social-icon" />
-        </a>
+      <div class="brand-support">
+        <img data-src="./Assets/images/i-hub.png" class="backing" />
+        <img data-src="./Assets/images/WF-Logo.png" class="backing" />
+        <img data-src="./Assets/images/sui.png" class="backing" />
+        <img class="backing" data-src="./Assets/images/image 1.png" alt="make in india" />
       </div>
     </div>
-    <div class="footer-mid">
-      <div class="footer-mid-p1">
-        <div class="detail-container">
-          <h4 class="footer-mid-header">
-            Dicot Innovations Private Limited
-          </h4>
+    <div class="clientSection">
+      <div class="sectionHead">Our Esteemed Clientele</div>
+      <div class="marqueeContainer" id="marqueeContainer">
+        <div class="clientImgWrapper" id="marqueeContent">
+          <div class="clientImg">
+            <img class="client" style="height: 10rem;" data-src="./Assets/images/tata.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/apolloTireslogo.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/bhel.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/isro.jpg" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/radical.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/micon.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/kelviron.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/yudian.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/ent.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/bharatElectronics.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/jubatu.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/atc.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/deepIndustry.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/logo-iisc.jpg" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/saclogo.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/sansellogo.jpeg" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/PIDMaxWell.jpg" alt="" srcset="" />
+          </div>
 
-          <div class="company-details">
-            <div class="footer-s2-detailtext">
-              A-805, Siddhi Vinayak Towers,<br />
-              Off S. G. Road, B/H. DCP Office,<br />
-              Makarba, Ahmedabad,<br />
-              Gujarat, India 380051
+          <!-- duplicate -->
+
+          <div class="clientImg">
+            <img class="client" style="height: 10rem;" data-src="./Assets/images/tata.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/apolloTireslogo.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/bhel.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/isro.jpg" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/radical.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/micon.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/kelviron.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/yudian.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/ent.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/bharatElectronics.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/jubatu.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/atc.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/deepIndustry.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/logo-iisc.jpg" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/saclogo.png" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/sansellogo.jpeg" alt="" srcset="" />
+          </div>
+          <div class="clientImg">
+            <img class="client" data-src="./Assets/images/PIDMaxWell.jpg" alt="" srcset="" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="directorSection">
+      <div class="sectionHead" style="font-weight: 700">Our Team</div>
+      <div class="sectionHead">Board of Directors</div>
+      <div class="personInfoWrapper">
+        <div class="personInfo">
+          <div class="photoWrapper">
+            <img data-src="./Assets/images/nandan.jpg" alt="" class="personImg" />
+          </div>
+          <div class="personName">Nandan Shukla</div>
+          <div class="personRole">CEO</div>
+        </div>
+        <div class="personInfo">
+          <div class="photoWrapper">
+            <img data-src="./Assets/images/darshana.png" alt="" class="personImg" />
+          </div>
+          <div class="personName">Darshana Shukla</div>
+          <div class="personRole">Director</div>
+        </div>
+      </div>
+    </div>
+    <div class="mentorSection">
+      <div class="sectionHead">Mentors</div>
+      <div class="personInfoWrapper">
+        <div class="personInfo">
+          <div class="photoWrapper">
+            <img data-src="./Assets/images/dharren.jpg" alt="" class="personImg" />
+          </div>
+          <div class="personName">Dharren Savla</div>
+          <div class="personRole">Director, Deep Industries Ltd.</div>
+        </div>
+        <div class="personInfo">
+          <div class="photoWrapper">
+            <img data-src="./Assets/images/person1.jpg" alt="" class="personImg" />
+          </div>
+          <div class="personName">Niket Gorakhia</div>
+          <div class="personRole">Director, Micon Automation</div>
+        </div>
+        <div class="personInfo">
+          <div class="photoWrapper">
+            <img data-src="./Assets/images/person2.jpg" alt="" class="personImg" />
+          </div>
+          <div class="personName">Parag Shukla</div>
+          <div class="personRole">Director, Micon Automation</div>
+        </div>
+        <div class="personInfo">
+          <div class="photoWrapper">
+            <img data-src="./Assets/images/sachin.jpg" alt="" class="personImg" />
+          </div>
+          <div class="personName">Sachin Soni</div>
+          <div class="personRole">Founder, Swastik Automation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-5">
+      <div class="container-5-titles">
+        <h1 class="container-5-title">Join Our Monthly IIoT Newsletter</h1>
+        <h2 class="container-5-subtitle">
+          Get Updates About All Things IIoT And Much More
+        </h2>
+      </div>
+      <div class="button" onclick="signup()">Join Now</div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <span class="follow-text">Follow Dicot</span>
+        <div class="footer-social-icons">
+          <a href="https://instagram.com/dicot.tech" target="_blank">
+            <img data-src="./Assets/images/Instagram.svg" alt="Insta" class="social-icon" />
+          </a>
+          <a href="https://linkedin.com/company/dicot-tech" target="_blank">
+            <img data-src="./Assets/images/Linkedin.svg" alt="Lkdn" class="social-icon" />
+          </a>
+          <a href="https://youtube.com/@dicot" target="_blank">
+            <img data-src="./Assets/images/youtube.svg" alt="YT" class="social-icon" />
+          </a>
+          <a href="https://threads.net/@dicot.tech" target="_blank">
+            <img data-src="./Assets/images/Threads.svg" alt="Thrds" class="social-icon" />
+          </a>
+          <a href="https://twitter.com/dicot_tech" target="_blank">
+            <img data-src="./Assets/images/X.svg" alt="X" class="social-icon" />
+          </a>
+          <a href="https://facebook.com/dicot.tech" target="_blank">
+            <img data-src="./Assets/images/Facebook.svg" alt="FB" class="social-icon" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-mid">
+        <div class="footer-mid-p1">
+          <div class="detail-container">
+            <h4 class="footer-mid-header">
+              Dicot Innovations Private Limited
+            </h4>
+
+            <div class="company-details">
+              <div class="footer-s2-detailtext">
+                A-805, Siddhi Vinayak Towers,<br />
+                Off S. G. Road, B/H. DCP Office,<br />
+                Makarba, Ahmedabad,<br />
+                Gujarat, India 380051
+              </div>
+            </div>
+            <div class="compdetail">
+              <div class="footer-s2-detailtext">
+                <a class="navText" href="mailto:hello@dicot.tech">hello@dicot.tech</a>
+              </div>
+            </div>
+            <div class="compdetail">
+              <div class="footer-s2-detailtext">
+                <a class="navText" href="tel:+917949185398">+91-7949185398</a>
+              </div>
             </div>
           </div>
-          <div class="compdetail">
-            <div class="footer-s2-detailtext">
-              <a class="navText" href="mailto:hello@dicot.tech">hello@dicot.tech</a>
+        </div>
+        <div class="footer-mid-right-section">
+          <div class="footer-mid-p">
+            <h3 class="footer-mid-header">Company</h3>
+            <div class="footer-qlink">
+              <a class="navText" href="careers.html">Career</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="downloads.html">Downloads</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="#">News</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="#">Distribution Network</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="#">Customer Stories</a>
             </div>
           </div>
-          <div class="compdetail">
-            <div class="footer-s2-detailtext">
-              <a class="navText" href="tel:+917949185398">+91-7949185398</a>
+          <div class="footer-mid-p">
+            <h3 class="footer-mid-header">What's New</h3>
+            <div class="footer-qlink">
+              <a class="navText" href="#">Vision C</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="#">Vision Web</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="#">VGraphic</a>
+            </div>
+          </div>
+          <div class="footer-mid-p">
+            <h3 class="footer-mid-header">Stay in touch</h3>
+            <div class="footer-qlink">
+              <a class="navText" href="mailto:support@dicot.tech?subject=Hi, I need some assistance!">Technical
+                Support</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="https://reddit.com/r/Dicot" target="_blank">Community</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="https://whatsapp.com/channel/0029Va9zKGNFsn0jZ1TYtQ1D" target="_blank">WhatsApp
+                Channel</a>
+            </div>
+            <div class="footer-qlink">
+              <a class="navText" href="https://t.me/+8N2nkr-DmwA5NjA1" target="_blank">Telegram Channel</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-mid-right-section">
-        <div class="footer-mid-p">
-          <h3 class="footer-mid-header">Company</h3>
-          <div class="footer-qlink">
-            <a class="navText" href="careers.html">Career</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="downloads.html">Downloads</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="#">News</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="#">Distribution Network</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="#">Customer Stories</a>
-          </div>
-        </div>
-        <div class="footer-mid-p">
-          <h3 class="footer-mid-header">What's New</h3>
-          <div class="footer-qlink">
-            <a class="navText" href="#">Vision C</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="#">Vision Web</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="#">VGraphic</a>
-          </div>
-        </div>
-        <div class="footer-mid-p">
-          <h3 class="footer-mid-header">Stay in touch</h3>
-          <div class="footer-qlink">
-            <a class="navText" href="mailto:support@dicot.tech?subject=Hi, I need some assistance!">Technical
-              Support</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="https://reddit.com/r/Dicot" target="_blank">Community</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="https://whatsapp.com/channel/0029Va9zKGNFsn0jZ1TYtQ1D" target="_blank">WhatsApp
-              Channel</a>
-          </div>
-          <div class="footer-qlink">
-            <a class="navText" href="https://t.me/+8N2nkr-DmwA5NjA1" target="_blank">Telegram Channel</a>
-          </div>
+      <div class="footer-low">
+        <div class="low-p1">© Dicot Innovations 2024</div>
+        <div class="low-p2">
+          <a class="navText" href="TandC.html">Terms of use</a>
+          <a class="navText" href="privacypolicy.html">Privacy Policy</a>
+          <a class="navText" href="randc.html">Refund Policy</a>
         </div>
       </div>
-    </div>
-    <div class="footer-low">
-      <div class="low-p1">© Dicot Innovations 2024</div>
-      <div class="low-p2">
-        <a class="navText" href="TandC.html">Terms of use</a>
-        <a class="navText" href="privacypolicy.html">Privacy Policy</a>
-        <a class="navText" href="randc.html">Refund Policy</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <button class="scrollUpBtn" id="btt" onclick="topFunction()">
-    <img src="Assets/images/scrollUp.svg" alt="" srcset="" />
-  </button>
+    <button class="scrollUpBtn" id="btt" onclick="topFunction()">
+      <img src="Assets/images/scrollUp.svg" alt="" srcset="" />
+    </button>
   </div>
 
   <script>
-    window.addEventListener("load", () => {
-        const marquee = document.getElementById("marqueeContent");
-        // Duplicate once
-        marquee.innerHTML += marquee.innerHTML;
-      });
-
     function signup() {
       window.open("http://eepurl.com/hUzsQf", "_blank");
     }
@@ -425,6 +488,10 @@
       return init();
     })();
   </script>
+
+
+
+
 </body>
 
 </html>

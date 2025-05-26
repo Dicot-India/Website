@@ -8,7 +8,7 @@
 }
 
 
-.body{
+.body {
   padding-bottom: 4rem;
 }
 
@@ -292,24 +292,31 @@ nav {
 }
 
 .marqueeContainer {
-  display: flex;
-  width: 90%;
-  overflow: hidden;
+    overflow: hidden;
+  position: relative;
+  width: 100%;
   padding: 2rem 0;
-  margin: 0 5%;
-  gap: 4rem;
 }
 
 .clientImgWrapper {
   display: flex;
   gap: 4rem;
   animation: marqueeAnimation 20s linear infinite;
-  --scroll-width: 1000px;
+  width: max-content;
+  content: '';
+}
+
+.clientImgWrapper::after {
+  content: '';
+  display: flex;
+  gap: 4rem;
 }
 
 .clientImg {
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .client {
