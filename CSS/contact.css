@@ -297,7 +297,8 @@ input[type=submit] {
 }
 
 .container-3 {
-    padding-left: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 60px;
     padding-top: 30px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -317,6 +318,7 @@ input[type=submit] {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-bottom: 1rem;
 }
 
 .c3-tel,
