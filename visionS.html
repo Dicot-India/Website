@@ -8,21 +8,7 @@
       Acquisition
     </title>
     <link rel="stylesheet" href="./CSS/visionC.css" />
-    
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CLGWSRY8FE"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-CLGWSRY8FE");
-    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </head>
   <body>
     <nav>
@@ -201,7 +187,9 @@
       </div>
     </div>
     <div class="btnWrapper">
-      <button class="button" style="margin-bottom: 2rem;"  onclick="download_vs()">Download</button>
+      <button class="button" style="margin-bottom: 2rem" onclick="openForm()">
+        Download
+      </button>
     </div>
 
     <div class="container-5">
@@ -354,6 +342,79 @@
       <img src="./Assets/images/scrollUp.svg" alt="" data-srcset="" />
     </button>
 
+    <!-- Modal Form -->
+    <div id="downloadFormModal" class="modal">
+      <div class="modal-content">
+        <div class="close" onclick="closeForm()">&times;</div>
+
+        <form
+          action="https://send.pageclip.co/AfU4k0Gt3t05y6SsYO2U9QOYuoTpe55E/downloadForm"
+          method="POST"
+          class="form pageclip-form"
+          onsubmit="return download_vs(event)"
+        >
+          <h2>Download Vision S</h2>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            class="formInput"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="formInput"
+          />
+
+          <button
+            type="submit"
+            class="formSaveBtn pageclip-form__submit"
+            data-pageclip
+          >
+            <span>Submit & Download</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function download_vs(event) {
+        event.preventDefault(); // Stop default form submission
+        const form = event.target;
+
+        if (!window.Pageclip) {
+          alert("Pageclip is not loaded.");
+          return false;
+        }
+
+        // Submit via Pageclip
+        Pageclip.send(form, {}, function (error, response) {
+          if (error) {
+            alert("Something went wrong. Please try again.");
+            return false;
+          }
+
+          // Download file after successful submission
+          location.href = "https://dicot.tech/VisionS.iso";
+        });
+
+        return false; // Prevent default
+      }
+    </script>
+    <script>
+      function openForm() {
+        document.getElementById("downloadFormModal").style.display = "flex";
+      }
+
+      function closeForm() {
+        document.getElementById("downloadFormModal").style.display = "none";
+      }
+    </script>
+
     <script>
       function signup() {
         window.open("https://zcmp.in/Xgc6", "_blank");
@@ -437,10 +498,6 @@
         return init();
       })();
     </script>
-    <script>
-      function download_vs() {
-        location.href = "https://dicot.tech/VisionS.iso";
-      }
-    </script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
 </html>
