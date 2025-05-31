@@ -382,8 +382,13 @@
     </div>
 
     <script>
+      function closeForm() {
+        document.getElementById("downloadFormModal").style.display = "none";
+      }
+
       function download_vs(event) {
         event.preventDefault(); // Stop default form submission
+
         const form = event.target;
 
         if (!window.Pageclip) {
@@ -391,18 +396,25 @@
           return false;
         }
 
-        // Submit via Pageclip
+        // Submit form data to Pageclip
         Pageclip.send(form, {}, function (error, response) {
           if (error) {
             alert("Something went wrong. Please try again.");
             return false;
           }
 
-          // Download file after successful submission
-          location.href = "https://dicot.tech/VisionS.iso";
+          // ✅ Trigger download of ISO file
+          const link = document.createElement("a");
+          link.href = "https://dicot.tech/VisionS.iso";
+          link.download = "VisionS.iso"; // Hint for browser to download
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          closeForm();
         });
 
-        return false; // Prevent default
+        return false;
       }
     </script>
     <script>
