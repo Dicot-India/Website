@@ -8,11 +8,7 @@
       Acquisition
     </title>
     <link rel="stylesheet" href="./CSS/visionC.css" />
-    <script
-      src="https://s.pageclip.co/v1/pageclip.js"
-      charset="utf-8"
-      defer
-    ></script>
+
   </head>
   <body>
     <nav>
@@ -346,15 +342,15 @@
       <img src="./Assets/images/scrollUp.svg" alt="" data-srcset="" />
     </button>
 
-    <!-- Modal Form -->
     <div id="downloadFormModal" class="modal">
       <div class="modal-content">
         <div class="close" onclick="closeForm()">&times;</div>
 
         <form
+          id="downloadForm"
+          action="https://send.pageclip.co/AfU4k0Gt3t05y6SsYO2U9QOYuoTpe55E/downloadForm"
           method="POST"
           class="form pageclip-form"
-          onsubmit="triggerDownload(event)"
         >
           <h2>Download Vision S</h2>
 
@@ -384,51 +380,43 @@
       </div>
     </div>
 
+    <!-- Pageclip JS -->
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
     <script>
-      function triggerDownload(event) {
-        event.preventDefault()
-        console.log("Downloading...");
+      function triggerDownload() {
         const link = document.createElement("a");
         link.href = "https://dicot.tech/VisionS.iso";
-        link.setAttribute("download", ""); // optional: force download
+        link.setAttribute("download", "");
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        closeForm();
       }
 
-      function handleFormSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-        console.log("form:", form);
-        triggerDownload();
+      function closeForm() {
+        document.getElementById("downloadFormModal").style.display = "none";
+      }
 
-        if (window.Pageclip) {
-          Pageclip.send(form, {}, function (error, response) {
+      window.addEventListener("DOMContentLoaded", () => {
+        Pageclip.form("#downloadForm", {
+          onSubmit: function () {
+            console.log("Submitting form and triggering download...");
+            triggerDownload();
+          },
+          onResponse: function (error, response) {
             if (error) {
-              console.warn("Pageclip error:", error);
+              console.error("Pageclip submission failed:", error);
             } else {
-              console.log("Pageclip submitted successfully");
-              triggerDownload(); // ✅ Trigger download here
+              console.log("Pageclip submission successful!");
             }
-          });
-        } else {
-          console.warn("Pageclip not loaded. Skipping submission.");
-        }
-
-        return false;
-      }
-
-      // Make it global
-      window.handleFormSubmit = handleFormSubmit;
+          },
+        });
+      });
     </script>
 
     <script>
       function openForm() {
         document.getElementById("downloadFormModal").style.display = "flex";
-      }
-      function closeForm() {
-        document.getElementById("downloadFormModal").style.display = "none";
       }
     </script>
 
