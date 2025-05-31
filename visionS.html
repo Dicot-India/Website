@@ -8,7 +8,11 @@
       Acquisition
     </title>
     <link rel="stylesheet" href="./CSS/visionC.css" />
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <script
+      src="https://s.pageclip.co/v1/pageclip.js"
+      charset="utf-8"
+      defer
+    ></script>
   </head>
   <body>
     <nav>
@@ -348,10 +352,9 @@
         <div class="close" onclick="closeForm()">&times;</div>
 
         <form
-          action="https://send.pageclip.co/AfU4k0Gt3t05y6SsYO2U9QOYuoTpe55E/downloadForm"
           method="POST"
           class="form pageclip-form"
-          onsubmit="return download_vs(event)"
+          onsubmit="triggerDownload(event)"
         >
           <h2>Download Vision S</h2>
 
@@ -382,46 +385,48 @@
     </div>
 
     <script>
-      function closeForm() {
-        document.getElementById("downloadFormModal").style.display = "none";
+      function triggerDownload(event) {
+        event.preventDefault()
+        console.log("Downloading...");
+        const link = document.createElement("a");
+        link.href = "https://dicot.tech/VisionS.iso";
+        link.setAttribute("download", ""); // optional: force download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        closeForm();
       }
 
-      function download_vs(event) {
-        event.preventDefault(); // Stop default form submission
-
+      function handleFormSubmit(event) {
+        event.preventDefault();
         const form = event.target;
+        console.log("form:", form);
+        triggerDownload();
 
-        if (!window.Pageclip) {
-          alert("Pageclip is not loaded.");
-          return false;
+        if (window.Pageclip) {
+          Pageclip.send(form, {}, function (error, response) {
+            if (error) {
+              console.warn("Pageclip error:", error);
+            } else {
+              console.log("Pageclip submitted successfully");
+              triggerDownload(); // ✅ Trigger download here
+            }
+          });
+        } else {
+          console.warn("Pageclip not loaded. Skipping submission.");
         }
-
-        // Submit form data to Pageclip
-        Pageclip.send(form, {}, function (error, response) {
-          if (error) {
-            alert("Something went wrong. Please try again.");
-            return false;
-          }
-
-          // ✅ Trigger download of ISO file
-          const link = document.createElement("a");
-          link.href = "https://dicot.tech/VisionS.iso";
-          link.download = "VisionS.iso"; // Hint for browser to download
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-
-          closeForm();
-        });
 
         return false;
       }
+
+      // Make it global
+      window.handleFormSubmit = handleFormSubmit;
     </script>
+
     <script>
       function openForm() {
         document.getElementById("downloadFormModal").style.display = "flex";
       }
-
       function closeForm() {
         document.getElementById("downloadFormModal").style.display = "none";
       }
