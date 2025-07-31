@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 
-.body{
+.body {
     padding-bottom: 4rem;
 }
 
@@ -39,9 +39,12 @@ nav {
     height: 80px;
     width: 80%;
     border-radius: 10px;
-    backdrop-filter: blur(12.5px);
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 0px 10px 0px rgba(158, 158, 158, 0.25);
+    background: linear-gradient(rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.5));
+    box-shadow: 0px 0px 10px 0px rgba(158, 158, 158, 0.25) inset 0 0 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px) saturate(180%) contrast(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(180%) contrast(120%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .nav-items {
@@ -58,7 +61,7 @@ nav {
 }
 
 
-.staticFooter{
+.staticFooter {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -68,17 +71,17 @@ nav {
 
 }
 
-.staticText{
+.staticText {
     text-align: center;
     padding: 1rem;
     color: #CB0000;
     font-family: "Inter", sans-serif;
     font-size: 1.4rem;
     font-weight: 500;
-    
+
 }
 
-.applyBtn{
+.applyBtn {
     cursor: pointer;
     font-weight: 600;
     border: none;
@@ -90,7 +93,7 @@ nav {
 
 }
 
-.applyText{
+.applyText {
     color: #CB0000;
     text-decoration: none;
 }
@@ -149,19 +152,23 @@ nav {
     width: 100%;
     text-align: right;
     padding: 0 20% 0 0;
-    opacity: 0; /* Start with 0 opacity */
-    transform: translateY(20px); /* Start position */
+    opacity: 0;
+    /* Start with 0 opacity */
+    transform: translateY(20px);
+    /* Start position */
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .mobmenu.show span {
-    opacity: 1; /* End with full opacity when the menu is shown */
-    transform: translateY(0); /* End position when the menu is shown */
+    opacity: 1;
+    /* End with full opacity when the menu is shown */
+    transform: translateY(0);
+    /* End position when the menu is shown */
 }
 
 .mobmenu span a {
     color: #000000;
-    font-family: "Inter",sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
@@ -626,7 +633,7 @@ nav {
         display: block;
     }
 
-    
+
 
     .hamburger img {
         width: 30px;
@@ -670,11 +677,11 @@ nav {
         width: 100%;
     }
 
-    .container-2-card img{
+    .container-2-card img {
         width: 30%;
     }
 
-    .inner-text{
+    .inner-text {
         width: 100%;
         text-align: center;
     }
@@ -738,11 +745,11 @@ nav {
         bottom: 10vh;
     }
 
-    .staticText{
+    .staticText {
         font-size: 1.2rem;
     }
 
-    .applyBtn{
+    .applyBtn {
         font-size: 1.2rem;
     }
 }

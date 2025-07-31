@@ -551,7 +551,7 @@
           this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '<span class="cursor">|</span></span>';
 
         var that = this;
         var delta = 300 - Math.random() * 100;
@@ -585,8 +585,7 @@
         }
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML =
-          ".txt-rotate > .wrap { border-right: 0.03em solid black }";
+        css.innerHTML = ".txt-rotate > .wrap .cursor{display:inline-block;color:black;animation:blink-cursor 0.8s steps(1,end) infinite;}@keyframes blink-cursor{0%,100%{opacity:0;}50%{opacity:1;}}";
         document.body.appendChild(css);
       };
     </script>
