@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./Assets/images/Favicon.png" />
-    <title>
-      Dicot Innovations | Gateway to Industrial Solutions for Factory Data
-      Acquisition
-    </title>
-    <link rel="stylesheet" href="./CSS/visionC.css" />
-    <meta
-      name="keywords"
-      content="Factory data, Data Acquisition, DAQ, industrial software, IIoT, Industrial IoT, datalogger, data logging software"
-    />
-    <meta
-      name="description"
-      content="Vision C is a powerful mini-SCADA software that offers a wide range of features. One of its notable features is its support for protocols such as Modbus RTU, AIBUS, and Modbus TCP/IP. With zero development time and cost."
-    />
-    <meta
-      http-equiv="Cache-control"
-      content="public, max-age=31536000, immutable"
-    />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CLGWSRY8FE"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
-      gtag("config", "G-CLGWSRY8FE");
-    </script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./Assets/images/Favicon.png" />
 
-  <body>
-    <nav>
+  <title>Vision C | Industrial Data Logging, Remote Monitoring & Mini-SCADA Software</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Vision C is a powerful mini-SCADA and industrial data logging tool for remote monitoring, control, and reporting. It supports PLCs, HMIs, PID controllers, and more with zero development cost and truly unlimited tags." />
+  <meta name="keywords"
+    content="Vision C, industrial data logging, remote monitoring software, mini SCADA, IIoT, industrial IoT, PLC data acquisition, HMI data monitoring, PID controller logging, datalogger software, factory automation software, SELEC, Multispan, Yudian, Eurotherm, Yokogawa, Fuji" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Vision C | Industrial Data Logging & Mini-SCADA" />
+  <meta property="og:description"
+    content="Vision C provides data acquisition, remote monitoring, reporting, and control for industrial devices. Lightweight and cost-effective SCADA solution." />
+  <meta property="og:image" content="./Assets/images/VisionC.png" />
+  <meta property="og:url" content="https://dicot.tech/visionc" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vision C | Industrial Data Logging & Mini-SCADA" />
+  <meta name="twitter:description"
+    content="Industrial software for data logging, SCADA-like monitoring, and reporting with zero development cost." />
+  <meta name="twitter:image" content="./Assets/images/VisionC.png" />
+
+  <link rel="stylesheet" href="./CSS/visionC.css" />
+  <meta http-equiv="Cache-control" content="public, max-age=31536000, immutable" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CLGWSRY8FE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-CLGWSRY8FE");
+  </script>
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav aria-label="Main navigation">
       <div class="nav-inner">
         <div class="logo">
-          <img class="logoimg" src="./Assets/images/Logo.svg" alt="Dicot" />
+          <a href="home.html">
+            <img class="logoimg" src="./Assets/images/Logo.svg" alt="Dicot Innovations Logo" />
+          </a>
         </div>
         <div class="nav-items">
           <span><a href="home.html">Home</a></span>
@@ -50,25 +59,17 @@
           <span><a href="products.html">Products</a></span>
           <span><a href="contact.html">Contact</a></span>
           <span><a href="https://blog.dicot.tech">Blog</a></span>
-          <span
-            ><a href="https://vision-web.tech" target="_blank"
-              ><u>Vision Web Login</u></a
-            ></span
-          >
+          <span><a href="https://vision-web.tech" target="_blank"><u>Vision Web Login</u></a></span>
         </div>
         <button aria-label="Menu" class="hamburger" onclick="showmenu()">
           <img src="./Assets/images/hamburger.png" alt="Menu Icon" />
         </button>
       </div>
     </nav>
-    <div class="mobmenu" id="mobmenu">
+    <div class="mobmenu" id="mobmenu" role="menu">
       <div class="closeButtonRow">
-        <button
-          aria-label="Close Menu"
-          class="closeButton"
-          onclick="hidemenu()"
-        >
-          <img src="./Assets/images/close.svg" alt="Close Menu Button" />
+        <button aria-label="Close Menu" class="closeButton" onclick="hidemenu()">
+          <img src="./Assets/images/close.svg" alt="Close Menu" />
         </button>
       </div>
       <span><a href="home.html">Home</a></span>
@@ -76,25 +77,25 @@
       <span><a href="products.html">Products</a></span>
       <span><a href="contact.html">Contact</a></span>
       <span><a href="https://blog.dicot.tech">Blog</a></span>
-      <span
-        ><a href="https://vision-web.tech" target="_blank"
-          >Vision Web Login</a
-        ></span
-      >
+      <span><a href="https://vision-web.tech" target="_blank">Vision Web Login</a></span>
     </div>
+  </header>
 
-    <div class="container-header">Vision C</div>
+  <!-- Main Content -->
+  <main>
+    <h1 class="container-header">Vision C – Industrial Data Logging & Mini-SCADA</h1>
 
-    <div class="container-1">
+    <!-- Product Image -->
+    <section class="container-1">
       <div class="c1-image">
-        <img src="./Assets/images/Vision C.png" alt="visionc" />
+        <img src="./Assets/images/Vision C.png" alt="Vision C industrial SCADA software interface" />
       </div>
-      <img class="shadow" src="./Assets/images/Rectangle 6.png" alt="shadow" />
-    </div>
+      <img class="shadow" src="./Assets/images/Rectangle 6.png" alt="Shadow Effect" />
+    </section>
 
-    <div class="c2-header">A mini-SCADA designed from customer feedback</div>
-
-    <div class="container-2">
+    <!-- Features -->
+    <section class="container-2">
+      <h2 class="c2-header">A Mini-SCADA Designed from Customer Feedback</h2>
       <div class="table-container">
         <div class="table-header">Capabilities</div>
         <div class="c2-table">
@@ -196,68 +197,67 @@
           </table>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container-3">
-      <h1 class="c3-title">First In Segment for</h1>
+    <!-- Unique Advantages -->
+    <section class="container-3">
+      <h2 class="c3-title">First In Segment For</h2>
       <div class="c3-mid">
         <div class="c3-cards">
-          <img src="./Assets/images/developer symbols.svg" />
-          <h1 class="c3-head">0 Development Time & Cost</h1>
+          <img src="./Assets/images/developer symbols.svg" alt="Zero Development Time Icon" />
+          <h3 class="c3-head">0 Development Time & Cost</h3>
         </div>
         <div class="c3-cards">
-          <img src="./Assets/images/laptop.svg" />
-          <h1 class="c3-head">Free Software Updates</h1>
+          <img src="./Assets/images/laptop.svg" alt="Free Updates Icon" />
+          <h3 class="c3-head">Free Software Updates</h3>
         </div>
         <div class="c3-cards">
-          <img src="./Assets/images/robo.svg" class="robo" />
-          <h1 class="c3-head">Super Light Weight (10MB)</h1>
+          <img src="./Assets/images/robo.svg" class="robo" alt="Lightweight 10MB Software Icon" />
+          <h3 class="c3-head">Super Lightweight (10MB)</h3>
         </div>
       </div>
-    </div>
-    <div class="video-container">
-      <iframe
-        class="video-frame"
-        src="https://www.youtube.com/embed/pN_wP1dGd_k?si=jSiqRhw5JVY0-35e&mute=1&autoplay=1"
-        title="Vision C Demo"
-        frameborder="0"
+    </section>
+
+    <!-- Video Demo -->
+    <section class="video-container">
+      <h2 class="sr-only">Vision C Demo Video</h2>
+      <iframe class="video-frame" src="https://www.youtube.com/embed/pN_wP1dGd_k?si=jSiqRhw5JVY0-35e&mute=1&autoplay=1"
+        title="Vision C Demo Video" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <div class="container-4">
-      <h1 class="c4-title">System Requirements</h1>
+        allowfullscreen></iframe>
+    </section>
+
+    <!-- System Requirements -->
+    <section class="container-4">
+      <h2 class="c4-title">System Requirements</h2>
       <div class="c4-mid">
         <div class="c4-cards">
-          <img src="./Assets/images/simple-icons_windows.svg" />
-          <h1 class="c4-head">Windows 8 or above</h1>
+          <img src="./Assets/images/simple-icons_windows.svg" alt="Windows Operating System" />
+          <h3 class="c4-head">Windows 8 or above</h3>
         </div>
         <div class="c4-cards">
-          <img src="./Assets/images/bi_file-pdf-fill.svg" />
-          <h1 class="c4-head">Adobe PDF Reader</h1>
+          <img src="./Assets/images/bi_file-pdf-fill.svg" alt="PDF Reader Requirement" />
+          <h3 class="c4-head">Adobe PDF Reader</h3>
         </div>
         <div class="c4-cards">
-          <img src="./Assets/images/ri_ram-2-fill.svg" />
-          <h1 class="c4-head">4GB+ RAM</h1>
+          <img src="./Assets/images/ri_ram-2-fill.svg" alt="RAM Requirement Icon" />
+          <h3 class="c4-head">4GB+ RAM</h3>
         </div>
       </div>
       <div class="btnWrapper">
         <button class="button" onclick="download_vc()">Download</button>
-<!--         <a class="trialLicense" href="./licenseGenerator.html"
-          >Trial License Generator</a
-        > -->
       </div>
-    </div>
+    </section>
 
-    <div class="container-5">
+    <!-- Newsletter -->
+    <section class="container-5">
       <div class="c5-titles">
-        <h1 class="c5-title">Join Our Monthly IIoT Newsletter</h1>
-        <h2 class="c5-subtitle">
-          Get Updates About All Things IIoT And Much More
-        </h2>
+        <h2 class="c5-title">Join Our Monthly IIoT Newsletter</h2>
+        <p class="c5-subtitle">Get updates about industrial IoT, automation, and smart manufacturing.</p>
       </div>
       <div class="button1" onclick="signup()">Join Now</div>
-    </div>
+    </section>
+  </main>
 
     <footer class="footer">
       <div class="footer-top">
@@ -386,7 +386,7 @@
         </div>
       </div>
       <div class="footer-low">
-        <div class="low-p1">© Dicot Innovations 2024</div>
+        <div class="low-p1">© Dicot Innovations 2025</div>
         <div class="low-p2">
           <a href="TandC.html">Terms of use</a>
           <a href="privacypolicy.html">Privacy Policy</a>

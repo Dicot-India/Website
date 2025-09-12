@@ -1,517 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Dicot Innovations | Gateway to Industrial Solutions for Factory Data
-      Acquisition
-    </title>
-    <link rel="stylesheet" href="./CSS/visionC.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vision S - Advanced SCADA Software for Industrial Data Acquisition</title>
+  <meta name="description"
+    content="Vision S is a powerful SCADA software for industrial automation, supporting data acquisition from IoT controllers, PLCs, HMIs, and more. Compatible with Siemens, Schneider, Honeywell, GE, Yokogawa, Fuji, Multispan, ABB, Rockwell, Selec, Autonics, Teltonika, Wecon, Kinco, and other industrial devices. Download now for real-time monitoring and control." />
+  <meta name="keywords"
+    content="SCADA software, industrial automation, data acquisition, IoT controllers, PLC, HMI, PID, Siemens, Schneider, Honeywell, GE, Yokogawa, Fuji, Multispan, ABB, Rockwell, Selec, Autonics, Teltonika, Wecon, Kinco, factory automation, real-time monitoring" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Dicot Innovations" />
+  <meta property="og:title" content="Vision S - Advanced SCADA Software for Industrial Automation" />
+  <meta property="og:description"
+    content="Discover Vision S, a robust SCADA solution for real-time industrial data acquisition and control, compatible with a wide range of IoT devices, PLCs, and HMIs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dicot.tech/vision-s" />
+  <meta property="og:image" content="https://dicot.tech/Assets/images/visions.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vision S - SCADA Software for Industrial Automation" />
+  <meta name="twitter:description"
+    content="Vision S offers advanced SCADA features for industrial data acquisition, supporting multiple protocols and devices for seamless factory automation." />
+  <meta name="twitter:image" content="https://dicot.tech/Assets/images/visions.png" />
+  <link rel="canonical" href="https://dicot.tech/visionS" />
+  <link rel="stylesheet" href="./CSS/visionC.css" />
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Vision S SCADA Software",
+        "description": "Vision S is an advanced SCADA software designed for industrial data acquisition and automation, supporting IoT controllers, PLCs, HMIs, and over 4000 protocols.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Dicot Innovations"
+        },
+        "image": "https://dicot.tech/Assets/images/visions.png",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://dicot.tech/vision-s",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "USD",
+          "price": "0.00",
+          "itemOffered": {
+            "@type": "SoftwareApplication",
+            "name": "Vision S",
+            "applicationCategory": "Industrial Automation Software",
+            "operatingSystem": "Windows 7, Windows 10"
+          }
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <header>
     <nav>
       <div class="nav-inner">
         <div class="logo">
-          <img class="logoimg" src="./Assets/images/Logo.svg" alt="Dicot" />
+          <a href="home.html" aria-label="Dicot Innovations Home">
+            <img class="logoimg" src="./Assets/images/Logo.svg" alt="Dicot Innovations Logo" />
+          </a>
         </div>
         <div class="nav-items">
           <span><a href="home.html">Home</a></span>
           <span><a href="about.html">About</a></span>
           <span><a href="products.html">Products</a></span>
           <span><a href="contact.html">Contact</a></span>
-          <span><a href="https://blog.dicot.tech">Blog</a></span>
-          <span
-            ><a href="https://vision-web.tech" target="_blank"
-              ><u>Vision Web Login</u></a
-            ></span
-          >
+          <span><a href="https://blog.dicot.tech" rel="noopener">Blog</a></span>
+          <span>
+            <a href="https://vision-web.tech" target="_blank" rel="noopener">
+              <u>Vision Web Login</u>
+            </a>
+          </span>
         </div>
-        <button aria-label="Menu" class="hamburger" onclick="showmenu()">
-          <img src="./Assets/images/hamburger.png" alt="Menu Icon" />
+        <button aria-label="Open Navigation Menu" class="hamburger" onclick="showmenu()">
+          <img src="./Assets/images/hamburger.png" alt="Navigation Menu Icon" />
         </button>
       </div>
     </nav>
     <div class="mobmenu" id="mobmenu">
       <div class="closeButtonRow">
-        <button
-          aria-label="Close Menu"
-          class="closeButton"
-          onclick="hidemenu()"
-        >
-          <img src="./Assets/images/close.svg" alt="Close Menu Button" />
+        <button aria-label="Close Navigation Menu" class="closeButton" onclick="hidemenu()">
+          <img src="./Assets/images/close.svg" alt="Close Navigation Menu Icon" />
         </button>
       </div>
       <span><a href="home.html">Home</a></span>
       <span><a href="about.html">About</a></span>
       <span><a href="products.html">Products</a></span>
       <span><a href="contact.html">Contact</a></span>
-      <span><a href="https://blog.dicot.tech">Blog</a></span>
-      <span
-        ><a href="https://vision-web.tech" target="_blank"
-          >Vision Web Login</a
-        ></span
-      >
+      <span><a href="https://blog.dicot.tech" rel="noopener">Blog</a></span>
+      <span>
+        <a href="https://vision-web.tech" target="_blank" rel="noopener">Vision Web Login</a>
+      </span>
     </div>
-    <div class="container-header">Vision S</div>
+  </header>
+  <main>
+    <section class="container-header" aria-labelledby="vision-s-heading">
+      <h1 id="vision-s-heading">Vision S - SCADA</h1>
+    </section>
 
-    <div class="container-1">
+    <section class="container-1" aria-label="Vision S Product Image">
       <div class="c1-image">
-        <img
-          src="./Assets/images/visions.png"
-          alt="visionc"
-          style="border-radius: 0.3rem"
-        />
+        <img src="./Assets/images/visions.png" alt="Vision S SCADA software interface for industrial automation"
+          style="border-radius: 0.3rem" loading="lazy" />
       </div>
-      <img class="shadow" src="./Assets/images/Rectangle 6.png" alt="shadow" />
-    </div>
+      <img class="shadow" src="./Assets/images/Rectangle 6.png" alt="Decorative shadow effect" loading="lazy" />
+    </section>
 
-    <div class="c2-header">A SCADA designed from customer feedback</div>
+    <section class="c2-header" aria-labelledby="scada-features-heading">
+      <h2 id="scada-features-heading">A SCADA Designed from Customer Feedback</h2>
+    </section>
 
-    <div class="container-2">
+    <section class="container-2" aria-label="Vision S Capabilities">
       <div class="table-container">
-        <div class="table-header">Capabilities</div>
+        <h3 class="table-header">Key Features and Capabilities</h3>
         <div class="c2-table">
           <table>
-            <tr>
-              <th style="text-align: left">Feature</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td class="table-desc">Tags</td>
-              <td class="table-data">Up to 60000</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Ports Supported</td>
-              <td class="table-data">Multiple Ports</td>
-            </tr>
-            <tr>
-              <td class="table-desc">User Levels</td>
-              <td class="table-data">Unlimited</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Audit Trails</td>
-              <td class="table-data">21CFR</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Protocols</td>
-              <td class="table-data">4000+, OPC UA and DA</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Graphic Library</td>
-              <td class="table-data">Huge, Import options</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Live Trending Graph</td>
-              <td class="table-data">Customizable</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Historical Database</td>
-              <td class="table-data">
-                Postgres, 3rd party integration possible
-              </td>
-            </tr>
-            <tr>
-              <td class="table-desc">Reports</td>
-              <td class="table-data">Prints & PDF</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Report Customization</td>
-              <td class="table-data">Fully Customizable</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Recipe</td>
-              <td class="table-data">Unlimited</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Software Updates</td>
-              <td class="table-data">Free</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Batch Data Recording</td>
-              <td class="table-data">Multiple Simultaneous Batches</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Alarms</td>
-              <td class="table-data">Both Software and Device</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Electronic Signature</td>
-              <td class="table-data">Customizable</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Scaling</td>
-              <td class="table-data">Linear and Non-Linear</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Web Connection</td>
-              <td class="table-data">API, Customized</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Scripting Language</td>
-              <td class="table-data">C Language</td>
-            </tr>
-            <tr>
-              <td class="table-desc">Additional Features</td>
-              <td class="table-data">Multi Monitor, OPC UA Server</td>
-            </tr>
-            <tr>
-              <td class="table-desc">License</td>
-              <td class="table-data">
-                Tag based, Separate Runtime and Development
-              </td>
-            </tr>
+            <caption class="sr-only">Vision S SCADA Software Features</caption>
+            <thead>
+              <tr>
+                <th scope="col" style="text-align: left">Feature</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-desc">Tags</td>
+                <td class="table-data">Up to 60,000</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Ports Supported</td>
+                <td class="table-data">Multiple Ports</td>
+              </tr>
+              <tr>
+                <td class="table-desc">User Levels</td>
+                <td class="table-data">Unlimited</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Audit Trails</td>
+                <td class="table-data">21CFR Compliant</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Protocols</td>
+                <td class="table-data">4000+, OPC UA and DA</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Graphic Library</td>
+                <td class="table-data">Extensive, with Import Options</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Live Trending Graph</td>
+                <td class="table-data">Fully Customizable</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Historical Database</td>
+                <td class="table-data">Postgres, 3rd Party Integration</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Reports</td>
+                <td class="table-data">Printable & PDF Export</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Report Customization</td>
+                <td class="table-data">Fully Customizable</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Recipe Management</td>
+                <td class="table-data">Unlimited Recipes</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Software Updates</td>
+                <td class="table-data">Free Updates</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Batch Data Recording</td>
+                <td class="table-data">Multiple Simultaneous Batches</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Alarms</td>
+                <td class="table-data">Software and Device Alarms</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Electronic Signature</td>
+                <td class="table-data">Customizable</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Scaling</td>
+                <td class="table-data">Linear and Non-Linear</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Web Connection</td>
+                <td class="table-data">API, Customized Integration</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Scripting Language</td>
+                <td class="table-data">C Language Support</td>
+              </tr>
+              <tr>
+                <td class="table-desc">Additional Features</td>
+                <td class="table-data">Multi-Monitor, OPC UA Server</td>
+              </tr>
+              <tr>
+                <td class="table-desc">License</td>
+                <td class="table-data">Tag-Based, Separate Runtime and Development</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container-4">
-      <h1 class="c4-title">System Requirements</h1>
+    <section class="container-4" aria-labelledby="system-requirements-heading">
+      <h2 class="c4-title" id="system-requirements-heading">System Requirements</h2>
       <div class="c4-mid">
         <div class="c4-cards">
-          <img src="./Assets/images/simple-icons_windows.svg" />
-          <h1 class="c4-head">Windows 7/Windows 10</h1>
+          <img src="./Assets/images/simple-icons_windows.svg" alt="Windows operating system icon" loading="lazy" />
+          <h3 class="c4-head">Windows 7 or Windows 10</h3>
         </div>
         <div class="c4-cards">
-          <img src="./Assets/images/cpu.svg" />
-          <h1 class="c4-head">
-            P4 processor, 1ghz or higher, or an equivalent model
-          </h1>
+          <img src="./Assets/images/cpu.svg" alt="Processor icon" loading="lazy" />
+          <h3 class="c4-head">P4 Processor, 1GHz or Higher</h3>
         </div>
         <div class="c4-cards">
-          <img src="./Assets/images/ri_ram-2-fill.svg" />
-          <h1 class="c4-head">Minimum 512 MB; 1GB Recommanded</h1>
+          <img src="./Assets/images/ri_ram-2-fill.svg" alt="RAM icon" loading="lazy" />
+          <h3 class="c4-head">Minimum 512 MB; 1GB Recommended</h3>
         </div>
       </div>
-    </div>
+    </section>
+
     <div class="btnWrapper">
-      <button class="button" style="margin-bottom: 2rem" onclick="openForm()">
-        Download
+      <button class="button" style="margin-bottom: 2rem" onclick="openForm()"
+        aria-label="Download Vision S SCADA Software">
+        Download Now
       </button>
     </div>
 
-    <div class="container-5">
+    <section class="container-5" aria-labelledby="newsletter-heading">
       <div class="c5-titles">
-        <h1 class="c5-title">Join Our Monthly IIoT Newsletter</h1>
-        <h2 class="c5-subtitle">
-          Get Updates About All Things IIoT And Much More
-        </h2>
+        <h2 class="c5-title" id="newsletter-heading">Join Our Monthly IIoT Newsletter</h2>
+        <p class="c5-subtitle">Stay Updated on IIoT and Industrial Automation Trends</p>
       </div>
-      <div class="button1" onclick="signup()">Join Now</div>
-    </div>
+      <button class="button1" onclick="signup()" aria-label="Join IIoT Newsletter">Join Now</button>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <div class="footer-top">
-        <span class="follow-text">Follow Dicot</span>
-        <div class="footer-social-icons">
-          <a href="https://instagram.com/dicot.tech" target="_blank">
-            <img
-              data-src="./Assets/images/Instagram.svg"
-              alt="Instagram"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://linkedin.com/company/dicot-tech" target="_blank">
-            <img
-              data-src="./Assets/images/Linkedin.svg"
-              alt="Linkedin"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://youtube.com/@dicot" target="_blank">
-            <img
-              data-src="./Assets/images/youtube.svg"
-              alt="YouTube"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://threads.net/@dicot.tech" target="_blank">
-            <img
-              data-src="./Assets/images/Threads.svg"
-              alt="Threads"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://twitter.com/dicot_tech" target="_blank">
-            <img data-src="./Assets/images/X.svg" alt="X" class="social-icon" />
-          </a>
-          <a href="https://facebook.com/dicot.tech" target="_blank">
-            <img
-              data-src="./Assets/images/Facebook.svg"
-              alt="Facebook"
-              class="social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="footer-mid">
-        <div class="footer-mid-p1">
-          <div class="detail-container">
-            <h4 class="footer-mid-header">Dicot Innovations Private Limited</h4>
-
-            <div class="company-details">
-              <div class="footer-s2-detailtext">
-                A-805, Siddhi Vinayak Towers,<br />
-                Off S. G. Road, B/H. DCP Office,<br />
-                Makarba, Ahmedabad,<br />
-                Gujarat, India 380051
-              </div>
-            </div>
-            <div class="compdetail">
-              <div class="footer-s2-detailtext">
-                <a href="mailto:hello@dicot.tech">hello@dicot.tech</a>
-              </div>
-            </div>
-            <div class="compdetail">
-              <div class="footer-s2-detailtext">
-                <a href="tel:+917949185398">+91-7949185398</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-mid-right-section">
-          <div class="footer-mid-p">
-            <h3 class="footer-mid-header">Company</h3>
-            <div class="footer-qlink">
-              <a href="careers.html">Career</a>
-            </div>
-            <div class="footer-qlink">
-              <a href="downloads.html">Downloads</a>
-            </div>
-            <div class="footer-qlink">
-              <a href="#">News</a>
-            </div>
-            <div class="footer-qlink">
-              <a href="#">Distribution Network</a>
-            </div>
-            <div class="footer-qlink">
-              <a href="#">Customer Stories</a>
-            </div>
-          </div>
-          <div class="footer-mid-p">
-            <h3 class="footer-mid-header">What's New</h3>
-            <div class="footer-qlink">
-              <a href="#">Vision C</a>
-            </div>
-            <div class="footer-qlink">
-              <a href="#">Vision Web</a>
-            </div>
-            <div class="footer-qlink">
-              <a href="#">VGraphic</a>
-            </div>
-          </div>
-          <div class="footer-mid-p">
-            <h3 class="footer-mid-header">Stay in touch</h3>
-            <div class="footer-qlink">
-              <a
-                href="mailto:support@dicot.tech?subject=Hi, I need some assistance!"
-                >Technical Support</a
-              >
-            </div>
-            <div class="footer-qlink">
-              <a href="https://reddit.com/r/Dicot" target="_blank">Community</a>
-            </div>
-            <div class="footer-qlink">
-              <a
-                href="https://whatsapp.com/channel/0029Va9zKGNFsn0jZ1TYtQ1D"
-                target="_blank"
-                >WhatsApp Channel</a
-              >
-            </div>
-            <div class="footer-qlink">
-              <a href="https://t.me/+8N2nkr-DmwA5NjA1" target="_blank"
-                >Telegram Channel</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-low">
-        <div class="low-p1">© Dicot Innovations 2024</div>
-        <div class="low-p2">
-          <a href="TandC.html">Terms of use</a>
-          <a href="privacypolicy.html">Privacy Policy</a>
-          <a href="randc.html">Refund Policy</a>
-        </div>
-      </div>
-    </footer>
-
-    <button class="scrollUpBtn" id="btt" onclick="topFunction()">
-      <img src="./Assets/images/scrollUp.svg" alt="" data-srcset="" />
-    </button>
-
-    <div id="downloadFormModal" class="modal">
-      <div class="modal-content">
-        <div class="close" onclick="closeForm()">&times;</div>
-
-        <form
-          id="downloadForm"
-          action="https://send.pageclip.co/AfU4k0Gt3t05y6SsYO2U9QOYuoTpe55E/downloadForm"
-          method="POST"
-          class="form pageclip-form"
-        >
-          <h2>Download Vision S</h2>
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-            class="formInput"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            class="formInput"
-          />
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            pattern="^\+\d{1,4}[0-9]{10}$"
-            required
-            class="formInput"
-            placeholder="+911234567890"
-            title="Enter phone number with country code, e.g. +911234567890"
-          />
-
-          <button
-            type="submit"
-            class="formSaveBtn pageclip-form__submit"
-            data-pageclip
-          >
-            <span>Submit & Download</span>
-          </button>
-        </form>
+  <footer class="footer">
+    <div class="footer-top">
+      <span class="follow-text">Follow Dicot</span>
+      <div class="footer-social-icons">
+        <a href="https://instagram.com/dicot.tech" target="_blank" rel="noopener"
+          aria-label="Follow Dicot on Instagram">
+          <img data-src="./Assets/images/Instagram.svg" alt="Instagram icon" class="social-icon" loading="lazy" />
+        </a>
+        <a href="https://linkedin.com/company/dicot-tech" target="_blank" rel="noopener"
+          aria-label="Follow Dicot on LinkedIn">
+          <img data-src="./Assets/images/Linkedin.svg" alt="LinkedIn icon" class="social-icon" loading="lazy" />
+        </a>
+        <a href="https://youtube.com/@dicot" target="_blank" rel="noopener" aria-label="Follow Dicot on YouTube">
+          <img data-src="./Assets/images/youtube.svg" alt="YouTube icon" class="social-icon" loading="lazy" />
+        </a>
+        <a href="https://threads.net/@dicot.tech" target="_blank" rel="noopener" aria-label="Follow Dicot on Threads">
+          <img data-src="./Assets/images/Threads.svg" alt="Threads icon" class="social-icon" loading="lazy" />
+        </a>
+        <a href="https://twitter.com/dicot_tech" target="_blank" rel="noopener" aria-label="Follow Dicot on Twitter">
+          <img data-src="./Assets/images/X.svg" alt="Twitter icon" class="social-icon" loading="lazy" />
+        </a>
+        <a href="https://facebook.com/dicot.tech" target="_blank" rel="noopener" aria-label="Follow Dicot on Facebook">
+          <img data-src="./Assets/images/Facebook.svg" alt="Facebook icon" class="social-icon" loading="lazy" />
+        </a>
       </div>
     </div>
+    <div class="footer-mid">
+      <div class="footer-mid-p1">
+        <div class="detail-container">
+          <h4 class="footer-mid-header">Dicot Innovations Private Limited</h4>
+          <div class="company-details">
+            <address class="footer-s2-detailtext">
+              A-805, Siddhi Vinayak Towers,<br />
+              Off S. G. Road, B/H. DCP Office,<br />
+              Makarba, Ahmedabad,<br />
+              Gujarat, India 380051
+            </address>
+          </div>
+          <div class="compdetail">
+            <a href="mailto:hello@dicot.tech" class="footer-s2-detailtext">hello@dicot.tech</a>
+          </div>
+          <div class="compdetail">
+            <a href="tel:+917949185398" class="footer-s2-detailtext">+91-7949185398</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-mid-right-section">
+        <div class="footer-mid-p">
+          <h3 class="footer-mid-header">Company</h3>
+          <div class="footer-qlink">
+            <a href="careers.html">Careers</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="downloads.html">Downloads</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="#">News</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="#">Distribution Network</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="#">Customer Stories</a>
+          </div>
+        </div>
+        <div class="footer-mid-p">
+          <h3 class="footer-mid-header">What's New</h3>
+          <div class="footer-qlink">
+            <a href="#">Vision C</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="#">Vision Web</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="#">VGraphic</a>
+          </div>
+        </div>
+        <div class="footer-mid-p">
+          <h3 class="footer-mid-header">Stay in Touch</h3>
+          <div class="footer-qlink">
+            <a href="mailto:support@dicot.tech?subject=Hi, I need some assistance!" rel="noopener">Technical Support</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="https://reddit.com/r/Dicot" target="_blank" rel="noopener">Community</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="https://whatsapp.com/channel/0029Va9zKGNFsn0jZ1TYtQ1D" target="_blank" rel="noopener">WhatsApp
+              Channel</a>
+          </div>
+          <div class="footer-qlink">
+            <a href="https://t.me/+8N2nkr-DmwA5NjA1" target="_blank" rel="noopener">Telegram Channel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-low">
+      <div class="low-p1">© Dicot Innovations 2025</div>
+      <div class="low-p2">
+        <a href="TandC.html">Terms of Use</a>
+        <a href="privacypolicy.html">Privacy Policy</a>
+        <a href="randc.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+  <button class="scrollUpBtn" id="btt" onclick="topFunction()" aria-label="Scroll to Top">
+    <img src="./Assets/images/scrollUp.svg" alt="Scroll to top icon" loading="lazy" />
+  </button>
 
-    <script>
-      function triggerDownload() {
-        const link = document.createElement("a");
-        link.href = "https://dicot.tech/VisionS.iso";
-        link.setAttribute("download", "");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      }
+  <div id="downloadFormModal" class="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeForm()" aria-label="Close Download Form">&times;</button>
+      <form id="downloadForm" action="https://send.pageclip.co/AfU4k0Gt3t05y6SsYO2U9QOYuoTpe55E/downloadForm"
+        method="POST" class="form pageclip-form">
+        <h2>Download Vision S SCADA Software</h2>
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required class="formInput" />
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email" required class="formInput" />
+        <label for="phoneNumber" class="sr-only">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="^\+\d{1,4}[0-9]{10}$" required class="formInput"
+          placeholder="+911234567890" title="Enter phone number with country code, e.g. +911234567890" />
+        <button type="submit" class="formSaveBtn pageclip-form__submit" data-pageclip
+          aria-label="Submit Form to Download Vision S">
+          <span>Submit & Download</span>
+        </button>
+      </form>
+    </div>
+  </div>
 
-      function closeForm() {
-        document.getElementById("downloadFormModal").style.display = "none";
-      }
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
-      window.addEventListener("DOMContentLoaded", () => {
-        Pageclip.form("#downloadForm", {
-          onSubmit: function () {
-            console.log("Submitting form and triggering download...");
-            triggerDownload();
-          },
-          onResponse: function (error, response) {
-            if (error) {
-              console.error("Pageclip submission failed:", error);
-            } else {
-              console.log("Pageclip submission successful!");
-              closeForm();
-            }
-          },
-        });
-      });
-    </script>
+  <script>
+    function triggerDownload() {
+      const link = document.createElement("a");
+      link.href = "https://dicot.tech/VisionS.iso";
+      link.setAttribute("download", "");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
 
-    <script>
-      function openForm() {
-        document.getElementById("downloadFormModal").style.display = "flex";
-      }
-    </script>
+    function closeForm() {
+      document.getElementById("downloadFormModal").style.display = "none";
+    }
 
-    <script>
-      function signup() {
-        window.open("https://zcmp.in/Xgc6", "_blank");
-      }
-
-      var mybutton = document.getElementById("btt");
-      var mobmenu = document.getElementById("mobmenu");
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-
-      function showmenu() {
-        mobmenu.style.display = "flex";
-        setTimeout(function () {
-          mobmenu.classList.add("show");
-        }, 50); // You can adjust the delay as needed
-      }
-
-      function hidemenu() {
-        mobmenu.classList.remove("show");
-        setTimeout(function () {
-          mobmenu.style.display = "none";
-        }, 500); // Adjust the delay to match the transition duration
-      }
-    </script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-      (function () {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-        s0.parentNode.insertBefore(s1, s0);
-      })();
-    </script>
-    <!--End of Tawk.to Script-->
-
-    <script>
-      (function () {
-        var elements = document.querySelectorAll("img[data-src]");
-        var index = 0;
-        var lazyLoad = function () {
-          if (index >= elements.length) return;
-          var item = elements[index];
-          if (this.scrollY + this.innerHeight > item.offsetTop) {
-            var src = item.getAttribute("data-src");
-            item.src = src;
-            item.addEventListener("load", function () {
-              item.removeAttribute("data-src");
-            });
-            index++;
-            lazyLoad();
+    window.addEventListener("DOMContentLoaded", () => {
+      Pageclip.form("#downloadForm", {
+        onSubmit: function () {
+          console.log("Submitting form and triggering download...");
+          triggerDownload();
+        },
+        onResponse: function (error, response) {
+          if (error) {
+            console.error("Pageclip submission failed:", error);
+          } else {
+            console.log("Pageclip submission successful!");
+            closeForm();
           }
-        };
-        var init = function () {
-          window.addEventListener("scroll", lazyLoad);
+        },
+      });
+    });
+  </script>
+
+  <script>
+    function openForm() {
+      document.getElementById("downloadFormModal").style.display = "flex";
+    }
+  </script>
+
+  <script>
+    function signup() {
+      window.open("https://zcmp.in/Xgc6", "_blank");
+    }
+
+    var mybutton = document.getElementById("btt");
+    var mobmenu = document.getElementById("mobmenu");
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    function showmenu() {
+      mobmenu.style.display = "flex";
+      setTimeout(function () {
+        mobmenu.classList.add("show");
+      }, 50);
+    }
+
+    function hidemenu() {
+      mobmenu.classList.remove("show");
+      setTimeout(function () {
+        mobmenu.style.display = "none";
+      }, 500);
+    }
+  </script>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/626530d87b967b11798c3c2b/1g1dkdkc9";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script>
+    (function () {
+      var elements = document.querySelectorAll("img[data-src]");
+      var index = 0;
+      var lazyLoad = function () {
+        if (index >= elements.length) return;
+        var item = elements[index];
+        if (this.scrollY + this.innerHeight > item.offsetTop) {
+          var src = item.getAttribute("data-src");
+          item.src = src;
+          item.addEventListener("load", function () {
+            item.removeAttribute("data-src");
+          });
+          index++;
           lazyLoad();
-        };
-        return init();
-      })();
-    </script>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-  </body>
+        }
+      };
+      var init = function () {
+        window.addEventListener("scroll", lazyLoad);
+        lazyLoad();
+      };
+      return init();
+    })();
+  </script>
+</body>
+
 </html>
