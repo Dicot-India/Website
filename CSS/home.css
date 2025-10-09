@@ -184,7 +184,7 @@ nav {
 .black-text {
     color: #0a0a28;
     font-family: "Inter", sans-serif;
-    font-size: 10rem;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -195,7 +195,7 @@ nav {
 .txt-rotate {
     color: #4747d1;
     font-family: "Inter", sans-serif;
-    font-size: 8rem;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
