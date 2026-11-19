@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "vision-c-100-tags",
+    "title": "Vision C is now licensed up to 100 tags",
+    "date": "2026-11-19",
+    "author": "Dicot Innovations",
+    "excerpt": "A smaller, clearer ceiling for our mini-SCADA, and a new path for larger scopes.",
+    "tags": ["Vision C", "Licensing"],
+    "cover": "/images/vision-c.png",
+    "coverAlt": "Vision C mini-SCADA interface",
+    "content": "<p>Vision C is our Windows mini-SCADA and data logger for compact machines and single lines. Its published ceiling is now <strong>up to 100 tags</strong>.</p><h2>What that means</h2><p>The number is a licence limit, not a technical guess. If your application fits inside 100 tags, Vision C keeps the setup short: Modbus TCP/IP, RTU, BCD and AIBUS, local history, and one-click forwarding to Vision Web.</p><ul><li>Scope: one compact machine or line.</li><li>Licences: 2, 5, 10 or 20 years, or perpetual without updates.</li><li>Quotes: handled through an authorised dealer.</li></ul><h2>What if the scope is bigger?</h2><p>For more than 100 tags on-premise, we point you to Vision S, our enterprise SCADA for multi-line and regulated plants. If the need is Vision S-style software at a lower cost, Vision S Lite is in development; register interest and we will share details at launch.</p>"
+  },
+  {
+    "slug": "vision-s-lite-in-development",
+    "title": "Vision S Lite: what we can share today",
+    "date": "2026-11-19",
+    "author": "Dicot Innovations",
+    "excerpt": "A lighter Vision S for cost-sensitive applications. In development, with no invented specs.",
+    "tags": ["Vision S", "Product update"],
+    "cover": "/images/visions.png",
+    "coverAlt": "Vision S SCADA interface",
+    "content": "<p>Vision S Lite is in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library, for plants that need Vision S-style SCADA without the full footprint.</p><h2>What we can confirm</h2><ul><li>It is built on the Vision S platform.</li><li>It carries fewer protocols than Vision S.</li><li>It has a smaller design library.</li><li>It targets cost-sensitive applications.</li></ul><h2>What we are not saying yet</h2><p>We have not published a tag limit, edition list or price. Those will be announced at launch and quoted through authorised dealers. If you want to hear first, <a href=\"/contact/?interest=vision-s-lite\">register your interest</a>.</p>"
+  }
+]

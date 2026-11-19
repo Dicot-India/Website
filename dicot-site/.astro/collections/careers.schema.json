@@ -1,0 +1,45 @@
+{
+  "$ref": "#/definitions/careers",
+  "definitions": {
+    "careers": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "default": "Full-time"
+        },
+        "experience": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "posted": {
+          "type": "string"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "department",
+        "location",
+        "experience",
+        "description",
+        "posted"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

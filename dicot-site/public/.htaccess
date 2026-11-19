@@ -1,0 +1,62 @@
+Options -MultiViews
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # One canonical host: non-www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # Legacy URLs from the old static site
+  RewriteRule ^index\.html$ / [R=301,L,NC]
+  RewriteRule ^home\.html$ / [R=301,L,NC]
+  RewriteRule ^about\.html$ /about/ [R=301,L,NC]
+  RewriteRule ^products\.html$ /products/ [R=301,L,NC]
+  RewriteRule ^contact\.html$ /contact/ [R=301,L,NC]
+  RewriteRule ^careers\.html$ /careers/ [R=301,L,NC]
+  RewriteRule ^downloads\.html$ /downloads/ [R=301,L,NC]
+  RewriteRule ^visionC\.html$ /products/vision-c/ [R=301,L,NC]
+  RewriteRule ^visionWeb\.html$ /products/vision-web/ [R=301,L,NC]
+  RewriteRule ^visionS\.html$ /products/vision-s/ [R=301,L,NC]
+  RewriteRule ^vGraphic\.html$ /products/vgraphic/ [R=301,L,NC]
+  RewriteRule ^TandC\.html$ /legal/terms/ [R=301,L,NC]
+  RewriteRule ^privacypolicy\.html$ /legal/privacy/ [R=301,L,NC]
+  RewriteRule ^randc\.html$ /legal/refund/ [R=301,L,NC]
+  RewriteRule ^licenseGenerator\.html$ /downloads/ [R=301,L,NC]
+
+  # Blog articles are read from /blog/posts.json by /blog/index.html.
+  # This gives each post a clean URL without creating a folder per post.
+  RewriteRule ^blog/([a-z0-9][a-z0-9-]*)/?$ /blog/index.html [L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Astro emits inline module scripts and scoped styles, so inline is required here.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://www.google-analytics.com https://embed.tawk.to https://*.tawk.to; style-src 'self' 'unsafe-inline' https://*.tawk.to; img-src 'self' data: https://*.google-analytics.com https://www.google-analytics.com https://*.tawk.to; connect-src 'self' https://*.google-analytics.com https://www.google-analytics.com https://*.googletagmanager.com https://*.tawk.to wss://*.tawk.to; font-src 'self' https://*.tawk.to; frame-src https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+</IfModule>

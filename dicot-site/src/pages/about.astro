@@ -1,0 +1,201 @@
+---
+import Base from "../layouts/Base.astro";
+import Cta from "../components/Cta.astro";
+import { site } from "../data/site";
+import { stats, recognitions, customerLogos, testimonials, team } from "../data/content";
+
+const title = "About Dicot Innovations | SCADA Company in India";
+const description =
+  "Dicot Innovations is an Ahmedabad-based SCADA and IIoT software company founded in 2022. 800+ customers, 1,000+ deployments, backed by Startup India and i-Hub.";
+
+const localBusiness = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${site.url}/#localbusiness`,
+  name: site.name,
+  url: site.url,
+  email: site.emails.sales,
+  telephone: site.phones[0].label,
+  foundingDate: site.founded,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.street,
+    addressLocality: site.address.city,
+    addressRegion: site.address.region,
+    postalCode: site.address.postalCode,
+    addressCountry: site.address.country,
+  },
+  parentOrganization: { "@id": `${site.url}/#organization` },
+};
+
+const initials = (name: string) =>
+  name
+    .split(" ")
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join("");
+
+const leadership = team.filter((t) => t.group === "Leadership");
+const board = team.filter((t) => t.group !== "Leadership");
+---
+<Base title={title} description={description} schema={[localBusiness]}>
+  <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>About</li></ol></nav></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">About Dicot</span>
+      <h1>Industrial software from Ahmedabad, for the world.</h1>
+      <p class="lede">
+        Dicot Innovations builds SCADA, IIoT and data-acquisition software for manufacturers. We started in 2022 with a
+        simple observation: the plants that need data most are often the ones least able to afford a six-month
+        integration project.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="stats">
+        {stats.map((s) => <div class="stat"><b>{s.value}</b><span>{s.label}</span></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2>Built by people who commission plants.</h2>
+        <p>
+          Dicot was founded in Ahmedabad in 2022 by a small team with background in industrial automation. The first
+          product, Vision C, was a reaction to what we saw on shop floors: capable machines, no usable history, and
+          reports assembled by hand at the end of every shift.
+        </p>
+        <p>
+          Today the suite covers a mini-SCADA, an enterprise SCADA and a hosted cloud platform, used by more than 800
+          customers across 1,000+ deployments. The core team is six people, backed by directors and mentors from the
+          automation industry.
+        </p>
+        <p>
+          We are recognised under Startup India, incubated at i-Hub (a Gujarat Government enterprise), supported by
+          the Wadhwani Foundation and part of the Make in India initiative.
+        </p>
+      </div>
+      <div>
+        <div class="card">
+          <h3>What we optimise for</h3>
+          <ul role="list" class="mb-0">
+            <li><strong>Time to first data.</strong> A product should be useful before the project plan is approved.</li>
+            <li><strong>Support that answers.</strong> Production does not wait for a ticket queue.</li>
+            <li><strong>Software a plant can afford.</strong> Pricing that matches the size of the problem.</li>
+          </ul>
+        </div>
+        <div class="card mt-2">
+          <h3>Registered office</h3>
+          <p class="mb-0">{site.address.full}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Recognition</span><h2>Supported by the ecosystem.</h2></div>
+      </div>
+      <div class="logo-row">
+        {recognitions.map((r) => <img src={r.image} alt={r.alt} height="36" loading="lazy" />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head section-head--sub">
+        <div>
+          <span class="eyebrow">Team</span><h2>The people behind the product.</h2>
+          <p>The team that builds the software, backed by directors from the automation industry.</p>
+        </div>
+      </div>
+      <h3 class="mono muted">Leadership</h3>
+      <div class="team-grid mt-2">
+        {leadership.map((t) => (
+          <article class="person">
+            <img
+              class="person__photo"
+              src={t.image}
+              alt={`${t.name}, ${t.role}`}
+              width="920"
+              height="690"
+              loading="lazy"
+              style={t.position ? `object-position:${t.position}` : undefined}
+            />
+            <div class="person__body"><b>{t.name}</b><span>{t.role}</span></div>
+          </article>
+        ))}
+      </div>
+      <h3 class="mono muted mt-4">Board &amp; mentors</h3>
+      <div class="team-grid mt-2">
+        {board.map((t) => (
+          <article class="person">
+            <img
+              class="person__photo"
+              src={t.image}
+              alt={`${t.name}, ${t.role}`}
+              width="920"
+              height="690"
+              loading="lazy"
+              style={t.position ? `object-position:${t.position}` : undefined}
+            />
+            <div class="person__body"><b>{t.name}</b><span>{t.role}</span></div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="section-head section-head--sub">
+        <div>
+          <span class="eyebrow">Customers</span><h2>Brands using Dicot software.</h2>
+          <p>A selection of the manufacturers and institutions running our products.</p>
+        </div>
+      </div>
+      <div class="logo-wall">
+        {customerLogos.map((l) => (
+          <div class="logo-wall__cell">
+            <img
+              src={l.image}
+              alt={`${l.name} logo`}
+              loading="lazy"
+              style={l.scale ? `--logo-scale:${l.scale}` : undefined}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section stories">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Customer stories</span><h2>In their words.</h2></div>
+      </div>
+      <div class="quote-grid">
+        {testimonials.map((t) => (
+          <figure class="quote">
+            <span class="quote__mark" aria-hidden="true">“</span>
+            <blockquote><p>{t.quote}</p></blockquote>
+            <figcaption>
+              <span class="quote__avatar" aria-hidden="true">{initials(t.name)}</span>
+              <span class="quote__who"><b>{t.name}</b><span>{t.role}</span></span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Cta title="Come see the software." text="A demo is the fastest way to judge whether we fit your plant. Bring your tag list." />
+</Base>

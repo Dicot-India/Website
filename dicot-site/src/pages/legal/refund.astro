@@ -1,0 +1,72 @@
+---
+import Legal from "../../layouts/Legal.astro";
+import { site } from "../../data/site";
+
+const title = "Refund & Cancellation Policy | Dicot Innovations";
+const description =
+  "Refund and cancellation rules for Dicot software licences, cloud subscriptions and duplicate transactions, including processing timelines.";
+---
+<Legal
+  title={title}
+  description={description}
+  label="Refund & cancellation"
+  lede="Software licences and cloud subscriptions are digital products. This page explains when an order can be cancelled or refunded."
+>
+  <p><strong>Effective date:</strong> 18 November 2026 · <strong>Version:</strong> 2.0</p>
+
+  <h2>1. Cancellation before delivery</h2>
+  <p>
+    If you cancel an order before a licence key is generated or a cloud subscription is activated, the order amount is
+    refunded in full. Cancel by writing to <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> with the order
+    or invoice number.
+  </p>
+
+  <h2>2. After a licence is generated</h2>
+  <p>
+    A software licence cannot be cancelled or refunded once the licence key has been issued, because the product can be
+    used immediately. This applies to Vision C, Vision S, VGraphic and cloud activations.
+  </p>
+
+  <h2>3. Cloud subscriptions</h2>
+  <p>
+    Cloud subscriptions are paid in advance. Cancellation stops the next renewal; the current period is not refunded.
+    If you cancel, export your data before the period ends. We retain cloud data as described in the
+    <a href="/legal/privacy/">privacy policy</a> and your order terms.
+  </p>
+
+  <h2>4. Physical goods</h2>
+  <p>
+    If a physical item has shipped but has not been delivered, the order can be cancelled and the amount refunded after
+    deducting shipping and handling, once the item is returned intact. Delivered items cannot be cancelled.
+  </p>
+
+  <h2>5. Failed or duplicate transactions</h2>
+  <p>
+    If a payment fails but money is debited, or the same order is charged twice, the affected amount is refunded. Send
+    the transaction reference and invoice number to <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a>.
+    Bank or card charges may not be refundable.
+  </p>
+
+  <h2>6. Processing time</h2>
+  <p>
+    Approved refunds are processed within 5–7 business days on our side. Your bank or card issuer may take longer to
+    credit the amount. We cannot guarantee a specific credit date once the refund leaves us.
+  </p>
+
+  <h2>7. Partial cancellations</h2>
+  <p>
+    Where an order includes multiple items and only some are cancelled, the refund corresponds to the cancelled part.
+  </p>
+
+  <h2>8. Changes</h2>
+  <p>
+    We may update this policy. The version on this page applies to orders placed after its effective date.
+  </p>
+
+  <h2>9. Contact</h2>
+  <p>
+    {site.name}<br />
+    {site.address.full}<br />
+    <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> · {site.phones[0].label}
+  </p>
+</Legal>

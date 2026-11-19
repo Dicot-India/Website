@@ -1,0 +1,73 @@
+---
+import type { Product } from "../data/products";
+
+interface Props {
+  product: Product;
+  lazy?: boolean;
+}
+
+const { product: p, lazy = true } = Astro.props;
+---
+
+<figure class:list={["shot", p.status === "upcoming" && "shot--pending"]}>
+  {p.status === "upcoming" ? (
+    <div class="pending-panel">
+      <span class="pending-panel__status"><i aria-hidden="true"></i>In development</span>
+      <strong>{p.name}</strong>
+      <p>Lighter Vision S platform · reduced protocol set · smaller design library</p>
+    </div>
+  ) : (
+    <img src={p.image} alt={p.imageAlt} loading={lazy ? "lazy" : "eager"} width="1400" height="740" />
+  )}
+  <figcaption>{p.name} — {p.status === "upcoming" ? "launch preview" : "product interface"}</figcaption>
+</figure>
+
+<style>
+  .shot--pending {
+    background: var(--navy);
+  }
+  .pending-panel {
+    min-height: 360px;
+    padding: clamp(24px, 4vw, 44px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .pending-panel__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ff8f8f;
+  }
+  .pending-panel__status i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 0 4px rgba(203, 0, 0, 0.18);
+  }
+  .pending-panel strong {
+    font-family: var(--display);
+    font-size: clamp(2.1rem, 4vw, 3.2rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+  .pending-panel p {
+    margin: 6px 0 0;
+    max-width: 32ch;
+    color: #b9b9cd;
+    font-size: 0.95rem;
+  }
+  .shot--pending figcaption {
+    background: #fff;
+  }
+</style>

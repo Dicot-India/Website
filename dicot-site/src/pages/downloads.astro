@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+import Cta from "../components/Cta.astro";
+import { downloads } from "../data/content";
+import { site } from "../data/site";
+
+const title = "Software Downloads | Dicot Vision C, Vision Web, VGraphic";
+const description =
+  "Download Dicot software: Vision C setup, Vision Web Windows and Android clients, Vision S manuals, VGraphic setup and manuals, plus the RS-485 driver.";
+---
+<Base title={title} description={description}>
+  <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Downloads</li></ol></nav></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Downloads</span>
+      <h1>Installers, clients and manuals.</h1>
+      <p class="lede">
+        Current builds for Windows and Android. Licence keys are issued by your dealer or by our sales team; the
+        installers below do not include a licence.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-2">
+      {downloads.map((group) => (
+        <div class="card">
+          <h3>{group.name}</h3>
+          <ul role="list" class="mb-0">
+            {group.items.map((item) => (
+              <li class="mt-1">
+                <a href={item.href} rel="noopener">{item.label}</a>
+                <span class="chip" style="margin-left:8px">{item.type}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="wrap mt-3">
+      <p class="form-note">
+        Files are hosted on dicot.tech and dicot.in. If a link fails, email <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> with the product name.
+        The old licence generator page has been retired; licence keys are issued through your dealer.
+      </p>
+    </div>
+  </section>
+
+  <Cta title="Need a licence or an upgrade?" text="Send your product, licence ID and the version you are running. We will route it to the right person." primaryLabel="Contact support" secondaryLabel="See plans" secondaryHref="/pricing/" />
+</Base>

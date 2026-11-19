@@ -1,0 +1,262 @@
+---
+import Base from "../layouts/Base.astro";
+import LiveDemo from "../components/LiveDemo.astro";
+import Faq from "../components/Faq.astro";
+import Cta from "../components/Cta.astro";
+import "../styles/home.css";
+import { products } from "../data/products";
+import { stats, recognitions, industries, testimonials, homeFaqs } from "../data/content";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: homeFaqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const [headlineStat, ...proofStats] = stats;
+
+const title = "SCADA & IIoT Software Built in India | Dicot";
+const description =
+  "Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Vision C, Vision S and Vision Web run in 1,000+ plants. Book a demo.";
+---
+<Base title={title} description={description} schema={[faqSchema]}>
+  <div class="home">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="hero-index"><span>Plant floor, live</span><span>Ahmedabad, IN</span></div>
+            <h1>SCADA and IIoT software, <em>built in India</em> for the world.</h1>
+            <p class="lede">
+              Connect the shop floor to the top floor with Vision C, Vision S and Vision Web. One suite for data logging,
+              remote monitoring and regulated manufacturing — deployed in 1,000+ plants across nine industries.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="/contact/">Book a demo</a>
+              <a class="btn btn--ghost" href="/products/">Explore the suite</a>
+            </div>
+            <div class="hero-meta">
+              <span>800+ customers</span>
+              <span>1,000+ deployments</span>
+              <span>4,000+ device protocols</span>
+            </div>
+          </div>
+          <LiveDemo />
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap trust-inner">
+        <span class="trust-label">Recognised &amp; supported by</span>
+        <div class="trust-logos">
+          {recognitions.map((r) => (
+            <img src={r.image} alt={r.alt} height="30" loading="lazy" />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <section class="section home-proof">
+      <div class="wrap">
+        <div class="home-head">
+          <div>
+            <span class="home-kicker">The layer between</span>
+            <h2>From a sensor on a machine to a decision on a phone.</h2>
+          </div>
+          <p>
+            Dicot makes the software layer between industrial equipment and the people who run it: collect data, keep it
+            safe, show it clearly and raise the alarm when something drifts.
+          </p>
+        </div>
+        <div class="proof-grid">
+          <div class="proof-main">
+            <b>{headlineStat.value}</b>
+            <span>{headlineStat.label}</span>
+          </div>
+          <div class="proof-list">
+            {proofStats.map((s) => (
+              <div><b>{s.value}</b><span>{s.label}</span></div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white home-products" id="products">
+      <div class="wrap">
+        <div class="home-head">
+          <div>
+            <span class="home-kicker">Product index</span>
+            <h2>One architecture. Every size of plant.</h2>
+          </div>
+          <a class="btn btn--ghost btn--small" href="/products/">Compare all products</a>
+        </div>
+        <div class="product-index">
+          {products.map((p, i) => (
+            <a class="p-row" href={`/products/${p.slug}/`}>
+              <span class="p-row__num">0{i + 1}</span>
+              <div>
+                <h3>{p.name}</h3>
+                <span class="p-row__cat">{p.category}</span>
+                {p.status === "upcoming" && <span class="p-row__cat p-row__cat--soon">In development</span>}
+              </div>
+              <p>{p.tagline}</p>
+              <div class="p-row__facts">
+                {p.facts.slice(0, 2).map((f) => <span>{f.value}</span>)}
+              </div>
+              <span class="p-row__arrow" aria-hidden="true">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-signal">
+      <div class="wrap">
+        <div class="home-head home-head--light">
+          <div>
+            <span class="home-kicker">The data path</span>
+            <h2>One path from PLC to PDF.</h2>
+          </div>
+          <p>
+            Each product does one job in the same chain. Start at the machine, add plant-wide visibility, then put the
+            evidence in front of the person who needs it.
+          </p>
+        </div>
+        <ol class="signal-path">
+          <li>
+            <span class="signal-step">01 / Collect</span>
+            <h3>Vision C</h3>
+            <p>Reads Modbus TCP/IP, RTU, BCD and AIBUS from one machine or line. Up to 100 tags, logged locally.</p>
+          </li>
+          <li>
+            <span class="signal-step">02 / Run the plant</span>
+            <h3>Vision S</h3>
+            <p>Enterprise SCADA for multi-line plants: 4,000+ protocols, OPC UA/DA and 21 CFR-ready audit trails.</p>
+          </li>
+          <li>
+            <span class="signal-step">03 / Reach people</span>
+            <h3>Vision Web</h3>
+            <p>Hosted cloud SCADA with 50–100 ms updates and alarms by SMS, email, WhatsApp and Telegram.</p>
+          </li>
+          <li>
+            <span class="signal-step">04 / Report</span>
+            <h3>VGraphic</h3>
+            <p>Turns Excel, CSV, SQL and DAT files into branded PDF tables and graphs, on desktop or phone.</p>
+          </li>
+        </ol>
+        <a class="signal-link" href="/solutions/">See how it fits your plant <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="section home-why">
+      <div class="wrap split split--center">
+        <div>
+          <span class="home-kicker">How we work</span>
+          <h2>Industrial software without the industrial project.</h2>
+          <p class="lede">
+            Most SCADA rollouts stall on integration. Dicot ships a working platform, a dealer network that knows the
+            plant, and support that answers the same day.
+          </p>
+          <ul class="why-list">
+            <li><strong>Same-day expert support</strong> for production issues, not a ticket queue.</li>
+            <li><strong>Free software updates</strong> across the supported licence term.</li>
+            <li><strong>Deploy on-prem or in our cloud</strong>, and change your mind later.</li>
+            <li><strong>Made in India</strong> under Startup India, i-Hub, Wadhwani Foundation and Make in India.</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn--dark" href="/about/">About Dicot</a>
+            <a class="btn btn--ghost" href="/solutions/">See solutions</a>
+          </div>
+        </div>
+        <figure class="shot">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <em>vision-web.tech / dashboard</em>
+          </div>
+          <img src="/images/vision-web.png" alt="Vision Web cloud SCADA dashboard with connected projects" width="1431" height="710" loading="lazy" />
+          <figcaption>Vision Web — hosted cloud SCADA dashboard</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--paper home-industries" id="industries">
+      <div class="wrap">
+        <div class="home-head">
+          <div>
+            <span class="home-kicker">Industry index</span>
+            <h2>Where our software runs.</h2>
+          </div>
+          <a class="btn btn--ghost btn--small" href="/industries/">All industries</a>
+        </div>
+        <div class="industry-index">
+          {industries.map((i, n) => (
+            <a class="industry-item" href={`/industries/#${i.slug}`}>
+              <span>{String(n + 1).padStart(2, "0")}</span>
+              <h3>{i.name}</h3>
+              <p>{i.text}</p>
+              <span class="industry-item__proof mono">{i.proof}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white home-quotes">
+      <div class="wrap">
+        <div class="home-head">
+          <div>
+            <span class="home-kicker">In their words</span>
+            <h2>What partners and plant teams say.</h2>
+          </div>
+        </div>
+        <div class="quote-index">
+          {testimonials.map((t) => (
+            <blockquote class="quote-item">
+              <span class="quote-item__mark" aria-hidden="true">“</span>
+              <p>{t.quote}</p>
+              <footer><b>{t.name}</b><span>{t.role}</span></footer>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-compare">
+      <div class="wrap split split--center">
+        <div>
+          <span class="home-kicker">Buying guide</span>
+          <h2>Compare the options before you commit.</h2>
+          <p class="lede">
+            Traditional SCADA, a cloud platform and a mini-SCADA solve different problems. We wrote an honest comparison
+            so you can pick the right shape for your plant — even if it is not ours.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn--dark" href="/alternatives/">SCADA alternatives in India</a>
+            <a class="btn btn--ghost" href="/compare/cloud-vs-on-premise-scada/">Cloud vs on-premise</a>
+          </div>
+        </div>
+        <div class="spec-box">
+          <table class="spec-table">
+            <tr><th>Single machine</th><td>Vision C</td></tr>
+            <tr><th>Multi-line plant</th><td>Vision S</td></tr>
+            <tr><th>Remote sites</th><td>Vision Web</td></tr>
+            <tr><th>Shift reports</th><td>VGraphic</td></tr>
+            <tr><th>Regulated process</th><td>Vision S + e-signature</td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="home-faq">
+      <Faq items={homeFaqs} title="Questions buyers ask before a demo" intro="Short answers to the things plant teams ask us first. If yours is not here, ask us directly." />
+    </div>
+
+    <Cta />
+  </div>
+</Base>

@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Page not found | Dicot Innovations";
+const description = "The page you are looking for does not exist. Find Dicot products, pricing, downloads or contact the team.";
+---
+<Base title={title} description={description} noindex={true}>
+  <section class="e404">
+    <div class="wrap">
+      <span class="mono">Error 404</span>
+      <h1>Signal lost.</h1>
+      <p>
+        The page you asked for is not on this site. It may have moved when we rebuilt the site, or the link may be
+        mistyped.
+      </p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn--primary" href="/">Go home</a>
+        <a class="btn btn--ghost" href="/products/">Browse products</a>
+      </div>
+      <div class="grid-3 mt-4" style="text-align:left">
+        <a class="card" href="/products/vision-c/"><h3>Vision C</h3><p>Mini-SCADA and data logger.</p></a>
+        <a class="card" href="/products/vision-web/"><h3>Vision Web</h3><p>Cloud SCADA and mobile alarms.</p></a>
+        <a class="card" href="/contact/"><h3>Contact</h3><p>Talk to the team or book a demo.</p></a>
+      </div>
+      <p class="small muted mt-3">Looking for something specific? <a href="/pricing/">Pricing</a> · <a href="/downloads/">Downloads</a> · <a href="/careers/">Careers</a></p>
+    </div>
+  </section>
+</Base>

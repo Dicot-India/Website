@@ -1,0 +1,65 @@
+---
+import Legal from "../../layouts/Legal.astro";
+
+const title = "Cookie Policy | Dicot Innovations";
+const description =
+  "Which cookies and local storage dicot.tech uses, what each one does, how long it lasts, and how to change your consent choice.";
+---
+<Legal
+  title={title}
+  description={description}
+  label="Cookies"
+  lede="We keep cookies to a minimum. Essential storage runs the site; analytics and support chat load only after you accept them, and we do not run advertising cookies."
+>
+  <p><strong>Effective date:</strong> 18 November 2026 · <strong>Version:</strong> 2.0</p>
+
+  <h2>What we use</h2>
+  <div class="table-wrap">
+      <table>
+    <thead><tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th><th>Consent</th></tr></thead>
+    <tbody>
+      <tr><td>dicot_consent_v1</td><td>Local storage</td><td>Remembers your cookie choice so we do not ask on every page</td><td>Until you clear browser storage</td><td>Essential</td></tr>
+      <tr><td>__cf_bm</td><td>Cookie</td><td>Cloudflare bot management and security</td><td>30 minutes</td><td>Essential</td></tr>
+      <tr><td>_ga</td><td>Cookie</td><td>Google Analytics 4 — distinguishes browsers for aggregate usage reporting</td><td>Up to 2 years</td><td>Analytics</td></tr>
+      <tr><td>_ga_&lt;container&gt;</td><td>Cookie</td><td>Google Analytics 4 — keeps session state</td><td>Up to 2 years</td><td>Analytics</td></tr>
+      <tr><td>__tawkuuid</td><td>Cookie</td><td>Tawk.to live chat — recognises a returning chat visitor</td><td>Up to 6 months</td><td>Support chat</td></tr>
+      <tr><td>TawkConnectionTime</td><td>Cookie</td><td>Tawk.to live chat — manages the chat connection</td><td>Session</td><td>Support chat</td></tr>
+      <tr><td>tawk_uuid_&lt;property&gt;</td><td>Cookie</td><td>Tawk.to live chat — keeps the chat session across pages</td><td>Up to 6 months</td><td>Support chat</td></tr>
+    </tbody>
+  </table>
+    </div>
+  <p>
+    We do not currently set advertising or marketing cookies. If that changes, we will add the category here and ask
+    for consent before setting them.
+  </p>
+
+  <h2>Third-party services</h2>
+  <p>
+    The partner application link opens a Google Form. Once you visit Google, Google’s cookies and privacy terms apply.
+    Our fonts are self-hosted, so loading a page does not contact Google Fonts. The Tawk.to live-chat widget is loaded
+    from Tawk.to only if you enable “Support chat” in the cookie preferences; its own cookies and privacy terms apply to
+    the chat service.
+  </p>
+
+  <h2>How to change your choice</h2>
+  <p>
+    Use the “Cookie settings” link in the footer to reopen the banner and change analytics, support-chat or marketing consent. You
+    can also block or delete cookies in your browser settings; blocking essential storage may make the consent banner
+    reappear on each visit.
+  </p>
+  <p>
+    Rejecting analytics or chat does not restrict any part of the site. The contact form and downloads work without either.
+  </p>
+
+  <h2>Do Not Track and AI crawlers</h2>
+  <p>
+    We do not use a separate Do Not Track response. Automated crawlers are governed by our
+    <a href="/robots.txt">robots.txt</a>; we allow standard search engines and AI assistants to read public pages.
+  </p>
+
+  <h2>More information</h2>
+  <p>
+    For the wider picture of how we handle personal data, see the <a href="/legal/privacy/">privacy policy</a> or write
+    to <a href="mailto:privacy@dicot.tech">privacy@dicot.tech</a>.
+  </p>
+</Legal>

@@ -1,0 +1,84 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+
+const title = "Careers at Dicot | Industrial Software, Ahmedabad";
+const description =
+  "Work on SCADA and IIoT software used in 1,000+ plants. See open roles at Dicot Innovations in Ahmedabad, or send your CV to careers@dicot.tech.";
+
+type Role = {
+  title: string;
+  department: string;
+  location: string;
+  type?: string;
+  experience: string;
+  description: string;
+  posted: string;
+};
+
+const modules = import.meta.glob<Role>("../content/careers/*.json", { eager: true, import: "default" });
+const roles = Object.values(modules).sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));
+---
+<Base title={title} description={description}>
+  <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Careers</li></ol></nav></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Careers</span>
+      <h1>Build software that runs the plant floor.</h1>
+      <p class="lede">
+        Dicot is a six-person core team in Ahmedabad building SCADA and IIoT products used in more than 1,000
+        deployments. Small team, short decisions, real customers.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-3">
+      <div class="card"><h3>Own a product, not a ticket</h3><p>Engineers here talk to the plant, not just to a backlog. What you build is commissioned by someone you can call.</p></div>
+      <div class="card"><h3>Industrial scale, startup speed</h3><p>Your work reaches hundreds of manufacturers without passing through five approval layers.</p></div>
+      <div class="card"><h3>Ahmedabad, on-site</h3><p>We work from the Makarba office. Roles are listed with their location when they open.</p></div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">Open roles</span><h2>Current openings.</h2></div>
+        <p>Roles are added here as they open. If nothing fits today, send your CV anyway.</p>
+      </div>
+
+      {roles.length === 0 ? (
+        <div class="empty">
+          <p><strong>No open roles right now.</strong></p>
+          <p>We still read every application. Send your CV and a short note about what you want to work on to
+            <a href={`mailto:${site.emails.careers}`}>{site.emails.careers}</a>.</p>
+          <a class="btn btn--primary" href={`mailto:${site.emails.careers}?subject=Application%20%E2%80%94%20Dicot`}>Email your CV</a>
+        </div>
+      ) : (
+        <div>
+          {roles.map((role) => (
+            <a class="role" href={`mailto:${site.emails.careers}?subject=${encodeURIComponent(`Application — ${role.title}`)}`}>
+              <div>
+                <h3>{role.title}</h3>
+                <span class="mono">{role.department} · {role.location} · {role.type ?? "Full-time"} · {role.experience}</span>
+              </div>
+              <span class="btn btn--ghost btn--small">Apply</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow center">
+      <h2>How we hire.</h2>
+      <p class="lede">
+        A conversation about your work, a practical discussion around a real problem, and a meeting with the team you
+        would join.
+      </p>
+      <p class="small muted">Send applications to <a href={`mailto:${site.emails.careers}`}>{site.emails.careers}</a>. We keep CVs for 12 months unless you ask us to delete them.</p>
+    </div>
+  </section>
+</Base>

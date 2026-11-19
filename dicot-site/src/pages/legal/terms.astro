@@ -1,0 +1,94 @@
+---
+import Legal from "../../layouts/Legal.astro";
+import { site } from "../../data/site";
+
+const title = "Terms of Use | Dicot Innovations";
+const description =
+  "Terms governing use of dicot.tech and dicot.in, software licensing, acceptable use, intellectual property and the governing law for Dicot Innovations.";
+---
+<Legal
+  title={title}
+  description={description}
+  label="Terms"
+  lede="These terms govern your use of this website. Software licences are governed by the licence terms supplied with the product, which take precedence for the software itself."
+>
+  <p><strong>Effective date:</strong> 18 November 2026 · <strong>Version:</strong> 2.0</p>
+
+  <h2>1. Acceptance</h2>
+  <p>
+    By accessing or using dicot.tech or dicot.in, you agree to these terms. If you do not agree, do not use the site. We
+    may update these terms; the current version is always on this page, and continued use after a change means you
+    accept it.
+  </p>
+
+  <h2>2. Website use</h2>
+  <p>
+    You may browse, download publicly offered files and contact us. You may not attempt to disrupt the site, bypass
+    access controls, upload malicious code, or use the site for unlawful purposes.
+  </p>
+
+  <h2>3. Automated access</h2>
+  <p>
+    Standard search engine and AI assistant crawlers may read public pages in line with our
+    <a href="/robots.txt">robots.txt</a>. Automated access that degrades the service, ignores rate limits, or extracts
+    data at volume for a competing service is not permitted. Contact us if you need a data feed or partnership access.
+  </p>
+
+  <h2>4. Products and licences</h2>
+  <p>
+    Vision C, Vision S, Vision Web, VGraphic and related software are licensed, not sold. The licence terms provided
+    with the product or dealer order govern the number of tags, users, deployment rights, update entitlement and
+    support. This website does not grant a software licence.
+  </p>
+  <p>
+    Industrial software displays and stores data that may differ from the physical process because of sensor error,
+    configuration, communication loss or scan timing. You are responsible for validating the system for your process,
+    maintaining independent safety systems, and holding valid licences for the operating system and third-party
+    software you use.
+  </p>
+
+  <h2>5. Intellectual property</h2>
+  <p>
+    The site content, software, documentation, logos and product names are owned by Dicot Innovations Private Limited
+    or its licensors and are protected by copyright and trademark law. You may not copy, modify, distribute or
+    reverse-engineer the software except as permitted by its licence or by law.
+  </p>
+
+  <h2>6. Third-party links</h2>
+  <p>
+    We link to services we do not control, including Google Forms, social media and customer platforms. Their terms and
+    privacy policies apply. We are not responsible for their content or availability.
+  </p>
+
+  <h2>7. Privacy</h2>
+  <p>
+    Personal data is handled as described in our <a href="/legal/privacy/">privacy policy</a> and
+    <a href="/legal/cookies/">cookie policy</a>.
+  </p>
+
+  <h2>8. Availability and changes</h2>
+  <p>
+    We aim to keep the site available but do not guarantee uninterrupted access. We may change, suspend or remove
+    content, products or downloads at any time, including for maintenance or security.
+  </p>
+
+  <h2>9. Limitation of liability</h2>
+  <p>
+    To the maximum extent permitted by law, Dicot is not liable for indirect, incidental, special or consequential loss,
+    loss of production, loss of data, or loss of profit arising from use of this website. Nothing in these terms limits
+    liability that cannot be limited under applicable law, or liability for fraud or wilful misconduct.
+  </p>
+
+  <h2>10. Governing law and jurisdiction</h2>
+  <p>
+    These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts at
+    Ahmedabad, Gujarat.
+  </p>
+
+  <h2>11. Contact</h2>
+  <p>
+    {site.name}<br />
+    {site.address.full}<br />
+    <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> · {site.phones[0].label}
+  </p>
+</Legal>

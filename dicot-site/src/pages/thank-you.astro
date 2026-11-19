@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+
+const title = "Enquiry received | Dicot Innovations";
+const description = "Thank you. Your enquiry has reached the Dicot team.";
+---
+<Base title={title} description={description} noindex={true}>
+  <section class="e404">
+    <div class="wrap">
+      <span class="mono">Message received</span>
+      <h1>Thank you.</h1>
+      <p>
+        Your enquiry is with our team. We usually reply within one working day. If it is urgent, call
+        <a href="tel:+919016683114">+91 90166 83114</a>.
+      </p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn--primary" href="/products/">Browse products</a>
+        <a class="btn btn--ghost" href="/downloads/">Downloads</a>
+      </div>
+      <p class="small muted mt-3">We have not added you to any marketing list unless you opted in. See our <a href="/legal/privacy/">privacy policy</a>.</p>
+    </div>
+  </section>
+</Base>

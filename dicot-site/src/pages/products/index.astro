@@ -1,0 +1,102 @@
+---
+import Base from "../../layouts/Base.astro";
+import Cta from "../../components/Cta.astro";
+import ProductVisual from "../../components/ProductVisual.astro";
+import { products } from "../../data/products";
+
+const title = "SCADA, IIoT & Report Software | Dicot Products";
+const description =
+  "Compare Dicot's product suite: Vision C mini-SCADA, Vision S enterprise SCADA, Vision S Lite (in development), Vision Web cloud SCADA and VGraphic report generator.";
+
+const atGlance: Record<string, { tags: string; deployment: string; licence: string }> = {
+  "vision-c": { tags: "100", deployment: "On-premise Windows", licence: "2–20 years or perpetual" },
+  "vision-web": { tags: "20,000 per project", deployment: "Hosted by Dicot", licence: "Yearly subscription" },
+  "vision-s": { tags: "60,000", deployment: "On-premise Windows", licence: "Tag-based, runtime + development" },
+  "vision-s-lite": { tags: "Below Vision S", deployment: "Vision S platform", licence: "Announced at launch" },
+  vgraphic: { tags: "Not tag-based", deployment: "Cloud", licence: "1–10 years or offline lifetime" },
+};
+
+const itemList = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Dicot product suite",
+  itemListElement: products.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `https://dicot.tech/products/${p.slug}/`,
+    name: p.name,
+  })),
+};
+---
+<Base title={title} description={description} schema={[itemList]}>
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li>Products</li></ol>
+    </nav>
+  </div>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Product suite</span>
+      <h1>SCADA software for every size of plant.</h1>
+      <p class="lede">
+        Start with a single machine and a mini-SCADA, grow into a multi-line plant, or put remote sites on a phone.
+        Every product shares the same tag model and reporting logic, so your team learns one system.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr><th>Product</th><th>Best for</th><th>Tags</th><th>Deployment</th><th>Licence</th></tr>
+          </thead>
+          <tbody>
+            {products.map((p) => (
+              <tr>
+                <td>
+                  <strong><a href={`/products/${p.slug}/`}>{p.name}</a></strong>
+                  {p.status === "upcoming" && <span class="chip chip--soon">In development</span>}
+                  <br /><span class="small muted">{p.category}</span>
+                </td>
+                <td>{p.bestFor.split(".")[0]}.</td>
+                <td>{atGlance[p.slug].tags}</td>
+                <td>{atGlance[p.slug].deployment}</td>
+                <td>{atGlance[p.slug].licence}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {products.map((p, i) => (
+    <section class:list={["section", i % 2 === 0 ? "section--white" : "section--paper"]}>
+      <div class="wrap split split--center">
+        <div>
+          <span class="eyebrow">0{i + 1} · {p.category}</span>
+          <h2>{p.name}{p.status === "upcoming" && <span class="chip chip--soon">In development</span>}</h2>
+          <p class="lede">{p.summary}</p>
+          <div class="product-card__facts mt-2">
+            {p.facts.slice(0, 4).map((f) => <span class="chip">{f.value}</span>)}
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--dark" href={`/products/${p.slug}/`}>
+              {p.status === "upcoming" ? "See what we can share" : `Explore ${p.name}`}
+            </a>
+            {p.status === "upcoming" ? (
+              <a class="btn btn--ghost btn--small" href={`/contact/?interest=${p.slug}`}>Register interest</a>
+            ) : (
+              <a class="btn btn--ghost btn--small" href="/pricing/">Plans &amp; licensing</a>
+            )}
+          </div>
+        </div>
+        <ProductVisual product={p} />
+      </div>
+    </section>
+  ))}
+
+  <Cta title="Not sure which product fits?" text="Tell us the tag count, protocols and whether you need cloud or on-premise. We will point you to the smallest product that does the job." />
+</Base>

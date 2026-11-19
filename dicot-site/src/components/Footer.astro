@@ -1,0 +1,79 @@
+---
+import { site } from "../data/site";
+import { products } from "../data/products";
+
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/images/logo-light.svg" alt="Dicot Innovations" width="200" height="79" loading="lazy" />
+        <p>SCADA, IIoT and data-acquisition software built in Ahmedabad, India. Deployed in 1,000+ plants since 2022.</p>
+        <div class="socials">
+          {site.socials.map((s) => (
+            <a href={s.url} rel="noopener" target="_blank">{s.name}</a>
+          ))}
+        </div>
+      </div>
+      <div>
+        <h3>Products</h3>
+        <ul>
+          {products.map((p) => <li><a href={`/products/${p.slug}/`}>{p.name}</a></li>)}
+          <li><a href="/pricing/">Pricing &amp; licensing</a></li>
+          <li><a href="/downloads/">Downloads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/solutions/">Solutions</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/partners/">Partner programme</a></li>
+          <li><a href="/contact/#channel-partners">Channel partners</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href={site.blog}>Blog</a></li>
+          <li><a href={site.visionWebLogin} rel="noopener">Vision Web login</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <address class="footer-contact">
+          {site.address.full}<br />
+          <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a><br />
+          {site.phones.map((p, i) => (
+            <>
+              {i > 0 && <br />}
+              <a href={`tel:${p.href}`}>{p.label}</a>{p.primary ? " (primary)" : ""}
+            </>
+          ))}
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© {year} {site.name}. All rights reserved.</p>
+      <ul>
+        <li><a href="/legal/terms/">Terms</a></li>
+        <li><a href="/legal/privacy/">Privacy</a></li>
+        <li><a href="/legal/cookies/">Cookies</a></li>
+        <li><a href="/legal/refund/">Refund &amp; cancellation</a></li>
+        <li><button type="button" class="linkish" data-cookie-settings>Cookie settings</button></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<style>
+  .linkish {
+    background: none;
+    border: 0;
+    padding: 0;
+    font: inherit;
+    color: #d6d6e4;
+    cursor: pointer;
+  }
+  .linkish:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>

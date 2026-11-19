@@ -1,0 +1,31 @@
+---
+import Base from "./Base.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  label: string;
+  updated?: string;
+  lede?: string;
+}
+const { title, description, label, updated = "18 November 2026", lede } = Astro.props;
+---
+<Base title={title} description={description}>
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li><a href="/legal/privacy/">Legal</a></li><li>{label}</li></ol>
+    </nav>
+  </div>
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal · updated {updated}</span>
+      <h1>{title.split("|")[0].trim()}</h1>
+      {lede && <p class="lede">{lede}</p>}
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap prose">
+      <slot />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,424 @@
+---
+import Base from "../../layouts/Base.astro";
+import Cta from "../../components/Cta.astro";
+import { site } from "../../data/site";
+
+const title = "Blog | SCADA, IIoT and Licensing Notes | Dicot";
+const description =
+  "Articles from Dicot Innovations on SCADA sizing, licensing, data acquisition and product updates. Written for machine builders and plant teams.";
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Dicot Innovations Blog",
+  url: `${site.url}/blog/`,
+  description,
+  publisher: { "@id": `${site.url}/#organization` },
+  inLanguage: "en",
+};
+---
+
+<Base title={title} description={description} schema={[blogSchema]}>
+  <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Blog</li></ol></nav></div>
+
+  <section class="page-hero" id="blog-hero">
+    <div class="wrap">
+      <span class="eyebrow">Blog</span>
+      <h1>Notes from the plant floor.</h1>
+      <p class="lede">
+        Short, practical writing on SCADA sizing, licensing and getting data out of machines. No slide decks.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div id="blog-root" data-posts="/blog/posts.json">
+        <p class="blog-status">Loading articles…</p>
+      </div>
+      <noscript>
+        <div class="card">
+          <h2>Enable JavaScript to read the blog</h2>
+          <p>The article list is loaded from a small JSON file. Everything else on this site works without JavaScript.</p>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <div id="blog-cta"><Cta title="Have a plant question?" text="Send the tag count, the protocols and the outcome you need. We will tell you which product fits, including when it is not ours." /></div>
+</Base>
+
+<style is:global>
+  .blog-status {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+  }
+  .blog-card:hover {
+    border-color: var(--red);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+  .blog-card__media {
+    aspect-ratio: 16 / 9;
+    background: var(--navy);
+    overflow: hidden;
+  }
+  .blog-card__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .blog-card__placeholder {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    padding: 16px;
+    color: #a9a9c2;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .blog-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+    flex: 1;
+  }
+  .blog-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .blog-card__meta span:first-child {
+    color: var(--red);
+  }
+  .blog-card h2 {
+    font-size: 1.28rem;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+  }
+  .blog-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4a4a60;
+  }
+  .blog-card__foot {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--red);
+    font-size: 0.85rem;
+  }
+  .blog-back {
+    display: inline-block;
+    margin-bottom: 28px;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .blog-back:hover {
+    color: var(--red);
+  }
+  .blog-post {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .blog-post__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .blog-post h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.03;
+    letter-spacing: -0.035em;
+  }
+  .blog-post__excerpt {
+    font-size: 1.16rem;
+    line-height: 1.55;
+    color: #4a4a60;
+    margin-top: 20px;
+  }
+  .blog-post__cover {
+    margin: 32px 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--navy);
+  }
+  .blog-post__cover img {
+    display: block;
+    width: 100%;
+  }
+  .blog-content {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #35354a;
+  }
+  .blog-content h2 {
+    font-size: 1.5rem;
+    margin: 2em 0 0.5em;
+    letter-spacing: -0.02em;
+  }
+  .blog-content h3 {
+    font-size: 1.15rem;
+    margin: 1.6em 0 0.5em;
+  }
+  .blog-content p {
+    margin: 0 0 1.1em;
+  }
+  .blog-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.2em;
+    display: grid;
+    gap: 10px;
+  }
+  .blog-content li {
+    position: relative;
+    padding-left: 17px;
+  }
+  .blog-content li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    background: var(--red);
+  }
+  .blog-content a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .blog-post__foot {
+    margin-top: 44px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .blog-empty {
+    max-width: 620px;
+  }
+  .blog-empty h2 {
+    margin-bottom: 12px;
+  }
+  @media (max-width: 640px) {
+    .blog-card__body {
+      padding: 18px;
+    }
+  }
+</style>
+
+<script>
+  type Post = {
+    slug: string;
+    title: string;
+    date: string;
+    author?: string;
+    excerpt?: string;
+    tags?: string[];
+    cover?: string;
+    coverAlt?: string;
+    content?: string;
+  };
+
+  const root = document.getElementById("blog-root");
+  const hero = document.getElementById("blog-hero");
+  const cta = document.getElementById("blog-cta");
+  if (root) {
+    const endpoint = root.dataset.posts || "/blog/posts.json";
+    // Query-string links work on any static host (Hostinger, Astro preview, local IPs)
+    // without relying on a server rewrite. Clean /blog/<slug>/ URLs still resolve below.
+    const postHref = (s: string) => `/blog/?post=${encodeURIComponent(s)}`;
+    const esc = (v: unknown) =>
+      String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+    const prettyDate = (d: string) => {
+      const date = new Date(d + "T00:00:00");
+      return Number.isNaN(date.getTime())
+        ? d
+        : date.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+    };
+    const readingTime = (html: string) => {
+      const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+      return `${Math.max(1, Math.round(words / 200))} min read`;
+    };
+
+    function setMeta(post: Post, canonical: string) {
+      document.title = `${post.title} | Dicot Innovations`;
+      const set = (selector: string, attr: string, value: string) => {
+        document.querySelector<HTMLMetaElement | HTMLLinkElement>(selector)?.setAttribute(attr, value);
+      };
+      set('meta[name="description"]', "content", post.excerpt || post.title);
+      set('link[rel="canonical"]', "href", canonical);
+      set('meta[property="og:type"]', "content", "article");
+      set('meta[property="og:title"]', "content", post.title);
+      set('meta[property="og:description"]', "content", post.excerpt || post.title);
+      set('meta[property="og:url"]', "content", canonical);
+      set('meta[name="twitter:title"]', "content", post.title);
+      set('meta[name="twitter:description"]', "content", post.excerpt || post.title);
+      if (post.cover) {
+        const abs = new URL(post.cover, location.href).href;
+        set('meta[property="og:image"]', "content", abs);
+        set('meta[name="twitter:image"]', "content", abs);
+      }
+      const ld = document.createElement("script");
+      ld.type = "application/ld+json";
+      ld.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt || post.title,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: { "@type": "Organization", name: post.author || "Dicot Innovations" },
+        publisher: { "@type": "Organization", name: "Dicot Innovations" },
+        mainEntityOfPage: canonical,
+        ...(post.cover ? { image: new URL(post.cover, location.href).href } : {}),
+        articleBody: (post.content || "").replace(/<[^>]+>/g, " ").trim(),
+      });
+      document.head.appendChild(ld);
+    }
+
+    function card(p: Post, i: number) {
+      const media = p.cover
+        ? `<img src="${esc(p.cover)}" alt="${esc(p.coverAlt || p.title)}" loading="lazy" />`
+        : `<div class="blog-card__placeholder">Dicot / Insights</div>`;
+      const tags = (p.tags || []).slice(0, 2).map((t) => `<span>${esc(t)}</span>`).join("");
+      return `<a class="blog-card" href="${postHref(p.slug)}">
+        <div class="blog-card__media">${media}</div>
+        <div class="blog-card__body">
+          <div class="blog-card__meta"><span>${i === 0 ? "Latest" : "Article"}</span><time datetime="${esc(p.date)}">${esc(prettyDate(p.date))}</time>${tags}</div>
+          <h2>${esc(p.title)}</h2>
+          <p>${esc(p.excerpt || "")}</p>
+          <div class="blog-card__foot"><span>Read article</span><span aria-hidden="true">→</span></div>
+        </div>
+      </a>`;
+    }
+
+    function renderList(posts: Post[]) {
+      const sorted = [...posts].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+      if (!sorted.length) {
+        root!.innerHTML = `<div class="card blog-empty"><span class="eyebrow">Empty for now</span><h2>No articles published yet.</h2><p>Articles appear here as soon as a JSON file is added to <code>/blog/posts.json</code>. See <code>BLOG.md</code> in the project for the file format.</p></div>`;
+        return;
+      }
+      root!.innerHTML = `<div class="blog-grid">${sorted.map(card).join("")}</div>`;
+      const ld = document.createElement("script");
+      ld.type = "application/ld+json";
+      ld.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Dicot Innovations Blog",
+        itemListElement: sorted.map((p, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "BlogPosting",
+            headline: p.title,
+            datePublished: p.date,
+            url: new URL(postHref(p.slug), location.href).href,
+          },
+        })),
+      });
+      document.head.appendChild(ld);
+    }
+
+    function renderPost(post: Post, all: Post[]) {
+      hero?.remove();
+      if (cta) cta.hidden = true;
+      // Point the canonical at the URL actually in the address bar.
+      const canonical = location.href.split("#")[0];
+      setMeta(post, canonical);
+      const cover = post.cover
+        ? `<figure class="blog-post__cover"><img src="${esc(post.cover)}" alt="${esc(post.coverAlt || post.title)}" /></figure>`
+        : "";
+      const tags = (post.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join("");
+      const others = all.filter((p) => p.slug !== post.slug).slice(0, 2);
+      const related = others.length
+        ? `<section class="section section--tight"><div class="wrap"><div class="section-head"><div><span class="eyebrow">Keep reading</span><h2>More from the blog.</h2></div></div><div class="blog-grid">${others.map((p, i) => card(p, i + 1)).join("")}</div></div></section>`
+        : "";
+      root!.innerHTML = `<article class="blog-post">
+        <a class="blog-back" href="/blog/">← All articles</a>
+        <div class="blog-post__meta"><time datetime="${esc(post.date)}">${esc(prettyDate(post.date))}</time><span>${esc(post.author || "Dicot Innovations")}</span><span>${esc(readingTime(post.content || ""))}</span></div>
+        <h1>${esc(post.title)}</h1>
+        ${post.excerpt ? `<p class="blog-post__excerpt">${esc(post.excerpt)}</p>` : ""}
+        ${cover}
+        <div class="blog-content">${post.content || ""}</div>
+        <div class="blog-post__foot"><div class="blog-tags">${tags}</div><a class="blog-back" href="/blog/">← All articles</a></div>
+      </article>${related}`;
+    }
+
+    (async () => {
+      const match = location.pathname.match(/^\/blog\/([^/]+)\/?$/);
+      const slug = match ? decodeURIComponent(match[1]) : new URLSearchParams(location.search).get("post");
+      let posts: Post[] = [];
+      try {
+        const response = await fetch(endpoint, { cache: "no-store" });
+        if (!response.ok) throw new Error(String(response.status));
+        const data = await response.json();
+        posts = Array.isArray(data) ? data : [];
+      } catch {
+        root!.innerHTML = `<div class="card blog-empty"><h2>Articles are unavailable.</h2><p>The article file could not be loaded. Please try again later or <a href="/contact/">contact us</a>.</p></div>`;
+        return;
+      }
+      if (!slug) {
+        renderList(posts);
+        return;
+      }
+      const post = posts.find((p) => p.slug === slug);
+      if (!post) {
+        root!.innerHTML = `<div class="card blog-empty"><span class="eyebrow">Not found</span><h2>That article does not exist.</h2><p><a href="/blog/">Back to all articles</a></p></div>`;
+        return;
+      }
+      renderPost(post, posts);
+    })();
+  }
+</script>

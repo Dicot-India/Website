@@ -1,0 +1,44 @@
+---
+import { nav, site } from "../data/site";
+
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+---
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="logo" aria-label="Dicot Innovations home">
+      <img src="/images/logo.svg" alt="Dicot Innovations" width="200" height="79" />
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav" id="primary-nav" aria-label="Main">
+      {nav.map((item) => (
+        <a class="nav-link" href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a>
+      ))}
+      <a class="nav-login" href={site.visionWebLogin} rel="noopener" target="_blank">
+        <span>Vision Web login</span>
+        <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+      <div class="header-cta">
+        <a class="btn btn--primary btn--small" href="/contact/">Book a demo</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<script>
+  const header = document.getElementById("site-header");
+  const toggle = header?.querySelector(".nav-toggle");
+  toggle?.addEventListener("click", () => {
+    const open = header!.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && header?.classList.contains("is-open")) {
+      header.classList.remove("is-open");
+      toggle?.setAttribute("aria-expanded", "false");
+      (toggle as HTMLElement)?.focus();
+    }
+  });
+</script>

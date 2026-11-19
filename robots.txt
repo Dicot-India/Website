@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you/
+Disallow: /contact.php
+Disallow: /404.html
+
+# Search engines and AI assistants may read public pages.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://dicot.tech/sitemap-index.xml

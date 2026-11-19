@@ -1,0 +1,406 @@
+---
+---
+<section class="demo" id="live-demo" aria-labelledby="demo-title">
+  <div class="demo__head">
+    <div class="demo__brand">
+      <span class="demo__dot" aria-hidden="true"></span>
+      <span id="demo-title">Vision live demo</span>
+    </div>
+    <div class="demo__tabs" role="tablist" aria-label="Choose a plant type">
+      <button class="demo__tab" role="tab" id="tab-boiler" aria-selected="true" aria-controls="demo-panel" data-plant="boiler" type="button">Boiler</button>
+      <button class="demo__tab" role="tab" id="tab-water" aria-selected="false" aria-controls="demo-panel" data-plant="water" tabindex="-1" type="button">Water</button>
+      <button class="demo__tab" role="tab" id="tab-hvac" aria-selected="false" aria-controls="demo-panel" data-plant="hvac" tabindex="-1" type="button">HVAC</button>
+      <button class="demo__tab" role="tab" id="tab-machine" aria-selected="false" aria-controls="demo-panel" data-plant="machine" tabindex="-1" type="button">Machine</button>
+    </div>
+  </div>
+
+  <div class="demo__body" id="demo-panel" role="tabpanel" aria-labelledby="tab-boiler">
+    <div class="demo__mimic">
+      <svg viewBox="0 0 600 260" role="img" aria-label="Process mimic: feed tank, pump, boiler and steam header">
+        <defs>
+          <linearGradient id="tankGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#25256a" />
+            <stop offset="1" stop-color="#14143f" />
+          </linearGradient>
+        </defs>
+
+        <rect x="24" y="96" width="86" height="120" rx="7" fill="#0d0d2e" stroke="#3b3b73" stroke-width="2" />
+        <rect id="tank-fill" x="28" y="142" width="78" height="70" fill="url(#tankGrad)" />
+        <line x1="24" y1="118" x2="110" y2="118" stroke="#262656" stroke-width="1" />
+        <line x1="24" y1="162" x2="110" y2="162" stroke="#262656" stroke-width="1" />
+        <text class="mimic-value" id="tank-value" x="67" y="88" text-anchor="middle">62%</text>
+        <text class="mimic-label" id="tank-label" x="67" y="234" text-anchor="middle">Feed tank</text>
+
+        <path class="mimic-pipe" d="M110 150 H150" />
+        <path class="mimic-flow" d="M110 150 H150" />
+
+        <circle cx="170" cy="150" r="19" fill="#0d0d2e" stroke="#3b3b73" stroke-width="2" />
+        <g class="mimic-rotor" style="transform-origin:170px 150px">
+          <path d="M170 139 L179 150 L170 161 L161 150 Z" fill="#6b6bf0" />
+        </g>
+        <text class="mimic-label" id="pump-label" x="170" y="188" text-anchor="middle">Feed pump</text>
+        <text class="mimic-value" id="pump-state" x="170" y="203" text-anchor="middle" fill="#23a06b">RUN</text>
+
+        <path class="mimic-pipe" d="M189 150 H248" />
+        <path class="mimic-flow" d="M189 150 H248" />
+
+        <rect x="248" y="86" width="124" height="126" rx="8" fill="#0d0d2e" stroke="#3b3b73" stroke-width="2" />
+        <circle cx="342" cy="110" r="15" fill="#07071f" stroke="#3b3b73" stroke-width="2" />
+        <line x1="342" y1="110" x2="350" y2="102" stroke="#6b6bf0" stroke-width="2" stroke-linecap="round" />
+        <text class="mimic-value" id="unit-value" x="310" y="150" text-anchor="middle">182.4°C</text>
+        <text class="mimic-label" id="unit-sub" x="310" y="166" text-anchor="middle">Steam</text>
+        <text class="mimic-label" id="unit-label" x="310" y="231" text-anchor="middle">Boiler</text>
+
+        <path class="mimic-pipe" d="M310 86 V40 H512" />
+        <path class="mimic-flow" d="M310 86 V40 H512" />
+        <path d="M510 40 l-8 -4 v8 z" fill="#6b6bf0" />
+        <path d="M424 33 L436 40 L424 47 Z" fill="#0d0d2e" stroke="#3b3b73" stroke-width="2" />
+        <path d="M436 33 L424 40 L436 47 Z" fill="#0d0d2e" stroke="#3b3b73" stroke-width="2" />
+        <text class="mimic-label" id="out-label" x="478" y="26" text-anchor="middle">Steam header</text>
+        <text class="mimic-label" x="474" y="63" text-anchor="middle">Control valve 62%</text>
+
+        <circle cx="120" cy="139" r="3" fill="#23a06b" />
+        <circle cx="238" cy="139" r="3" fill="#23a06b" />
+        <circle cx="508" cy="52" r="3" fill="#23a06b" />
+      </svg>
+    </div>
+
+    <div class="demo__readings">
+      <div class="reading" data-reading="0">
+        <span class="reading__label">Steam temp</span>
+        <span class="reading__value">182.4<span class="reading__unit">°C</span></span>
+        <svg viewBox="0 0 100 18" preserveAspectRatio="none" aria-hidden="true"><polyline points="" /></svg>
+      </div>
+      <div class="reading" data-reading="1">
+        <span class="reading__label">Pressure</span>
+        <span class="reading__value">8.20<span class="reading__unit">bar</span></span>
+        <svg viewBox="0 0 100 18" preserveAspectRatio="none" aria-hidden="true"><polyline points="" /></svg>
+      </div>
+      <div class="reading" data-reading="2">
+        <span class="reading__label">Feedwater flow</span>
+        <span class="reading__value">14.3<span class="reading__unit">m³/h</span></span>
+        <svg viewBox="0 0 100 18" preserveAspectRatio="none" aria-hidden="true"><polyline points="" /></svg>
+      </div>
+      <div class="reading" data-reading="3">
+        <span class="reading__label">Drum level</span>
+        <span class="reading__value">62.0<span class="reading__unit">%</span></span>
+        <svg viewBox="0 0 100 18" preserveAspectRatio="none" aria-hidden="true"><polyline points="" /></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="alarm-card" id="alarm-card" role="status" aria-live="polite" hidden>
+    <div>
+      <b id="alarm-title">High steam temperature · Boiler 2</b>
+      <p id="alarm-message">Steam temperature 191.2°C crossed the 190°C trip point. Alert sent by WhatsApp and SMS.</p>
+    </div>
+    <button type="button" id="alarm-ack">Acknowledge</button>
+  </div>
+
+  <div class="demo__foot">
+    <button class="demo__btn" type="button" id="pump-btn" aria-pressed="true">Stop pump</button>
+    <button class="demo__btn" type="button" id="alarm-btn">Simulate alarm</button>
+    <span class="demo__status" id="demo-status">Running</span>
+  </div>
+  <p class="demo__note">Interactive demo — <span>simulated values, not a live plant.</span></p>
+</section>
+
+<script>
+  type Reading = { label: string; unit: string; value: number; min: number; max: number; step: number };
+  type Plant = {
+    tank: string;
+    pump: string;
+    unit: string;
+    unitSub: string;
+    out: string;
+    pumpWord: string;
+    levelIndex: number | null;
+    readings: Reading[];
+    alarmTitle: string;
+    alarmMessage: (value: string) => string;
+  };
+
+  const PLANTS: Record<string, Plant> = {
+    boiler: {
+      tank: "Feed tank",
+      pump: "Feed pump",
+      unit: "Boiler",
+      unitSub: "Steam",
+      out: "Steam header",
+      pumpWord: "pump",
+      levelIndex: 3,
+      readings: [
+        { label: "Steam temp", unit: "°C", value: 182.4, min: 176, max: 188, step: 0.6 },
+        { label: "Pressure", unit: "bar", value: 8.2, min: 7.6, max: 8.9, step: 0.05 },
+        { label: "Feedwater flow", unit: "m³/h", value: 14.3, min: 12.8, max: 15.6, step: 0.15 },
+        { label: "Drum level", unit: "%", value: 62, min: 48, max: 78, step: 1.2 },
+      ],
+      alarmTitle: "High steam temperature · Boiler 2",
+      alarmMessage: (v) => `Steam temperature ${v}°C crossed the 190°C trip point. Alert sent by WhatsApp and SMS.`,
+    },
+    water: {
+      tank: "Raw water tank",
+      pump: "Transfer pump",
+      unit: "RO unit",
+      unitSub: "Permeate",
+      out: "Treated water",
+      pumpWord: "pump",
+      levelIndex: 0,
+      readings: [
+        { label: "Tank level", unit: "%", value: 74, min: 60, max: 86, step: 1.0 },
+        { label: "pH", unit: "pH", value: 7.2, min: 6.9, max: 7.5, step: 0.03 },
+        { label: "Conductivity", unit: "µS/cm", value: 640, min: 610, max: 680, step: 4 },
+        { label: "Permeate flow", unit: "m³/h", value: 22.4, min: 20.8, max: 24.1, step: 0.2 },
+      ],
+      alarmTitle: "Permeate quality · RO train 1",
+      alarmMessage: (v) => `Conductivity ${v} µS/cm crossed the 700 µS/cm limit. Alert sent to the water treatment team.`,
+    },
+    hvac: {
+      tank: "Return air",
+      pump: "AHU fan",
+      unit: "Cooling coil",
+      unitSub: "Supply",
+      out: "Conditioned space",
+      pumpWord: "fan",
+      levelIndex: null,
+      readings: [
+        { label: "Supply air", unit: "°C", value: 16.8, min: 15.9, max: 17.6, step: 0.12 },
+        { label: "Return air", unit: "°C", value: 24.1, min: 23.2, max: 25.0, step: 0.15 },
+        { label: "Humidity", unit: "%", value: 52, min: 47, max: 57, step: 0.6 },
+        { label: "Fan speed", unit: "%", value: 68, min: 64, max: 72, step: 0.5 },
+      ],
+      alarmTitle: "Humidity out of range · AHU 2",
+      alarmMessage: (v) => `Relative humidity ${v}% left the 45–60% band. Alert sent to the facility team on Telegram.`,
+    },
+    machine: {
+      tank: "Coolant tank",
+      pump: "Coolant pump",
+      unit: "Spindle",
+      unitSub: "Load",
+      out: "Workpiece",
+      pumpWord: "pump",
+      levelIndex: 3,
+      readings: [
+        { label: "Spindle load", unit: "%", value: 68, min: 58, max: 79, step: 0.9 },
+        { label: "Vibration", unit: "mm/s", value: 2.1, min: 1.7, max: 2.6, step: 0.06 },
+        { label: "Cycle time", unit: "s", value: 42.3, min: 41.5, max: 43.2, step: 0.1 },
+        { label: "Coolant level", unit: "%", value: 71, min: 58, max: 82, step: 0.7 },
+      ],
+      alarmTitle: "Spindle vibration warning · Line 3",
+      alarmMessage: (v) => `Vibration ${v} mm/s crossed the 3.5 mm/s warning threshold. Maintenance notified by email and WhatsApp.`,
+    },
+  };
+
+  const demo = document.getElementById("live-demo") as HTMLElement;
+  const panel = document.getElementById("demo-panel") as HTMLElement;
+  const tabs = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-plant]"));
+  const pumpBtn = document.getElementById("pump-btn") as HTMLButtonElement;
+  const alarmBtn = document.getElementById("alarm-btn") as HTMLButtonElement;
+  const alarmCard = document.getElementById("alarm-card") as HTMLElement;
+  const alarmTitle = document.getElementById("alarm-title") as HTMLElement;
+  const alarmMessage = document.getElementById("alarm-message") as HTMLElement;
+  const alarmAck = document.getElementById("alarm-ack") as HTMLButtonElement;
+  const status = document.getElementById("demo-status") as HTMLElement;
+  const pumpState = document.getElementById("pump-state") as SVGTextElement;
+  const tankFill = document.getElementById("tank-fill") as SVGRectElement;
+  const tankValue = document.getElementById("tank-value") as SVGTextElement;
+  const unitValue = document.getElementById("unit-value") as SVGTextElement;
+  const readingEls = Array.from(document.querySelectorAll<HTMLElement>("[data-reading]"));
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  let plantKey = "boiler";
+  let running = true;
+  let alarmed = false;
+  let timer: number | undefined;
+  let visible = true;
+  let history: number[][] = [];
+
+  const clamp = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v));
+  const setText = (id: string, text: string) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+  };
+
+  function pointsFor(values: number[], reading: Reading) {
+    if (!values.length) return "";
+    return values
+      .map((v, i) => {
+        const x = (i / 29) * 100;
+        const y = 16 - ((v - reading.min) / (reading.max - reading.min)) * 13;
+        return `${x.toFixed(1)},${clamp(y, 2, 16).toFixed(1)}`;
+      })
+      .join(" ");
+  }
+
+  function drawSpark() {
+    const readings = PLANTS[plantKey].readings;
+    readingEls.forEach((card, i) => {
+      const line = card.querySelector("polyline");
+      if (line) line.setAttribute("points", pointsFor(history[i] || [], readings[i]));
+    });
+  }
+
+  function renderReadings(reset = false) {
+    const p = PLANTS[plantKey];
+    readingEls.forEach((card, i) => {
+      const r = p.readings[i];
+      const val = card.querySelector(".reading__value");
+      if (val) {
+        val.innerHTML = `${format(r)}<span class="reading__unit"></span>`;
+        const unit = val.querySelector(".reading__unit");
+        if (unit) unit.textContent = r.unit;
+      }
+      const label = card.querySelector(".reading__label");
+      if (label) label.textContent = r.label;
+      if (reset) {
+        history[i] = [r.value, r.value, r.value, r.value, r.value];
+        for (let j = 0; j < 25; j++) history[i].push(r.value + (Math.random() - 0.5) * r.step);
+      }
+    });
+    drawSpark();
+  }
+
+  function format(r: Reading) {
+    const decimals = r.step < 0.1 ? 2 : r.step < 1 ? 1 : 0;
+    return r.value.toFixed(decimals);
+  }
+
+  function renderPlant() {
+    const p = PLANTS[plantKey];
+    setText("tank-label", p.tank);
+    setText("pump-label", p.pump);
+    setText("unit-label", p.unit);
+    setText("unit-sub", p.unitSub);
+    setText("out-label", p.out);
+    pumpBtn.textContent = running ? `Stop ${p.pumpWord}` : `Start ${p.pumpWord}`;
+    pumpBtn.setAttribute("aria-pressed", String(running));
+    panel.setAttribute("aria-labelledby", `tab-${plantKey}`);
+    renderReadings(true);
+    updateMimic();
+  }
+
+  function updateMimic() {
+    const p = PLANTS[plantKey];
+    const r = p.readings;
+    const level = p.levelIndex === null ? 55 : r[p.levelIndex].value;
+    const height = clamp((level / 100) * 114, 8, 114);
+    tankFill.setAttribute("height", height.toFixed(1));
+    tankFill.setAttribute("y", (214 - height).toFixed(1));
+    const levelDecimals = p.levelIndex === null ? 0 : p.readings[p.levelIndex].step < 1 ? 1 : 0;
+    tankValue.textContent = p.levelIndex === null ? "" : `${level.toFixed(levelDecimals)}%`;
+    unitValue.textContent = `${format(r[0])}${r[0].unit === "°C" ? "°C" : r[0].unit === "%" ? "%" : " " + r[0].unit}`;
+    pumpState.textContent = running ? "RUN" : "STOP";
+    pumpState.setAttribute("fill", running ? "#23a06b" : "#e0a008");
+    demo.classList.toggle("is-stopped", !running);
+    if (!alarmed) status.textContent = running ? "Running" : `${p.pumpWord[0].toUpperCase()}${p.pumpWord.slice(1)} stopped`;
+  }
+
+  function tick() {
+    if (!visible || !running || alarmed) return;
+    const p = PLANTS[plantKey];
+    p.readings.forEach((r, i) => {
+      r.value = clamp(r.value + (Math.random() - 0.5) * r.step * 2, r.min, r.max);
+      history[i].push(r.value);
+      if (history[i].length > 30) history[i].shift();
+    });
+    renderReadings(false);
+    updateMimic();
+  }
+
+  function start() {
+    if (timer || reduce) return;
+    timer = window.setInterval(tick, 1000);
+  }
+  function stop() {
+    if (timer) {
+      window.clearInterval(timer);
+      timer = undefined;
+    }
+  }
+
+  function triggerAlarm() {
+    alarmed = true;
+    const p = PLANTS[plantKey];
+    const r = p.readings[0];
+    const value = `${format(r)}${r.unit}`;
+    alarmTitle.textContent = p.alarmTitle;
+    alarmMessage.textContent = p.alarmMessage(value);
+    alarmCard.hidden = false;
+    demo.classList.add("is-alarm");
+    status.textContent = "Alarm sent";
+    status.classList.add("is-alarm");
+  }
+
+  function clearAlarm() {
+    alarmed = false;
+    alarmCard.hidden = true;
+    demo.classList.remove("is-alarm");
+    status.classList.remove("is-alarm");
+    status.textContent = running ? "Running" : "Stopped";
+  }
+
+  function selectPlant(key: string, focus = false) {
+    plantKey = key;
+    alarmed = false;
+    alarmCard.hidden = true;
+    demo.classList.remove("is-alarm");
+    status.classList.remove("is-alarm");
+    tabs.forEach((t) => {
+      const active = t.dataset.plant === key;
+      t.setAttribute("aria-selected", String(active));
+      t.tabIndex = active ? 0 : -1;
+      if (active && focus) t.focus();
+    });
+    renderPlant();
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => selectPlant(tab.dataset.plant!));
+    tab.addEventListener("keydown", (e) => {
+      const i = tabs.indexOf(tab);
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        e.preventDefault();
+        const next = e.key === "ArrowRight" ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+        selectPlant(tabs[next].dataset.plant!, true);
+      }
+      if (e.key === "Home") {
+        e.preventDefault();
+        selectPlant(tabs[0].dataset.plant!, true);
+      }
+      if (e.key === "End") {
+        e.preventDefault();
+        selectPlant(tabs[tabs.length - 1].dataset.plant!, true);
+      }
+    });
+  });
+
+  pumpBtn.addEventListener("click", () => {
+    running = !running;
+    const p = PLANTS[plantKey];
+    pumpBtn.textContent = running ? `Stop ${p.pumpWord}` : `Start ${p.pumpWord}`;
+    pumpBtn.setAttribute("aria-pressed", String(running));
+    updateMimic();
+  });
+  alarmBtn.addEventListener("click", triggerAlarm);
+  alarmAck.addEventListener("click", clearAlarm);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else if (visible) start();
+  });
+
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        visible ? start() : stop();
+      },
+      { threshold: 0.15 }
+    ).observe(demo);
+  } else {
+    start();
+  }
+
+  renderPlant();
+  if (!reduce) start();
+</script>

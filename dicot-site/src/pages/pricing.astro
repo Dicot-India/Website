@@ -1,0 +1,198 @@
+---
+import Base from "../layouts/Base.astro";
+import Faq from "../components/Faq.astro";
+import Cta from "../components/Cta.astro";
+import { products } from "../data/products";
+
+const title = "SCADA Software Pricing & Licensing | Dicot";
+const description =
+  "See how Dicot SCADA products are licensed: Vision C term or perpetual, Vision S tag-based runtime and development, Vision Web yearly cloud subscriptions. Vision S Lite is in development. Quotes via dealers.";
+
+const faqs = [
+  {
+    q: "Why are prices not listed on the website?",
+    a: "Dicot sells through an authorised dealer network. Dealers quote in their local context, bundle installation and support, and handle taxes and purchase formalities. Send an enquiry with your tag count and the nearest dealer will respond.",
+  },
+  {
+    q: "What counts as a tag?",
+    a: "A tag is one data point the software reads, writes or calculates, such as a temperature, a motor status or a totaliser. Licences are sized by the number of tags you need in a project.",
+  },
+  {
+    q: "Are software updates included?",
+    a: "Vision C, Vision S and Vision Web include free software updates during the supported licence term. A perpetual Vision C licence does not include future updates.",
+  },
+  {
+    q: "Can I start small and upgrade?",
+    a: "Yes. Vision C can forward data to Vision Web, and Vision S licences can be extended by tags or editions. Upgrades are handled through the dealer who sold the original licence.",
+  },
+  {
+    q: "Do you offer development or evaluation licences?",
+    a: "Vision S has separate development, runtime, client-server and web-client editions so you can build before you deploy. Ask your dealer about evaluation options for your scope.",
+  },
+  {
+    q: "Is there a subscription for on-premise software?",
+    a: "Vision C is licensed for a fixed term or perpetual. Vision S is licensed by tags with separate development and runtime editions. Vision Web and VGraphic cloud are yearly subscriptions.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+---
+<Base title={title} description={description} schema={[faqSchema]}>
+  <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Pricing</li></ol></nav></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Plans &amp; licensing</span>
+      <h1>Plans built for how plants actually buy.</h1>
+      <p class="lede">
+        A single machine should not need an enterprise contract. Choose a term licence, a tag-based runtime, or a
+        yearly cloud subscription — then get the number from your nearest authorised dealer.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="finder">
+        <span class="eyebrow">Edition finder</span>
+        <h2 class="mt-0">How many tags, and where does it run?</h2>
+        <fieldset style="border:0;padding:0;margin:0 0 20px">
+          <legend class="sr-only">Deployment type</legend>
+          <div class="seg" role="radiogroup" aria-label="Deployment type">
+            <label><input type="radio" name="deploy" value="onprem" checked /><span>On-premise</span></label>
+            <label><input type="radio" name="deploy" value="cloud" /><span>Cloud</span></label>
+          </div>
+        </fieldset>
+        <label for="tag-slider">Approximate tags</label>
+        <input id="tag-slider" type="range" min="0" max="5" step="1" value="2" />
+        <div class="finder__scale" aria-hidden="true">
+          <span>10</span><span>50</span><span>100</span><span>500</span><span>2,000</span><span>20,000</span>
+        </div>
+        <div class="finder__out" aria-live="polite">
+          <b id="finder-name">Vision C</b>
+          <p id="finder-desc">On-premises mini-SCADA for one machine or line, up to 100 tags.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary btn--small" id="finder-link" href="/products/vision-c/">See Vision C</a>
+            <a class="btn btn--ghost btn--small" href="/contact/">Request a quote</a>
+          </div>
+          <p class="form-note mt-2" id="finder-tags">Selected: 100 tags</p>
+          <p class="form-note mb-0">Cost-sensitive scope? <a href="/products/vision-s-lite/">Vision S Lite is in development</a>.</p>
+        </div>
+      </div>
+      <p class="small muted mt-2">
+        This finder suggests a starting point only. Final sizing depends on protocol, scan rate and how many calculated
+        tags the project needs.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="eyebrow">The plans</span><h2>Every edition, side by side.</h2></div>
+        <p>No prices are published because dealer quotes include installation, support and local taxes. The editions below are fixed.</p>
+      </div>
+      <div class="grid-2">
+        {products.filter((p) => p.status !== "upcoming").map((p) => (
+          <div class="card">
+            <span class="mono muted">{p.category}</span>
+            <h3 class="mt-1">{p.name}</h3>
+            <p>{p.planNote}</p>
+            <table class="spec-table mt-2">
+              <tbody>
+                {p.plans.map((plan) => (
+                  <tr><th>{plan.name}</th><td>{plan.detail}</td></tr>
+                ))}
+              </tbody>
+            </table>
+            <a class="btn btn--ghost btn--small mt-2" href={`/products/${p.slug}/#plans`}>Details</a>
+          </div>
+        ))}
+      </div>
+      <p class="form-note mt-3">
+        Vision S Lite, a lighter Vision S for cost-sensitive applications, is in development. Editions and pricing will
+        be announced at launch. <a href="/products/vision-s-lite/">See the launch page</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split split--center">
+      <div>
+        <span class="eyebrow">Sizing</span>
+        <h2>What is a tag, really?</h2>
+        <p class="lede">
+          One tag is one value: a temperature, a pressure, a motor run status, a calculated total. If a screen shows
+          the same value twice, that is still one tag. If you calculate efficiency from four readings, the calculated
+          value is a fifth tag.
+        </p>
+      </div>
+      <div class="spec-box">
+        <table class="spec-table">
+          <tr><th>One compact machine</th><td>20–100 tags</td></tr>
+          <tr><th>One production line</th><td>100–1,000 tags</td></tr>
+          <tr><th>Small plant</th><td>1,000–5,000 tags</td></tr>
+          <tr><th>Large or regulated plant</th><td>5,000–60,000 tags</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <Faq items={faqs} title="Licensing questions, answered" intro="The commercial questions we get before a quote. Ask your dealer for the numbers." />
+
+  <Cta title="Get a number for your scope." text="Send tag count, protocols and whether you need on-premise or cloud. We will route it to the nearest authorised dealer." primaryLabel="Request a quote" />
+</Base>
+
+<script>
+  const steps = [10, 50, 100, 500, 2000, 20000];
+  const slider = document.getElementById("tag-slider") as HTMLInputElement;
+  const nameEl = document.getElementById("finder-name") as HTMLElement;
+  const descEl = document.getElementById("finder-desc") as HTMLElement;
+  const linkEl = document.getElementById("finder-link") as HTMLAnchorElement;
+  const tagsEl = document.getElementById("finder-tags") as HTMLElement;
+
+  function update() {
+    const tags = steps[Number(slider.value)];
+    const cloud = (document.querySelector('input[name="deploy"]:checked') as HTMLInputElement).value === "cloud";
+    let name = "";
+    let desc = "";
+    let href = "";
+    let label = "";
+
+    if (cloud) {
+      href = "/products/vision-web/";
+      if (tags <= 10) { name = "Vision Web · 10 tags"; label = "10 tags"; }
+      else if (tags <= 50) { name = "Vision Web · 50 tags"; label = "50 tags"; }
+      else if (tags <= 500) { name = "Vision Web · 500 tags"; label = "500 tags"; }
+      else if (tags <= 5000) { name = "Vision Web · 5,000 tags"; label = "5,000 tags"; }
+      else { name = "Vision Web · Enterprise"; label = "Enterprise"; }
+      desc = `Hosted by Dicot with two-year history, 50–100 ms updates and alarms by SMS, email, WhatsApp and Telegram. Yearly subscription for ${label}.`;
+    } else if (tags <= 100) {
+      name = "Vision C";
+      href = "/products/vision-c/";
+      desc = "On-premises mini-SCADA and data logger for one machine or line. Modbus TCP/IP, RTU, BCD and AIBUS, up to 100 tags.";
+    } else {
+      name = "Vision S";
+      href = "/products/vision-s/";
+      desc = "Enterprise SCADA for multi-line and regulated plants. 4,000+ protocols, OPC UA/DA, 21 CFR-ready audit trails and PostgreSQL history.";
+    }
+
+    nameEl.textContent = name;
+    descEl.textContent = desc;
+    linkEl.href = href;
+    linkEl.textContent = `See ${href.includes("vision-c") ? "Vision C" : href.includes("vision-web") ? "Vision Web" : "Vision S"}`;
+    tagsEl.textContent = `Selected: ${tags.toLocaleString("en-IN")} tags · ${cloud ? "cloud" : "on-premise"}`;
+  }
+
+  slider.addEventListener("input", update);
+  document.querySelectorAll('input[name="deploy"]').forEach((r) => r.addEventListener("change", update));
+  update();
+</script>

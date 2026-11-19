@@ -1,0 +1,178 @@
+---
+import Legal from "../../layouts/Legal.astro";
+import { site } from "../../data/site";
+
+const title = "Privacy Policy | Dicot Innovations";
+const description =
+  "How Dicot Innovations collects, uses, shares and protects personal data under India's DPDP Act 2023 and DPDP Rules 2025. Rights, retention and grievance contact.";
+---
+<Legal
+  title={title}
+  description={description}
+  label="Privacy"
+  lede="This policy explains what personal data we collect, why we collect it, how long we keep it and how you can exercise your rights under India's Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025."
+>
+  <p><strong>Effective date:</strong> 18 November 2026 · <strong>Version:</strong> 2.0</p>
+
+  <h2>1. Who we are</h2>
+  <p>
+    Dicot Innovations Private Limited (“Dicot”, “we”, “us”) is the Data Fiduciary for the personal data described in
+    this policy. We are registered in India with our office at {site.address.full}.
+  </p>
+  <ul>
+    <li>Privacy and data requests: <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a></li>
+    <li>Grievance Officer: <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a></li>
+    <li>General contact: <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> · {site.phones[0].label}</li>
+  </ul>
+
+  <h2>2. Scope</h2>
+  <p>
+    This policy covers personal data processed through <strong>dicot.tech</strong> and <strong>dicot.in</strong>,
+    including our contact form, partner application link, careers applications, downloads, blog and analytics. Our
+    customer platform at vision-web.tech may have a separate notice; where it does, that notice applies to that
+    service.
+  </p>
+  <p>This policy does not cover personal data in customer plant data that we process as a processor under a customer contract.</p>
+
+  <h2>3. Personal data we collect</h2>
+  <div class="table-wrap">
+      <table>
+    <thead><tr><th>Category</th><th>What we collect</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Enquiries</td><td>Name, company, work email, phone, product interest, message</td><td>To answer your enquiry, arrange a demo and route it to a dealer</td></tr>
+      <tr><td>Partner applications</td><td>Name, company, email, phone, territory and business details</td><td>To assess and manage a dealer, integrator or OEM partnership</td></tr>
+      <tr><td>Careers</td><td>Name, email, phone, CV and the role you apply for</td><td>To assess your application and contact you about it</td></tr>
+      <tr><td>Support and licences</td><td>Name, company, contact details, product and licence identifiers</td><td>To provide support, renewals and warranty service</td></tr>
+      <tr><td>Analytics (with consent)</td><td>Pages viewed, approximate location derived from IP, device and browser, referrer, interaction events</td><td>To understand which content helps buyers and improve the site</td></tr>
+      <tr><td>Support chat (with consent)</td><td>Name and message you type in the Tawk.to chat, chat identifiers and the pages viewed during the chat</td><td>To answer your question and keep the conversation in context</td></tr>
+      <tr><td>Security logs</td><td>IP address, user agent, request time and status</td><td>To keep the site available and investigate abuse</td></tr>
+    </tbody>
+  </table>
+    </div>
+  <p>
+    We do not intentionally collect sensitive personal data such as health, biometric, caste, religious or political
+    information through this website. Please do not send it through the contact form.
+  </p>
+
+  <h2>4. How we use personal data</h2>
+  <ul>
+    <li>Respond to enquiries, demos and partner applications.</li>
+    <li>Provide, licence, support and renew our software.</li>
+    <li>Send product updates where you have opted in.</li>
+    <li>Measure site usage where you have consented to analytics.</li>
+    <li>Protect the site, prevent fraud and comply with legal obligations.</li>
+  </ul>
+  <p>We do not sell personal data, and we do not use enquiry data for unrelated advertising.</p>
+
+  <h2>5. Consent and withdrawal</h2>
+  <p>
+    Where we rely on consent, we ask for it separately and do not pre-tick the box. You can withdraw consent at any
+    time by writing to <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a> or by changing your cookie
+    choices through “Cookie settings” in the footer. Withdrawal does not affect processing already carried out, and we
+    will stop using the data for that purpose. You can also ask us to delete it, subject to legal retention
+    requirements.
+  </p>
+
+  <h2>6. Cookies and analytics</h2>
+  <p>
+    Essential storage keeps your consent choice and the site working. Google Analytics 4 loads only after you accept
+    analytics, and the Tawk.to chat widget loads only after you enable support chat. Neither loads if you reject or
+    ignore the banner. See the <a href="/legal/cookies/">cookie policy</a> for the specific cookies and durations.
+  </p>
+
+  <h2>7. Sharing and processors</h2>
+  <p>We share personal data only where needed, with:</p>
+  <div class="table-wrap">
+      <table>
+    <thead><tr><th>Recipient</th><th>Purpose</th><th>Location</th></tr></thead>
+    <tbody>
+      <tr><td>Hostinger</td><td>Website hosting and email</td><td>EU / India, per plan</td></tr>
+      <tr><td>Cloudflare</td><td>DNS, CDN and security</td><td>Global</td></tr>
+      <tr><td>Google (Analytics, Forms)</td><td>Consented analytics; partner application form</td><td>Global</td></tr>
+      <tr><td>Tawk.to</td><td>Live chat, only when you enable support chat</td><td>Global</td></tr>
+      <tr><td>Authorised dealers</td><td>Responding to your enquiry or quote in your territory</td><td>India / your region</td></tr>
+      <tr><td>Professional advisers and authorities</td><td>Legal, audit or regulatory requirements</td><td>India</td></tr>
+    </tbody>
+  </table>
+    </div>
+  <p>
+    Processors act on our instructions under contract. Some may process data outside India; where they do, we take
+    steps required by the DPDP Act and Rules. The partner application opens a Google Form, so Google’s own terms and
+    cookies apply to that form. The live-chat widget is loaded from Tawk.to only after you enable support chat, and
+    Tawk.to's own terms apply while you use it.
+  </p>
+
+  <h2>8. Retention</h2>
+  <div class="table-wrap">
+      <table>
+    <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+    <tbody>
+      <tr><td>Enquiries and demo requests</td><td>24 months from last contact</td></tr>
+      <tr><td>Partner applications</td><td>24 months from last contact</td></tr>
+      <tr><td>Job applications</td><td>12 months, unless you ask us to delete earlier</td></tr>
+      <tr><td>Customer, licence and support records</td><td>For the contract term and as required by law</td></tr>
+      <tr><td>Analytics</td><td>Up to 14 months in Google Analytics</td></tr>
+      <tr><td>Support chat transcripts</td><td>Up to 12 months from the last message</td></tr>
+      <tr><td>Security logs</td><td>Up to 90 days</td></tr>
+    </tbody>
+  </table>
+    </div>
+  <p>When retention ends, we delete or anonymise the data.</p>
+
+  <h2>9. Security</h2>
+  <p>
+    We use HTTPS, access controls, least-privilege accounts, patched infrastructure, backups and vendor contracts with
+    confidentiality obligations. No system is completely secure; if you suspect a problem, contact
+    <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a> immediately.
+  </p>
+
+  <h2>10. Data breaches</h2>
+  <p>
+    If a personal data breach occurs, we will contain it, assess the risk and notify the Data Protection Board of India
+    and affected Data Principals as required by the DPDP Act and DPDP Rules, 2025. We keep an internal record of
+    breaches and remedial actions.
+  </p>
+
+  <h2>11. Your rights</h2>
+  <p>As a Data Principal you can ask us to:</p>
+  <ul>
+    <li>confirm whether we process your personal data and provide a summary;</li>
+    <li>correct, complete or update inaccurate data;</li>
+    <li>erase data that is no longer needed for its purpose;</li>
+    <li>nominate another person to exercise your rights in the event of death or incapacity;</li>
+    <li>withdraw consent; and</li>
+    <li>resolve a grievance.</li>
+  </ul>
+  <p>
+    Write to <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a> with the subject “DPDP request”. We may
+    ask for information to verify your identity. We aim to respond within 30 days or the period prescribed under the
+    DPDP Rules. If you are not satisfied, you can complain to the Data Protection Board of India.
+  </p>
+
+  <h2>12. Children</h2>
+  <p>
+    Our website and products are intended for businesses and are not directed to children under 18. We do not
+    knowingly collect children’s personal data. If you believe a child has provided data, contact us and we will delete
+    it.
+  </p>
+
+  <h2>13. Marketing</h2>
+  <p>
+    We send product updates only where you opt in, and every message includes an unsubscribe route. You can also ask us
+    to stop by emailing <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>.
+  </p>
+
+  <h2>14. Changes to this policy</h2>
+  <p>
+    We will update this page when our processing changes and revise the effective date and version. Material changes
+    will be communicated where required.
+  </p>
+
+  <h2>15. Contact and grievance redressal</h2>
+  <p>
+    Grievance Officer, Dicot Innovations Private Limited<br />
+    {site.address.full}<br />
+    Email: <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a><br />
+    Phone: {site.phones[0].label}
+  </p>
+</Legal>

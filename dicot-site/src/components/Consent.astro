@@ -1,0 +1,135 @@
+---
+import { site } from "../data/site";
+---
+<section
+  class="consent"
+  id="consent"
+  aria-label="Cookie consent"
+  data-ga-id={site.gaId}
+  data-tawk-id={site.tawkProperty}
+  hidden
+>
+  <h2>Cookies, analytics and chat</h2>
+  <p>
+    We use essential storage to run this site. With your consent we also load Google Analytics to understand which pages
+    help buyers, and Tawk.to for live chat. Nothing non-essential loads before you choose. Read our
+    <a href="/legal/cookies/">cookie policy</a> and <a href="/legal/privacy/">privacy policy</a>.
+  </p>
+  <div class="consent__row">
+    <button type="button" class="btn btn--primary btn--small" data-consent="all">Accept all</button>
+    <button type="button" class="btn btn--ghost btn--small" data-consent="reject">Reject all</button>
+    <button type="button" class="btn btn--ghost btn--small" data-consent="prefs" aria-expanded="false" aria-controls="consent-prefs">Preferences</button>
+  </div>
+  <div class="consent__prefs" id="consent-prefs" hidden>
+    <label><input type="checkbox" id="consent-analytics" /> Analytics — Google Analytics 4, aggregated page usage</label>
+    <label><input type="checkbox" id="consent-chat" /> Support chat — Tawk.to live chat widget</label>
+    <label><input type="checkbox" id="consent-marketing" /> Marketing — reserved for campaign measurement, currently unused</label>
+    <div class="consent__row">
+      <button type="button" class="btn btn--primary btn--small" data-consent="save">Save choices</button>
+    </div>
+  </div>
+</section>
+<script>
+  const KEY = "dicot_consent_v1";
+  const banner = document.getElementById("consent");
+  const gaId = banner?.dataset.gaId ?? "";
+  const tawkProperty = banner?.dataset.tawkId ?? "";
+  const prefs = document.getElementById("consent-prefs");
+  const analyticsBox = document.getElementById("consent-analytics") as HTMLInputElement;
+  const chatBox = document.getElementById("consent-chat") as HTMLInputElement;
+  const marketingBox = document.getElementById("consent-marketing") as HTMLInputElement;
+  const prefsButton = document.querySelector('[data-consent="prefs"]') as HTMLButtonElement | null;
+
+  type Consent = { analytics: boolean; chat?: boolean; marketing: boolean; ts: string };
+
+  function read(): Consent | null {
+    try {
+      const raw = localStorage.getItem(KEY);
+      return raw ? (JSON.parse(raw) as Consent) : null;
+    } catch {
+      return null;
+    }
+  }
+
+  function loadAnalytics() {
+    const w = window as unknown as { __dicotGa?: boolean; dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void };
+    if (w.__dicotGa || !gaId) return;
+    w.__dicotGa = true;
+    w.dataLayer = w.dataLayer || [];
+    w.gtag = function () {
+      w.dataLayer!.push(arguments);
+    };
+    w.gtag("js", new Date());
+    w.gtag("config", gaId);
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+    document.head.appendChild(s);
+  }
+
+  function loadChat() {
+    const w = window as unknown as { __dicotChat?: boolean; Tawk_API?: Record<string, unknown>; Tawk_LoadStart?: Date };
+    if (w.__dicotChat || !tawkProperty) return;
+    w.__dicotChat = true;
+    w.Tawk_API = w.Tawk_API || {};
+    w.Tawk_LoadStart = new Date();
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = `https://embed.tawk.to/${tawkProperty}`;
+    s.charset = "UTF-8";
+    s.setAttribute("crossorigin", "*");
+    document.head.appendChild(s);
+  }
+
+  function apply(c: Consent) {
+    if (c.analytics) loadAnalytics();
+    if (c.chat) loadChat();
+  }
+
+  function save(c: Consent) {
+    localStorage.setItem(KEY, JSON.stringify(c));
+    banner?.setAttribute("hidden", "");
+    apply(c);
+  }
+
+  function openPrefs() {
+    banner?.removeAttribute("hidden");
+    prefs?.removeAttribute("hidden");
+    prefsButton?.setAttribute("aria-expanded", "true");
+    const c = read();
+    if (c) {
+      analyticsBox.checked = c.analytics;
+      chatBox.checked = Boolean(c.chat);
+      marketingBox.checked = c.marketing;
+    }
+    banner?.querySelector("h2")?.setAttribute("tabindex", "-1");
+    (banner?.querySelector("h2") as HTMLElement | null)?.focus();
+  }
+
+  const stored = read();
+  if (stored) apply(stored);
+  else banner?.removeAttribute("hidden");
+
+  banner?.addEventListener("click", (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>("[data-consent]");
+    if (!btn) return;
+    const action = btn.dataset.consent;
+    if (action === "all") save({ analytics: true, chat: true, marketing: true, ts: new Date().toISOString() });
+    if (action === "reject") save({ analytics: false, chat: false, marketing: false, ts: new Date().toISOString() });
+    if (action === "prefs") {
+      const isOpen = !prefs?.hasAttribute("hidden");
+      prefs?.toggleAttribute("hidden", isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+    }
+    if (action === "save") {
+      save({ analytics: analyticsBox.checked, chat: chatBox.checked, marketing: marketingBox.checked, ts: new Date().toISOString() });
+    }
+  });
+
+  document.querySelectorAll("[data-cookie-settings]").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      openPrefs();
+    });
+  });
+</script>
