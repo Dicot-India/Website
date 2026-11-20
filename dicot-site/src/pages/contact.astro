@@ -7,6 +7,7 @@ import { dealers } from "../data/dealers";
 const title = "Contact Dicot | Dealers in Gujarat, Tamil Nadu & Mumbai";
 const description =
   "Talk to Dicot about SCADA, IIoT or data-acquisition software. Ahmedabad office, +91 90166 83114, sales@dicot.tech. Channel partners in Gujarat, Tamil Nadu and Mumbai.";
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 
 const contactPage = {
   "@context": "https://schema.org",
@@ -61,6 +62,11 @@ const dealerList = {
         <div class="form-error" id="form-error" hidden>
           Something went wrong sending the form. Please email <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> or call {site.phones[0].label}.
         </div>
+        {!turnstileSiteKey && (
+          <div class="form-error">
+            The contact form is temporarily unavailable. Please email <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a>.
+          </div>
+        )}
         <form class="form" action="/contact.php" method="post" accept-charset="utf-8">
           <div class="grid-2">
             <div class="field">
@@ -108,8 +114,9 @@ const dealerList = {
             <input type="checkbox" name="updates" value="yes" />
             <span>Also send me occasional product updates. I can unsubscribe at any time.</span>
           </label>
+          {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>}
           <div>
-            <button class="btn btn--primary" type="submit">Send enquiry</button>
+            <button class="btn btn--primary" type="submit" disabled={!turnstileSiteKey}>Send enquiry</button>
           </div>
           <p class="form-note">
             We use these details to answer your enquiry and keep a record of the conversation. We do not sell contact
@@ -149,6 +156,8 @@ const dealerList = {
       </aside>
     </div>
   </section>
+
+  {turnstileSiteKey && <script async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>}
 
   <section class="section section--white" id="channel-partners">
     <div class="wrap">

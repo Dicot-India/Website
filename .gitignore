@@ -1,5 +1,7 @@
 # dependencies
 node_modules
+vendor
+contact-secrets.php
 .npm
 .pnp
 .lock

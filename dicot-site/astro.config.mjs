@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://dicot.tech",
   trailingSlash: "always",
+  outDir: "./.build",
   build: { format: "directory" },
   integrations: [
     sitemap({
