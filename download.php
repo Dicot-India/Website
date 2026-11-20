@@ -31,9 +31,37 @@ function dicot_download_fail(string $reason): void
     exit;
 }
 
-function dicot_download_signature(string $build, int $expires, string $emailHash): string
+/**
+ * Key that signs the emailed links.
+ *
+ * DOWNLOAD_SIGNING_KEY is the intended value. When it is missing the key is
+ * derived from a secret the deployment already needs, so the email flow works
+ * before that setting is added. Adding or rotating that secret invalidates
+ * links already sent, which is acceptable inside the 48-hour window.
+ */
+function dicot_download_key(): string
 {
     $key = dicot_setting('DOWNLOAD_SIGNING_KEY');
+    if ($key !== '') {
+        return $key;
+    }
+
+    foreach (['SMTP_PASSWORD', 'TURNSTILE_SECRET_KEY'] as $source) {
+        $secret = dicot_setting($source);
+        if ($secret !== '') {
+            return hash('sha256', 'dicot-vision-s-links|' . $secret);
+        }
+    }
+
+    return '';
+}
+
+function dicot_download_signature(string $build, int $expires, string $emailHash): string
+{
+    $key = dicot_download_key();
+    if ($key === '') {
+        return '';
+    }
     $raw = hash_hmac('sha256', 'vision-s|' . $build . '|' . $expires . '|' . $emailHash, $key, true);
     return rtrim(strtr(base64_encode($raw), '+/', '-_'), '=');
 }
@@ -193,21 +221,31 @@ $leadBody = "New Vision S download request\n\n"
     . "Retention: " . DICOT_RETENTION . ". Delete this record when the window ends.\n";
 
 $leadSubject = 'Vision S download: ' . $buildInfo['label'] . ' — ' . $name . ' (' . $company . ')';
-$leadError = dicot_send_mail(DICOT_SALES, $leadSubject, $leadBody, $email);
-if ($leadError !== null) {
-    error_log('Vision S download: lead email failed: ' . $leadError);
-}
+
+// The lead email is the consent record, so it is always sent. Its failure is
+// logged rather than shown: blocking the file here would punish the visitor for
+// our SMTP.
+$sendLead = static function () use ($leadSubject, $leadBody, $email): void {
+    $leadError = dicot_send_mail(DICOT_SALES, $leadSubject, $leadBody, $email);
+    if ($leadError !== null) {
+        error_log('Vision S download: lead email failed: ' . $leadError);
+    }
+};
 
 if ($mode === 'direct') {
-    // The visitor asked to download now. The lead email failure is logged, not
-    // shown: blocking the file here would punish the visitor for our SMTP.
+    // Release the response first. SMTP takes a few seconds, and the browser
+    // should start the large transfer instead of waiting for our mailbox.
     header('Cache-Control: no-store');
     header('Location: /' . $buildInfo['file'], true, 303);
+    dicot_finish_response();
+    $sendLead();
     exit;
 }
 
-if (dicot_setting('DOWNLOAD_SIGNING_KEY') === '') {
-    error_log('Vision S download unavailable: DOWNLOAD_SIGNING_KEY is not configured.');
+$sendLead();
+
+if (dicot_download_key() === '') {
+    error_log('Vision S download unavailable: no signing key. Set DOWNLOAD_SIGNING_KEY, or the SMTP password it falls back to.');
     dicot_download_fail('config');
 }
 

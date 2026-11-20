@@ -135,8 +135,8 @@ const software = {
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
           </div>
 
-          <div class="notice" id="privacy-notice">
-            <h2 class="notice__title">Before you download</h2>
+          <div class="dl-notice" id="privacy-notice">
+            <h2 class="dl-notice__title">Before you download</h2>
             <p class="mb-1">
               <strong>What we collect:</strong> your name, company, work email and, if you add it, your phone number; the
               build you chose, the time of the request, and a Cloudflare Turnstile security token. Your IP address is used
@@ -163,7 +163,7 @@ const software = {
             </p>
           </div>
 
-          <label class="consent">
+          <label class="consent-field">
             <input type="checkbox" name="consent" value="yes" required />
             <span>
               I agree that Dicot Innovations may use these details to send my Vision S download link and to contact me
@@ -172,7 +172,7 @@ const software = {
             </span>
           </label>
 
-          <label class="consent consent--optional">
+          <label class="consent-field consent-field--optional">
             <input type="checkbox" name="updates" value="yes" />
             <span>Send me occasional product updates. Optional, and I can unsubscribe at any time.</span>
           </label>
@@ -183,6 +183,11 @@ const software = {
             <button class="btn btn--primary" type="submit">Get the download</button>
             <a class="btn btn--ghost" href="/downloads/">Back to all downloads</a>
           </div>
+
+          <p class="form-note mb-0" id="download-status" role="status" hidden>
+            Your download is starting. A file this size takes a few seconds to appear — keep this tab open. If nothing
+            happens, choose the email option above and we will send the link instead.
+          </p>
 
           <p class="form-note mb-0">
             This form records the request and the consent you give. We keep that record for
@@ -226,7 +231,7 @@ const software = {
 
         <div class="card mt-2">
           <h2 class="h3">Need help?</h2>
-          <p class="mb-1">
+          <p>
             <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a><br />
             {site.phones.map((phone) => (
               <><a href={`tel:${phone.href}`}>{phone.label}</a>{phone.primary ? " (primary)" : ""}<br /></>
@@ -245,9 +250,14 @@ const software = {
 
 <script>
   const params = new URLSearchParams(location.search);
+  const form = document.querySelector<HTMLFormElement>(".download-form");
   const errorPanel = document.getElementById("download-error");
   const successPanel = document.getElementById("download-success");
   const errorDetail = document.getElementById("download-error-detail");
+  const statusNote = document.getElementById("download-status");
+  const submitButton = form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+  const submitLabel = submitButton?.textContent ?? "";
+  let restoreTimer = 0;
 
   const reasons: Record<string, string> = {
     rate: "Too many requests from this connection. Wait a few minutes, then try again, or email sales@dicot.tech.",
@@ -257,11 +267,21 @@ const software = {
     config: "The download form is not configured right now. Please email sales@dicot.tech.",
   };
 
+  const restoreSubmit = () => {
+    window.clearTimeout(restoreTimer);
+    if (submitButton) {
+      submitButton.textContent = submitLabel;
+      submitButton.removeAttribute("aria-busy");
+    }
+  };
+
   if (params.get("error") === "1" && errorPanel) {
     const reason = params.get("reason") ?? "";
     if (errorDetail && reasons[reason]) errorDetail.textContent = reasons[reason];
     errorPanel.removeAttribute("hidden");
     errorPanel.scrollIntoView({ block: "center" });
+    // Drop the reason so a reload cannot repeat a message about an old attempt.
+    history.replaceState({}, "", location.pathname);
   }
 
   if (params.get("sent") === "1" && successPanel) {
@@ -269,6 +289,21 @@ const software = {
     successPanel.scrollIntoView({ block: "center" });
     history.replaceState({}, "", location.pathname);
   }
+
+  form?.addEventListener("submit", () => {
+    // A direct download keeps this page open, so an earlier failure banner used
+    // to stay on screen and look like an error from the new attempt.
+    errorPanel?.setAttribute("hidden", "");
+    successPanel?.setAttribute("hidden", "");
+    statusNote?.removeAttribute("hidden");
+    if (submitButton) {
+      submitButton.setAttribute("aria-busy", "true");
+      submitButton.textContent = "Preparing your download…";
+    }
+    restoreTimer = window.setTimeout(restoreSubmit, 30000);
+  });
+
+  window.addEventListener("pageshow", restoreSubmit);
 </script>
 
 <style>
@@ -310,20 +345,33 @@ const software = {
     cursor: pointer;
   }
   .choice + .choice { margin-top: 8px; }
-  .choice input { margin-top: 4px; }
+  /* The fieldset carries .field, whose global rule sizes every input to 100%:
+     reset the radio so it stays a small control beside its label. */
+  .choice input[type="radio"] {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin: 4px 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    accent-color: var(--blue);
+  }
+  .choice > span { flex: 1 1 auto; min-width: 0; }
   .choice__hint { display: block; font-size: 0.82rem; color: var(--muted); }
   .choice:has(input:checked) { border-color: var(--blue); }
-  .notice {
+  .dl-notice {
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--paper-2);
     padding: 18px 20px;
   }
-  .notice__title { font-size: 1rem; margin-bottom: 10px; }
-  .notice p { font-size: 0.9rem; }
-  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; }
-  .consent input { margin-top: 4px; flex: none; }
-  .consent--optional { color: var(--muted); }
+  .dl-notice__title { font-size: 1rem; margin-bottom: 10px; }
+  .dl-notice p { font-size: 0.9rem; }
+  .consent-field { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; }
+  .consent-field input { margin-top: 4px; flex: none; }
+  .consent-field--optional { color: var(--muted); }
   .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   .form-success {
     border: 1px solid #9bd3b4;
@@ -332,7 +380,7 @@ const software = {
     padding: 14px 16px;
     margin-bottom: 18px;
   }
-  .notice .mb-1 { margin-bottom: 0.65em; }
+  .dl-notice .mb-1 { margin-bottom: 0.65em; }
   .h3 { font-size: 1.1rem; }
 </style>
 

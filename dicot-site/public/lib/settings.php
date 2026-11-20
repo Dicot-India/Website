@@ -78,3 +78,25 @@ function dicot_client_ip(): string
     }
     return '0.0.0.0';
 }
+
+/**
+ * Hand the response to the client and keep the script running.
+ *
+ * Used after the redirect for a direct download: the visitor must not wait for
+ * the SMTP conversation before a large transfer starts. Where the SAPI cannot
+ * flush early the function is a no-op and the caller simply continues normally.
+ */
+function dicot_finish_response(): void
+{
+    ignore_user_abort(true);
+    while (ob_get_level() > 0) {
+        ob_end_flush();
+    }
+    flush();
+
+    if (function_exists('fastcgi_finish_request')) {
+        fastcgi_finish_request();
+    } elseif (function_exists('litespeed_finish_request')) {
+        litespeed_finish_request();
+    }
+}
