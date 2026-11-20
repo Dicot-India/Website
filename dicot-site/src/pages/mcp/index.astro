@@ -1,0 +1,169 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+
+const title = "Dicot MCP API | Read-only SCADA data for AI agents";
+const description =
+  "JSON-RPC 2.0 endpoint serving published Dicot product facts, download options and contact details. No auth, read-only, no personal data, 60 requests per minute per IP.";
+
+const endpoint = `${site.url}/mcp.php`;
+
+const methods = [
+  {
+    method: "initialize",
+    purpose: "Handshake. Returns the negotiated protocol version, capabilities and server instructions.",
+    params: "protocolVersion (optional)",
+  },
+  { method: "ping", purpose: "Liveness check. Returns an empty result.", params: "none" },
+  { method: "tools/list", purpose: "Lists the four read-only tools with their input schemas.", params: "none" },
+  { method: "tools/call", purpose: "Runs one tool and returns text and structured content.", params: "name, arguments" },
+  { method: "server/discover", purpose: "Server information, capabilities and protocol versions in one call.", params: "none" },
+  {
+    method: "notifications/initialized · notifications/cancelled",
+    purpose: "Accepted and acknowledged with HTTP 202 and no body.",
+    params: "none",
+  },
+];
+
+const tools = [
+  {
+    name: "search_dicot_products",
+    description:
+      "Search Dicot SCADA, IIoT and reporting software by product name, protocol, industry or use case. Returns matching products with a summary and canonical URL.",
+    input: "query (string, required) — a product name or keyword, for example “OPC UA”, “pharma” or “cloud”.",
+  },
+  {
+    name: "get_dicot_product",
+    description:
+      "Return the published specification, editions, requirements and FAQs for one Dicot product. Prices are never returned.",
+    input: "product (string, required) — vision-c, vision-s, vision-web, vision-s-lite or vgraphic.",
+  },
+  {
+    name: "get_dicot_download_options",
+    description:
+      "List public installers and manuals, and explain that the two Vision S builds need a request form with name, company and work email.",
+    input: "none",
+  },
+  {
+    name: "get_dicot_contact",
+    description:
+      "Return the Dicot office address, sales and privacy email addresses, phone numbers and the authorised channel partners.",
+    input: "none",
+  },
+];
+
+const curlToolsList = `curl -X POST ${endpoint} \\
+  -H "Content-Type: application/json" \\
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'`;
+
+const curlToolCall = `curl -X POST ${endpoint} \\
+  -H "Content-Type: application/json" \\
+  -d '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"get_dicot_product","arguments":{"product":"vision-s"}}}'`;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    name: "Dicot MCP API",
+    description,
+    url: `${site.url}/mcp/`,
+    about: { "@id": `${site.url}/#organization` },
+    audience: { "@type": "Audience", audienceType: "AI agents and software integrators" },
+  },
+];
+---
+<Base title={title} description={description} schema={schema}>
+  <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>MCP API</li></ol></nav></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Machine access</span>
+      <h1>The Dicot MCP API.</h1>
+      <p class="lede">
+        A read-only JSON-RPC endpoint that serves published facts about Dicot SCADA, IIoT and
+        data-acquisition software: products, download options and contact details. Built for AI
+        agents and integrations.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-4">
+      <div class="card"><h3>Endpoint</h3><p><span class="mono">{endpoint}</span></p><p>JSON-RPC 2.0 over HTTP POST. GET is rejected with 405.</p></div>
+      <div class="card"><h3>Protocol</h3><p>MCP Streamable HTTP. Protocol versions: <span class="mono">2025-11-25</span>, <span class="mono">2025-06-18</span>, <span class="mono">2025-03-26</span>.</p></div>
+      <div class="card"><h3>Access</h3><p>No authentication. Every tool carries a read-only annotation. No personal data is accepted or stored.</p></div>
+      <div class="card"><h3>Rate limit</h3><p>60 requests per minute per IP address. A 429 response carries <span class="mono">Retry-After: 60</span>.</p></div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="wrap prose">
+      <div class="section-head">
+        <div><span class="eyebrow">Reference</span><h2>Methods and tools.</h2></div>
+        <p>Prices never appear in any response: Dicot sells through authorised dealers and does not publish prices.</p>
+      </div>
+
+      <h3>JSON-RPC methods</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Method</th><th>Purpose</th><th>Params</th></tr></thead>
+          <tbody>
+            {methods.map((entry) => (
+              <tr>
+                <td><span class="mono">{entry.method}</span></td>
+                <td>{entry.purpose}</td>
+                <td>{entry.params}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Tools</h3>
+      <ul role="list">
+        {tools.map((tool) => (
+          <li>
+            <strong><span class="mono">{tool.name}</span></strong> — {tool.description}
+            Input: {tool.input}.
+          </li>
+        ))}
+      </ul>
+
+      <h3>Example requests</h3>
+      <pre><code>{curlToolsList}</code></pre>
+      <pre><code>{curlToolCall}</code></pre>
+      <p class="small muted">
+        Responses are JSON-RPC 2.0: a <span class="mono">result</span> object with
+        <span class="mono">content</span> and <span class="mono">structuredContent</span>, or an
+        <span class="mono">error</span> object with a code and message.
+      </p>
+
+      <h3>Machine-readable discovery</h3>
+      <ul role="list">
+        <li>API catalog (RFC 9727): <a href="/.well-known/api-catalog">/.well-known/api-catalog</a></li>
+        <li>OpenAPI 3.1 description of this endpoint: <a href="/.well-known/mcp/openapi.json">/.well-known/mcp/openapi.json</a></li>
+        <li>MCP Server Card (SEP-2127): <a href="/.well-known/mcp/server-card.json">/.well-known/mcp/server-card.json</a></li>
+        <li>Health and status document: <a href="/.well-known/health.json">/.well-known/health.json</a></li>
+        <li>Agent guidance in plain text: <a href="/llms.txt">/llms.txt</a> and <a href="/llms-full.txt">/llms-full.txt</a></li>
+        <li>AI catalog: <a href="/.well-known/ai-catalog.json">/.well-known/ai-catalog.json</a></li>
+      </ul>
+      <p class="small muted">
+        robots.txt declares <span class="mono">Content-Signal: search=yes, ai-input=yes, ai-train=no</span>:
+        pages may be indexed and quoted in answers, not used for model training. Every page also has a
+        Markdown mirror at the same URL plus <span class="mono">index.md</span>, served when a request
+        sends <span class="mono">Accept: text/markdown</span>.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow center">
+      <h2>Talking to a person.</h2>
+      <p class="lede">
+        For quotes, demos or integration questions, use the <a href="/contact/">contact form</a> or write
+        to {site.emails.sales}. Vision S installers are requested at the
+        <a href="/downloads/vision-s/">downloads page</a>, not through the API.
+      </p>
+    </div>
+  </section>
+</Base>

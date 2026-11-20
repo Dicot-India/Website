@@ -1,0 +1,35 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://dicot.tech/mcp.php",
+      "service-desc": [
+        {
+          "href": "https://dicot.tech/.well-known/mcp/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://dicot.tech/mcp/",
+          "type": "text/html"
+        },
+        {
+          "href": "https://dicot.tech/llms.txt",
+          "type": "text/plain"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://dicot.tech/.well-known/health.json",
+          "type": "application/json"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://dicot.tech/.well-known/mcp/server-card.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

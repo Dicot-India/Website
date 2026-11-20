@@ -80,6 +80,10 @@ const payload = {
     privacy: `${site.url}/legal/privacy/`,
     llms: `${site.url}/llms.txt`,
     markdownExample: `${site.url}/index.md`,
+    mcpDocs: `${site.url}/mcp/`,
+    apiCatalog: `${site.url}/.well-known/api-catalog`,
+    openapi: `${site.url}/.well-known/mcp/openapi.json`,
+    health: `${site.url}/.well-known/health.json`,
   },
 };
 

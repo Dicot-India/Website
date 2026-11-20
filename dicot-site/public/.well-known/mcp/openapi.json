@@ -1,0 +1,185 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Dicot MCP API",
+    "version": "1.0.0",
+    "summary": "Read-only MCP endpoint serving published Dicot SCADA, IIoT and data-acquisition facts.",
+    "description": "JSON-RPC 2.0 over HTTP POST (Model Context Protocol, Streamable HTTP transport). The endpoint returns published product specifications, download options and contact details only. It accepts no personal data, performs no writes, requires no authentication and never returns prices (Dicot sells through authorised dealers). Related documents: MCP Server Card https://dicot.tech/.well-known/mcp/server-card.json, API catalog https://dicot.tech/.well-known/api-catalog, human-readable docs https://dicot.tech/mcp/.",
+    "contact": {
+      "name": "Dicot Innovations",
+      "email": "sales@dicot.tech",
+      "url": "https://dicot.tech/contact/"
+    }
+  },
+  "servers": [
+    { "url": "https://dicot.tech" }
+  ],
+  "paths": {
+    "/mcp.php": {
+      "post": {
+        "operationId": "jsonRpc",
+        "summary": "Single JSON-RPC 2.0 request (MCP Streamable HTTP)",
+        "description": "Supported methods: initialize, ping, tools/list, tools/call and server/discover. The notifications/initialized and notifications/cancelled notifications are accepted and answered with HTTP 202 and no body. Requests larger than 64 KB are rejected. Rate limited to 60 requests per minute per IP address.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/JsonRpcRequest" },
+              "examples": {
+                "toolsList": {
+                  "value": { "jsonrpc": "2.0", "id": 1, "method": "tools/list" }
+                },
+                "ping": {
+                  "value": { "jsonrpc": "2.0", "id": 2, "method": "ping" }
+                },
+                "productFacts": {
+                  "value": {
+                    "jsonrpc": "2.0",
+                    "id": 3,
+                    "method": "tools/call",
+                    "params": {
+                      "name": "get_dicot_product",
+                      "arguments": { "product": "vision-s" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "JSON-RPC 2.0 response containing a result or an error.",
+            "headers": {
+              "MCP-Protocol-Version": {
+                "description": "Returned on initialize with the negotiated protocol version.",
+                "schema": { "type": "string" }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/JsonRpcResponse" }
+              }
+            }
+          },
+          "202": { "description": "Notification accepted; no response body." },
+          "400": {
+            "description": "Malformed or missing JSON-RPC request (application error -32600)."
+          },
+          "405": {
+            "description": "GET is not supported; send JSON-RPC 2.0 requests with POST (error -32600)."
+          },
+          "429": {
+            "description": "Rate limit exceeded (error -32000). Retry after 60 seconds (Retry-After header)."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "JsonRpcRequest": {
+        "type": "object",
+        "required": ["jsonrpc", "method"],
+        "properties": {
+          "jsonrpc": { "const": "2.0" },
+          "id": {
+            "description": "Request identifier. Omit for notifications.",
+            "type": ["integer", "string", "null"]
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "initialize",
+              "notifications/initialized",
+              "notifications/cancelled",
+              "ping",
+              "tools/list",
+              "tools/call",
+              "server/discover"
+            ]
+          },
+          "params": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "JsonRpcResponse": {
+        "type": "object",
+        "required": ["jsonrpc"],
+        "properties": {
+          "jsonrpc": { "const": "2.0" },
+          "id": { "type": ["integer", "string", "null"] },
+          "result": { "type": "object", "additionalProperties": true },
+          "error": {
+            "type": "object",
+            "required": ["code", "message"],
+            "properties": {
+              "code": { "type": "integer", "examples": [-32600, -32601, -32602, -32000] },
+              "message": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-mcp": {
+    "endpoint": "https://dicot.tech/mcp.php",
+    "transport": "streamable-http",
+    "protocolVersions": ["2025-11-25", "2025-06-18", "2025-03-26"],
+    "authentication": "none",
+    "readOnly": true,
+    "rateLimit": "60 requests per minute per IP address",
+    "tools": [
+      {
+        "name": "search_dicot_products",
+        "title": "Search Dicot products",
+        "description": "Search Dicot SCADA, IIoT and reporting software by product name, protocol, industry or use case. Returns matching products with a summary and canonical URL.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Product name or keyword, for example \"OPC UA\", \"pharma\" or \"cloud\"."
+            }
+          },
+          "required": ["query"],
+          "additionalProperties": false
+        },
+        "readOnlyHint": true
+      },
+      {
+        "name": "get_dicot_product",
+        "title": "Get Dicot product facts",
+        "description": "Return the published specification, editions, requirements and FAQs for one Dicot product. Prices are never returned.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "product": {
+              "type": "string",
+              "description": "Product slug or name: vision-c, vision-s, vision-web, vision-s-lite or vgraphic."
+            }
+          },
+          "required": ["product"],
+          "additionalProperties": false
+        },
+        "readOnlyHint": true
+      },
+      {
+        "name": "get_dicot_download_options",
+        "title": "Get Dicot download options",
+        "description": "List public installers and manuals, and explain that the two Vision S builds need a request form with name, company and work email.",
+        "inputSchema": { "type": "object", "additionalProperties": false },
+        "readOnlyHint": true
+      },
+      {
+        "name": "get_dicot_contact",
+        "title": "Get Dicot contact details",
+        "description": "Return the Dicot office address, sales and privacy email addresses, phone numbers and the authorised channel partners.",
+        "inputSchema": { "type": "object", "additionalProperties": false },
+        "readOnlyHint": true
+      }
+    ]
+  }
+}

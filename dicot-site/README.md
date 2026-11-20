@@ -1,6 +1,6 @@
 # dicot.tech
 
-Static rebuild of the Dicot Innovations website. Astro 5, plain CSS, no UI framework. Built for SEO and for AI search (GEO).
+Static rebuild of the Dicot Innovations website. Astro 5, plain CSS, no UI framework. Built for SEO and for AI search (GEO) and agent discovery (robots.txt Content Signals, RFC 8288 Link headers, RFC 9727 API catalog, MCP).
 
 ## Run
 
@@ -25,21 +25,24 @@ src/
   data/downloads.ts         Vision S builds, sizes, consent version, retention
   data/content.ts           stats, industries, testimonials, team, downloads
   lib/sitemap-lastmod.mjs   per-route <lastmod> from git history
-  pages/                    routes (includes /downloads/vision-s/ and /mcp/data.json)
+  pages/                    routes (includes /downloads/vision-s/, /mcp/ docs and /mcp/data.json)
   content/careers/*.json    one file per open role
 public/
   images/                   logo, screenshots, customer logos, OG images
   fonts/                    self-hosted Inter + Plus Jakarta Sans
   robots.txt, llms.txt      Content-Signal + agent guidance
-  .well-known/              MCP Server Card and AI catalog
-  .htaccess                 redirects, markdown negotiation, cache, security headers
+  .well-known/              MCP Server Card, AI catalog, API catalog, OpenAPI spec, health document
+  .htaccess                 redirects, markdown negotiation, cache, security headers, Link headers
   contact.php               contact form handler (Hostinger PHP)
   download.php              gated Vision S download endpoint
   mcp.php                   read-only MCP endpoint (JSON-RPC over POST)
   lib/                      shared PHP settings, rate limiter, mailer
 scripts/
   generate-markdown.mjs     HTML → Markdown mirrors + llms-full.txt
+  publish-root.mjs          copies the build into the repository root for upload
+  copy-php-vendor.mjs       brings PHPMailer into the root vendor/ folder
   probe-429.mjs             controlled 429 probe
+  smoke-endpoints.mjs       contact / download / MCP endpoint checks
 docs/429-RUNBOOK.md         how to identify and fix a 429
 ```
 
@@ -72,18 +75,20 @@ Team photos live in `public/images/team/` and are referenced from `src/data/cont
 
 **Redirects** — `public/.htaccess`. Every old `.html` URL maps to its new route. Add new legacy URLs there, never as meta refresh.
 
+**Agent discovery documents** — `public/.well-known/`. `server-card.json` and `ai-catalog.json` are hand-written. `api-catalog` (RFC 9727 linkset), `mcp/openapi.json` (OpenAPI 3.1 for `mcp.php`) and `health.json` are hand-written too; update all three together when the MCP toolset changes. The catalog's exact `Content-Type` comes from `ForceType` rules in `public/.htaccess`.
+
 ## Deploy to Hostinger
 
 1. Install Composer dependencies with `composer install --no-dev --optimize-autoloader`.
-2. Set `PUBLIC_TURNSTILE_SITE_KEY` in `dicot-site/.env`, then run `npm run build:deploy` from `dicot-site`. The build runs three steps: `astro build`, then `scripts/generate-markdown.mjs` (Markdown mirrors + `llms-full.txt`), then `scripts/publish-root.mjs`, which writes the generated site into the repository root. The deploy command also copies PHPMailer into the root `vendor/` folder. The build does not clear the repository root.
+2. Set `PUBLIC_TURNSTILE_SITE_KEY` in `dicot-site/.env`, then run `npm run build:deploy` from `dicot-site`. The build runs three steps: `astro build`, then `scripts/generate-markdown.mjs` (Markdown mirrors + `llms-full.txt`), then `scripts/publish-root.mjs`, which writes the generated site into the repository root. The deploy command also copies PHPMailer into the root `vendor/` folder. The build does not clear the repository root, so first delete stale files you no longer ship.
    In addition to the Turnstile and SMTP settings, set `DOWNLOAD_SIGNING_KEY` to 32+ random bytes. It signs the 48-hour Vision S download links. It is optional: without it the endpoint derives a key from `SMTP_PASSWORD` (then `TURNSTILE_SECRET_KEY`), so the email flow works before the setting is added — but adding or rotating that secret later invalidates links already sent. Direct downloads never need a key.
-3. Upload the generated website files from the repository root to `public_html`. Do not upload `.git/` or the `dicot-site/` source project. Include the root `.htaccess`, `download.php`, `mcp.php`, `lib/`, `mcp/` and the `.well-known/` folder — FTP clients often hide dot-folders, so enable "show hidden files".
-4. Confirm `.htaccess` exists in `public_html`. It forces HTTPS, non-www canonicals, old-URL redirects, compression, caching and security headers.
+3. Upload the generated website files from the repository root to `public_html`. Do not upload `.git/` or the `dicot-site/` source project. Include the root `.htaccess`, `download.php`, `mcp.php`, `lib/`, `mcp/` and the `.well-known/` folder — FTP clients often hide dot-folders, so enable "show hidden files". The `.well-known/` folder must contain `api-catalog` (no extension), `ai-catalog.json`, `mcp/server-card.json`, `mcp/openapi.json` and `health.json`.
+4. Confirm `.htaccess` exists in `public_html`. It forces HTTPS, non-www canonicals, old-URL redirects, compression, caching, security headers and the RFC 8288 `Link` headers.
 5. Set PHP 8.0+ with cURL and OpenSSL enabled in hPanel. Create a Cloudflare Turnstile widget for `dicot.tech`. Set `TURNSTILE_SECRET_KEY` and the Zoho SMTP settings in PHP's runtime environment if your plan supports custom variables. Otherwise, create `contact-secrets.php` one directory above `public_html` and return an array containing those settings; the handler checks there as a fallback. Never put secrets in `dicot-site/.env`, source control, or `public_html`. Use `SMTP_HOST` for your Zoho data center, `SMTP_PORT` (`587` for STARTTLS or `465` for SSL), `SMTP_USERNAME` (full mailbox address), `SMTP_PASSWORD` (app-specific password), and optionally `SMTP_FROM`. The form rejects submissions if verification or SMTP configuration is missing.
 6. Test the contact form and check the PHP error log, mailbox spam folder, and domain SPF/DKIM records if delivery fails.
-7. Cloudflare (already in front of the domain): purge cache after upload. Enable Email Address Obfuscation to make published email addresses harder for scrapers to collect, and **disable Rocket Loader** so the demo scripts are not deferred or broken.
+7. Cloudflare (already in front of the domain): purge cache after upload. Enable Email Address Obfuscation to make published email addresses harder for scrapers to collect, and **disable Rocket Loader** so the demo scripts are not deferred or broken. If Cloudflare caches `.well-known/api-catalog`, purge it whenever the catalog changes.
 8. Submit `https://dicot.tech/sitemap-index.xml` in Google Search Console and Bing Webmaster Tools.
-9. Check that `www.dicot.tech` and every old `.html` URL return a single 301 to the new route, and that a random URL returns a real 404.
+9. Check that `www.dicot.tech` and every old `.html` URL return a single 301 to the new route, that a random URL returns a real 404, and that `/.well-known/api-catalog` serves 200 with `Content-Type: application/linkset+json`.
 
 The generated root `contact.php` and `vendor/` must both be uploaded; without them the contact form cannot verify CAPTCHA or send mail.
 
@@ -109,18 +114,22 @@ The generated root `contact.php` and `vendor/` must both be uploaded; without th
 ## Agent access (GEO)
 
 - `robots.txt` declares `Content-Signal: search=yes, ai-input=yes, ai-train=no` in every group.
-- `sitemap-0.xml` carries a per-URL `<lastmod>` derived from git history (`src/lib/sitemap-lastmod.mjs`), so agents know what changed.
+- `sitemap-index.xml` carries a per-URL `<lastmod>` derived from git history (`src/lib/sitemap-lastmod.mjs`), so agents know what changed.
 - `scripts/generate-markdown.mjs` writes `/index.md`, `/products/vision-s/index.md`, … plus `/llms-full.txt`. A request with `Accept: text/markdown` is rewritten to the mirror in `.htaccess`.
-- HTML and Markdown responses carry an RFC 8288 `Link` header pointing at `llms.txt`, `llms-full.txt`, the MCP card and the sitemap.
+- HTML and Markdown responses carry an RFC 8288 `Link` header pointing at `llms.txt`, `llms-full.txt`, the MCP card, the API catalog, the OpenAPI spec, the MCP docs page and the sitemap. Relation types are written as bare tokens (`rel=describedby`) because this host emits the `\"` escapes of `.htaccess` quoted strings literally, which breaks RFC 8288 quoted-strings.
+- `/.well-known/api-catalog` (RFC 9727, `application/linkset+json` via `ForceType` in `.htaccess`) lists the MCP API with `service-desc` → `/.well-known/mcp/openapi.json`, `service-doc` → `/mcp/` and `/llms.txt`, `status` → `/.well-known/health.json` and `describedby` → the MCP Server Card.
+- `/mcp/` documents the endpoint in HTML and gets a Markdown mirror like every other page. `/.well-known/health.json` is a static status document; the MCP endpoint itself is best checked with a JSON-RPC `ping`.
 - `/.well-known/mcp/server-card.json` (SEP-2127) and `/.well-known/ai-catalog.json` advertise `https://dicot.tech/mcp.php`, a read-only JSON-RPC endpoint with four tools. Its knowledge base is generated at build time by `src/pages/mcp/data.json.ts`.
-- `WebMcp.astro` registers four read-only tools through `navigator.modelContext` / `document.modelContext` (falling back to `provideContext`). None submit forms or handle personal data.
+- `/mcp/` documents the MCP API for agents and developers: endpoint, protocol versions, the six JSON-RPC methods, the four read-only tools and curl examples. It is indexable and gets a Markdown mirror like every other page.
 
 After a deploy, verify:
 
 ```powershell
 curl.exe -sSI -H "Accept: text/markdown" https://dicot.tech/            # Content-Type: text/markdown
-curl.exe -sSI https://dicot.tech/                                        # Link: ... llms.txt ...
+curl.exe -sSI https://dicot.tech/                                        # Link: ... rel=describedby, rel=api-catalog ...
 curl.exe -sS  https://dicot.tech/.well-known/mcp/server-card.json
+curl.exe -sSI https://dicot.tech/.well-known/api-catalog         # Content-Type: application/linkset+json
+curl.exe -sSI https://dicot.tech/.well-known/health.json
 curl.exe -sS -X POST https://dicot.tech/mcp.php -H "Content-Type: application/json" -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\"}'
 ```
 
@@ -134,16 +143,36 @@ php -S 127.0.0.1:8099 -t ..
 node scripts/smoke-endpoints.mjs
 ```
 
+## Validating the agent checks
+
+After a deploy, re-run the agent-readiness scan and confirm the three checks:
+
+```powershell
+$body = '{"url":"https://dicot.tech"}'
+(Invoke-RestMethod -Uri 'https://isitagentready.com/api/scan' -Method Post -ContentType 'application/json' -Body $body).checks |
+  ConvertTo-Json -Depth 4
+```
+
+- `checks.botAccessControl.contentSignals` — `pass` (robots.txt already declares the signals in every group)
+- `checks.discovery.apiCatalog` — `pass` (`/.well-known/api-catalog`, `application/linkset+json`)
+- `checks.discoverability.linkHeaders` — `pass` (`Link` header with `api-catalog`, `service-desc`, `service-doc`, `describedby`)
+
+The scanner requests many URLs in a burst and dicot.tech's Cloudflare occasionally answers 429; wait a few minutes and retry, or allowlist the scanner.
+
 ## SEO / GEO checklist already in place
 
 - Canonical non-www host, trailing slashes, one `h1` per page, breadcrumbs.
 - Generated `sitemap-index.xml` with a real per-URL `lastmod`, `robots.txt` with a Content-Signal and explicit allowances for search and AI crawlers.
 - JSON-LD: Organization, WebSite, SoftwareApplication, FAQPage, BreadcrumbList, LocalBusiness, ContactPage, Article.
 - `llms.txt` with product facts and “do not quote prices” guidance for assistants, plus `llms-full.txt` and per-page Markdown mirrors.
-- `Link` headers, `Vary: Accept`, MCP Server Card, AI catalog and WebMCP tools for in-browser agents.
+- `Link` headers, `Vary: Accept`, MCP Server Card, AI catalog, RFC 9727 API catalog and WebMCP tools for in-browser agents.
+- RFC 9727 `/.well-known/api-catalog` (`application/linkset+json`) listing the MCP API with `service-desc` (OpenAPI 3.1), `service-doc` (`/mcp/`, `/llms.txt`) and `status` (`/.well-known/health.json`).
 - Real 1200×630 OG images per product; `og:image` dimensions set.
 - Self-hosted fonts, no third-party scripts before consent, lazy images, no layout-shifting embeds.
+- HTML head on every indexable page carries `<link rel="api-catalog">`, `<link rel="service-desc">` and `<link rel="service-doc">` next to the existing `describedby`/`alternate` links.
+- llms.txt lists every machine-readable entry point in one place, including the API catalog, OpenAPI spec, MCP docs page and health document.
 - Comparison pages (`/alternatives/`, `/compare/cloud-vs-on-premise-scada/`) written to be citable with direct answers, tables and stated limits.
+- `Content-Signal` directives in every robots.txt group and agent-useful relation types (`api-catalog`, `service-desc`, `service-doc`, `describedby`, `sitemap`) in the response `Link` headers.
 
 ## Troubleshooting
 
@@ -152,6 +181,10 @@ node scripts/smoke-endpoints.mjs
 - **Vision S link email missing:** the link is signed with `DOWNLOAD_SIGNING_KEY`, or a key derived from `SMTP_PASSWORD` when that setting is absent; with neither, the endpoint redirects back with `reason=config` ("not configured"). Check the SMTP settings and the PHP error log. The fallback is the direct-download option on the same form.
 - **Direct download slow to start:** the endpoint sends the 303 and calls `dicot_finish_response()` before mailing the lead record, so the transfer begins while SMTP runs. On a host without `fastcgi_finish_request` or `litespeed_finish_request` the mail is sent first and the visitor waits again — the page shows a "starting" note for that case.
 - **MCP endpoint returns 500:** confirm `mcp/data.json` exists in `public_html` (the build generates it) and that `public_html/mcp.php` and `public_html/lib/` were both uploaded.
+- **API catalog check fails:** verify `.well-known/api-catalog` (extensionless) was uploaded and that `.htaccess` reached `public_html` — the `ForceType application/linkset+json` rule lives there. `curl -I https://dicot.tech/.well-known/api-catalog` must show `Content-Type: application/linkset+json`.
+- **Link header check fails:** the `Link` value must contain no backslashes. If you ever re-add quoted strings, remember this host does not unescape `\"` in `.htaccess` values — use bare relation tokens instead.
+- **isitagentready scan returns 429:** the scanner fetches many URLs in quick succession and dicot.tech's Cloudflare may rate-limit it. Wait a few minutes before re-running, or allowlist the scanner in Cloudflare.
+- `/mcp/` appears in the sitemap: that is intentional — it is a real docs page. Only `thank-you` and `404` are filtered out in `astro.config.mjs`.
 
 ## Known limits
 
@@ -159,7 +192,8 @@ node scripts/smoke-endpoints.mjs
 - HTML is not edge-cached (`cf-cache-status: DYNAMIC`). Enabling a Cloudflare "Cache Everything" rule would cut origin load but breaks `Accept: text/markdown`, because Cloudflare ignores `Vary: Accept`. Move agents to the explicit `.md` URLs first if you ever need it.
 - The Vision S installers are served from Hostinger, not from a CDN: Cloudflare bypasses `.iso` and the files exceed the cacheable-object limit on non-Enterprise plans. Moving them to Cloudflare R2 is the fix if bandwidth or 429s become a problem.
 - The Vision S form is lead capture, not access control: the ISO files are still publicly reachable by URL. Remove them from the web root if that matters.
-- The MCP endpoint is read-only and rate-limited. It returns published facts only and never accepts personal data.
+- The MCP endpoint is read-only and rate-limited. It returns published facts only and never accepts personal data. Its contract is published three ways: `/.well-known/mcp/openapi.json` (OpenAPI 3.1), `/.well-known/api-catalog` (RFC 9727 linkset) and the `/mcp/` docs page. Keep all three in sync when tools change.
+- `/.well-known/health.json` is a static file: it proves the site is reachable, not that PHP or SMTP are healthy. The MCP endpoint is best probed with a JSON-RPC `ping`.
 - The LiveDemo is a simulation and is labelled as such on the page. Do not remove that label.
 - Customer logos and product screenshots are reused from the existing site and approved for use.
 - Site search and a full CMS are intentionally absent. Blog posts are added by editing `public/blog/posts.json`; see `BLOG.md`. Other page content needs a rebuild.

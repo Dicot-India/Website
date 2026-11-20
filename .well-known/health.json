@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "service": "https://dicot.tech/",
+  "type": "static-status-document",
+  "note": "This file is served statically: a 200 response means dicot.tech is reachable. To check the MCP endpoint itself, send a JSON-RPC ping.",
+  "mcpPing": {
+    "method": "POST",
+    "url": "https://dicot.tech/mcp.php",
+    "headers": { "Content-Type": "application/json" },
+    "body": { "jsonrpc": "2.0", "id": 1, "method": "ping" }
+  },
+  "links": {
+    "apiCatalog": "https://dicot.tech/.well-known/api-catalog",
+    "openapi": "https://dicot.tech/.well-known/mcp/openapi.json",
+    "serverCard": "https://dicot.tech/.well-known/mcp/server-card.json",
+    "docs": "https://dicot.tech/mcp/"
+  }
+}

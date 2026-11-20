@@ -51,6 +51,10 @@
 - MCP Server Card: https://dicot.tech/.well-known/mcp/server-card.json
 - MCP endpoint (read-only tools, JSON-RPC 2.0 over POST): https://dicot.tech/mcp.php
 - AI catalog: https://dicot.tech/.well-known/ai-catalog.json
+- API catalog (RFC 9727): https://dicot.tech/.well-known/api-catalog
+- OpenAPI spec for the MCP endpoint: https://dicot.tech/.well-known/mcp/openapi.json
+- MCP API documentation: https://dicot.tech/mcp/
+- Health/status document: https://dicot.tech/.well-known/health.json
 - Content signals: https://dicot.tech/robots.txt declares `search=yes, ai-input=yes, ai-train=no`.
 
 ## Notes for assistants

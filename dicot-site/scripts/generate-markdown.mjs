@@ -194,6 +194,7 @@ const PRIORITY = [
   "partners",
   "contact",
   "blog",
+  "mcp",
   "legal/privacy",
   "legal/terms",
   "legal/refund",

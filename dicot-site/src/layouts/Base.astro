@@ -79,6 +79,9 @@ const graph = [organisation, website, ...schema];
         <link rel="alternate" type="text/markdown" href={markdownHref} />
         <link rel="describedby" href="/llms.txt" />
         <link rel="alternate" type="application/json" href="/.well-known/mcp/server-card.json" />
+        <link rel="api-catalog" href="/.well-known/api-catalog" />
+        <link rel="service-desc" href="/.well-known/mcp/openapi.json" type="application/vnd.oai.openapi+json" />
+        <link rel="service-doc" href="/mcp/" />
       </>
     )}
     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />

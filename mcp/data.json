@@ -699,6 +699,10 @@
     "contact": "https://dicot.tech/contact/",
     "privacy": "https://dicot.tech/legal/privacy/",
     "llms": "https://dicot.tech/llms.txt",
-    "markdownExample": "https://dicot.tech/index.md"
+    "markdownExample": "https://dicot.tech/index.md",
+    "mcpDocs": "https://dicot.tech/mcp/",
+    "apiCatalog": "https://dicot.tech/.well-known/api-catalog",
+    "openapi": "https://dicot.tech/.well-known/mcp/openapi.json",
+    "health": "https://dicot.tech/.well-known/health.json"
   }
 }

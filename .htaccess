@@ -8,6 +8,17 @@ AddDefaultCharset UTF-8
   AddType application/x-iso9660-image .iso
   AddType application/vnd.android.package-archive .apk
   AddType application/ld+json .jsonld
+
+  # RFC 9727 API catalog and friends: agents read the media type before parsing.
+  <FilesMatch "^api-catalog$">
+    ForceType application/linkset+json
+  </FilesMatch>
+  <FilesMatch "^openapi\.json$">
+    ForceType application/vnd.oai.openapi+json
+  </FilesMatch>
+  <FilesMatch "^health\.json$">
+    ForceType application/json
+  </FilesMatch>
 </IfModule>
 
 <IfModule mod_rewrite.c>
@@ -96,14 +107,20 @@ ErrorDocument 429 /429.html
   Header append Vary "Accept"
 
   # RFC 8288 Link headers: agents find llms.txt, llms-full.txt, the MCP server
-  # card and the sitemap without guessing URLs.
+  # card, the RFC 9727 API catalog, the OpenAPI spec, the MCP docs page and the
+  # sitemap without guessing URLs.
+  #
+  # Relation types are bare tokens on purpose (rel=describedby, not
+  # rel="describedby"): this host emits the backslash escapes of .htaccess
+  # quoted strings literally, which produced rel=\"...\" and made the header
+  # unparseable. Bare tokens are valid RFC 8288 and mean the same thing.
   <FilesMatch "\.html$">
-    Header always set Link "</llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\", </.well-known/mcp/server-card.json>; rel=\"alternate\"; type=\"application/json\", </sitemap-index.xml>; rel=\"sitemap\""
+    Header always set Link "</llms.txt>; rel=describedby, </llms-full.txt>; rel=alternate, </.well-known/mcp/server-card.json>; rel=alternate, </.well-known/api-catalog>; rel=api-catalog, </.well-known/mcp/openapi.json>; rel=service-desc, </mcp/>; rel=service-doc, </sitemap-index.xml>; rel=sitemap"
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
 
   <FilesMatch "\.md$">
-    Header always set Link "</llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"alternate\"; type=\"application/json\""
+    Header always set Link "</llms.txt>; rel=describedby, </.well-known/mcp/server-card.json>; rel=alternate, </.well-known/api-catalog>; rel=api-catalog, </.well-known/mcp/openapi.json>; rel=service-desc, </mcp/>; rel=service-doc"
     Header set Cache-Control "public, max-age=3600"
   </FilesMatch>
 
@@ -126,7 +143,7 @@ ErrorDocument 429 /429.html
   </FilesMatch>
 
   # Public discovery documents, readable by in-browser agents.
-  <FilesMatch "(server-card|ai-catalog)\.json$">
+  <FilesMatch "(server-card|ai-catalog|openapi|health)\.json$|^api-catalog$">
     Header set Access-Control-Allow-Origin "*"
     Header set Cache-Control "public, max-age=3600"
   </FilesMatch>
