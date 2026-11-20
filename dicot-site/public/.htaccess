@@ -1,5 +1,14 @@
-Options -MultiViews
+Options -MultiViews -Indexes
 AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+  # Markdown mirrors served to agents that send "Accept: text/markdown".
+  AddType text/markdown .md
+  AddCharset UTF-8 .md
+  AddType application/x-iso9660-image .iso
+  AddType application/vnd.android.package-archive .apk
+  AddType application/ld+json .jsonld
+</IfModule>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -11,6 +20,15 @@ AddDefaultCharset UTF-8
   # One canonical host: non-www
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  # Agents that ask for Markdown get the pre-built mirror next to the HTML.
+  # The mirror is written by scripts/generate-markdown.mjs at build time.
+  RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+  RewriteCond %{REQUEST_METHOD} =GET
+  RewriteCond %{QUERY_STRING} !(^|&)post= [NC]
+  RewriteCond %{REQUEST_URI} /$
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.md -f
+  RewriteRule ^ %{REQUEST_URI}index.md [L,E=MD_MIRROR:1]
 
   # Legacy URLs from the old static site
   RewriteRule ^index\.html$ / [R=301,L,NC]
@@ -35,20 +53,36 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 ErrorDocument 404 /404.html
+ErrorDocument 429 /429.html
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/markdown text/css application/javascript application/json application/xml image/svg+xml
 </IfModule>
 
 <IfModule mod_expires.c>
   ExpiresActive On
+  # HTML is revalidated so a deploy is visible immediately.
   ExpiresByType text/html "access plus 0 seconds"
+  # Markdown mirrors change only on deploy.
+  ExpiresByType text/markdown "access plus 1 hour"
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType text/plain "access plus 1 hour"
+  ExpiresByType application/pdf "access plus 1 day"
+  ExpiresByType application/zip "access plus 1 day"
+  ExpiresByType application/vnd.android.package-archive "access plus 1 day"
+  ExpiresByType application/x-msdownload "access plus 1 day"
+  ExpiresByType application/x-iso9660-image "access plus 4 hours"
+  ExpiresByType application/octet-stream "access plus 4 hours"
 </IfModule>
 
 <IfModule mod_headers.c>
@@ -57,6 +91,46 @@ ErrorDocument 404 /404.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # Caches must key on Accept: /page/ can return HTML or Markdown.
+  Header append Vary "Accept"
+
+  # RFC 8288 Link headers: agents find llms.txt, llms-full.txt, the MCP server
+  # card and the sitemap without guessing URLs.
+  <FilesMatch "\.html$">
+    Header always set Link "</llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\", </.well-known/mcp/server-card.json>; rel=\"alternate\"; type=\"application/json\", </sitemap-index.xml>; rel=\"sitemap\""
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  <FilesMatch "\.md$">
+    Header always set Link "</llms.txt>; rel=\"describedby\", </.well-known/mcp/server-card.json>; rel=\"alternate\"; type=\"application/json\""
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+
+  # Hashed build assets are content-addressed: cache them for a year.
+  <IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/_astro/" DICOT_IMMUTABLE=1
+    Header set Cache-Control "public, max-age=31536000, immutable" env=DICOT_IMMUTABLE
+  </IfModule>
+
+  # Installers download instead of opening, and stay out of search results.
+  <FilesMatch "\.(iso|exe|apk|zip)$">
+    Header set Content-Disposition "attachment"
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+
+  # Form and MCP endpoints must never be cached or indexed.
+  <FilesMatch "^(contact|download|mcp)\.php$">
+    Header set Cache-Control "no-store"
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+
+  # Public discovery documents, readable by in-browser agents.
+  <FilesMatch "(server-card|ai-catalog)\.json$">
+    Header set Access-Control-Allow-Origin "*"
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+
   # Astro emits inline module scripts and scoped styles, so inline is required here.
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://*.googletagmanager.com https://*.google-analytics.com https://www.google-analytics.com https://embed.tawk.to https://*.tawk.to; style-src 'self' 'unsafe-inline' https://*.tawk.to; img-src 'self' data: https://*.google-analytics.com https://www.google-analytics.com https://*.tawk.to; connect-src 'self' data: https://analytics.google.com https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://*.cloudflarecaptcha.com https://*.google-analytics.com https://www.google-analytics.com https://*.googletagmanager.com https://*.tawk.to wss://*.tawk.to; font-src 'self' https://*.tawk.to; frame-src https://challenges.cloudflare.com https://*.challenges.cloudflare.com https://*.tawk.to; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
 </IfModule>

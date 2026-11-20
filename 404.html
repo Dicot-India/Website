@@ -5,4 +5,147 @@ The page you asked for is not on this site. It may have moved when we rebuilt th
 We use essential storage to run this site. With your consent we also load Google Analytics to understand which pages
     help buyers, and Tawk.to for live chat. Nothing non-essential loads before you choose. Read our
 <a href="/legal/cookies/">cookie policy</a> and <a href="/legal/privacy/">privacy policy</a>.
-</p> <div class="consent__row"> <button type="button" class="btn btn--primary btn--small" data-consent="all">Accept all</button> <button type="button" class="btn btn--ghost btn--small" data-consent="reject">Reject all</button> <button type="button" class="btn btn--ghost btn--small" data-consent="prefs" aria-expanded="false" aria-controls="consent-prefs">Preferences</button> </div> <div class="consent__prefs" id="consent-prefs" hidden> <label><input type="checkbox" id="consent-analytics"> Analytics — Google Analytics 4, aggregated page usage</label> <label><input type="checkbox" id="consent-chat"> Support chat — Tawk.to live chat widget</label> <label><input type="checkbox" id="consent-marketing"> Marketing — reserved for campaign measurement, currently unused</label> <div class="consent__row"> <button type="button" class="btn btn--primary btn--small" data-consent="save">Save choices</button> </div> </div> </section> <script type="module">const u="dicot_consent_v1",n=document.getElementById("consent"),c=n?.dataset.gaId??"",i=n?.dataset.tawkId??"",r=document.getElementById("consent-prefs"),l=document.getElementById("consent-analytics"),g=document.getElementById("consent-chat"),h=document.getElementById("consent-marketing"),y=document.querySelector('[data-consent="prefs"]');function m(){try{const t=localStorage.getItem(u);return t?JSON.parse(t):null}catch{return null}}function p(){const t=window;if(t.__dicotGa||!c)return;t.__dicotGa=!0,t.dataLayer=t.dataLayer||[],t.gtag=function(){t.dataLayer.push(arguments)},t.gtag("js",new Date),t.gtag("config",c);const e=document.createElement("script");e.async=!0,e.src=`https://www.googletagmanager.com/gtag/js?id=${c}`,document.head.appendChild(e)}function k(){const t=window;if(t.__dicotChat||!i)return;t.__dicotChat=!0,t.Tawk_API=t.Tawk_API||{},t.Tawk_LoadStart=new Date;const e=document.createElement("script");e.async=!0,e.src=`https://embed.tawk.to/${i}`,e.charset="UTF-8",e.setAttribute("crossorigin","*"),document.head.appendChild(e)}function f(t){t.analytics&&p(),t.chat&&k()}function o(t){localStorage.setItem(u,JSON.stringify(t)),n?.setAttribute("hidden",""),f(t)}function w(){n?.removeAttribute("hidden"),r?.removeAttribute("hidden"),y?.setAttribute("aria-expanded","true");const t=m();t&&(l.checked=t.analytics,g.checked=!!t.chat,h.checked=t.marketing),n?.querySelector("h2")?.setAttribute("tabindex","-1"),n?.querySelector("h2")?.focus()}const d=m();d?f(d):n?.removeAttribute("hidden");n?.addEventListener("click",t=>{const e=t.target.closest("[data-consent]");if(!e)return;const a=e.dataset.consent;if(a==="all"&&o({analytics:!0,chat:!0,marketing:!0,ts:new Date().toISOString()}),a==="reject"&&o({analytics:!1,chat:!1,marketing:!1,ts:new Date().toISOString()}),a==="prefs"){const s=!r?.hasAttribute("hidden");r?.toggleAttribute("hidden",s),e.setAttribute("aria-expanded",String(!s))}a==="save"&&o({analytics:l.checked,chat:g.checked,marketing:h.checked,ts:new Date().toISOString()})});document.querySelectorAll("[data-cookie-settings]").forEach(t=>{t.addEventListener("click",e=>{e.preventDefault(),w()})});</script> </body></html>
+</p> <div class="consent__row"> <button type="button" class="btn btn--primary btn--small" data-consent="all">Accept all</button> <button type="button" class="btn btn--ghost btn--small" data-consent="reject">Reject all</button> <button type="button" class="btn btn--ghost btn--small" data-consent="prefs" aria-expanded="false" aria-controls="consent-prefs">Preferences</button> </div> <div class="consent__prefs" id="consent-prefs" hidden> <label><input type="checkbox" id="consent-analytics"> Analytics — Google Analytics 4, aggregated page usage</label> <label><input type="checkbox" id="consent-chat"> Support chat — Tawk.to live chat widget</label> <label><input type="checkbox" id="consent-marketing"> Marketing — reserved for campaign measurement, currently unused</label> <div class="consent__row"> <button type="button" class="btn btn--primary btn--small" data-consent="save">Save choices</button> </div> </div> </section> <script type="module">const u="dicot_consent_v1",n=document.getElementById("consent"),c=n?.dataset.gaId??"",i=n?.dataset.tawkId??"",r=document.getElementById("consent-prefs"),l=document.getElementById("consent-analytics"),g=document.getElementById("consent-chat"),h=document.getElementById("consent-marketing"),y=document.querySelector('[data-consent="prefs"]');function m(){try{const t=localStorage.getItem(u);return t?JSON.parse(t):null}catch{return null}}function p(){const t=window;if(t.__dicotGa||!c)return;t.__dicotGa=!0,t.dataLayer=t.dataLayer||[],t.gtag=function(){t.dataLayer.push(arguments)},t.gtag("js",new Date),t.gtag("config",c);const e=document.createElement("script");e.async=!0,e.src=`https://www.googletagmanager.com/gtag/js?id=${c}`,document.head.appendChild(e)}function k(){const t=window;if(t.__dicotChat||!i)return;t.__dicotChat=!0,t.Tawk_API=t.Tawk_API||{},t.Tawk_LoadStart=new Date;const e=document.createElement("script");e.async=!0,e.src=`https://embed.tawk.to/${i}`,e.charset="UTF-8",e.setAttribute("crossorigin","*"),document.head.appendChild(e)}function f(t){t.analytics&&p(),t.chat&&k()}function o(t){localStorage.setItem(u,JSON.stringify(t)),n?.setAttribute("hidden",""),f(t)}function w(){n?.removeAttribute("hidden"),r?.removeAttribute("hidden"),y?.setAttribute("aria-expanded","true");const t=m();t&&(l.checked=t.analytics,g.checked=!!t.chat,h.checked=t.marketing),n?.querySelector("h2")?.setAttribute("tabindex","-1"),n?.querySelector("h2")?.focus()}const d=m();d?f(d):n?.removeAttribute("hidden");n?.addEventListener("click",t=>{const e=t.target.closest("[data-consent]");if(!e)return;const a=e.dataset.consent;if(a==="all"&&o({analytics:!0,chat:!0,marketing:!0,ts:new Date().toISOString()}),a==="reject"&&o({analytics:!1,chat:!1,marketing:!1,ts:new Date().toISOString()}),a==="prefs"){const s=!r?.hasAttribute("hidden");r?.toggleAttribute("hidden",s),e.setAttribute("aria-expanded",String(!s))}a==="save"&&o({analytics:l.checked,chat:g.checked,marketing:h.checked,ts:new Date().toISOString()})});document.querySelectorAll("[data-cookie-settings]").forEach(t=>{t.addEventListener("click",e=>{e.preventDefault(),w()})});</script> <script>(function(){const productIndex = [{"slug":"vision-c","name":"Vision C","category":"Mini-SCADA & data logger","tagline":"Shop-floor SCADA that installs in minutes, not months.","summary":"Vision C is a Windows mini-SCADA and data logger for compact machines and single lines. It handles up to 100 tags, connects over Modbus TCP/IP, RTU, BCD and AIBUS, and pushes data to Vision Web in one click. Licences run from two years to perpetual.","bestFor":"Machine builders, panel integrators and plant teams that need reliable logging and remote monitoring without a development project.","facts":[{"label":"Tags","value":"Up to 100"},{"label":"Protocols","value":"Modbus TCP/IP, RTU, BCD, AIBUS"},{"label":"Deployment","value":"On-premises, Windows"},{"label":"User levels","value":"Unlimited"},{"label":"Historical data","value":"File-based, exportable"},{"label":"Trends","value":"Last 1 hour, live"},{"label":"Recipes","value":"PID, up to 100 steps"},{"label":"Languages","value":"8"},{"label":"Security","value":"2-layer"},{"label":"Install size","value":"~10 MB"},{"label":"OS","value":"Windows 8 or later"},{"label":"Licence","value":"2, 5, 10, 20 years or perpetual"}],"url":"https://dicot.tech/products/vision-c/"},{"slug":"vision-web","name":"Vision Web","category":"Cloud SCADA & IIoT platform","tagline":"Your plant on any screen, with alarms where your team already is.","summary":"Vision Web is Dicot's hosted cloud SCADA platform. It brings up to 20,000 tags per project into a browser, updates at 50–100 ms, keeps two years of history and sends alarms by SMS, email, WhatsApp and Telegram. Dicot hosts and maintains the platform; you log in and run the plant.","bestFor":"Teams that need remote monitoring, multi-site visibility and mobile alarms without running servers or a VPN.","facts":[{"label":"Tags","value":"Up to 20,000 per project"},{"label":"Protocols","value":"HTTP, MQTT"},{"label":"Update latency","value":"50–100 ms"},{"label":"Hosting","value":"Managed by Dicot"},{"label":"Historical data","value":"NoSQL, 2-year retention"},{"label":"Alarms","value":"SMS, email, WhatsApp, Telegram"},{"label":"Security","value":"3-layer encryption, 2FA"},{"label":"Users","value":"Unlimited user levels"},{"label":"Reports","value":"Print and PDF, automatable"},{"label":"Licence","value":"Yearly subscription"}],"url":"https://dicot.tech/products/vision-web/"},{"slug":"vision-s","name":"Vision S","category":"Enterprise SCADA","tagline":"Full SCADA for regulated, high-tag-count plants.","summary":"Vision S is Dicot's enterprise SCADA for large and regulated plants. It scales to 60,000 tags, speaks 4,000+ protocols including OPC UA and DA, keeps 21 CFR-ready audit trails and stores history in PostgreSQL. Runtime, development, client-server and web-client licences can be mixed to fit the architecture.","bestFor":"Pharma, process and large manufacturing sites that need audit trails, high tag counts and a configurable SCADA architecture.","facts":[{"label":"Tags","value":"Up to 60,000"},{"label":"Protocols","value":"4,000+, OPC UA and DA"},{"label":"Audit trails","value":"21 CFR-ready"},{"label":"Historical database","value":"PostgreSQL"},{"label":"Scripting","value":"C"},{"label":"User levels","value":"Unlimited"},{"label":"Recipes","value":"Unlimited"},{"label":"Batches","value":"Multiple simultaneous"},{"label":"Reports","value":"Print and PDF, fully customisable"},{"label":"Extras","value":"E-signature, OPC UA server, multi-monitor"},{"label":"Licence","value":"Tag-based, runtime and development"}],"url":"https://dicot.tech/products/vision-s/"},{"slug":"vision-s-lite","name":"Vision S Lite","category":"Lightweight enterprise SCADA","tagline":"The Vision S platform, sized for cost-sensitive plants.","summary":"Vision S Lite is a lighter edition of Vision S, in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library, for applications that need Vision S-style SCADA without the full footprint.","bestFor":"Machine builders and plant teams that need Vision S-style SCADA, but do not need the full protocol library or the full design environment.","facts":[{"label":"Base","value":"Vision S platform"},{"label":"Protocols","value":"Reduced set vs Vision S"},{"label":"Design library","value":"Smaller than Vision S"},{"label":"Target","value":"Cost-sensitive applications"},{"label":"Status","value":"In development"},{"label":"Licensing","value":"Announced at launch"}],"url":"https://dicot.tech/products/vision-s-lite/"},{"slug":"vgraphic","name":"VGraphic","category":"Cloud report generator","tagline":"Turn plant files into branded PDF reports from anywhere.","summary":"VGraphic is a cloud report generator for industrial data. Upload or connect Excel, CSV, SQL and DAT files, filter by time or file, and export branded PDF tables and graphs from a desktop or mobile browser. There is nothing to install.","bestFor":"Quality, maintenance and production teams that spend hours turning exported data into shift and management reports.","facts":[{"label":"Installation","value":"None, cloud-based"},{"label":"Input files","value":"Excel, CSV, SQL, DAT"},{"label":"Output","value":"PDF tables and graphs"},{"label":"Apps","value":"Desktop and mobile"},{"label":"Filters","value":"Time and file"},{"label":"Branding","value":"Logo, header, footer"},{"label":"Storage","value":"Cloud, expandable"},{"label":"Licence","value":"1, 5 or 10 years; offline lifetime"}],"url":"https://dicot.tech/products/vgraphic/"}];
+const installers = [{"key":"Green key","name":"Vision S — green key","size":"827 MB","updated":"2025-01-02"},{"key":"Grey key","name":"Vision S Version 2026 — grey key","size":"977 MB","updated":"2026-01-07"}];
+const company = {"name":"Dicot Innovations Private Limited","url":"https://dicot.tech","salesEmail":"sales@dicot.tech","privacyEmail":"privacy@dicot.tech","phone":"+91 90166 83114","address":"A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India"};
+
+  const PRICING_NOTE =
+    "Prices are shared through authorised dealers and are not published. Direct the buyer to the contact page for a quote.";
+
+  const toolList = [
+    {
+      name: "search_dicot_products",
+      description:
+        "Search Dicot SCADA, IIoT and reporting software by product name, protocol or industry keyword. Returns matching products with a summary and canonical URL.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          query: {
+            type: "string",
+            description: "Product name or keyword, for example 'OPC UA', 'pharma' or 'cloud'.",
+          },
+        },
+        required: ["query"],
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute({ query }) {
+        const term = String(query ?? "").trim().toLowerCase();
+        if (!term) return { error: "A query is required." };
+        const terms = term.split(/\s+/);
+        const matches = productIndex
+          .map((product) => {
+            const haystack = JSON.stringify(product).toLowerCase();
+            let score = 0;
+            for (const part of terms) {
+              if (!part) continue;
+              if (product.name.toLowerCase().includes(part)) score += 5;
+              if (product.category.toLowerCase().includes(part)) score += 2;
+              if (haystack.includes(part)) score += 1;
+            }
+            return { score, product };
+          })
+          .filter((row) => row.score > 0)
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 5)
+          .map(({ product }) => ({
+            slug: product.slug,
+            name: product.name,
+            category: product.category,
+            summary: product.summary,
+            url: product.url,
+          }));
+        return { matches, pricingPolicy: PRICING_NOTE };
+      },
+    },
+    {
+      name: "get_dicot_product_facts",
+      description:
+        "Return the published specification, best-fit guidance and page URL for one Dicot product. Prices are not included.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          product: {
+            type: "string",
+            description: "Slug or name: vision-c, vision-s, vision-web, vision-s-lite or vgraphic.",
+          },
+        },
+        required: ["product"],
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute({ product }) {
+        const needle = String(product ?? "").trim().toLowerCase();
+        const found = productIndex.find(
+          (entry) =>
+            entry.slug === needle ||
+            entry.name.toLowerCase() === needle ||
+            entry.name.toLowerCase().includes(needle)
+        );
+        if (!found) {
+          return {
+            error: "Unknown product.",
+            knownProducts: productIndex.map((entry) => entry.slug),
+          };
+        }
+        return { product: found, pricingPolicy: PRICING_NOTE };
+      },
+    },
+    {
+      name: "get_dicot_download_options",
+      description:
+        "List the public Dicot installers and manuals, including the two Vision S builds that need a request form.",
+      inputSchema: { type: "object", additionalProperties: false },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute() {
+        return {
+          visionSInstallers: installers,
+          visionSRequestUrl: `${company.url}/downloads/vision-s/`,
+          downloadsUrl: `${company.url}/downloads/`,
+          note:
+            "Vision S downloads require a name, company, work email and explicit consent on the request page before a link is emailed or the download starts. Do not ask for or submit personal data on the person's behalf.",
+        };
+      },
+    },
+    {
+      name: "open_dicot_contact",
+      description:
+        "Return Dicot's contact details and the URL of the contact form. Does not submit anything.",
+      inputSchema: { type: "object", additionalProperties: false },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute() {
+        return {
+          ...company,
+          contactUrl: `${company.url}/contact/`,
+          note: "The contact form needs the person to submit it themselves.",
+        };
+      },
+    },
+  ];
+
+  function registerTools() {
+    const context =
+      (typeof document !== "undefined" && document.modelContext) ||
+      (typeof navigator !== "undefined" && navigator.modelContext);
+    if (!context) return;
+
+    try {
+      if (typeof context.registerTool === "function") {
+        for (const tool of toolList) context.registerTool(tool);
+        return;
+      }
+      if (typeof context.provideContext === "function") {
+        context.provideContext({ tools: toolList });
+      }
+    } catch (error) {
+      // A browser without WebMCP, or a rejected registration, must not break the page.
+      console.warn("[webmcp] tools were not registered", error);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", registerTools, { once: true });
+  } else {
+    registerTools();
+  }
+})();</script> </body></html>

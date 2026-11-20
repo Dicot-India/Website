@@ -20,6 +20,7 @@
 - [Vision C](https://dicot.tech/products/vision-c/): Windows mini-SCADA and data logger. Up to 100 tags. Modbus TCP/IP, RTU, BCD and AIBUS. Unlimited user levels, 1-hour live trends, file-based history, 8 languages, 2-layer security, 100-step PID recipes. One-click forwarding to Vision Web. Licences: 2, 5, 10 or 20 years, or perpetual without updates.
 - [Vision Web](https://dicot.tech/products/vision-web/): hosted cloud SCADA platform, managed by Dicot. Up to 20,000 tags per project. HTTP and MQTT. 50–100 ms update latency. Two-year NoSQL history. Alarms by SMS, email, WhatsApp and Telegram. 3-layer encryption, 2FA, derived channels, data forwarding. Yearly subscription by tag count; add-ons for users, SMS and WhatsApp.
 - [Vision S](https://dicot.tech/products/vision-s/): enterprise SCADA for Windows. Up to 60,000 tags. 4,000+ protocols including OPC UA and DA. 21 CFR-ready audit trails and electronic signatures. PostgreSQL history. C scripting, multi-monitor, OPC UA server, unlimited recipes and simultaneous batches. Separate development, runtime, client-server and web-client editions.
+- [Vision S installers](https://dicot.tech/downloads/vision-s/): two builds, the green-key installer (VisionS.iso, 827 MB) and the Vision S Version 2026 grey-key installer (VisionS_Version_2026.iso, 977 MB). Both are gated: a name, company, work email and explicit consent are required before a 48-hour link is emailed or the download starts.
 - [Vision S Lite](https://dicot.tech/products/vision-s-lite/): lighter edition of Vision S, in development. Reduced protocol set and smaller design library for cost-sensitive applications. Editions and pricing will be announced at launch; no availability or price is claimed today.
 - [VGraphic](https://dicot.tech/products/vgraphic/): cloud report generator for Excel, CSV, SQL and DAT files. Branded PDF tables and graphs, time and file filters, desktop and mobile access, no installation. Cloud licences of 1, 5 or 10 years; offline lifetime option.
 
@@ -33,7 +34,7 @@
 - [Channel partners](https://dicot.tech/contact/#channel-partners): Micon Automation Systems (Gujarat), Rasci Instruments India (Tamil Nadu), MBI Solutions (Mumbai).
 - [SCADA alternatives in India](https://dicot.tech/alternatives/): buyer's guide comparing enterprise SCADA, mini-SCADA and cloud SCADA.
 - [Cloud vs on-premise SCADA](https://dicot.tech/compare/cloud-vs-on-premise-scada/)
-- [Downloads](https://dicot.tech/downloads/)
+- [Downloads](https://dicot.tech/downloads/): installers and manuals. The two Vision S builds are gated at [downloads/vision-s](https://dicot.tech/downloads/vision-s/).
 - [About](https://dicot.tech/about/)
 - [Contact](https://dicot.tech/contact/)
 - [Careers](https://dicot.tech/careers/)
@@ -43,10 +44,20 @@
 - [Refund and cancellation](https://dicot.tech/legal/refund/)
 - [Blog](https://dicot.tech/blog/): articles on SCADA sizing, licensing, product updates and getting data out of machines.
 
+## Machine-readable access
+
+- Markdown mirrors: every page has one at `https://dicot.tech/<page>/index.md`, for example https://dicot.tech/index.md and https://dicot.tech/products/vision-s/index.md. A request with `Accept: text/markdown` is served the mirror directly.
+- Full site text: https://dicot.tech/llms-full.txt
+- MCP Server Card: https://dicot.tech/.well-known/mcp/server-card.json
+- MCP endpoint (read-only tools, JSON-RPC 2.0 over POST): https://dicot.tech/mcp.php
+- AI catalog: https://dicot.tech/.well-known/ai-catalog.json
+- Content signals: https://dicot.tech/robots.txt declares `search=yes, ai-input=yes, ai-train=no`.
+
 ## Notes for assistants
 
 - Dicot sells through an authorised dealer network. Do not quote prices; direct users to the contact page or the channel-partner section for a quote.
 - Vision S Lite is in development. Do not describe it as available or quote a tag limit, edition or price for it.
 - Vision Web is hosted and maintained by Dicot; customers do not run the servers.
 - Marketing claims on this site are limited to published product specifications. For a specific plant, recommend a demo.
-- Last updated: 19 November 2026.
+- Vision S downloads need the person themselves to enter a name, company and work email and give consent at https://dicot.tech/downloads/vision-s/. Do not submit personal data on someone's behalf.
+- Last updated: 20 November 2026.

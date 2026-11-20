@@ -1,0 +1,181 @@
+---
+import { products } from "../data/products";
+import { site } from "../data/site";
+import { visionSBuilds } from "../data/downloads";
+
+/**
+ * In-browser agent tools (WebMCP).
+ *
+ * Every tool is read-only: it returns published facts and URLs, never submits a
+ * form and never touches personal data. The contact form and the Vision S
+ * download form stay human-driven, which keeps the DPDP consent meaningful.
+ */
+const productIndex = products.map((product) => ({
+  slug: product.slug,
+  name: product.name,
+  category: product.category,
+  tagline: product.tagline,
+  summary: product.summary,
+  bestFor: product.bestFor,
+  facts: product.facts,
+  url: `${site.url}/products/${product.slug}/`,
+}));
+
+const installers = visionSBuilds.map((build) => ({
+  key: build.key,
+  name: build.name,
+  size: build.size,
+  updated: build.updated,
+}));
+
+const company = {
+  name: "Dicot Innovations Private Limited",
+  url: site.url,
+  salesEmail: site.emails.sales,
+  privacyEmail: site.emails.privacy,
+  phone: site.phones[0].label,
+  address: site.address.full,
+};
+---
+<script define:vars={{ productIndex, installers, company }}>
+  const PRICING_NOTE =
+    "Prices are shared through authorised dealers and are not published. Direct the buyer to the contact page for a quote.";
+
+  const toolList = [
+    {
+      name: "search_dicot_products",
+      description:
+        "Search Dicot SCADA, IIoT and reporting software by product name, protocol or industry keyword. Returns matching products with a summary and canonical URL.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          query: {
+            type: "string",
+            description: "Product name or keyword, for example 'OPC UA', 'pharma' or 'cloud'.",
+          },
+        },
+        required: ["query"],
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute({ query }) {
+        const term = String(query ?? "").trim().toLowerCase();
+        if (!term) return { error: "A query is required." };
+        const terms = term.split(/\s+/);
+        const matches = productIndex
+          .map((product) => {
+            const haystack = JSON.stringify(product).toLowerCase();
+            let score = 0;
+            for (const part of terms) {
+              if (!part) continue;
+              if (product.name.toLowerCase().includes(part)) score += 5;
+              if (product.category.toLowerCase().includes(part)) score += 2;
+              if (haystack.includes(part)) score += 1;
+            }
+            return { score, product };
+          })
+          .filter((row) => row.score > 0)
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 5)
+          .map(({ product }) => ({
+            slug: product.slug,
+            name: product.name,
+            category: product.category,
+            summary: product.summary,
+            url: product.url,
+          }));
+        return { matches, pricingPolicy: PRICING_NOTE };
+      },
+    },
+    {
+      name: "get_dicot_product_facts",
+      description:
+        "Return the published specification, best-fit guidance and page URL for one Dicot product. Prices are not included.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          product: {
+            type: "string",
+            description: "Slug or name: vision-c, vision-s, vision-web, vision-s-lite or vgraphic.",
+          },
+        },
+        required: ["product"],
+        additionalProperties: false,
+      },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute({ product }) {
+        const needle = String(product ?? "").trim().toLowerCase();
+        const found = productIndex.find(
+          (entry) =>
+            entry.slug === needle ||
+            entry.name.toLowerCase() === needle ||
+            entry.name.toLowerCase().includes(needle)
+        );
+        if (!found) {
+          return {
+            error: "Unknown product.",
+            knownProducts: productIndex.map((entry) => entry.slug),
+          };
+        }
+        return { product: found, pricingPolicy: PRICING_NOTE };
+      },
+    },
+    {
+      name: "get_dicot_download_options",
+      description:
+        "List the public Dicot installers and manuals, including the two Vision S builds that need a request form.",
+      inputSchema: { type: "object", additionalProperties: false },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute() {
+        return {
+          visionSInstallers: installers,
+          visionSRequestUrl: `${company.url}/downloads/vision-s/`,
+          downloadsUrl: `${company.url}/downloads/`,
+          note:
+            "Vision S downloads require a name, company, work email and explicit consent on the request page before a link is emailed or the download starts. Do not ask for or submit personal data on the person's behalf.",
+        };
+      },
+    },
+    {
+      name: "open_dicot_contact",
+      description:
+        "Return Dicot's contact details and the URL of the contact form. Does not submit anything.",
+      inputSchema: { type: "object", additionalProperties: false },
+      annotations: { readOnlyHint: true, openWorldHint: false },
+      execute() {
+        return {
+          ...company,
+          contactUrl: `${company.url}/contact/`,
+          note: "The contact form needs the person to submit it themselves.",
+        };
+      },
+    },
+  ];
+
+  function registerTools() {
+    const context =
+      (typeof document !== "undefined" && document.modelContext) ||
+      (typeof navigator !== "undefined" && navigator.modelContext);
+    if (!context) return;
+
+    try {
+      if (typeof context.registerTool === "function") {
+        for (const tool of toolList) context.registerTool(tool);
+        return;
+      }
+      if (typeof context.provideContext === "function") {
+        context.provideContext({ tools: toolList });
+      }
+    } catch (error) {
+      // A browser without WebMCP, or a rejected registration, must not break the page.
+      console.warn("[webmcp] tools were not registered", error);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", registerTools, { once: true });
+  } else {
+    registerTools();
+  }
+</script>
+

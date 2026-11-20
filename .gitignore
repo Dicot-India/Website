@@ -9,6 +9,8 @@ contact-secrets.php
 build
 dist
 out
+.build
+dicot-rate-limit
 public/bundle.js
 
 # logs and temp files

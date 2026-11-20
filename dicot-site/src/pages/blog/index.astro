@@ -291,6 +291,13 @@ const blogSchema = {
       const words = html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
       return `${Math.max(1, Math.round(words / 200))} min read`;
     };
+    // Consent-gated telemetry: gtag only exists after analytics is accepted, so
+    // this never creates a request for visitors who rejected cookies.
+    function reportRateLimit(path: string) {
+      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      if (typeof w.gtag !== "function") return;
+      w.gtag("event", "rate_limited", { path, status: 429 });
+    }
 
     function setMeta(post: Post, canonical: string) {
       document.title = `${post.title} | Dicot Innovations`;
@@ -401,8 +408,13 @@ const blogSchema = {
       const slug = match ? decodeURIComponent(match[1]) : new URLSearchParams(location.search).get("post");
       let posts: Post[] = [];
       try {
-        const response = await fetch(endpoint, { cache: "no-store" });
-        if (!response.ok) throw new Error(String(response.status));
+        // Default caching lets the browser and the CDN keep this small JSON, so
+        // repeat views no longer reach the origin. See docs/429-RUNBOOK.md.
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+          if (response.status === 429) reportRateLimit(endpoint);
+          throw new Error(String(response.status));
+        }
         const data = await response.json();
         posts = Array.isArray(data) ? data : [];
       } catch {

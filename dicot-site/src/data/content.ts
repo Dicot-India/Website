@@ -173,7 +173,7 @@ export const downloads = [
     ],
   },
   {
-    name: "Vision S",
+    name: "Vision S manuals",
     items: [{ label: "Vision S manual pack", href: "https://dicot.tech/VisionS_Manual.zip", type: "ZIP" }],
   },
   {

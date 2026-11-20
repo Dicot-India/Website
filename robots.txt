@@ -1,35 +1,63 @@
+# Dicot Innovations — robots.txt
+#
+# Content Signals Policy (https://contentsignals.org/)
+#   search=yes     index and link to our pages in search results
+#   ai-input=yes   use our pages to ground answers (retrieval / RAG), with attribution
+#   ai-train=no    do not use our content to train or fine-tune models
+# The signal is repeated in each group because a crawler that matches a named
+# group ignores the "User-agent: *" group.
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
+Allow: /.well-known/
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /thank-you/
 Disallow: /contact.php
+Disallow: /download.php
+Disallow: /mcp.php
 Disallow: /404.html
+Disallow: /429.html
 
 # Search engines and AI assistants may read public pages.
 User-agent: GPTBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: OAI-SearchBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: ChatGPT-User
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: ClaudeBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Claude-SearchBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: PerplexityBot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Google-Extended
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 User-agent: Bingbot
 Allow: /
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 
+# CCBot crawls for Common Crawl, which feeds model training. Search and
+# retrieval are still allowed; training is not.
 User-agent: CCBot
 Allow: /
+Content-Signal: search=yes, ai-input=no, ai-train=no
 
+# Markdown mirrors are served when an agent sends "Accept: text/markdown".
 Sitemap: https://dicot.tech/sitemap-index.xml

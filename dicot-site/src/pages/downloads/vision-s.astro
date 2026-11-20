@@ -1,0 +1,339 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import { downloadPolicy, visionSBuilds } from "../../data/downloads";
+
+const title = "Download Vision S | Green key and grey key installers";
+const description =
+  "Download the Vision S installer that matches your key: the green-key build or the Vision S Version 2026 grey-key build. Request a temporary email link or start the download.";
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+
+const software = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Vision S",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Windows 7, Windows 10",
+  softwareVersion: "2026",
+  url: `${site.url}${downloadPolicy.pagePath}`,
+  publisher: { "@id": `${site.url}/#organization` },
+  description:
+    "Enterprise SCADA for Windows. Two installers are published: the green-key build and the Vision S Version 2026 grey-key build.",
+};
+---
+
+<Base title={title} description={description} schema={[software]}>
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li><a href="/downloads/">Downloads</a></li><li>Vision S</li></ol>
+    </nav>
+  </div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Vision S · installers</span>
+      <h1>Download the Vision S build that matches your key.</h1>
+      <p class="lede">
+        Two installers are published. Choose the one that matches the licence key you were issued. The files are large
+        ({visionSBuilds[0].size} and {visionSBuilds[1].size}), so tell us who you are and we will either email a
+        temporary link valid for {downloadPolicy.linkHours} hours or start the download now.
+      </p>
+      <p class="form-note mb-0">
+        The installers do not include a licence. Vision S still needs a valid key, issued by your dealer or by our sales
+        team.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <div class="form-error" id="download-error" hidden>
+          <strong>We could not start the download.</strong>
+          <span id="download-error-detail">Please try again, or email <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> with the build you need.</span>
+        </div>
+
+        <div class="form-success" id="download-success" hidden>
+          <strong>Check your inbox.</strong>
+          <p class="mb-0">
+            Your download link is on its way from {site.emails.sales}. It is valid for {downloadPolicy.linkHours} hours.
+            Nothing arrived? Check spam, then email <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a>.
+          </p>
+        </div>
+
+        {!turnstileSiteKey && (
+          <div class="form-error">
+            The download form is temporarily unavailable. Please email
+            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> with the build you need and we will send the link.
+          </div>
+        )}
+
+        <form
+          class="form download-form"
+          action={downloadPolicy.endpoint}
+          method="post"
+          accept-charset="utf-8"
+          toolname="request_vision_s_download"
+          tooldescription="Request a Vision S installer download link. Requires the person's own name, company, work email and consent; the form does not submit itself."
+        >
+          <fieldset class="field">
+            <legend>1. Which build do you need? <span class="req">*</span></legend>
+            <div class="build-grid">
+              {visionSBuilds.map((build, index) => (
+                <label class="build-card">
+                  <input type="radio" name="build" value={build.id} checked={index === 0} required />
+                  <span class="build-card__body">
+                    <span class="build-card__key">{build.key}</span>
+                    <span class="build-card__name">{build.name}</span>
+                    <span class="build-card__meta">{build.size} · file dated {build.updated}</span>
+                    <span class="build-card__note">{build.summary}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>2. How should we deliver it? <span class="req">*</span></legend>
+            <label class="choice">
+              <input type="radio" name="mode" value="email" checked required />
+              <span>
+                <strong>Email me a temporary link</strong>
+                <span class="choice__hint">Valid {downloadPolicy.linkHours} hours. Best on a slow or shared connection.</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="mode" value="direct" />
+              <span>
+                <strong>Start the download now</strong>
+                <span class="choice__hint">Downloads in this browser straight away.</span>
+              </span>
+            </label>
+          </fieldset>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="name">Name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" />
+            </div>
+            <div class="field">
+              <label for="company">Company <span class="req">*</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization" required maxlength="120" />
+            </div>
+            <div class="field">
+              <label for="email">Work email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
+            </div>
+          </div>
+
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="notice" id="privacy-notice">
+            <h2 class="notice__title">Before you download</h2>
+            <p class="mb-1">
+              <strong>What we collect:</strong> your name, company, work email and, if you add it, your phone number; the
+              build you chose, the time of the request, and a Cloudflare Turnstile security token. Your IP address is used
+              only to stop repeated automated requests.
+            </p>
+            <p class="mb-1">
+              <strong>Why:</strong> to send the download link or start the download, to help you if the install needs it,
+              and to keep this form from being abused. We do not sell your data and we do not use it for unrelated
+              advertising.
+            </p>
+            <p class="mb-1">
+              <strong>How long:</strong> {downloadPolicy.retention}. Security logs are kept for up to 90 days.
+            </p>
+            <p class="mb-1">
+              <strong>Your rights:</strong> you can ask for access, correction or erasure, and you can withdraw consent at
+              any time. Withdrawing is as easy as giving it: use the link in your confirmation email or write to
+              <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>. Grievance Officer:
+              <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>. Full detail in the
+              <a href={downloadPolicy.privacyPath}>privacy policy</a> (version 2.1).
+            </p>
+            <p class="mb-0 form-note">
+              This form is for business users aged 18 or over. Please do not send personal or sensitive data about anyone
+              else.
+            </p>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" value="yes" required />
+            <span>
+              I agree that Dicot Innovations may use these details to send my Vision S download link and to contact me
+              about this download. I have read the <a href={downloadPolicy.privacyPath}>privacy policy</a>.
+              <span class="req">*</span>
+            </span>
+          </label>
+
+          <label class="consent consent--optional">
+            <input type="checkbox" name="updates" value="yes" />
+            <span>Send me occasional product updates. Optional, and I can unsubscribe at any time.</span>
+          </label>
+
+          {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light"></div>}
+
+          <div class="btn-row">
+            <button class="btn btn--primary" type="submit">Get the download</button>
+            <a class="btn btn--ghost" href="/downloads/">Back to all downloads</a>
+          </div>
+
+          <p class="form-note mb-0">
+            This form records the request and the consent you give. We keep that record for
+            {downloadPolicy.retention}, then delete it.
+          </p>
+        </form>
+
+        <noscript>
+          <p class="form-note">
+            JavaScript is off, so the confirmation banner cannot appear here. After you submit, the link email or the
+            download starts immediately. If nothing happens, email
+            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a>.
+          </p>
+        </noscript>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h2 class="h3">Which key do I have?</h2>
+          <p>
+            The key label states its colour. Choose the build with the same colour; the other build will not accept it.
+            If you are unsure, send a photo of the key label to
+            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> before downloading a large file.
+          </p>
+          <ul class="mb-0">
+            {visionSBuilds.map((build) => (
+              <li><strong>{build.key}</strong> — {build.file}, {build.size}, file dated {build.updated}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="card mt-2">
+          <h2 class="h3">Before you install</h2>
+          <ul class="mb-0">
+            <li>Windows 7 or Windows 10, 4 GB RAM recommended (1 GB minimum).</li>
+            <li>PostgreSQL is needed for historical logging.</li>
+            <li>Mount the ISO, or write it to a DVD, then run the setup inside.</li>
+            <li>Keep your licence key and licence ID to hand.</li>
+          </ul>
+        </div>
+
+        <div class="card mt-2">
+          <h2 class="h3">Need help?</h2>
+          <p class="mb-1">
+            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a><br />
+            {site.phones.map((phone) => (
+              <><a href={`tel:${phone.href}`}>{phone.label}</a>{phone.primary ? " (primary)" : ""}<br /></>
+            ))}
+          </p>
+          <p class="form-note mb-0">
+            Include the build, your licence ID and the Windows version so we can help faster.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {turnstileSiteKey && <script async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>}
+</Base>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const errorPanel = document.getElementById("download-error");
+  const successPanel = document.getElementById("download-success");
+  const errorDetail = document.getElementById("download-error-detail");
+
+  const reasons: Record<string, string> = {
+    rate: "Too many requests from this connection. Wait a few minutes, then try again, or email sales@dicot.tech.",
+    fields: "Some details are missing or look wrong. Check the name, company and work email, and tick the consent box.",
+    token: "The security check did not pass. Reload the page and try again.",
+    mail: "The link email could not be sent. Try the direct download instead, or email sales@dicot.tech.",
+    config: "The download form is not configured right now. Please email sales@dicot.tech.",
+  };
+
+  if (params.get("error") === "1" && errorPanel) {
+    const reason = params.get("reason") ?? "";
+    if (errorDetail && reasons[reason]) errorDetail.textContent = reasons[reason];
+    errorPanel.removeAttribute("hidden");
+    errorPanel.scrollIntoView({ block: "center" });
+  }
+
+  if (params.get("sent") === "1" && successPanel) {
+    successPanel.removeAttribute("hidden");
+    successPanel.scrollIntoView({ block: "center" });
+    history.replaceState({}, "", location.pathname);
+  }
+</script>
+
+<style>
+  .download-form fieldset { border: 0; padding: 0; margin: 0; }
+  .download-form legend { padding: 0; font-size: 0.82rem; font-weight: 600; }
+  .download-form legend .req { color: var(--red); }
+  .build-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .build-card { position: relative; display: block; cursor: pointer; }
+  .build-card input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .build-card__body {
+    display: grid;
+    gap: 4px;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    height: 100%;
+  }
+  .build-card input:checked + .build-card__body { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue) inset; }
+  .build-card input:focus-visible + .build-card__body { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .build-card__key {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .build-card__name { font-weight: 600; }
+  .build-card__meta { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
+  .build-card__note { font-size: 0.88rem; color: var(--muted); }
+  .choice {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    cursor: pointer;
+  }
+  .choice + .choice { margin-top: 8px; }
+  .choice input { margin-top: 4px; }
+  .choice__hint { display: block; font-size: 0.82rem; color: var(--muted); }
+  .choice:has(input:checked) { border-color: var(--blue); }
+  .notice {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-2);
+    padding: 18px 20px;
+  }
+  .notice__title { font-size: 1rem; margin-bottom: 10px; }
+  .notice p { font-size: 0.9rem; }
+  .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; }
+  .consent input { margin-top: 4px; flex: none; }
+  .consent--optional { color: var(--muted); }
+  .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .form-success {
+    border: 1px solid #9bd3b4;
+    background: #f1fbf6;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-bottom: 18px;
+  }
+  .notice .mb-1 { margin-bottom: 0.65em; }
+  .h3 { font-size: 1.1rem; }
+</style>
+
+

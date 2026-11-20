@@ -2,11 +2,12 @@
 import Base from "../layouts/Base.astro";
 import Cta from "../components/Cta.astro";
 import { downloads } from "../data/content";
+import { visionSBuilds } from "../data/downloads";
 import { site } from "../data/site";
 
-const title = "Software Downloads | Dicot Vision C, Vision Web, VGraphic";
+const title = "Software Downloads | Dicot Vision C, Vision S, Vision Web, VGraphic";
 const description =
-  "Download Dicot software: Vision C setup, Vision Web Windows and Android clients, Vision S manuals, VGraphic setup and manuals, plus the RS-485 driver.";
+  "Download Dicot software: Vision C setup, the Vision S green-key and grey-key installers, Vision Web Windows and Android clients, VGraphic setup and manuals, plus the RS-485 driver.";
 ---
 <Base title={title} description={description}>
   <div class="wrap"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li>Downloads</li></ol></nav></div>
@@ -17,13 +18,32 @@ const description =
       <h1>Installers, clients and manuals.</h1>
       <p class="lede">
         Current builds for Windows and Android. Licence keys are issued by your dealer or by our sales team; the
-        installers below do not include a licence.
+        installers below do not include a licence. The Vision S installers are large, so we ask who you are before
+        sending a temporary link or starting the download.
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap grid-2">
+      <div class="card">
+        <h3>Vision S installers</h3>
+        <p class="form-note" style="margin-bottom:12px">
+          Two builds, {visionSBuilds[0].size} and {visionSBuilds[1].size}. Choose the one that matches the key you were
+          issued; we ask for a name, company and work email before sending a temporary link or starting the download.
+        </p>
+        <ul role="list" class="mb-0">
+          {visionSBuilds.map((build) => (
+            <li class="mt-1">
+              <a href="/downloads/vision-s/">{build.key} — {build.name}</a>
+              <span class="chip" style="margin-left:8px">{build.size}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-3 mb-0">
+          <a class="btn btn--primary btn--small" href="/downloads/vision-s/">Get a Vision S installer</a>
+        </p>
+      </div>
       {downloads.map((group) => (
         <div class="card">
           <h3>{group.name}</h3>

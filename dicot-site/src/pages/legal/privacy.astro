@@ -10,9 +10,10 @@ const description =
   title={title}
   description={description}
   label="Privacy"
+  updated="20 November 2026"
   lede="This policy explains what personal data we collect, why we collect it, how long we keep it and how you can exercise your rights under India's Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025."
 >
-  <p><strong>Effective date:</strong> 18 November 2026 · <strong>Version:</strong> 2.0</p>
+  <p><strong>Effective date:</strong> 20 November 2026 · <strong>Version:</strong> 2.1</p>
 
   <h2>1. Who we are</h2>
   <p>
@@ -46,6 +47,7 @@ const description =
       <tr><td>Analytics (with consent)</td><td>Pages viewed, approximate location derived from IP, device and browser, referrer, interaction events</td><td>To understand which content helps buyers and improve the site</td></tr>
       <tr><td>Support chat (with consent)</td><td>Name and message you type in the Tawk.to chat, chat identifiers and the pages viewed during the chat</td><td>To answer your question and keep the conversation in context</td></tr>
       <tr><td>Contact form anti-spam check</td><td>IP address and CAPTCHA verification token</td><td>Cloudflare Turnstile uses these to verify contact-form submissions and reduce spam</td></tr>
+      <tr><td>Vision S download requests</td><td>Name, company, work email, optional phone, the build selected, the consent text and its timestamp, IP address and CAPTCHA token</td><td>To send the download link or start the download, help with installation, and prevent automated abuse</td></tr>
       <tr><td>Security logs</td><td>IP address, user agent, request time and status</td><td>To keep the site available and investigate abuse</td></tr>
     </tbody>
   </table>
@@ -53,6 +55,13 @@ const description =
   <p>
     We do not intentionally collect sensitive personal data such as health, biometric, caste, religious or political
     information through this website. Please do not send it through the contact form.
+  </p>
+  <p>
+    <strong>Vision S downloads.</strong> The installers are large files, so before sending a temporary link or starting
+    a download we ask for your name, company and work email, and optionally a phone number. We record the build you
+    chose, the time of the request and the consent you give, and we use your IP address only to stop automated abuse.
+    We use this data to deliver the file, help with installation and keep the form from being misused. It is not used
+    for unrelated advertising, and the marketing opt-in on that form is optional and separate.
   </p>
 
   <h2>4. How we use personal data</h2>
@@ -72,6 +81,13 @@ const description =
     choices through “Cookie settings” in the footer. Withdrawal does not affect processing already carried out, and we
     will stop using the data for that purpose. You can also ask us to delete it, subject to legal retention
     requirements.
+  </p>
+  <p>
+    <strong>Download consent.</strong> The Vision S download form asks for a separate consent that is never pre-ticked.
+    Every confirmation email repeats how to withdraw it, and a request to{" "}
+    <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a> with the subject “Withdraw download consent” is
+    actioned without any further steps. Withdrawal does not affect the download you already received, and it is as easy
+    to withdraw as it was to consent.
   </p>
 
   <h2>6. Cookies and analytics</h2>
@@ -110,6 +126,7 @@ const description =
     <tbody>
       <tr><td>Enquiries and demo requests</td><td>24 months from last contact</td></tr>
       <tr><td>Partner applications</td><td>24 months from last contact</td></tr>
+      <tr><td>Vision S download requests</td><td>24 months from last contact</td></tr>
       <tr><td>Job applications</td><td>12 months, unless you ask us to delete earlier</td></tr>
       <tr><td>Customer, licence and support records</td><td>For the contract term and as required by law</td></tr>
       <tr><td>Analytics</td><td>Up to 14 months in Google Analytics</td></tr>

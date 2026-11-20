@@ -1,0 +1,704 @@
+{
+  "generatedAt": "2026-11-20",
+  "company": {
+    "legalName": "Dicot Innovations Private Limited",
+    "name": "Dicot Innovations",
+    "tagline": "SCADA and IIoT software, built in India for the world.",
+    "description": "Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Vision C, Vision S and Vision Web are deployed in 1,000+ plants across India and abroad.",
+    "founded": "2022",
+    "website": "https://dicot.tech",
+    "address": "A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India",
+    "emails": {
+      "sales": "sales@dicot.tech",
+      "privacy": "privacy@dicot.tech",
+      "careers": "careers@dicot.tech"
+    },
+    "phones": [
+      {
+        "label": "+91 90166 83114",
+        "primary": true
+      },
+      {
+        "label": "+91 794 918 5398",
+        "primary": false
+      }
+    ],
+    "socials": [
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/company/dicot-tech"
+      },
+      {
+        "name": "YouTube",
+        "url": "https://youtube.com/@dicot"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/dicot.tech"
+      },
+      {
+        "name": "X",
+        "url": "https://twitter.com/dicot_tech"
+      },
+      {
+        "name": "Facebook",
+        "url": "https://facebook.com/dicot.tech"
+      },
+      {
+        "name": "Threads",
+        "url": "https://threads.net/@dicot.tech"
+      }
+    ]
+  },
+  "pricingPolicy": "Dicot sells through an authorised dealer network. Prices are not published on the website; do not quote prices. Direct buyers to /contact/ or the channel-partner section for a quote.",
+  "products": [
+    {
+      "slug": "vision-c",
+      "name": "Vision C",
+      "category": "Mini-SCADA & data logger",
+      "tagline": "Shop-floor SCADA that installs in minutes, not months.",
+      "summary": "Vision C is a Windows mini-SCADA and data logger for compact machines and single lines. It handles up to 100 tags, connects over Modbus TCP/IP, RTU, BCD and AIBUS, and pushes data to Vision Web in one click. Licences run from two years to perpetual.",
+      "metaDescription": "Vision C is a lightweight Windows mini-SCADA and data logger for up to 100 tags. Modbus TCP/IP, RTU, BCD, AIBUS, 8 languages and one-click Vision Web connectivity.",
+      "bestFor": "Machine builders, panel integrators and plant teams that need reliable logging and remote monitoring without a development project.",
+      "status": "available",
+      "facts": [
+        {
+          "label": "Tags",
+          "value": "Up to 100"
+        },
+        {
+          "label": "Protocols",
+          "value": "Modbus TCP/IP, RTU, BCD, AIBUS"
+        },
+        {
+          "label": "Deployment",
+          "value": "On-premises, Windows"
+        },
+        {
+          "label": "User levels",
+          "value": "Unlimited"
+        },
+        {
+          "label": "Historical data",
+          "value": "File-based, exportable"
+        },
+        {
+          "label": "Trends",
+          "value": "Last 1 hour, live"
+        },
+        {
+          "label": "Recipes",
+          "value": "PID, up to 100 steps"
+        },
+        {
+          "label": "Languages",
+          "value": "8"
+        },
+        {
+          "label": "Security",
+          "value": "2-layer"
+        },
+        {
+          "label": "Install size",
+          "value": "~10 MB"
+        },
+        {
+          "label": "OS",
+          "value": "Windows 8 or later"
+        },
+        {
+          "label": "Licence",
+          "value": "2, 5, 10, 20 years or perpetual"
+        }
+      ],
+      "plans": [
+        {
+          "name": "2-year licence",
+          "detail": "Full licence, unlimited tags within the 100-tag limit."
+        },
+        {
+          "name": "5-year licence",
+          "detail": "Same feature set with a longer support window."
+        },
+        {
+          "name": "10-year licence",
+          "detail": "For deployments with a long plant lifecycle."
+        },
+        {
+          "name": "20-year licence",
+          "detail": "Long-horizon licence for OEM and infrastructure projects."
+        },
+        {
+          "name": "Perpetual licence",
+          "detail": "Perpetual use without future software updates."
+        }
+      ],
+      "planNote": "Prices are shared through our authorised dealer network. Request a quote and we will route it to the right partner.",
+      "requirements": [
+        "Windows 8 or later",
+        "4 GB RAM or more",
+        "Adobe PDF Reader for reports",
+        "Ethernet or serial port for device connectivity"
+      ],
+      "faqs": [
+        {
+          "q": "What is Vision C?",
+          "a": "Vision C is a mini-SCADA and data-logging application for Windows. It reads tags from PLCs and devices, shows live values and trends, stores history, records batches and generates reports. It supports up to 100 tags."
+        },
+        {
+          "q": "Which protocols does Vision C support?",
+          "a": "Modbus TCP/IP, Modbus RTU, BCD and AIBUS, across multiple ports."
+        },
+        {
+          "q": "Can Vision C send data to the cloud?",
+          "a": "Yes. A one-click connection forwards data to Vision Web, Dicot's hosted SCADA platform, for remote monitoring and alerts."
+        },
+        {
+          "q": "How is Vision C licensed?",
+          "a": "As a time-based licence of 2, 5, 10 or 20 years, or perpetual without future updates. Pricing is provided by authorised dealers."
+        },
+        {
+          "q": "Do I need a developer to set it up?",
+          "a": "No. Configuration is done through the application. Most customers are logging data on the first day."
+        }
+      ],
+      "url": "https://dicot.tech/products/vision-c/"
+    },
+    {
+      "slug": "vision-web",
+      "name": "Vision Web",
+      "category": "Cloud SCADA & IIoT platform",
+      "tagline": "Your plant on any screen, with alarms where your team already is.",
+      "summary": "Vision Web is Dicot's hosted cloud SCADA platform. It brings up to 20,000 tags per project into a browser, updates at 50–100 ms, keeps two years of history and sends alarms by SMS, email, WhatsApp and Telegram. Dicot hosts and maintains the platform; you log in and run the plant.",
+      "metaDescription": "Vision Web is a hosted cloud SCADA platform with up to 20,000 tags, 50–100 ms updates, two-year history and SMS, email, WhatsApp and Telegram alarms.",
+      "bestFor": "Teams that need remote monitoring, multi-site visibility and mobile alarms without running servers or a VPN.",
+      "status": "available",
+      "facts": [
+        {
+          "label": "Tags",
+          "value": "Up to 20,000 per project"
+        },
+        {
+          "label": "Protocols",
+          "value": "HTTP, MQTT"
+        },
+        {
+          "label": "Update latency",
+          "value": "50–100 ms"
+        },
+        {
+          "label": "Hosting",
+          "value": "Managed by Dicot"
+        },
+        {
+          "label": "Historical data",
+          "value": "NoSQL, 2-year retention"
+        },
+        {
+          "label": "Alarms",
+          "value": "SMS, email, WhatsApp, Telegram"
+        },
+        {
+          "label": "Security",
+          "value": "3-layer encryption, 2FA"
+        },
+        {
+          "label": "Users",
+          "value": "Unlimited user levels"
+        },
+        {
+          "label": "Reports",
+          "value": "Print and PDF, automatable"
+        },
+        {
+          "label": "Licence",
+          "value": "Yearly subscription"
+        }
+      ],
+      "plans": [
+        {
+          "name": "10 tags",
+          "detail": "Single small asset or a pilot project."
+        },
+        {
+          "name": "50 tags",
+          "detail": "One machine or a compact production line."
+        },
+        {
+          "name": "500 tags",
+          "detail": "A full line or a small plant."
+        },
+        {
+          "name": "5,000 tags",
+          "detail": "Multi-line or multi-site monitoring."
+        },
+        {
+          "name": "Enterprise",
+          "detail": "Above 5,000 tags, scoped with our team."
+        },
+        {
+          "name": "Add-ons",
+          "detail": "Additional users, SMS credits and WhatsApp alerts."
+        }
+      ],
+      "planNote": "Yearly subscription, quoted through authorised dealers. User add-ons apply after the included user allowance.",
+      "requirements": [
+        "Modern browser",
+        "Internet connection at the plant gateway",
+        "Android 8+ or Windows for the client apps",
+        "MQTT-capable gateway or Vision C for data collection"
+      ],
+      "faqs": [
+        {
+          "q": "Is Vision Web hosted by Dicot?",
+          "a": "Yes. Dicot hosts, maintains and backs up Vision Web. Customers do not need to provision cloud infrastructure or manage servers."
+        },
+        {
+          "q": "How fast does Vision Web update?",
+          "a": "Typical latency is 50–100 ms on a stable connection."
+        },
+        {
+          "q": "How long is data retained?",
+          "a": "Two years of historical data is retained in the platform's NoSQL store."
+        },
+        {
+          "q": "Which alarm channels are supported?",
+          "a": "SMS, email, WhatsApp and Telegram, with different triggers and recipients per alarm."
+        },
+        {
+          "q": "Can I connect an existing PLC or Vision C installation?",
+          "a": "Yes. Vision Web receives data over MQTT or HTTP, and Vision C can forward data with a one-click connection."
+        },
+        {
+          "q": "How is Vision Web priced?",
+          "a": "As a yearly subscription by tag count, with add-ons for extra users, SMS and WhatsApp. Prices are shared through authorised dealers."
+        }
+      ],
+      "url": "https://dicot.tech/products/vision-web/"
+    },
+    {
+      "slug": "vision-s",
+      "name": "Vision S",
+      "category": "Enterprise SCADA",
+      "tagline": "Full SCADA for regulated, high-tag-count plants.",
+      "summary": "Vision S is Dicot's enterprise SCADA for large and regulated plants. It scales to 60,000 tags, speaks 4,000+ protocols including OPC UA and DA, keeps 21 CFR-ready audit trails and stores history in PostgreSQL. Runtime, development, client-server and web-client licences can be mixed to fit the architecture.",
+      "metaDescription": "Vision S enterprise SCADA scales to 60,000 tags with 4,000+ protocols, OPC UA/DA, 21 CFR audit trails, PostgreSQL history, C scripting and web clients.",
+      "bestFor": "Pharma, process and large manufacturing sites that need audit trails, high tag counts and a configurable SCADA architecture.",
+      "status": "available",
+      "facts": [
+        {
+          "label": "Tags",
+          "value": "Up to 60,000"
+        },
+        {
+          "label": "Protocols",
+          "value": "4,000+, OPC UA and DA"
+        },
+        {
+          "label": "Audit trails",
+          "value": "21 CFR-ready"
+        },
+        {
+          "label": "Historical database",
+          "value": "PostgreSQL"
+        },
+        {
+          "label": "Scripting",
+          "value": "C"
+        },
+        {
+          "label": "User levels",
+          "value": "Unlimited"
+        },
+        {
+          "label": "Recipes",
+          "value": "Unlimited"
+        },
+        {
+          "label": "Batches",
+          "value": "Multiple simultaneous"
+        },
+        {
+          "label": "Reports",
+          "value": "Print and PDF, fully customisable"
+        },
+        {
+          "label": "Extras",
+          "value": "E-signature, OPC UA server, multi-monitor"
+        },
+        {
+          "label": "Licence",
+          "value": "Tag-based, runtime and development"
+        }
+      ],
+      "plans": [
+        {
+          "name": "Development licence",
+          "detail": "For building and testing projects. Not for production deployment."
+        },
+        {
+          "name": "Runtime licence",
+          "detail": "For live deployment on the plant floor, sized by tags."
+        },
+        {
+          "name": "Client/Server licence",
+          "detail": "For distributed architectures without an I/O licence included."
+        },
+        {
+          "name": "Web Client licence",
+          "detail": "Browser-based remote operation, sized by concurrent users."
+        },
+        {
+          "name": "Accessories",
+          "detail": "Electronic signature and OPC UA server add-ons."
+        },
+        {
+          "name": "Enterprise scope",
+          "detail": "Multi-site and 60,000-tag deployments scoped with our team."
+        }
+      ],
+      "planNote": "Tag-based licensing with separate development and runtime editions. Prices are shared through authorised dealers.",
+      "requirements": [
+        "Windows 7 or Windows 10",
+        "Pentium 4, 1 GHz or higher",
+        "4 GB RAM recommended (1 GB minimum)",
+        "PostgreSQL for historical logging"
+      ],
+      "faqs": [
+        {
+          "q": "What is Vision S?",
+          "a": "Vision S is an enterprise SCADA platform for Windows. It collects data from PLCs and devices, provides operator screens, alarms, trends, reports, recipes and batch recording, and scales to 60,000 tags."
+        },
+        {
+          "q": "Does Vision S support 21 CFR Part 11 requirements?",
+          "a": "Vision S provides 21 CFR-ready audit trails, electronic signatures and user-level access control. Validation and compliance remain the responsibility of the regulated site."
+        },
+        {
+          "q": "Which protocols are supported?",
+          "a": "More than 4,000 drivers, including OPC UA and OPC DA, with multi-port connectivity."
+        },
+        {
+          "q": "Can I develop and deploy with different licences?",
+          "a": "Yes. Development, runtime, client-server and web-client licences are separate, and can be combined."
+        },
+        {
+          "q": "Where is historical data stored?",
+          "a": "In PostgreSQL, with options for third-party integration."
+        }
+      ],
+      "url": "https://dicot.tech/products/vision-s/"
+    },
+    {
+      "slug": "vision-s-lite",
+      "name": "Vision S Lite",
+      "category": "Lightweight enterprise SCADA",
+      "tagline": "The Vision S platform, sized for cost-sensitive plants.",
+      "summary": "Vision S Lite is a lighter edition of Vision S, in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library, for applications that need Vision S-style SCADA without the full footprint.",
+      "metaDescription": "Vision S Lite is a lighter edition of Vision S with fewer protocols and a smaller design library, built for cost-sensitive SCADA applications. In development.",
+      "bestFor": "Machine builders and plant teams that need Vision S-style SCADA, but do not need the full protocol library or the full design environment.",
+      "status": "upcoming",
+      "facts": [
+        {
+          "label": "Base",
+          "value": "Vision S platform"
+        },
+        {
+          "label": "Protocols",
+          "value": "Reduced set vs Vision S"
+        },
+        {
+          "label": "Design library",
+          "value": "Smaller than Vision S"
+        },
+        {
+          "label": "Target",
+          "value": "Cost-sensitive applications"
+        },
+        {
+          "label": "Status",
+          "value": "In development"
+        },
+        {
+          "label": "Licensing",
+          "value": "Announced at launch"
+        }
+      ],
+      "plans": [],
+      "planNote": "Vision S Lite is in development. Editions and pricing will be announced at launch and quoted through authorised dealers.",
+      "requirements": [],
+      "faqs": [
+        {
+          "q": "What is Vision S Lite?",
+          "a": "Vision S Lite is a lighter edition of Vision S, in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library for cost-sensitive applications."
+        },
+        {
+          "q": "How is Vision S Lite different from Vision S?",
+          "a": "Vision S Lite is scoped below Vision S: fewer protocols and a smaller design library. Vision S remains the choice for 60,000-tag, multi-line plants that need the full 4,000+ protocol library, OPC UA/DA and 21 CFR-ready audit trails."
+        },
+        {
+          "q": "Is Vision S Lite available now?",
+          "a": "Not yet. It is in development. Register your interest and the team will share availability, editions and pricing when they are confirmed."
+        },
+        {
+          "q": "Who is Vision S Lite for?",
+          "a": "Machine builders and plant teams with cost-sensitive applications that need Vision S-style SCADA, but do not need the full protocol library or design environment."
+        },
+        {
+          "q": "How will Vision S Lite be licensed?",
+          "a": "Editions and pricing will be announced at launch. As with the rest of the Dicot range, quotes will be handled through authorised dealers."
+        }
+      ],
+      "url": "https://dicot.tech/products/vision-s-lite/"
+    },
+    {
+      "slug": "vgraphic",
+      "name": "VGraphic",
+      "category": "Cloud report generator",
+      "tagline": "Turn plant files into branded PDF reports from anywhere.",
+      "summary": "VGraphic is a cloud report generator for industrial data. Upload or connect Excel, CSV, SQL and DAT files, filter by time or file, and export branded PDF tables and graphs from a desktop or mobile browser. There is nothing to install.",
+      "metaDescription": "VGraphic turns Excel, CSV, SQL and DAT plant data into branded PDF reports and graphs. Cloud-based, mobile and desktop, with time and file filters.",
+      "bestFor": "Quality, maintenance and production teams that spend hours turning exported data into shift and management reports.",
+      "status": "available",
+      "facts": [
+        {
+          "label": "Installation",
+          "value": "None, cloud-based"
+        },
+        {
+          "label": "Input files",
+          "value": "Excel, CSV, SQL, DAT"
+        },
+        {
+          "label": "Output",
+          "value": "PDF tables and graphs"
+        },
+        {
+          "label": "Apps",
+          "value": "Desktop and mobile"
+        },
+        {
+          "label": "Filters",
+          "value": "Time and file"
+        },
+        {
+          "label": "Branding",
+          "value": "Logo, header, footer"
+        },
+        {
+          "label": "Storage",
+          "value": "Cloud, expandable"
+        },
+        {
+          "label": "Licence",
+          "value": "1, 5 or 10 years; offline lifetime"
+        }
+      ],
+      "plans": [
+        {
+          "name": "1-year cloud",
+          "detail": "Cloud licence with report generation and storage."
+        },
+        {
+          "name": "5-year cloud",
+          "detail": "Longer cloud term for recurring reporting."
+        },
+        {
+          "name": "10-year cloud",
+          "detail": "For long-life plant and OEM programmes."
+        },
+        {
+          "name": "Offline lifetime",
+          "detail": "Perpetual offline licence for air-gapped sites."
+        },
+        {
+          "name": "Extra storage",
+          "detail": "Additional cloud storage per GB per year."
+        }
+      ],
+      "planNote": "Cloud and offline editions are available. Prices are shared through authorised dealers.",
+      "requirements": [
+        "Modern browser for the cloud edition",
+        "Excel, CSV, SQL or DAT source files",
+        "Internet connection for cloud sync"
+      ],
+      "faqs": [
+        {
+          "q": "What is VGraphic?",
+          "a": "VGraphic is a report generator for industrial data. It converts Excel, CSV, SQL and DAT files into branded PDF reports with tables and graphs."
+        },
+        {
+          "q": "Do I need to install anything?",
+          "a": "No for the cloud edition. The offline lifetime edition is available for sites that cannot use the cloud."
+        },
+        {
+          "q": "Can reports carry our logo?",
+          "a": "Yes. Logo, header and footer are configurable per report."
+        },
+        {
+          "q": "How is VGraphic licensed?",
+          "a": "Cloud licences run for 1, 5 or 10 years. An offline lifetime licence and extra cloud storage are also available."
+        }
+      ],
+      "url": "https://dicot.tech/products/vgraphic/"
+    }
+  ],
+  "downloads": [
+    {
+      "group": "Vision C",
+      "items": [
+        {
+          "label": "Vision C setup (Windows)",
+          "url": "https://dicot.in/VisionCsetup.exe",
+          "type": "EXE"
+        },
+        {
+          "label": "Vision C user guide",
+          "url": "https://dicot.in/Userguidevc2.pdf",
+          "type": "PDF"
+        }
+      ]
+    },
+    {
+      "group": "Vision Web",
+      "items": [
+        {
+          "label": "Vision Web client (Windows)",
+          "url": "https://dicot.tech/VisionWebClient.exe",
+          "type": "EXE"
+        },
+        {
+          "label": "Vision Web app (Android)",
+          "url": "https://dicot.tech/VisionWeb.apk",
+          "type": "APK"
+        }
+      ]
+    },
+    {
+      "group": "Vision S manuals",
+      "items": [
+        {
+          "label": "Vision S manual pack",
+          "url": "https://dicot.tech/VisionS_Manual.zip",
+          "type": "ZIP"
+        }
+      ]
+    },
+    {
+      "group": "VGraphic",
+      "items": [
+        {
+          "label": "VGraphic setup",
+          "url": "https://dicot.tech/VGSetup.exe",
+          "type": "EXE"
+        },
+        {
+          "label": "VGraphic manual",
+          "url": "https://dicot.tech/Vgraphic_Manual.pdf",
+          "type": "PDF"
+        }
+      ]
+    },
+    {
+      "group": "Utilities",
+      "items": [
+        {
+          "label": "RS-485 driver",
+          "url": "https://dicot.tech/485driver.exe",
+          "type": "EXE"
+        },
+        {
+          "label": "Product catalogue",
+          "url": "https://dicot.tech/Catalogue.pdf",
+          "type": "PDF"
+        }
+      ]
+    }
+  ],
+  "visionSInstallers": {
+    "note": "The Vision S installers require a name, company, work email and explicit consent before a temporary link is emailed or the download starts. Direct agents to the request page rather than the raw file.",
+    "requestUrl": "https://dicot.tech/downloads/vision-s/",
+    "builds": [
+      {
+        "id": "green",
+        "key": "Green key",
+        "name": "Vision S — green key",
+        "file": "VisionS.iso",
+        "size": "827 MB",
+        "updated": "2025-01-02"
+      },
+      {
+        "id": "grey",
+        "key": "Grey key",
+        "name": "Vision S Version 2026 — grey key",
+        "file": "VisionS_Version_2026.iso",
+        "size": "977 MB",
+        "updated": "2026-01-07"
+      }
+    ]
+  },
+  "dealers": [
+    {
+      "company": "Micon Automation Systems Private Limited",
+      "territory": "Gujarat",
+      "city": "Ahmedabad",
+      "email": "sales@miconindia.com",
+      "phone": "+91 97234 62290",
+      "website": "https://www.miconindia.com"
+    },
+    {
+      "company": "Rasci Instruments India Private Limited",
+      "territory": "Tamil Nadu",
+      "city": "Chennai",
+      "email": "solution@rasciindia.com",
+      "phone": "+91 98412 91758",
+      "website": null
+    },
+    {
+      "company": "MBI Solutions",
+      "territory": "Mumbai",
+      "city": "Mumbai",
+      "email": "mbisolutions@gmail.com",
+      "phone": "+91 98210 63652",
+      "website": null
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What does Dicot Innovations do?",
+      "a": "Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Its products are Vision C (mini-SCADA and data logger), Vision S (enterprise SCADA), Vision Web (hosted cloud SCADA) and VGraphic (cloud report generator). Vision S Lite, a lighter Vision S for cost-sensitive applications, is in development. The company was founded in Ahmedabad in 2022 and its software is deployed in more than 1,000 plants."
+    },
+    {
+      "q": "Is Dicot's SCADA software made in India?",
+      "a": "Yes. Dicot designs and develops its software in Ahmedabad, Gujarat. It is recognised under Startup India, incubated at i-Hub (a Gujarat Government enterprise), supported by the Wadhwani Foundation and part of the Make in India initiative."
+    },
+    {
+      "q": "What is the difference between Vision C, Vision S and Vision Web?",
+      "a": "Vision C is a lightweight on-premises mini-SCADA for up to 100 tags. Vision S is an enterprise SCADA for up to 60,000 tags, with 4,000+ protocols and 21 CFR-ready audit trails. Vision Web is a cloud SCADA platform hosted by Dicot, with up to 20,000 tags per project and mobile alarms. Vision S Lite, in development, is a lighter Vision S with fewer protocols and a smaller design library for cost-sensitive applications."
+    },
+    {
+      "q": "Can Dicot software connect to existing PLCs and machines?",
+      "a": "Yes. Vision C supports Modbus TCP/IP, RTU, BCD and AIBUS. Vision S supports more than 4,000 device protocols including OPC UA and OPC DA. Vision Web receives data over MQTT and HTTP, including from Vision C."
+    },
+    {
+      "q": "How do I get pricing?",
+      "a": "Dicot sells through an authorised dealer network, so prices are shared by your nearest dealer rather than published online. Send an enquiry with your tag count and deployment type and the team will route it to the right partner."
+    },
+    {
+      "q": "Which industries use Dicot software?",
+      "a": "Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC. Deployments range from a single machine to multi-line plants."
+    }
+  ],
+  "pages": {
+    "products": "https://dicot.tech/products/",
+    "pricing": "https://dicot.tech/pricing/",
+    "downloads": "https://dicot.tech/downloads/",
+    "solutions": "https://dicot.tech/solutions/",
+    "industries": "https://dicot.tech/industries/",
+    "alternatives": "https://dicot.tech/alternatives/",
+    "about": "https://dicot.tech/about/",
+    "contact": "https://dicot.tech/contact/",
+    "privacy": "https://dicot.tech/legal/privacy/",
+    "llms": "https://dicot.tech/llms.txt",
+    "markdownExample": "https://dicot.tech/index.md"
+  }
+}

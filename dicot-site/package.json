@@ -5,12 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/publish-root.mjs",
+    "build": "astro build && node scripts/generate-markdown.mjs && node scripts/publish-root.mjs",
     "build:deploy": "npm run build && node scripts/copy-php-vendor.mjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "probe:429": "node scripts/probe-429.mjs",
+    "smoke:endpoints": "node scripts/smoke-endpoints.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.5",
     "astro": "^5.18.2"
+  },
+  "devDependencies": {
+    "turndown": "^7.2.5",
+    "turndown-plugin-gfm": "^1.0.2"
   }
 }

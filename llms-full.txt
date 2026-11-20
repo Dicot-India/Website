@@ -1,0 +1,2709 @@
+# Dicot Innovations — full site text
+
+> Generated 2026-11-20 from https://dicot.tech. HTML pages are canonical.
+> Products: Vision C (mini-SCADA), Vision S (enterprise SCADA), Vision Web (hosted cloud SCADA) and VGraphic (cloud report generator).
+> Prices are shared through authorised dealers and are not published. Vision S Lite is in development.
+
+---
+title: "SCADA & IIoT Software Built in India | Dicot"
+description: "Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Vision C, Vision S and Vision Web run in 1,000+ plants. Book a demo."
+url: "https://dicot.tech/"
+markdown_url: "https://dicot.tech/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/. The HTML page remains the source of truth. -->
+# SCADA and IIoT software, _built in India_ for the world.
+
+Connect the shop floor to the top floor with Vision C, Vision S and Vision Web. One suite for data logging, remote monitoring and regulated manufacturing — deployed in 1,000+ plants across nine industries.
+
+[Book a demo](/contact/) [Explore the suite](/products/)
+
+800+ customers 1,000+ deployments 4,000+ device protocols
+
+Recognised & supported by
+
+![Startup India](/images/sui.png)![i-Hub, a Gujarat Government enterprise](/images/i-hub.png)![Wadhwani Foundation](/images/wf-logo.png)![Make in India](/images/image-1.png)
+
+The layer between
+
+## From a sensor on a machine to a decision on a phone.
+
+Dicot makes the software layer between industrial equipment and the people who run it: collect data, keep it safe, show it clearly and raise the alarm when something drifts.
+
+**800+** customers
+
+**1,000+**deployments
+
+**4,000+**device protocols
+
+**50–100 ms**cloud update latency
+
+Product index
+
+## One architecture. Every size of plant.
+
+[Compare all products](/products/)
+
+[01
+
+### Vision C
+
+Mini-SCADA & data logger
+
+Shop-floor SCADA that installs in minutes, not months.
+
+Up to 100Modbus TCP/IP, RTU, BCD, AIBUS
+
+](/products/vision-c/)[02
+
+### Vision Web
+
+Cloud SCADA & IIoT platform
+
+Your plant on any screen, with alarms where your team already is.
+
+Up to 20,000 per projectHTTP, MQTT
+
+](/products/vision-web/)[03
+
+### Vision S
+
+Enterprise SCADA
+
+Full SCADA for regulated, high-tag-count plants.
+
+Up to 60,0004,000+, OPC UA and DA
+
+](/products/vision-s/)[04
+
+### Vision S Lite
+
+Lightweight enterprise SCADA In development
+
+The Vision S platform, sized for cost-sensitive plants.
+
+Vision S platformReduced set vs Vision S
+
+](/products/vision-s-lite/)[05
+
+### VGraphic
+
+Cloud report generator
+
+Turn plant files into branded PDF reports from anywhere.
+
+None, cloud-basedExcel, CSV, SQL, DAT
+
+](/products/vgraphic/)
+
+The data path
+
+## One path from PLC to PDF.
+
+Each product does one job in the same chain. Start at the machine, add plant-wide visibility, then put the evidence in front of the person who needs it.
+
+1.  01 / Collect
+    
+    ### Vision C
+    
+    Reads Modbus TCP/IP, RTU, BCD and AIBUS from one machine or line. Up to 100 tags, logged locally.
+    
+2.  02 / Run the plant
+    
+    ### Vision S
+    
+    Enterprise SCADA for multi-line plants: 4,000+ protocols, OPC UA/DA and 21 CFR-ready audit trails.
+    
+3.  03 / Reach people
+    
+    ### Vision Web
+    
+    Hosted cloud SCADA with 50–100 ms updates and alarms by SMS, email, WhatsApp and Telegram.
+    
+4.  04 / Report
+    
+    ### VGraphic
+    
+    Turns Excel, CSV, SQL and DAT files into branded PDF tables and graphs, on desktop or phone.
+    
+
+[See how it fits your plant](/solutions/)
+
+How we work
+
+## Industrial software without the industrial project.
+
+Most SCADA rollouts stall on integration. Dicot ships a working platform, a dealer network that knows the plant, and support that answers the same day.
+
+-   **Same-day expert support** for production issues, not a ticket queue.
+-   **Free software updates** across the supported licence term.
+-   **Deploy on-prem or in our cloud**, and change your mind later.
+-   **Made in India** under Startup India, i-Hub, Wadhwani Foundation and Make in India.
+
+[About Dicot](/about/) [See solutions](/solutions/)
+
+![Vision Web cloud SCADA dashboard with connected projects](/images/vision-web.png)
+
+Vision Web — hosted cloud SCADA dashboard
+
+Industry index
+
+## Where our software runs.
+
+[All industries](/industries/)
+
+[01
+
+### Pharmaceuticals
+
+Batch records, audit trails and 21 CFR-ready controls for regulated production. Vision S keeps the evidence trail your auditors ask for.
+
+Audit trails and e-signature](/industries/#pharma) [02
+
+### Textiles
+
+Monitor dyeing, spinning and processing lines, log shifts and catch deviations before a batch is wasted.
+
+Multi-line data logging](/industries/#textiles) [03
+
+### Food & beverage
+
+Track temperature, pressure and batch times with reports that satisfy quality teams and customers.
+
+Batch-wise reporting](/industries/#food-beverage) [04
+
+### Machine tools
+
+Give OEM machines a ready SCADA and cloud layer without building software for every customer.
+
+OEM and white-label ready](/industries/#machine-tools) [05
+
+### Water treatment
+
+Watch tank levels, flow, pH and conductivity across remote sites, with alarms on the phones your operators carry.
+
+Remote alarms](/industries/#water-treatment) [06
+
+### Foundry
+
+Log furnace, moulding and cooling data in harsh environments and compare shifts without paper registers.
+
+Rugged, low-footprint logging](/industries/#foundry) [07
+
+### Ceramics
+
+Follow kiln curves and energy use over long cycles, and export the evidence for every batch.
+
+Long-cycle trending](/industries/#ceramics) [08
+
+### Railway
+
+Monitor wayside and depot equipment with local logging and central visibility, even across distributed sites.
+
+Distributed monitoring](/industries/#railway) [09
+
+### HVAC
+
+Track AHU temperatures, humidity and energy use, and alert facility teams when a space drifts out of range.
+
+Comfort and energy visibility](/industries/#hvac)
+
+In their words
+
+## What partners and plant teams say.
+
+> Dicot's IIoT software offers unmatched compatibility. Their data acquisition software is ideal for logging and remote monitoring, making them a top choice for manufacturing clients seeking reliable SCADA alternatives.
+> 
+> **Raj Kanabar**CEO, Radical TechArt
+
+> Vision C is a game-changer. As a mini-SCADA, it is quick to set up and drives digitalisation forward. Our customers consistently praise its effectiveness as a modern SCADA India solution.
+> 
+> **Mayank Dantwala**CEO, Control Equipments & Marketing Co.
+
+> Dicot's SCADA software is intuitive and stable. The prompt support ensures seamless remote monitoring and data logging, which is critical for our industrial operations and Industry 4.0 initiatives.
+> 
+> **Amit Prajapati**Maintenance Head, Electrotherm India Ltd.
+
+Buying guide
+
+## Compare the options before you commit.
+
+Traditional SCADA, a cloud platform and a mini-SCADA solve different problems. We wrote an honest comparison so you can pick the right shape for your plant — even if it is not ours.
+
+[SCADA alternatives in India](/alternatives/) [Cloud vs on-premise](/compare/cloud-vs-on-premise-scada/)
+
+<table class="spec-table"><tbody><tr><th>Single machine</th><td>Vision C</td></tr><tr><th>Multi-line plant</th><td>Vision S</td></tr><tr><th>Remote sites</th><td>Vision Web</td></tr><tr><th>Shift reports</th><td>VGraphic</td></tr><tr><th>Regulated process</th><td>Vision S + e-signature</td></tr></tbody></table>
+
+FAQ
+
+## Questions buyers ask before a demo
+
+Short answers to the things plant teams ask us first. If yours is not here, ask us directly.
+
+What does Dicot Innovations do?
+
+Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Its products are Vision C (mini-SCADA and data logger), Vision S (enterprise SCADA), Vision Web (hosted cloud SCADA) and VGraphic (cloud report generator). Vision S Lite, a lighter Vision S for cost-sensitive applications, is in development. The company was founded in Ahmedabad in 2022 and its software is deployed in more than 1,000 plants.
+
+Is Dicot's SCADA software made in India?
+
+Yes. Dicot designs and develops its software in Ahmedabad, Gujarat. It is recognised under Startup India, incubated at i-Hub (a Gujarat Government enterprise), supported by the Wadhwani Foundation and part of the Make in India initiative.
+
+What is the difference between Vision C, Vision S and Vision Web?
+
+Vision C is a lightweight on-premises mini-SCADA for up to 100 tags. Vision S is an enterprise SCADA for up to 60,000 tags, with 4,000+ protocols and 21 CFR-ready audit trails. Vision Web is a cloud SCADA platform hosted by Dicot, with up to 20,000 tags per project and mobile alarms. Vision S Lite, in development, is a lighter Vision S with fewer protocols and a smaller design library for cost-sensitive applications.
+
+Can Dicot software connect to existing PLCs and machines?
+
+Yes. Vision C supports Modbus TCP/IP, RTU, BCD and AIBUS. Vision S supports more than 4,000 device protocols including OPC UA and OPC DA. Vision Web receives data over MQTT and HTTP, including from Vision C.
+
+How do I get pricing?
+
+Dicot sells through an authorised dealer network, so prices are shared by your nearest dealer rather than published online. Send an enquiry with your tag count and deployment type and the team will route it to the right partner.
+
+Which industries use Dicot software?
+
+Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC. Deployments range from a single machine to multi-line plants.
+
+## Put your plant on the screen.
+
+Tell us your tag count, deployment type and timeline. We will route you to the right product and the nearest authorised partner.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/. Questions: sales@dicot.tech
+
+
+---
+title: "SCADA, IIoT & Report Software | Dicot Products"
+description: "Compare Dicot's product suite: Vision C mini-SCADA, Vision S enterprise SCADA, Vision S Lite (in development), Vision Web cloud SCADA and VGraphic report generator."
+url: "https://dicot.tech/products/"
+markdown_url: "https://dicot.tech/products/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/products/. The HTML page remains the source of truth. -->
+Product suite
+
+# SCADA software for every size of plant.
+
+Start with a single machine and a mini-SCADA, grow into a multi-line plant, or put remote sites on a phone. Every product shares the same tag model and reporting logic, so your team learns one system.
+
+| Product | Best for | Tags | Deployment | Licence |
+| --- | --- | --- | --- | --- |
+| **[Vision C](/products/vision-c/)**  
+Mini-SCADA & data logger | Machine builders, panel integrators and plant teams that need reliable logging and remote monitoring without a development project. | 100 | On-premise Windows | 2–20 years or perpetual |
+| **[Vision Web](/products/vision-web/)**  
+Cloud SCADA & IIoT platform | Teams that need remote monitoring, multi-site visibility and mobile alarms without running servers or a VPN. | 20,000 per project | Hosted by Dicot | Yearly subscription |
+| **[Vision S](/products/vision-s/)**  
+Enterprise SCADA | Pharma, process and large manufacturing sites that need audit trails, high tag counts and a configurable SCADA architecture. | 60,000 | On-premise Windows | Tag-based, runtime + development |
+| **[Vision S Lite](/products/vision-s-lite/)** In development  
+Lightweight enterprise SCADA | Machine builders and plant teams that need Vision S-style SCADA, but do not need the full protocol library or the full design environment. | Below Vision S | Vision S platform | Announced at launch |
+| **[VGraphic](/products/vgraphic/)**  
+Cloud report generator | Quality, maintenance and production teams that spend hours turning exported data into shift and management reports. | Not tag-based | Cloud | 1–10 years or offline lifetime |
+
+01 · Mini-SCADA & data logger
+
+## Vision C
+
+Vision C is a Windows mini-SCADA and data logger for compact machines and single lines. It handles up to 100 tags, connects over Modbus TCP/IP, RTU, BCD and AIBUS, and pushes data to Vision Web in one click. Licences run from two years to perpetual.
+
+Up to 100Modbus TCP/IP, RTU, BCD, AIBUSOn-premises, WindowsUnlimited
+
+[Explore Vision C](/products/vision-c/) [Plans & licensing](/pricing/)
+
+![Vision C mini-SCADA interface showing live indicator tiles](/images/vision-c.png)
+
+Vision C — product interface
+
+02 · Cloud SCADA & IIoT platform
+
+## Vision Web
+
+Vision Web is Dicot's hosted cloud SCADA platform. It brings up to 20,000 tags per project into a browser, updates at 50–100 ms, keeps two years of history and sends alarms by SMS, email, WhatsApp and Telegram. Dicot hosts and maintains the platform; you log in and run the plant.
+
+Up to 20,000 per projectHTTP, MQTT50–100 msManaged by Dicot
+
+[Explore Vision Web](/products/vision-web/) [Plans & licensing](/pricing/)
+
+![Vision Web cloud SCADA dashboard showing connected projects](/images/vision-web.png)
+
+Vision Web — product interface
+
+03 · Enterprise SCADA
+
+## Vision S
+
+Vision S is Dicot's enterprise SCADA for large and regulated plants. It scales to 60,000 tags, speaks 4,000+ protocols including OPC UA and DA, keeps 21 CFR-ready audit trails and stores history in PostgreSQL. Runtime, development, client-server and web-client licences can be mixed to fit the architecture.
+
+Up to 60,0004,000+, OPC UA and DA21 CFR-readyPostgreSQL
+
+[Explore Vision S](/products/vision-s/) [Plans & licensing](/pricing/)
+
+![Vision S enterprise SCADA project explorer and configuration interface](/images/visions.png)
+
+Vision S — product interface
+
+04 · Lightweight enterprise SCADA
+
+## Vision S LiteIn development
+
+Vision S Lite is a lighter edition of Vision S, in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library, for applications that need Vision S-style SCADA without the full footprint.
+
+Vision S platformReduced set vs Vision SSmaller than Vision SCost-sensitive applications
+
+[See what we can share](/products/vision-s-lite/) [Register interest](/contact/?interest=vision-s-lite)
+
+In development **Vision S Lite**
+
+Lighter Vision S platform · reduced protocol set · smaller design library
+
+Vision S Lite — launch preview
+
+05 · Cloud report generator
+
+## VGraphic
+
+VGraphic is a cloud report generator for industrial data. Upload or connect Excel, CSV, SQL and DAT files, filter by time or file, and export branded PDF tables and graphs from a desktop or mobile browser. There is nothing to install.
+
+None, cloud-basedExcel, CSV, SQL, DATPDF tables and graphsDesktop and mobile
+
+[Explore VGraphic](/products/vgraphic/) [Plans & licensing](/pricing/)
+
+![VGraphic report generator showing plotted channel data and chart options](/images/vgraphic.png)
+
+VGraphic — product interface
+
+## Not sure which product fits?
+
+Tell us the tag count, protocols and whether you need cloud or on-premise. We will point you to the smallest product that does the job.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/products/. Questions: sales@dicot.tech
+
+
+---
+title: "Vision C Mini-SCADA & Data Logger | Dicot"
+description: "Vision C is a lightweight Windows mini-SCADA and data logger for up to 100 tags. Modbus TCP/IP, RTU, BCD, AIBUS, 8 languages and one-click Vision Web connectivity."
+url: "https://dicot.tech/products/vision-c/"
+markdown_url: "https://dicot.tech/products/vision-c/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/products/vision-c/. The HTML page remains the source of truth. -->
+Mini-SCADA & data logger
+
+# Vision C
+
+Shop-floor SCADA that installs in minutes, not months.
+
+Vision C is a Windows mini-SCADA and data logger for compact machines and single lines. It handles up to 100 tags, connects over Modbus TCP/IP, RTU, BCD and AIBUS, and pushes data to Vision Web in one click. Licences run from two years to perpetual.
+
+[Book a demo](/contact/) [See plans](/pricing/)
+
+Last updated November 2026
+
+![Vision C mini-SCADA interface showing live indicator tiles](/images/vision-c.png)
+
+Vision C — product interface
+
+Key facts
+
+## What Vision C does.
+
+### Best for
+
+Machine builders, panel integrators and plant teams that need reliable logging and remote monitoring without a development project.
+
+<table class="spec-table"><tbody><tr><th>Tags</th><td>Up to 100</td></tr><tr><th>Protocols</th><td>Modbus TCP/IP, RTU, BCD, AIBUS</td></tr><tr><th>Deployment</th><td>On-premises, Windows</td></tr><tr><th>User levels</th><td>Unlimited</td></tr><tr><th>Historical data</th><td>File-based, exportable</td></tr><tr><th>Trends</th><td>Last 1 hour, live</td></tr><tr><th>Recipes</th><td>PID, up to 100 steps</td></tr><tr><th>Languages</th><td>8</td></tr><tr><th>Security</th><td>2-layer</td></tr><tr><th>Install size</th><td>~10 MB</td></tr><tr><th>OS</th><td>Windows 8 or later</td></tr><tr><th>Licence</th><td>2, 5, 10, 20 years or perpetual</td></tr></tbody></table>
+
+Capabilities
+
+## What you get on day one.
+
+No add-on modules to buy before the product is useful. These are part of the platform.
+
+01
+
+### Zero development time
+
+Install, map your tags and start logging the same day. No screens to code, no integration project.
+
+02
+
+### One-click Vision Web link
+
+Send live and historical data to the cloud without a gateway script or a second configuration.
+
+03
+
+### Batch recording
+
+Record multiple batches at the same time with batch-wise reports for traceability.
+
+04
+
+### PID recipes
+
+Store and recall up to 100-step recipes for repeatable process changes.
+
+05
+
+### Reports your team can read
+
+Print or export PDF reports with your logo, watermark and header.
+
+06
+
+### Runs on modest hardware
+
+About 10 MB installed, Windows 8 or later and 4 GB of RAM is enough.
+
+Plans & licensing
+
+## Licence it the way your plant buys.
+
+Prices are shared through our authorised dealer network. Request a quote and we will route it to the right partner.
+
+[Request a quote](/contact/) [Find a dealer](/contact/#channel-partners)
+
+| Edition | What it includes |
+| --- | --- |
+| **2-year licence** | Full licence, unlimited tags within the 100-tag limit. |
+| **5-year licence** | Same feature set with a longer support window. |
+| **10-year licence** | For deployments with a long plant lifecycle. |
+| **20-year licence** | Long-horizon licence for OEM and infrastructure projects. |
+| **Perpetual licence** | Perpetual use without future software updates. |
+
+Requirements
+
+## What it runs on.
+
+Modest hardware by industrial software standards. Check these before a pilot.
+
+-   Windows 8 or later
+-   4 GB RAM or more
+-   Adobe PDF Reader for reports
+-   Ethernet or serial port for device connectivity
+
+FAQ
+
+## Vision C: questions buyers ask
+
+What is Vision C?
+
+Vision C is a mini-SCADA and data-logging application for Windows. It reads tags from PLCs and devices, shows live values and trends, stores history, records batches and generates reports. It supports up to 100 tags.
+
+Which protocols does Vision C support?
+
+Modbus TCP/IP, Modbus RTU, BCD and AIBUS, across multiple ports.
+
+Can Vision C send data to the cloud?
+
+Yes. A one-click connection forwards data to Vision Web, Dicot's hosted SCADA platform, for remote monitoring and alerts.
+
+How is Vision C licensed?
+
+As a time-based licence of 2, 5, 10 or 20 years, or perpetual without future updates. Pricing is provided by authorised dealers.
+
+Do I need a developer to set it up?
+
+No. Configuration is done through the application. Most customers are logging data on the first day.
+
+Related
+
+## Works with the rest of the suite.
+
+[All products](/products/)
+
+[
+
+### Vision Web
+
+Cloud SCADA & IIoT platform
+
+Your plant on any screen, with alarms where your team already is.
+
+Up to 20,000 per projectHTTP, MQTT
+
+](/products/vision-web/)[
+
+### Vision S
+
+Enterprise SCADA
+
+Full SCADA for regulated, high-tag-count plants.
+
+Up to 60,0004,000+, OPC UA and DA
+
+](/products/vision-s/)[
+
+### Vision S Lite
+
+Lightweight enterprise SCADA
+
+The Vision S platform, sized for cost-sensitive plants.
+
+Vision S platformReduced set vs Vision S
+
+](/products/vision-s-lite/)
+
+## See Vision C on your data.
+
+A 30-minute demo with your tags, your protocols and your questions. No slide deck.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/products/vision-c/. Questions: sales@dicot.tech
+
+
+---
+title: "Vision S Enterprise SCADA Software | Dicot"
+description: "Vision S enterprise SCADA scales to 60,000 tags with 4,000+ protocols, OPC UA/DA, 21 CFR audit trails, PostgreSQL history, C scripting and web clients."
+url: "https://dicot.tech/products/vision-s/"
+markdown_url: "https://dicot.tech/products/vision-s/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/products/vision-s/. The HTML page remains the source of truth. -->
+Enterprise SCADA
+
+# Vision S
+
+Full SCADA for regulated, high-tag-count plants.
+
+Vision S is Dicot's enterprise SCADA for large and regulated plants. It scales to 60,000 tags, speaks 4,000+ protocols including OPC UA and DA, keeps 21 CFR-ready audit trails and stores history in PostgreSQL. Runtime, development, client-server and web-client licences can be mixed to fit the architecture.
+
+[Book a demo](/contact/) [See plans](/pricing/)
+
+Last updated November 2026
+
+![Vision S enterprise SCADA project explorer and configuration interface](/images/visions.png)
+
+Vision S — product interface
+
+Key facts
+
+## What Vision S does.
+
+### Best for
+
+Pharma, process and large manufacturing sites that need audit trails, high tag counts and a configurable SCADA architecture.
+
+<table class="spec-table"><tbody><tr><th>Tags</th><td>Up to 60,000</td></tr><tr><th>Protocols</th><td>4,000+, OPC UA and DA</td></tr><tr><th>Audit trails</th><td>21 CFR-ready</td></tr><tr><th>Historical database</th><td>PostgreSQL</td></tr><tr><th>Scripting</th><td>C</td></tr><tr><th>User levels</th><td>Unlimited</td></tr><tr><th>Recipes</th><td>Unlimited</td></tr><tr><th>Batches</th><td>Multiple simultaneous</td></tr><tr><th>Reports</th><td>Print and PDF, fully customisable</td></tr><tr><th>Extras</th><td>E-signature, OPC UA server, multi-monitor</td></tr><tr><th>Licence</th><td>Tag-based, runtime and development</td></tr></tbody></table>
+
+Capabilities
+
+## What you get on day one.
+
+No add-on modules to buy before the product is useful. These are part of the platform.
+
+01
+
+### Audit trails that stand up
+
+21 CFR-ready trails, electronic signatures and user-level control for regulated manufacturing.
+
+02
+
+### 4,000+ device protocols
+
+Connect mixed PLCs, drives and legacy equipment through OPC UA, OPC DA and native drivers.
+
+03
+
+### PostgreSQL history
+
+Plant data lands in a standard database, so your BI and reporting tools can query it directly.
+
+04
+
+### C scripting
+
+Write custom logic where configuration stops being enough, without leaving the platform.
+
+05
+
+### Architecture that fits
+
+Mix development, runtime, client-server and web-client licences as the plant grows.
+
+06
+
+### Built for the control room
+
+Multi-monitor layouts, alarms and batch views for operators who live in the system all shift.
+
+Plans & licensing
+
+## Licence it the way your plant buys.
+
+Tag-based licensing with separate development and runtime editions. Prices are shared through authorised dealers.
+
+[Request a quote](/contact/) [Find a dealer](/contact/#channel-partners)
+
+| Edition | What it includes |
+| --- | --- |
+| **Development licence** | For building and testing projects. Not for production deployment. |
+| **Runtime licence** | For live deployment on the plant floor, sized by tags. |
+| **Client/Server licence** | For distributed architectures without an I/O licence included. |
+| **Web Client licence** | Browser-based remote operation, sized by concurrent users. |
+| **Accessories** | Electronic signature and OPC UA server add-ons. |
+| **Enterprise scope** | Multi-site and 60,000-tag deployments scoped with our team. |
+
+Requirements
+
+## What it runs on.
+
+Modest hardware by industrial software standards. Check these before a pilot.
+
+-   Windows 7 or Windows 10
+-   Pentium 4, 1 GHz or higher
+-   4 GB RAM recommended (1 GB minimum)
+-   PostgreSQL for historical logging
+
+FAQ
+
+## Vision S: questions buyers ask
+
+What is Vision S?
+
+Vision S is an enterprise SCADA platform for Windows. It collects data from PLCs and devices, provides operator screens, alarms, trends, reports, recipes and batch recording, and scales to 60,000 tags.
+
+Does Vision S support 21 CFR Part 11 requirements?
+
+Vision S provides 21 CFR-ready audit trails, electronic signatures and user-level access control. Validation and compliance remain the responsibility of the regulated site.
+
+Which protocols are supported?
+
+More than 4,000 drivers, including OPC UA and OPC DA, with multi-port connectivity.
+
+Can I develop and deploy with different licences?
+
+Yes. Development, runtime, client-server and web-client licences are separate, and can be combined.
+
+Where is historical data stored?
+
+In PostgreSQL, with options for third-party integration.
+
+Related
+
+## Works with the rest of the suite.
+
+[All products](/products/)
+
+[
+
+### Vision C
+
+Mini-SCADA & data logger
+
+Shop-floor SCADA that installs in minutes, not months.
+
+Up to 100Modbus TCP/IP, RTU, BCD, AIBUS
+
+](/products/vision-c/)[
+
+### Vision Web
+
+Cloud SCADA & IIoT platform
+
+Your plant on any screen, with alarms where your team already is.
+
+Up to 20,000 per projectHTTP, MQTT
+
+](/products/vision-web/)[
+
+### Vision S Lite
+
+Lightweight enterprise SCADA
+
+The Vision S platform, sized for cost-sensitive plants.
+
+Vision S platformReduced set vs Vision S
+
+](/products/vision-s-lite/)
+
+## See Vision S on your data.
+
+A 30-minute demo with your tags, your protocols and your questions. No slide deck.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/products/vision-s/. Questions: sales@dicot.tech
+
+
+---
+title: "Vision Web Cloud SCADA & IIoT Platform | Dicot"
+description: "Vision Web is a hosted cloud SCADA platform with up to 20,000 tags, 50–100 ms updates, two-year history and SMS, email, WhatsApp and Telegram alarms."
+url: "https://dicot.tech/products/vision-web/"
+markdown_url: "https://dicot.tech/products/vision-web/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/products/vision-web/. The HTML page remains the source of truth. -->
+Cloud SCADA & IIoT platform
+
+# Vision Web
+
+Your plant on any screen, with alarms where your team already is.
+
+Vision Web is Dicot's hosted cloud SCADA platform. It brings up to 20,000 tags per project into a browser, updates at 50–100 ms, keeps two years of history and sends alarms by SMS, email, WhatsApp and Telegram. Dicot hosts and maintains the platform; you log in and run the plant.
+
+[Book a demo](/contact/) [See plans](/pricing/)
+
+Last updated November 2026
+
+![Vision Web cloud SCADA dashboard showing connected projects](/images/vision-web.png)
+
+Vision Web — product interface
+
+Key facts
+
+## What Vision Web does.
+
+### Best for
+
+Teams that need remote monitoring, multi-site visibility and mobile alarms without running servers or a VPN.
+
+<table class="spec-table"><tbody><tr><th>Tags</th><td>Up to 20,000 per project</td></tr><tr><th>Protocols</th><td>HTTP, MQTT</td></tr><tr><th>Update latency</th><td>50–100 ms</td></tr><tr><th>Hosting</th><td>Managed by Dicot</td></tr><tr><th>Historical data</th><td>NoSQL, 2-year retention</td></tr><tr><th>Alarms</th><td>SMS, email, WhatsApp, Telegram</td></tr><tr><th>Security</th><td>3-layer encryption, 2FA</td></tr><tr><th>Users</th><td>Unlimited user levels</td></tr><tr><th>Reports</th><td>Print and PDF, automatable</td></tr><tr><th>Licence</th><td>Yearly subscription</td></tr></tbody></table>
+
+Capabilities
+
+## What you get on day one.
+
+No add-on modules to buy before the product is useful. These are part of the platform.
+
+01
+
+### No server to maintain
+
+Dicot hosts, patches and backs up the platform. Your team opens a browser or the mobile app.
+
+02
+
+### Alarms on the channels you use
+
+Route different triggers to SMS, email, WhatsApp or Telegram so the right person hears about it.
+
+03
+
+### Derived channels
+
+Calculate efficiency, totals and ratios in the platform instead of adding logic to every PLC.
+
+04
+
+### Two-factor authentication
+
+Protect operator access with a second factor, alongside per-user passwords and roles.
+
+05
+
+### Data forwarding
+
+Push selected data to your own systems instead of locking it inside a dashboard.
+
+06
+
+### Mobile-first monitoring
+
+Android and Windows clients keep the plant visible when nobody is at a desk.
+
+Plans & licensing
+
+## Licence it the way your plant buys.
+
+Yearly subscription, quoted through authorised dealers. User add-ons apply after the included user allowance.
+
+[Request a quote](/contact/) [Find a dealer](/contact/#channel-partners)
+
+| Edition | What it includes |
+| --- | --- |
+| **10 tags** | Single small asset or a pilot project. |
+| **50 tags** | One machine or a compact production line. |
+| **500 tags** | A full line or a small plant. |
+| **5,000 tags** | Multi-line or multi-site monitoring. |
+| **Enterprise** | Above 5,000 tags, scoped with our team. |
+| **Add-ons** | Additional users, SMS credits and WhatsApp alerts. |
+
+Requirements
+
+## What it runs on.
+
+Modest hardware by industrial software standards. Check these before a pilot.
+
+-   Modern browser
+-   Internet connection at the plant gateway
+-   Android 8+ or Windows for the client apps
+-   MQTT-capable gateway or Vision C for data collection
+
+FAQ
+
+## Vision Web: questions buyers ask
+
+Is Vision Web hosted by Dicot?
+
+Yes. Dicot hosts, maintains and backs up Vision Web. Customers do not need to provision cloud infrastructure or manage servers.
+
+How fast does Vision Web update?
+
+Typical latency is 50–100 ms on a stable connection.
+
+How long is data retained?
+
+Two years of historical data is retained in the platform's NoSQL store.
+
+Which alarm channels are supported?
+
+SMS, email, WhatsApp and Telegram, with different triggers and recipients per alarm.
+
+Can I connect an existing PLC or Vision C installation?
+
+Yes. Vision Web receives data over MQTT or HTTP, and Vision C can forward data with a one-click connection.
+
+How is Vision Web priced?
+
+As a yearly subscription by tag count, with add-ons for extra users, SMS and WhatsApp. Prices are shared through authorised dealers.
+
+Related
+
+## Works with the rest of the suite.
+
+[All products](/products/)
+
+[
+
+### Vision C
+
+Mini-SCADA & data logger
+
+Shop-floor SCADA that installs in minutes, not months.
+
+Up to 100Modbus TCP/IP, RTU, BCD, AIBUS
+
+](/products/vision-c/)[
+
+### Vision S
+
+Enterprise SCADA
+
+Full SCADA for regulated, high-tag-count plants.
+
+Up to 60,0004,000+, OPC UA and DA
+
+](/products/vision-s/)[
+
+### Vision S Lite
+
+Lightweight enterprise SCADA
+
+The Vision S platform, sized for cost-sensitive plants.
+
+Vision S platformReduced set vs Vision S
+
+](/products/vision-s-lite/)
+
+## See Vision Web on your data.
+
+A 30-minute demo with your tags, your protocols and your questions. No slide deck.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/products/vision-web/. Questions: sales@dicot.tech
+
+
+---
+title: "Vision S Lite — Lightweight Vision S SCADA | Dicot"
+description: "Vision S Lite is a lighter edition of Vision S with fewer protocols and a smaller design library, built for cost-sensitive SCADA applications. In development."
+url: "https://dicot.tech/products/vision-s-lite/"
+markdown_url: "https://dicot.tech/products/vision-s-lite/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/products/vision-s-lite/. The HTML page remains the source of truth. -->
+Lightweight enterprise SCADA
+
+# Vision S Lite
+
+The Vision S platform, sized for cost-sensitive plants.
+
+Vision S Lite is a lighter edition of Vision S, in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library, for applications that need Vision S-style SCADA without the full footprint.
+
+[Register interest](/contact/?interest=vision-s-lite) [Talk to a dealer](/contact/#channel-partners)
+
+In development · editions and pricing at launch
+
+In development **Vision S Lite**
+
+Lighter Vision S platform · reduced protocol set · smaller design library
+
+Vision S Lite — launch preview
+
+Key facts
+
+## What Vision S Lite does.
+
+### Best for
+
+Machine builders and plant teams that need Vision S-style SCADA, but do not need the full protocol library or the full design environment.
+
+<table class="spec-table"><tbody><tr><th>Base</th><td>Vision S platform</td></tr><tr><th>Protocols</th><td>Reduced set vs Vision S</td></tr><tr><th>Design library</th><td>Smaller than Vision S</td></tr><tr><th>Target</th><td>Cost-sensitive applications</td></tr><tr><th>Status</th><td>In development</td></tr><tr><th>Licensing</th><td>Announced at launch</td></tr></tbody></table>
+
+Capabilities
+
+## What you get on day one.
+
+No add-on modules to buy before the product is useful. These are part of the platform.
+
+01
+
+### Vision S core
+
+Built on the Vision S software platform, with the same operating model for tags, alarms, trends and reports.
+
+02
+
+### A reduced protocol set
+
+Fewer drivers than the full Vision S library, matched to the equipment a cost-sensitive application actually uses.
+
+03
+
+### A smaller design library
+
+A leaner set of screens and objects, so engineering effort stays proportional to the plant.
+
+04
+
+### Sized for the budget
+
+For machines and plants where the full Vision S footprint costs more than the application needs.
+
+05
+
+### One platform to learn
+
+It runs on the Vision S architecture, so it is not a separate toolchain for your team.
+
+Launch status
+
+## In development. Register your interest.
+
+Vision S Lite is in development. Editions and pricing will be announced at launch and quoted through authorised dealers.
+
+[Register interest](/contact/?interest=vision-s-lite) [Talk to a dealer](/contact/#channel-partners)
+
+What we can confirm today
+
+-   It is a lighter edition of Vision S.
+-   It uses a reduced protocol set.
+-   It carries a smaller design library.
+-   It targets cost-sensitive applications.
+
+FAQ
+
+## Vision S Lite: questions buyers ask
+
+What is Vision S Lite?
+
+Vision S Lite is a lighter edition of Vision S, in development at Dicot. It keeps the Vision S software approach but uses a reduced protocol set and a smaller design library for cost-sensitive applications.
+
+How is Vision S Lite different from Vision S?
+
+Vision S Lite is scoped below Vision S: fewer protocols and a smaller design library. Vision S remains the choice for 60,000-tag, multi-line plants that need the full 4,000+ protocol library, OPC UA/DA and 21 CFR-ready audit trails.
+
+Is Vision S Lite available now?
+
+Not yet. It is in development. Register your interest and the team will share availability, editions and pricing when they are confirmed.
+
+Who is Vision S Lite for?
+
+Machine builders and plant teams with cost-sensitive applications that need Vision S-style SCADA, but do not need the full protocol library or design environment.
+
+How will Vision S Lite be licensed?
+
+Editions and pricing will be announced at launch. As with the rest of the Dicot range, quotes will be handled through authorised dealers.
+
+Related
+
+## Works with the rest of the suite.
+
+[All products](/products/)
+
+[
+
+### Vision C
+
+Mini-SCADA & data logger
+
+Shop-floor SCADA that installs in minutes, not months.
+
+Up to 100Modbus TCP/IP, RTU, BCD, AIBUS
+
+](/products/vision-c/)[
+
+### Vision Web
+
+Cloud SCADA & IIoT platform
+
+Your plant on any screen, with alarms where your team already is.
+
+Up to 20,000 per projectHTTP, MQTT
+
+](/products/vision-web/)[
+
+### Vision S
+
+Enterprise SCADA
+
+Full SCADA for regulated, high-tag-count plants.
+
+Up to 60,0004,000+, OPC UA and DA
+
+](/products/vision-s/)
+
+## Be first to see Vision S Lite.
+
+Tell us the application and tag scope. We will share availability, editions and pricing when they are confirmed.
+
+[Register interest](/contact/?interest=vision-s-lite) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/products/vision-s-lite/. Questions: sales@dicot.tech
+
+
+---
+title: "VGraphic Industrial Report Generator | Dicot"
+description: "VGraphic turns Excel, CSV, SQL and DAT plant data into branded PDF reports and graphs. Cloud-based, mobile and desktop, with time and file filters."
+url: "https://dicot.tech/products/vgraphic/"
+markdown_url: "https://dicot.tech/products/vgraphic/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/products/vgraphic/. The HTML page remains the source of truth. -->
+Cloud report generator
+
+# VGraphic
+
+Turn plant files into branded PDF reports from anywhere.
+
+VGraphic is a cloud report generator for industrial data. Upload or connect Excel, CSV, SQL and DAT files, filter by time or file, and export branded PDF tables and graphs from a desktop or mobile browser. There is nothing to install.
+
+[Book a demo](/contact/) [See plans](/pricing/)
+
+Last updated November 2026
+
+![VGraphic report generator showing plotted channel data and chart options](/images/vgraphic.png)
+
+VGraphic — product interface
+
+Key facts
+
+## What VGraphic does.
+
+### Best for
+
+Quality, maintenance and production teams that spend hours turning exported data into shift and management reports.
+
+<table class="spec-table"><tbody><tr><th>Installation</th><td>None, cloud-based</td></tr><tr><th>Input files</th><td>Excel, CSV, SQL, DAT</td></tr><tr><th>Output</th><td>PDF tables and graphs</td></tr><tr><th>Apps</th><td>Desktop and mobile</td></tr><tr><th>Filters</th><td>Time and file</td></tr><tr><th>Branding</th><td>Logo, header, footer</td></tr><tr><th>Storage</th><td>Cloud, expandable</td></tr><tr><th>Licence</th><td>1, 5 or 10 years; offline lifetime</td></tr></tbody></table>
+
+Capabilities
+
+## What you get on day one.
+
+No add-on modules to buy before the product is useful. These are part of the platform.
+
+01
+
+### No installation
+
+Open a browser, load the data and generate the report. Nothing to deploy on operator PCs.
+
+02
+
+### Works with what you already export
+
+Excel, CSV, SQL and DAT files from PLCs, loggers and historians.
+
+03
+
+### Branded PDFs
+
+Add your logo, header and footer so reports go out looking like your company made them.
+
+04
+
+### Graphs and tables
+
+Export both views in one report, filtered by time range or source file.
+
+05
+
+### Access from the floor
+
+Desktop and mobile apps let supervisors pull a shift report without returning to a cabin.
+
+Plans & licensing
+
+## Licence it the way your plant buys.
+
+Cloud and offline editions are available. Prices are shared through authorised dealers.
+
+[Request a quote](/contact/) [Find a dealer](/contact/#channel-partners)
+
+| Edition | What it includes |
+| --- | --- |
+| **1-year cloud** | Cloud licence with report generation and storage. |
+| **5-year cloud** | Longer cloud term for recurring reporting. |
+| **10-year cloud** | For long-life plant and OEM programmes. |
+| **Offline lifetime** | Perpetual offline licence for air-gapped sites. |
+| **Extra storage** | Additional cloud storage per GB per year. |
+
+Requirements
+
+## What it runs on.
+
+Modest hardware by industrial software standards. Check these before a pilot.
+
+-   Modern browser for the cloud edition
+-   Excel, CSV, SQL or DAT source files
+-   Internet connection for cloud sync
+
+FAQ
+
+## VGraphic: questions buyers ask
+
+What is VGraphic?
+
+VGraphic is a report generator for industrial data. It converts Excel, CSV, SQL and DAT files into branded PDF reports with tables and graphs.
+
+Do I need to install anything?
+
+No for the cloud edition. The offline lifetime edition is available for sites that cannot use the cloud.
+
+Can reports carry our logo?
+
+Yes. Logo, header and footer are configurable per report.
+
+How is VGraphic licensed?
+
+Cloud licences run for 1, 5 or 10 years. An offline lifetime licence and extra cloud storage are also available.
+
+Related
+
+## Works with the rest of the suite.
+
+[All products](/products/)
+
+[
+
+### Vision C
+
+Mini-SCADA & data logger
+
+Shop-floor SCADA that installs in minutes, not months.
+
+Up to 100Modbus TCP/IP, RTU, BCD, AIBUS
+
+](/products/vision-c/)[
+
+### Vision Web
+
+Cloud SCADA & IIoT platform
+
+Your plant on any screen, with alarms where your team already is.
+
+Up to 20,000 per projectHTTP, MQTT
+
+](/products/vision-web/)[
+
+### Vision S
+
+Enterprise SCADA
+
+Full SCADA for regulated, high-tag-count plants.
+
+Up to 60,0004,000+, OPC UA and DA
+
+](/products/vision-s/)
+
+## See VGraphic on your data.
+
+A 30-minute demo with your tags, your protocols and your questions. No slide deck.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/products/vgraphic/. Questions: sales@dicot.tech
+
+
+---
+title: "SCADA Software Pricing & Licensing | Dicot"
+description: "See how Dicot SCADA products are licensed: Vision C term or perpetual, Vision S tag-based runtime and development, Vision Web yearly cloud subscriptions. Vision S Lite is in development. Quotes via dealers."
+url: "https://dicot.tech/pricing/"
+markdown_url: "https://dicot.tech/pricing/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/pricing/. The HTML page remains the source of truth. -->
+Plans & licensing
+
+# Plans built for how plants actually buy.
+
+A single machine should not need an enterprise contract. Choose a term licence, a tag-based runtime, or a yearly cloud subscription — then get the number from your nearest authorised dealer.
+
+Edition finder
+
+## How many tags, and where does it run?
+
+Deployment type
+
+On-premise Cloud
+
+Approximate tags 
+
+**Vision C**
+
+On-premises mini-SCADA for one machine or line, up to 100 tags.
+
+[See Vision C](/products/vision-c/) [Request a quote](/contact/)
+
+Selected: 100 tags
+
+Cost-sensitive scope? [Vision S Lite is in development](/products/vision-s-lite/).
+
+This finder suggests a starting point only. Final sizing depends on protocol, scan rate and how many calculated tags the project needs.
+
+The plans
+
+## Every edition, side by side.
+
+No prices are published because dealer quotes include installation, support and local taxes. The editions below are fixed.
+
+Mini-SCADA & data logger
+
+### Vision C
+
+Prices are shared through our authorised dealer network. Request a quote and we will route it to the right partner.
+
+<table class="spec-table mt-2"><tbody><tr><th>2-year licence</th><td>Full licence, unlimited tags within the 100-tag limit.</td></tr><tr><th>5-year licence</th><td>Same feature set with a longer support window.</td></tr><tr><th>10-year licence</th><td>For deployments with a long plant lifecycle.</td></tr><tr><th>20-year licence</th><td>Long-horizon licence for OEM and infrastructure projects.</td></tr><tr><th>Perpetual licence</th><td>Perpetual use without future software updates.</td></tr></tbody></table>
+
+[Details](/products/vision-c/#plans)
+
+Cloud SCADA & IIoT platform
+
+### Vision Web
+
+Yearly subscription, quoted through authorised dealers. User add-ons apply after the included user allowance.
+
+<table class="spec-table mt-2"><tbody><tr><th>10 tags</th><td>Single small asset or a pilot project.</td></tr><tr><th>50 tags</th><td>One machine or a compact production line.</td></tr><tr><th>500 tags</th><td>A full line or a small plant.</td></tr><tr><th>5,000 tags</th><td>Multi-line or multi-site monitoring.</td></tr><tr><th>Enterprise</th><td>Above 5,000 tags, scoped with our team.</td></tr><tr><th>Add-ons</th><td>Additional users, SMS credits and WhatsApp alerts.</td></tr></tbody></table>
+
+[Details](/products/vision-web/#plans)
+
+Enterprise SCADA
+
+### Vision S
+
+Tag-based licensing with separate development and runtime editions. Prices are shared through authorised dealers.
+
+<table class="spec-table mt-2"><tbody><tr><th>Development licence</th><td>For building and testing projects. Not for production deployment.</td></tr><tr><th>Runtime licence</th><td>For live deployment on the plant floor, sized by tags.</td></tr><tr><th>Client/Server licence</th><td>For distributed architectures without an I/O licence included.</td></tr><tr><th>Web Client licence</th><td>Browser-based remote operation, sized by concurrent users.</td></tr><tr><th>Accessories</th><td>Electronic signature and OPC UA server add-ons.</td></tr><tr><th>Enterprise scope</th><td>Multi-site and 60,000-tag deployments scoped with our team.</td></tr></tbody></table>
+
+[Details](/products/vision-s/#plans)
+
+Cloud report generator
+
+### VGraphic
+
+Cloud and offline editions are available. Prices are shared through authorised dealers.
+
+<table class="spec-table mt-2"><tbody><tr><th>1-year cloud</th><td>Cloud licence with report generation and storage.</td></tr><tr><th>5-year cloud</th><td>Longer cloud term for recurring reporting.</td></tr><tr><th>10-year cloud</th><td>For long-life plant and OEM programmes.</td></tr><tr><th>Offline lifetime</th><td>Perpetual offline licence for air-gapped sites.</td></tr><tr><th>Extra storage</th><td>Additional cloud storage per GB per year.</td></tr></tbody></table>
+
+[Details](/products/vgraphic/#plans)
+
+Vision S Lite, a lighter Vision S for cost-sensitive applications, is in development. Editions and pricing will be announced at launch. [See the launch page](/products/vision-s-lite/).
+
+Sizing
+
+## What is a tag, really?
+
+One tag is one value: a temperature, a pressure, a motor run status, a calculated total. If a screen shows the same value twice, that is still one tag. If you calculate efficiency from four readings, the calculated value is a fifth tag.
+
+<table class="spec-table"><tbody><tr><th>One compact machine</th><td>20–100 tags</td></tr><tr><th>One production line</th><td>100–1,000 tags</td></tr><tr><th>Small plant</th><td>1,000–5,000 tags</td></tr><tr><th>Large or regulated plant</th><td>5,000–60,000 tags</td></tr></tbody></table>
+
+FAQ
+
+## Licensing questions, answered
+
+The commercial questions we get before a quote. Ask your dealer for the numbers.
+
+Why are prices not listed on the website?
+
+Dicot sells through an authorised dealer network. Dealers quote in their local context, bundle installation and support, and handle taxes and purchase formalities. Send an enquiry with your tag count and the nearest dealer will respond.
+
+What counts as a tag?
+
+A tag is one data point the software reads, writes or calculates, such as a temperature, a motor status or a totaliser. Licences are sized by the number of tags you need in a project.
+
+Are software updates included?
+
+Vision C, Vision S and Vision Web include free software updates during the supported licence term. A perpetual Vision C licence does not include future updates.
+
+Can I start small and upgrade?
+
+Yes. Vision C can forward data to Vision Web, and Vision S licences can be extended by tags or editions. Upgrades are handled through the dealer who sold the original licence.
+
+Do you offer development or evaluation licences?
+
+Vision S has separate development, runtime, client-server and web-client editions so you can build before you deploy. Ask your dealer about evaluation options for your scope.
+
+Is there a subscription for on-premise software?
+
+Vision C is licensed for a fixed term or perpetual. Vision S is licensed by tags with separate development and runtime editions. Vision Web and VGraphic cloud are yearly subscriptions.
+
+## Get a number for your scope.
+
+Send tag count, protocols and whether you need on-premise or cloud. We will route it to the nearest authorised dealer.
+
+[Request a quote](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/pricing/. Questions: sales@dicot.tech
+
+
+---
+title: "Software Downloads | Dicot Vision C, Vision S, Vision Web, VGraphic"
+description: "Download Dicot software: Vision C setup, the Vision S green-key and grey-key installers, Vision Web Windows and Android clients, VGraphic setup and manuals, plus the RS-485 driver."
+url: "https://dicot.tech/downloads/"
+markdown_url: "https://dicot.tech/downloads/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/downloads/. The HTML page remains the source of truth. -->
+Downloads
+
+# Installers, clients and manuals.
+
+Current builds for Windows and Android. Licence keys are issued by your dealer or by our sales team; the installers below do not include a licence. The Vision S installers are large, so we ask who you are before sending a temporary link or starting the download.
+
+### Vision S installers
+
+Two builds, 827 MB and 977 MB. Choose the one that matches the key you were issued; we ask for a name, company and work email before sending a temporary link or starting the download.
+
+-   [Green key — Vision S — green key](/downloads/vision-s/) 827 MB
+-   [Grey key — Vision S Version 2026 — grey key](/downloads/vision-s/) 977 MB
+
+[Get a Vision S installer](/downloads/vision-s/)
+
+### Vision C
+
+-   [Vision C setup (Windows)](https://dicot.in/VisionCsetup.exe) EXE
+-   [Vision C user guide](https://dicot.in/Userguidevc2.pdf) PDF
+
+### Vision Web
+
+-   [Vision Web client (Windows)](https://dicot.tech/VisionWebClient.exe) EXE
+-   [Vision Web app (Android)](https://dicot.tech/VisionWeb.apk) APK
+
+### Vision S manuals
+
+-   [Vision S manual pack](https://dicot.tech/VisionS_Manual.zip) ZIP
+
+### VGraphic
+
+-   [VGraphic setup](https://dicot.tech/VGSetup.exe) EXE
+-   [VGraphic manual](https://dicot.tech/Vgraphic_Manual.pdf) PDF
+
+### Utilities
+
+-   [RS-485 driver](https://dicot.tech/485driver.exe) EXE
+-   [Product catalogue](https://dicot.tech/Catalogue.pdf) PDF
+
+Files are hosted on dicot.tech and dicot.in. If a link fails, email [sales@dicot.tech](mailto:sales@dicot.tech) with the product name. The old licence generator page has been retired; licence keys are issued through your dealer.
+
+## Need a licence or an upgrade?
+
+Send your product, licence ID and the version you are running. We will route it to the right person.
+
+[Contact support](/contact/) [See plans](/pricing/)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/downloads/. Questions: sales@dicot.tech
+
+
+---
+title: "Download Vision S | Green key and grey key installers"
+description: "Download the Vision S installer that matches your key: the green-key build or the Vision S Version 2026 grey-key build. Request a temporary email link or start the download."
+url: "https://dicot.tech/downloads/vision-s/"
+markdown_url: "https://dicot.tech/downloads/vision-s/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/downloads/vision-s/. The HTML page remains the source of truth. -->
+Vision S · installers
+
+# Download the Vision S build that matches your key.
+
+Two installers are published. Choose the one that matches the licence key you were issued. The files are large (827 MB and 977 MB), so tell us who you are and we will either email a temporary link valid for 48 hours or start the download now.
+
+The installers do not include a licence. Vision S still needs a valid key, issued by your dealer or by our sales team.
+
+1\. Which build do you need? \*
+
+ Green key Vision S — green key 827 MB · file dated 2025-01-02 Installer for sites running Vision S with a green licence key. Grey key Vision S Version 2026 — grey key 977 MB · file dated 2026-01-07 Installer for sites running Vision S Version 2026 with a grey licence key.
+
+2\. How should we deliver it? \*  **Email me a temporary link** Valid 48 hours. Best on a slow or shared connection.  **Start the download now** Downloads in this browser straight away.
+
+Name \* 
+
+Company \* 
+
+Work email \* 
+
+Phone (optional) 
+
+## Before you download
+
+**What we collect:** your name, company, work email and, if you add it, your phone number; the build you chose, the time of the request, and a Cloudflare Turnstile security token. Your IP address is used only to stop repeated automated requests.
+
+**Why:** to send the download link or start the download, to help you if the install needs it, and to keep this form from being abused. We do not sell your data and we do not use it for unrelated advertising.
+
+**How long:** 24 months from our last contact. Security logs are kept for up to 90 days.
+
+**Your rights:** you can ask for access, correction or erasure, and you can withdraw consent at any time. Withdrawing is as easy as giving it: use the link in your confirmation email or write to [privacy@dicot.tech](mailto:privacy@dicot.tech). Grievance Officer: [privacy@dicot.tech](mailto:privacy@dicot.tech). Full detail in the [privacy policy](/legal/privacy/) (version 2.1).
+
+This form is for business users aged 18 or over. Please do not send personal or sensitive data about anyone else.
+
+ I agree that Dicot Innovations may use these details to send my Vision S download link and to contact me about this download. I have read the [privacy policy](/legal/privacy/). \* Send me occasional product updates. Optional, and I can unsubscribe at any time.
+
+ [Back to all downloads](/downloads/)
+
+This form records the request and the consent you give. We keep that record for 24 months from our last contact, then delete it.
+
+## Which key do I have?
+
+The key label states its colour. Choose the build with the same colour; the other build will not accept it. If you are unsure, send a photo of the key label to [sales@dicot.tech](mailto:sales@dicot.tech) before downloading a large file.
+
+-   **Green key** — VisionS.iso, 827 MB, file dated 2025-01-02
+-   **Grey key** — VisionS\_Version\_2026.iso, 977 MB, file dated 2026-01-07
+
+## Before you install
+
+-   Windows 7 or Windows 10, 4 GB RAM recommended (1 GB minimum).
+-   PostgreSQL is needed for historical logging.
+-   Mount the ISO, or write it to a DVD, then run the setup inside.
+-   Keep your licence key and licence ID to hand.
+
+## Need help?
+
+[sales@dicot.tech](mailto:sales@dicot.tech)  
+[+91 90166 83114](tel:+919016683114) (primary)  
+[+91 794 918 5398](tel:+917949185398)  
+
+Include the build, your licence ID and the Windows version so we can help faster.
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/downloads/vision-s/. Questions: sales@dicot.tech
+
+
+---
+title: "SCADA & IIoT Solutions for Manufacturers | Dicot"
+description: "OEM white-labelling, integration and panel building, Industry 4.0 consulting and custom SCADA development from Dicot. Start with a pilot on one machine, then scale across the plant."
+url: "https://dicot.tech/solutions/"
+markdown_url: "https://dicot.tech/solutions/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/solutions/. The HTML page remains the source of truth. -->
+Solutions
+
+# Connect the factory without rebuilding it.
+
+Dicot works with machine builders, integrators and plant teams. The software is the product, but the engagement is practical: connect what exists, prove the value on one asset, then scale.
+
+[Talk to an engineer](/contact/) [See the products](/products/)
+
+New capability
+
+## Integration and panel building.
+
+Dicot is adding system integration and control-panel building to what we deliver. A plant can now source the panel, the SCADA software and the commissioning from one team.
+
+[Talk about a panel project](/contact/?interest=integration)
+
+-   **Panel design and build.** Control panels specified around the machines they run.
+-   **PLC, HMI and SCADA integration.** One data model from the machine to the report.
+-   **Retrofits.** Legacy equipment brought into the same monitoring stack.
+-   **One accountable team.** From the panel drawing to the first report.
+
+### OEM & white-labelling
+
+Ship Vision C or Vision Web under your own brand. Your customers see your product; we handle the software, updates and licensing behind it.
+
+-   Your logo, your installer, your support tier
+-   Licensing matched to machine warranty
+-   No software team needed in-house
+
+### IIoT & Industry 4.0 consulting
+
+Work out what to connect, what to store and what the plant floor actually needs to see. We start with your equipment list and network, not a slide deck.
+
+-   Tag and protocol audit
+-   Cloud, on-premise or hybrid architecture
+-   Alarm and reporting design
+
+### Custom SCADA development
+
+When configuration stops being enough, our team builds screens, reports and integrations on top of Vision S and Vision C.
+
+-   Custom screens and reports
+-   Third-party database and API integration
+-   C scripting inside Vision S
+
+### Data acquisition at the edge
+
+Vision C collects from PLCs, meters and legacy devices over Modbus and serial, then forwards clean data to Vision Web or your own systems.
+
+-   Modbus TCP/IP, RTU, BCD and AIBUS
+-   Local history that survives network outages
+-   One-click cloud forwarding
+
+How it works
+
+## Three steps, no big-bang rollout.
+
+Most failed SCADA projects start with a plant-wide scope. We start with one asset and earn the next one.
+
+01
+
+### Map the plant
+
+List the machines, protocols, tag counts and who needs to see what. We do this with your team, on a call or on site.
+
+02
+
+### Pilot one asset
+
+Connect one machine or line, prove the data and the alarms, and measure whether the report saves anyone time.
+
+03
+
+### Scale with a partner
+
+Roll out through an authorised dealer or with our team, with licensing that matches how the plant buys.
+
+For partners
+
+## Build a practice on our software.
+
+Dealers and system integrators get dealer pricing, technical training and a platform that is configured rather than coded from scratch.
+
+[Apply as a partner](https://forms.gle/nEM8FH92WSQyTh4k8) [Partner programme](/partners/)
+
+<table class="spec-table"><tbody><tr><th>Machine builders</th><td>White-label Vision C or Vision Web</td></tr><tr><th>Integrators</th><td>Configure, don't code, each project</td></tr><tr><th>Dealers</th><td>Sell and support in your territory</td></tr><tr><th>Plant teams</th><td>Buy through a partner or direct</td></tr></tbody></table>
+
+## Start with one machine.
+
+Send us the equipment list and the outcome you need. We will tell you what is possible, and what is not.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/solutions/. Questions: sales@dicot.tech
+
+
+---
+title: "SCADA & IIoT by Industry | Dicot"
+description: "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC plants."
+url: "https://dicot.tech/industries/"
+markdown_url: "https://dicot.tech/industries/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/industries/. The HTML page remains the source of truth. -->
+Industries
+
+# Nine industries. One data layer.
+
+The equipment changes; the problem does not. Collect reliable data, keep it safe, show it to the right person and raise an alarm when it drifts. Here is how that looks in each industry we serve.
+
+[Pharmaceuticals](#pharma)[Textiles](#textiles)[Food & beverage](#food-beverage)[Machine tools](#machine-tools)[Water treatment](#water-treatment)[Foundry](#foundry)[Ceramics](#ceramics)[Railway](#railway)[HVAC](#hvac)
+
+Industry / 01
+
+## Pharmaceuticals
+
+Regulated production needs more than a dashboard. Vision S records who changed what, when, and why, with audit trails and electronic signatures that hold up to an audit. Batch data is stored in PostgreSQL so quality teams can query it directly.
+
+[Built on Vision S](/products/vision-s/) [Discuss your plant](/contact/)
+
+-   21 CFR-ready audit trails and e-signatures
+-   Batch recording with multiple simultaneous batches
+-   Reports with your formats and approval headers
+
+Industry / 02
+
+## Textiles
+
+Dyeing, spinning and processing lines fail quietly: a temperature drifts, a batch runs long, a shift loses the register. Vision C logs the process locally and Vision Web puts the line on a supervisor's phone.
+
+[Built on Vision C](/products/vision-c/) [Discuss your plant](/contact/)
+
+-   Multi-port Modbus data collection
+-   Shift and batch reports
+-   Alarms by WhatsApp or SMS when a line drifts
+
+Industry / 03
+
+## Food & beverage
+
+Temperature, pressure and time decide whether a batch is safe. Dicot software records the evidence continuously and turns it into a report that quality and customers can sign off.
+
+[Built on Vision C](/products/vision-c/) [Discuss your plant](/contact/)
+
+-   Batch-wise logging and traceability
+-   Temperature and pressure alarms
+-   PDF reports with logo and batch header
+
+Industry / 04
+
+## Machine tools
+
+Machine builders should not become software companies. Vision C gives your machine a SCADA and data logger, and Vision Web gives your customer remote visibility — under your brand.
+
+[Built on Vision C](/products/vision-c/) [Discuss your plant](/contact/)
+
+-   White-label OEM editions
+-   Licensing tied to machine warranty
+-   One-click cloud connection for your customer
+
+Industry / 05
+
+## Water treatment
+
+Water sites are remote, unmanned or both. Vision Web watches tank levels, flow, pH and conductivity, and escalates alarms to the people who can act.
+
+[Built on Vision Web](/products/vision-web/) [Discuss your plant](/contact/)
+
+-   Level, flow and quality trending
+-   SMS, WhatsApp and Telegram alarms
+-   Multi-site visibility from one login
+
+Industry / 06
+
+## Foundry
+
+Furnaces, moulding lines and cooling conveyors generate data in harsh conditions. Vision C runs on modest industrial PCs and keeps logging when the network does not.
+
+[Built on Vision C](/products/vision-c/) [Discuss your plant](/contact/)
+
+-   Local history on the plant floor
+-   Furnace and cooling trend logs
+-   Shift comparison reports
+
+Industry / 07
+
+## Ceramics
+
+Kiln cycles are long and expensive to repeat. Dicot software records the full curve, compares batches and exports the evidence for customers and process teams.
+
+[Built on Vision S](/products/vision-s/) [Discuss your plant](/contact/)
+
+-   Long-cycle trending and history
+-   Batch comparison
+-   Energy and temperature reporting
+
+Industry / 08
+
+## Railway
+
+Wayside and depot equipment is distributed across sites and often on poor networks. Vision C logs locally; Vision Web aggregates what matters centrally.
+
+[Built on Vision Web](/products/vision-web/) [Discuss your plant](/contact/)
+
+-   Distributed data collection
+-   Store-and-forward architecture
+-   Central alarms and reports
+
+Industry / 09
+
+## HVAC
+
+Comfort complaints and energy bills rarely arrive with the same owner. Vision Web tracks AHU temperatures, humidity and fan status, and alerts facilities before a space drifts.
+
+[Built on Vision Web](/products/vision-web/) [Discuss your plant](/contact/)
+
+-   AHU and room condition monitoring
+-   Humidity and temperature alarms
+-   Trends for energy reviews
+
+## Your industry not listed?
+
+If it has machines, sensors and a person who needs to know when something drifts, it is probably a fit. Ask us.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/industries/. Questions: sales@dicot.tech
+
+
+---
+title: "SCADA Alternatives in India: Buyer's Guide (2026) | Dicot"
+description: "Compare SCADA alternatives in India: traditional enterprise SCADA, mini-SCADA and cloud SCADA. Tag limits, licensing, offline operation and when each fits."
+url: "https://dicot.tech/alternatives/"
+markdown_url: "https://dicot.tech/alternatives/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/alternatives/. The HTML page remains the source of truth. -->
+Buyer's guide · updated November 2026
+
+# SCADA alternatives in India: how to choose.
+
+A SCADA alternative is software that delivers the core SCADA job — collect data, show it, alarm on it, store it and report on it — without the cost and deployment model of a traditional enterprise system. The three common shapes are enterprise SCADA, mini-SCADA and cloud SCADA.
+
+## The three shapes, compared
+
+|   | Traditional enterprise SCADA | Mini-SCADA | Cloud SCADA |
+| --- | --- | --- | --- |
+| **Typical scope** | Whole plant, many lines | One machine or line | Remote and multi-site monitoring |
+| **Tag ceiling** | 10,000–100,000+ | Up to 100 | 10–20,000 per project |
+| **Deployment** | On-premise servers | One Windows PC | Vendor-hosted |
+| **Time to first data** | Weeks to months | Hours to days | Hours |
+| **Works offline** | Yes | Yes | Partial — local buffering needed |
+| **Remote access** | VPN or web client | Via cloud forwarding | Native, browser and mobile |
+| **Audit trails** | Usually | Basic | Varies |
+| **Licensing** | Tag + client + module | Term or perpetual | Yearly subscription |
+| **IT burden** | High | Low | Low |
+
+Ranges are typical of the category, not a specific competitor. Confirm limits with any vendor before you buy.
+
+Five questions
+
+## Ask these before you sign.
+
+The answers decide more than the feature list.
+
+1.  **How many tags will you actually need in three years?** Buy for the plant you will have, not the pilot.
+2.  **What happens when the internet drops?** Control must keep running locally; only the remote view should depend on the cloud.
+3.  **Who owns the historical data?** Ask for export in a standard format, not a proprietary dump.
+4.  **Which protocols are supported natively?** Every unsupported driver becomes a custom integration line item.
+5.  **What does year three cost?** Renewals, client licences, support and update policy matter more than the first invoice.
+
+Where Dicot fits
+
+## One portfolio, four answers.
+
+We make every shape, so the honest answer can be "the smaller one".
+
+Mini-SCADA
+
+### Vision C
+
+One compact machine or line, up to 100 tags, on-premise, Modbus and serial. Term or perpetual licence.
+
+[Vision C →](/products/vision-c/)
+
+Cloud SCADA
+
+### Vision Web
+
+Remote monitoring, up to 20,000 tags per project, mobile alarms, hosted by Dicot. Yearly subscription.
+
+[Vision Web →](/products/vision-web/)
+
+Enterprise SCADA
+
+### Vision S
+
+Up to 60,000 tags, 4,000+ protocols, 21 CFR-ready audit trails, PostgreSQL history. Runtime and development editions.
+
+[Vision S →](/products/vision-s/)
+
+Lighter enterprise SCADA
+
+### Vision S Lite In development
+
+A lighter Vision S with fewer protocols and a smaller design library, for cost-sensitive applications.
+
+[Vision S Lite →](/products/vision-s-lite/)
+
+Honest limits
+
+## When Dicot is not the right choice.
+
+A good evaluation includes the cases where you should walk away.
+
+-   Safety-instrumented systems and SIL-rated control. Use a certified safety system, not SCADA software.
+-   Hard real-time control loops below 50 ms on non-Windows controllers.
+-   Full MES, ERP, warehouse or maintenance management. We integrate; we do not replace them.
+-   Plants above 60,000 tags in a single on-premise project — talk to us about a multi-server architecture first.
+-   Sites that cannot use Windows for on-premise deployments and cannot use a hosted cloud.
+
+FAQ
+
+## SCADA alternative questions
+
+What is a SCADA alternative?
+
+A SCADA alternative is software that provides the core SCADA functions — data collection, operator screens, alarms, trends, history and reports — without the cost and deployment model of a traditional enterprise SCADA. Common alternatives are mini-SCADA for single machines and cloud SCADA for remote monitoring.
+
+Is a mini-SCADA enough for a full plant?
+
+Often, no. A mini-SCADA such as Vision C is designed for up to 100 tags, typically one machine or a compact line. A plant with multiple lines, recipes, audit trails and long history needs an enterprise platform such as Vision S or a cloud platform such as Vision Web.
+
+Can cloud SCADA replace on-premise SCADA?
+
+For monitoring and alarming, usually yes. For high-speed control, safety functions or sites with unreliable connectivity, keep control on-premise and send data to the cloud. Most plants end up with a hybrid architecture.
+
+How do I compare SCADA licensing models?
+
+Compare the total cost over the plant's life, not the sticker price. Check tag limits, runtime versus development editions, client licences, update policy and what happens when you need 20% more tags. Ask for the renewal cost in writing.
+
+Does Dicot replace a full MES or ERP?
+
+No. Dicot provides the SCADA, IIoT and reporting layer between machines and business systems. It can forward data to MES, ERP or BI tools, but it is not an MES or ERP.
+
+Which Dicot product is the right alternative?
+
+For a compact machine or line up to 100 tags, Vision C. For cost-sensitive scopes that need Vision S-style software, Vision S Lite is in development. For a large or regulated plant up to 60,000 tags with audit trails, Vision S. For remote monitoring with mobile alarms, Vision Web. For shift reports, VGraphic.
+
+## Compare on your own tag list.
+
+Send the tag count, protocols and site constraints. We will tell you which shape fits, including when it is not ours.
+
+[Talk to an engineer](/contact/) [See pricing approach](/pricing/)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/alternatives/. Questions: sales@dicot.tech
+
+
+---
+title: "Cloud SCADA vs On-Premise SCADA | Dicot"
+description: "Cloud SCADA or on-premise? Compare latency, offline operation, cost, security, remote access and scale — and see when a hybrid architecture is the right answer."
+url: "https://dicot.tech/compare/cloud-vs-on-premise-scada/"
+markdown_url: "https://dicot.tech/compare/cloud-vs-on-premise-scada/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/compare/cloud-vs-on-premise-scada/. The HTML page remains the source of truth. -->
+Comparison · updated November 2026
+
+# Cloud SCADA vs on-premise SCADA.
+
+Cloud SCADA runs on a vendor-hosted platform and is reached through a browser or mobile app. On-premise SCADA runs on servers inside the plant. The right choice is usually both: control stays local, monitoring goes to the cloud.
+
+| Factor | Cloud SCADA | On-premise SCADA |
+| --- | --- | --- |
+| **Update latency** | 50–100 ms typical, dependent on link | Milliseconds, local network |
+| **Offline operation** | Needs local buffering for gaps | Full operation without internet |
+| **Remote access** | Native, any browser or phone | VPN, remote desktop or web client |
+| **Upfront cost** | Low — subscription | Higher — server, licences, setup |
+| **Long-term cost** | Recurring subscription | Support and renewals, no hosting |
+| **IT workload** | Vendor handles patching and uptime | Your team handles servers and backups |
+| **Data location** | Vendor infrastructure | Inside the plant |
+| **Scale** | Add tags and sites without hardware | Add servers and licences |
+| **Best fit** | Remote sites, multi-site, small teams | Regulated, high-speed or air-gapped plants |
+
+The usual answer
+
+## Hybrid, with control at the edge.
+
+The plant keeps a local logger that runs the line and stores history. The cloud receives a copy for remote monitoring, alarms and management reporting. If the network drops, production does not.
+
+<table class="spec-table"><tbody><tr><th>Edge</th><td>Vision C — local logging, alarms and forwarding</td></tr><tr><th>Cloud</th><td>Vision Web — browser, mobile, WhatsApp/Telegram alarms</td></tr><tr><th>Enterprise</th><td>Vision S — 60,000 tags, audit trails, PostgreSQL</td></tr><tr><th>Reports</th><td>VGraphic — branded PDF output from plant files</td></tr></tbody></table>
+
+### Choose cloud when…
+
+-   Your sites are remote or unmanned.
+-   Operators and managers need phone access.
+-   You do not want to run servers or a VPN.
+-   You need to add sites without buying hardware.
+-   Alarms must reach people on WhatsApp, SMS or Telegram.
+
+### Choose on-premise when…
+
+-   The process cannot stop when the internet does.
+-   Audit trails and data residency must stay in the plant.
+-   Scan rates are high and latency matters.
+-   The site is air-gapped by policy.
+-   You already run industrial servers and OT security.
+
+FAQ
+
+## Deployment questions
+
+Is cloud SCADA secure enough for a factory?
+
+Security depends on the design, not the location. A hosted platform needs encryption in transit and at rest, strong authentication, role-based access and a clear data-ownership agreement. An on-premise system needs patching, network segmentation and backups. Both can be secure or badly run; ask for specifics.
+
+What happens to data when the internet goes down?
+
+In a hybrid setup, the local logger keeps collecting and buffering. When the link returns, it forwards the backlog. Control continues locally; only the remote view is interrupted.
+
+Is cloud SCADA cheaper?
+
+It moves cost from capital to operating expense and removes server maintenance, but a long subscription can cost more than a perpetual licence over ten years. Compare total cost over the plant's life, including IT staff time.
+
+Can I move from on-premise to cloud later?
+
+Usually yes, if the on-premise product can forward data to the cloud. Vision C forwards to Vision Web with a one-click connection, so a plant can start local and add cloud visibility without replacing its logger.
+
+Which does Dicot recommend?
+
+Keep control on-premise and put monitoring in the cloud unless you have a specific reason to do otherwise. That is why Vision C forwards to Vision Web, and why Vision S can expose data through APIs and web clients.
+
+## Design the architecture with us.
+
+Tell us the sites, the tags and what happens when the link drops. We will draw the simplest architecture that survives it.
+
+[Book a demo](/contact/) [Compare products](/products/)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/compare/cloud-vs-on-premise-scada/. Questions: sales@dicot.tech
+
+
+---
+title: "About Dicot Innovations | SCADA Company in India"
+description: "Dicot Innovations is an Ahmedabad-based SCADA and IIoT software company founded in 2022. 800+ customers, 1,000+ deployments, backed by Startup India and i-Hub."
+url: "https://dicot.tech/about/"
+markdown_url: "https://dicot.tech/about/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/about/. The HTML page remains the source of truth. -->
+About Dicot
+
+# Industrial software from Ahmedabad, for the world.
+
+Dicot Innovations builds SCADA, IIoT and data-acquisition software for manufacturers. We started in 2022 with a simple observation: the plants that need data most are often the ones least able to afford a six-month integration project.
+
+**800+**customers
+
+**1,000+**deployments
+
+**4,000+**device protocols
+
+**50–100 ms**cloud update latency
+
+Our story
+
+## Built by people who commission plants.
+
+Dicot was founded in Ahmedabad in 2022 by a small team with background in industrial automation. The first product, Vision C, was a reaction to what we saw on shop floors: capable machines, no usable history, and reports assembled by hand at the end of every shift.
+
+Today the suite covers a mini-SCADA, an enterprise SCADA and a hosted cloud platform, used by more than 800 customers across 1,000+ deployments. The core team is six people, backed by directors and mentors from the automation industry.
+
+We are recognised under Startup India, incubated at i-Hub (a Gujarat Government enterprise), supported by the Wadhwani Foundation and part of the Make in India initiative.
+
+### What we optimise for
+
+-   **Time to first data.** A product should be useful before the project plan is approved.
+-   **Support that answers.** Production does not wait for a ticket queue.
+-   **Software a plant can afford.** Pricing that matches the size of the problem.
+
+### Registered office
+
+A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India
+
+Recognition
+
+## Supported by the ecosystem.
+
+![Startup India](/images/sui.png)![i-Hub, a Gujarat Government enterprise](/images/i-hub.png)![Wadhwani Foundation](/images/wf-logo.png)![Make in India](/images/image-1.png)
+
+Team
+
+## The people behind the product.
+
+The team that builds the software, backed by directors from the automation industry.
+
+### Leadership
+
+![Nandan Shukla, Chief Executive Officer](/images/team/nandan.webp)
+
+**Nandan Shukla**Chief Executive Officer
+
+![Darshana Shukla, Director](/images/team/darshana.webp)
+
+**Darshana Shukla**Director
+
+### Board & mentors
+
+![Dharren Savla, Director, Deep Industries Ltd.](/images/team/dharren.webp)
+
+**Dharren Savla**Director, Deep Industries Ltd.
+
+![Niket Gorakhia, Director, Micon Automation](/images/team/niket.webp)
+
+**Niket Gorakhia**Director, Micon Automation
+
+Customers
+
+## Brands using Dicot software.
+
+A selection of the manufacturers and institutions running our products.
+
+![Cipla logo](/images/cipla_logo.png)
+
+![Tata Steel logo](/images/tata.png)
+
+![Apollo Tyres logo](/images/apollotireslogo.png)
+
+![Nippon Paint logo](/images/nipponpaintslogo.png)
+
+![BHEL logo](/images/bhel.png)
+
+![ISRO logo](/images/isro.jpg)
+
+![Lubi logo](/images/lubi.png)
+
+![Sansel logo](/images/sansellogo.jpeg)
+
+Customer stories
+
+## In their words.
+
+> Dicot's IIoT software offers unmatched compatibility. Their data acquisition software is ideal for logging and remote monitoring, making them a top choice for manufacturing clients seeking reliable SCADA alternatives.
+
+**Raj Kanabar**CEO, Radical TechArt
+
+> Vision C is a game-changer. As a mini-SCADA, it is quick to set up and drives digitalisation forward. Our customers consistently praise its effectiveness as a modern SCADA India solution.
+
+**Mayank Dantwala**CEO, Control Equipments & Marketing Co.
+
+> Dicot's SCADA software is intuitive and stable. The prompt support ensures seamless remote monitoring and data logging, which is critical for our industrial operations and Industry 4.0 initiatives.
+
+**Amit Prajapati**Maintenance Head, Electrotherm India Ltd.
+
+## Come see the software.
+
+A demo is the fastest way to judge whether we fit your plant. Bring your tag list.
+
+[Book a demo](/contact/) [Talk to a dealer](/contact/#channel-partners)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/about/. Questions: sales@dicot.tech
+
+
+---
+title: "SCADA Dealer & OEM Partner Programme | Dicot"
+description: "Become a Dicot dealer, system integrator or OEM partner. Sell and support Vision C, Vision S and Vision Web with dealer pricing, training and white-label options."
+url: "https://dicot.tech/partners/"
+markdown_url: "https://dicot.tech/partners/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/partners/. The HTML page remains the source of truth. -->
+Partner programme
+
+# Sell, integrate or ship it under your brand.
+
+Dicot works through dealers, system integrators and machine builders. If you already sell automation, panels or machines, our software adds a recurring layer without adding a development team.
+
+[Apply to become a partner](https://forms.gle/nEM8FH92WSQyTh4k8) [Email the team](mailto:sales@dicot.tech?subject=Partner%20enquiry)
+
+01
+
+### Dealers & resellers
+
+Sell and support Dicot products in your territory, with dealer pricing and technical backing from our team.
+
+02
+
+### System integrators
+
+Deliver SCADA and IIoT projects faster using a platform you can configure instead of code.
+
+03
+
+### OEMs & machine builders
+
+Ship Vision C or Vision Web under your own brand, with licensing that matches your machine warranty.
+
+What you get
+
+## A product you can support, not a project you have to code.
+
+Our partners do not start from a blank screen. They configure Vision C or Vision Web, reuse screens and reports, and hand over a system the customer can actually operate.
+
+-   **Dealer pricing** on the full product suite.
+-   **Technical training** on configuration, protocols and commissioning.
+-   **White-label options** for OEMs, including installer and branding.
+-   **Escalation support** from the engineers who build the software.
+-   **Lead routing** for enquiries in your territory.
+
+<table class="spec-table"><tbody><tr><th>Territories</th><td>India and international</td></tr><tr><th>Products</th><td>Vision C, Vision S, Vision Web, VGraphic</td></tr><tr><th>Partner types</th><td>Dealer, integrator, OEM</td></tr><tr><th>Application</th><td>Online form, reviewed by our team</td></tr></tbody></table>
+
+How to apply
+
+## Tell us what you already do.
+
+The application asks for your company, territory, industries and the products you currently sell. We review fit and come back with next steps. There is no fee to apply.
+
+[Open the application form](https://forms.gle/nEM8FH92WSQyTh4k8)
+
+The form is hosted by Google Forms. Read how we handle form data in our [privacy policy](/legal/privacy/).
+
+### Prefer to talk first?
+
+Write to [sales@dicot.tech](mailto:sales@dicot.tech) or call +91 90166 83114. Tell us your territory and the industries you serve.
+
+[Contact page →](/contact/)
+
+## Grow with a platform, not a one-off project.
+
+Apply once and we will map the right partnership model to your business.
+
+[Apply now](https://forms.gle/nEM8FH92WSQyTh4k8) [See products](/products/)
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/partners/. Questions: sales@dicot.tech
+
+
+---
+title: "Contact Dicot | Dealers in Gujarat, Tamil Nadu & Mumbai"
+description: "Talk to Dicot about SCADA, IIoT or data-acquisition software. Ahmedabad office, +91 90166 83114, sales@dicot.tech. Channel partners in Gujarat, Tamil Nadu and Mumbai."
+url: "https://dicot.tech/contact/"
+markdown_url: "https://dicot.tech/contact/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/contact/. The HTML page remains the source of truth. -->
+Contact
+
+# Tell us what the plant needs to see.
+
+Send the tag count, the protocols and whether you want on-premise or cloud. If you already know the product, say so. We will reply with the next step, or route you to the nearest dealer.
+
+Name \* 
+
+Company 
+
+Work email \* 
+
+Phone 
+
+What is this about? Book a product demo Vision C — Mini-SCADA & data loggerVision Web — Cloud SCADA & IIoT platformVision S — Enterprise SCADAVision S Lite — Lightweight enterprise SCADAVGraphic — Cloud report generator OEM / white-label Integration or panel project Dealer or partner enquiry Technical support Something else
+
+How can we help? \*
+
+ I consent to Dicot using these details to respond to this enquiry, as described in the [privacy policy](/legal/privacy/). \* Also send me occasional product updates. I can unsubscribe at any time.
+
+We use these details to answer your enquiry and keep a record of the conversation. We do not sell contact data. Required fields are marked with \*.
+
+### Ahmedabad office
+
+A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India  
+[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=Siddhi+Vinayak+Towers+Makarba+Ahmedabad)
+
+### Direct
+
+[sales@dicot.tech](mailto:sales@dicot.tech)  
+[+91 90166 83114](tel:+919016683114) (primary)  
+[+91 794 918 5398](tel:+917949185398) (office)  
+
+### Data and privacy
+
+[privacy@dicot.tech](mailto:privacy@dicot.tech)
+
+### Careers
+
+[careers@dicot.tech](mailto:careers@dicot.tech)
+
+### Selling or integrating?
+
+Dealers, integrators and OEMs can apply through the partner form. Tell us your territory and the industries you serve.
+
+[Partner application](https://forms.gle/nEM8FH92WSQyTh4k8)
+
+### Existing customer?
+
+For licence keys, renewals and support, include your product and licence ID so we can find the record faster.
+
+Channel partners
+
+## Talk to a dealer near you.
+
+Authorised Dicot partners for Gujarat, Tamil Nadu and Mumbai. For any other region, write to [sales@dicot.tech](mailto:sales@dicot.tech) and we will route your enquiry.
+
+Gujarat
+
+### Micon Automation Systems Private Limited
+
+A-814, Siddhi Vinayak Towers  
+Off S. G. Road, B/H DCP Office  
+Makarba, Ahmedabad, Gujarat 380051  
+
+[+91 97234 62290](tel:+919723462290)  
+[sales@miconindia.com](mailto:sales@miconindia.com)  
+[Visit website ↗](https://www.miconindia.com)
+
+Tamil Nadu
+
+### Rasci Instruments India Private Limited
+
+Plot No. 2 & 3, Balaji Nagar, 4th Street  
+Mettukuppam, Thoraipakkam  
+Chennai, Tamil Nadu 600097  
+
+[+91 98412 91758](tel:+919841291758)  
+[solution@rasciindia.com](mailto:solution@rasciindia.com)
+
+Mumbai
+
+### MBI Solutions
+
+Pl-1004, Promenade 1  
+LBS Marg, Ghatkopar West  
+Mumbai, Maharashtra 400086  
+
+[+91 98210 63652](tel:+919821063652)  
+[mbisolutions@gmail.com](mailto:mbisolutions@gmail.com)
+
+Partner details are listed for enquiries about Dicot products. Dealer pricing and local taxes are handled by the partner in your territory.
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/contact/. Questions: sales@dicot.tech
+
+
+---
+title: "Blog | SCADA, IIoT and Licensing Notes | Dicot"
+description: "Articles from Dicot Innovations on SCADA sizing, licensing, data acquisition and product updates. Written for machine builders and plant teams."
+url: "https://dicot.tech/blog/"
+markdown_url: "https://dicot.tech/blog/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/blog/. The HTML page remains the source of truth. -->
+# Dicot Innovations blog
+
+> Practical writing on SCADA sizing, licensing, data acquisition and product updates for machine builders and plant teams.
+
+- Blog index: https://dicot.tech/blog/
+- Contact: sales@dicot.tech
+
+## Vision C is now licensed up to 100 tags
+_2026-11-19 · Dicot Innovations_
+
+A smaller, clearer ceiling for our mini-SCADA, and a new path for larger scopes.
+
+Tags: Vision C, Licensing
+
+Read: https://dicot.tech/blog/?post=vision-c-100-tags
+
+## Vision S Lite: what we can share today
+_2026-11-19 · Dicot Innovations_
+
+A lighter Vision S for cost-sensitive applications. In development, with no invented specs.
+
+Tags: Vision S, Product update
+
+Read: https://dicot.tech/blog/?post=vision-s-lite-in-development
+
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/blog/. Questions: sales@dicot.tech
+
+
+---
+title: "Privacy Policy | Dicot Innovations"
+description: "How Dicot Innovations collects, uses, shares and protects personal data under India's DPDP Act 2023 and DPDP Rules 2025. Rights, retention and grievance contact."
+url: "https://dicot.tech/legal/privacy/"
+markdown_url: "https://dicot.tech/legal/privacy/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/legal/privacy/. The HTML page remains the source of truth. -->
+Legal · updated 20 November 2026
+
+# Privacy Policy
+
+This policy explains what personal data we collect, why we collect it, how long we keep it and how you can exercise your rights under India's Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025.
+
+**Effective date:** 20 November 2026 · **Version:** 2.1
+
+## 1\. Who we are
+
+Dicot Innovations Private Limited (“Dicot”, “we”, “us”) is the Data Fiduciary for the personal data described in this policy. We are registered in India with our office at A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India.
+
+-   Privacy and data requests: [privacy@dicot.tech](mailto:privacy@dicot.tech)
+-   Grievance Officer: [privacy@dicot.tech](mailto:privacy@dicot.tech)
+-   General contact: [sales@dicot.tech](mailto:sales@dicot.tech) · +91 90166 83114
+
+## 2\. Scope
+
+This policy covers personal data processed through **dicot.tech** and **dicot.in**, including our contact form, partner application link, careers applications, downloads, blog and analytics. Our customer platform at vision-web.tech may have a separate notice; where it does, that notice applies to that service.
+
+This policy does not cover personal data in customer plant data that we process as a processor under a customer contract.
+
+## 3\. Personal data we collect
+
+| Category | What we collect | Why |
+| --- | --- | --- |
+| Enquiries | Name, company, work email, phone, product interest, message | To answer your enquiry, arrange a demo and route it to a dealer |
+| Partner applications | Name, company, email, phone, territory and business details | To assess and manage a dealer, integrator or OEM partnership |
+| Careers | Name, email, phone, CV and the role you apply for | To assess your application and contact you about it |
+| Support and licences | Name, company, contact details, product and licence identifiers | To provide support, renewals and warranty service |
+| Analytics (with consent) | Pages viewed, approximate location derived from IP, device and browser, referrer, interaction events | To understand which content helps buyers and improve the site |
+| Support chat (with consent) | Name and message you type in the Tawk.to chat, chat identifiers and the pages viewed during the chat | To answer your question and keep the conversation in context |
+| Contact form anti-spam check | IP address and CAPTCHA verification token | Cloudflare Turnstile uses these to verify contact-form submissions and reduce spam |
+| Vision S download requests | Name, company, work email, optional phone, the build selected, the consent text and its timestamp, IP address and CAPTCHA token | To send the download link or start the download, help with installation, and prevent automated abuse |
+| Security logs | IP address, user agent, request time and status | To keep the site available and investigate abuse |
+
+We do not intentionally collect sensitive personal data such as health, biometric, caste, religious or political information through this website. Please do not send it through the contact form.
+
+**Vision S downloads.** The installers are large files, so before sending a temporary link or starting a download we ask for your name, company and work email, and optionally a phone number. We record the build you chose, the time of the request and the consent you give, and we use your IP address only to stop automated abuse. We use this data to deliver the file, help with installation and keep the form from being misused. It is not used for unrelated advertising, and the marketing opt-in on that form is optional and separate.
+
+## 4\. How we use personal data
+
+-   Respond to enquiries, demos and partner applications.
+-   Provide, licence, support and renew our software.
+-   Send product updates where you have opted in.
+-   Measure site usage where you have consented to analytics.
+-   Protect the site, prevent fraud and comply with legal obligations.
+
+We do not sell personal data, and we do not use enquiry data for unrelated advertising.
+
+## 5\. Consent and withdrawal
+
+Where we rely on consent, we ask for it separately and do not pre-tick the box. You can withdraw consent at any time by writing to [privacy@dicot.tech](mailto:privacy@dicot.tech) or by changing your cookie choices through “Cookie settings” in the footer. Withdrawal does not affect processing already carried out, and we will stop using the data for that purpose. You can also ask us to delete it, subject to legal retention requirements.
+
+**Download consent.** The Vision S download form asks for a separate consent that is never pre-ticked. Every confirmation email repeats how to withdraw it, and a request to [privacy@dicot.tech](mailto:privacy@dicot.tech) with the subject “Withdraw download consent” is actioned without any further steps. Withdrawal does not affect the download you already received, and it is as easy to withdraw as it was to consent.
+
+## 6\. Cookies and analytics
+
+Essential storage keeps your consent choice and the site working. Google Analytics 4 loads only after you accept analytics, and the Tawk.to chat widget loads only after you enable support chat. Neither loads if you reject or ignore the banner. See the [cookie policy](/legal/cookies/) for the specific cookies and durations.
+
+## 7\. Sharing and processors
+
+We share personal data only where needed, with:
+
+| Recipient | Purpose | Location |
+| --- | --- | --- |
+| Hostinger | Website hosting and email | EU / India, per plan |
+| Cloudflare | DNS, CDN and security | Global |
+| Google (Analytics, Forms) | Consented analytics; partner application form | Global |
+| Tawk.to | Live chat, only when you enable support chat | Global |
+| Authorised dealers | Responding to your enquiry or quote in your territory | India / your region |
+| Professional advisers and authorities | Legal, audit or regulatory requirements | India |
+
+Processors act on our instructions under contract. Some may process data outside India; where they do, we take steps required by the DPDP Act and Rules. The partner application opens a Google Form, so Google’s own terms and cookies apply to that form. The live-chat widget is loaded from Tawk.to only after you enable support chat, and Tawk.to's own terms apply while you use it.
+
+## 8\. Retention
+
+| Data | Retention |
+| --- | --- |
+| Enquiries and demo requests | 24 months from last contact |
+| Partner applications | 24 months from last contact |
+| Vision S download requests | 24 months from last contact |
+| Job applications | 12 months, unless you ask us to delete earlier |
+| Customer, licence and support records | For the contract term and as required by law |
+| Analytics | Up to 14 months in Google Analytics |
+| Support chat transcripts | Up to 12 months from the last message |
+| Security logs | Up to 90 days |
+
+When retention ends, we delete or anonymise the data.
+
+## 9\. Security
+
+We use HTTPS, access controls, least-privilege accounts, patched infrastructure, backups and vendor contracts with confidentiality obligations. No system is completely secure; if you suspect a problem, contact [privacy@dicot.tech](mailto:privacy@dicot.tech) immediately.
+
+## 10\. Data breaches
+
+If a personal data breach occurs, we will contain it, assess the risk and notify the Data Protection Board of India and affected Data Principals as required by the DPDP Act and DPDP Rules, 2025. We keep an internal record of breaches and remedial actions.
+
+## 11\. Your rights
+
+As a Data Principal you can ask us to:
+
+-   confirm whether we process your personal data and provide a summary;
+-   correct, complete or update inaccurate data;
+-   erase data that is no longer needed for its purpose;
+-   nominate another person to exercise your rights in the event of death or incapacity;
+-   withdraw consent; and
+-   resolve a grievance.
+
+Write to [privacy@dicot.tech](mailto:privacy@dicot.tech) with the subject “DPDP request”. We may ask for information to verify your identity. We aim to respond within 30 days or the period prescribed under the DPDP Rules. If you are not satisfied, you can complain to the Data Protection Board of India.
+
+## 12\. Children
+
+Our website and products are intended for businesses and are not directed to children under 18. We do not knowingly collect children’s personal data. If you believe a child has provided data, contact us and we will delete it.
+
+## 13\. Marketing
+
+We send product updates only where you opt in, and every message includes an unsubscribe route. You can also ask us to stop by emailing [privacy@dicot.tech](mailto:privacy@dicot.tech).
+
+## 14\. Changes to this policy
+
+We will update this page when our processing changes and revise the effective date and version. Material changes will be communicated where required.
+
+## 15\. Contact and grievance redressal
+
+Grievance Officer, Dicot Innovations Private Limited  
+A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India  
+Email: [privacy@dicot.tech](mailto:privacy@dicot.tech)  
+Phone: +91 90166 83114
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/legal/privacy/. Questions: sales@dicot.tech
+
+
+---
+title: "Terms of Use | Dicot Innovations"
+description: "Terms governing use of dicot.tech and dicot.in, software licensing, acceptable use, intellectual property and the governing law for Dicot Innovations."
+url: "https://dicot.tech/legal/terms/"
+markdown_url: "https://dicot.tech/legal/terms/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/legal/terms/. The HTML page remains the source of truth. -->
+Legal · updated 18 November 2026
+
+# Terms of Use
+
+These terms govern your use of this website. Software licences are governed by the licence terms supplied with the product, which take precedence for the software itself.
+
+**Effective date:** 18 November 2026 · **Version:** 2.0
+
+## 1\. Acceptance
+
+By accessing or using dicot.tech or dicot.in, you agree to these terms. If you do not agree, do not use the site. We may update these terms; the current version is always on this page, and continued use after a change means you accept it.
+
+## 2\. Website use
+
+You may browse, download publicly offered files and contact us. You may not attempt to disrupt the site, bypass access controls, upload malicious code, or use the site for unlawful purposes.
+
+## 3\. Automated access
+
+Standard search engine and AI assistant crawlers may read public pages in line with our [robots.txt](/robots.txt). Automated access that degrades the service, ignores rate limits, or extracts data at volume for a competing service is not permitted. Contact us if you need a data feed or partnership access.
+
+## 4\. Products and licences
+
+Vision C, Vision S, Vision Web, VGraphic and related software are licensed, not sold. The licence terms provided with the product or dealer order govern the number of tags, users, deployment rights, update entitlement and support. This website does not grant a software licence.
+
+Industrial software displays and stores data that may differ from the physical process because of sensor error, configuration, communication loss or scan timing. You are responsible for validating the system for your process, maintaining independent safety systems, and holding valid licences for the operating system and third-party software you use.
+
+## 5\. Intellectual property
+
+The site content, software, documentation, logos and product names are owned by Dicot Innovations Private Limited or its licensors and are protected by copyright and trademark law. You may not copy, modify, distribute or reverse-engineer the software except as permitted by its licence or by law.
+
+## 6\. Third-party links
+
+We link to services we do not control, including Google Forms, social media and customer platforms. Their terms and privacy policies apply. We are not responsible for their content or availability.
+
+## 7\. Privacy
+
+Personal data is handled as described in our [privacy policy](/legal/privacy/) and [cookie policy](/legal/cookies/).
+
+## 8\. Availability and changes
+
+We aim to keep the site available but do not guarantee uninterrupted access. We may change, suspend or remove content, products or downloads at any time, including for maintenance or security.
+
+## 9\. Limitation of liability
+
+To the maximum extent permitted by law, Dicot is not liable for indirect, incidental, special or consequential loss, loss of production, loss of data, or loss of profit arising from use of this website. Nothing in these terms limits liability that cannot be limited under applicable law, or liability for fraud or wilful misconduct.
+
+## 10\. Governing law and jurisdiction
+
+These terms are governed by the laws of India. Disputes are subject to the exclusive jurisdiction of the courts at Ahmedabad, Gujarat.
+
+## 11\. Contact
+
+Dicot Innovations Private Limited  
+A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India  
+[sales@dicot.tech](mailto:sales@dicot.tech) · +91 90166 83114
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/legal/terms/. Questions: sales@dicot.tech
+
+
+---
+title: "Refund & Cancellation Policy | Dicot Innovations"
+description: "Refund and cancellation rules for Dicot software licences, cloud subscriptions and duplicate transactions, including processing timelines."
+url: "https://dicot.tech/legal/refund/"
+markdown_url: "https://dicot.tech/legal/refund/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/legal/refund/. The HTML page remains the source of truth. -->
+Legal · updated 18 November 2026
+
+# Refund & Cancellation Policy
+
+Software licences and cloud subscriptions are digital products. This page explains when an order can be cancelled or refunded.
+
+**Effective date:** 18 November 2026 · **Version:** 2.0
+
+## 1\. Cancellation before delivery
+
+If you cancel an order before a licence key is generated or a cloud subscription is activated, the order amount is refunded in full. Cancel by writing to [sales@dicot.tech](mailto:sales@dicot.tech) with the order or invoice number.
+
+## 2\. After a licence is generated
+
+A software licence cannot be cancelled or refunded once the licence key has been issued, because the product can be used immediately. This applies to Vision C, Vision S, VGraphic and cloud activations.
+
+## 3\. Cloud subscriptions
+
+Cloud subscriptions are paid in advance. Cancellation stops the next renewal; the current period is not refunded. If you cancel, export your data before the period ends. We retain cloud data as described in the [privacy policy](/legal/privacy/) and your order terms.
+
+## 4\. Physical goods
+
+If a physical item has shipped but has not been delivered, the order can be cancelled and the amount refunded after deducting shipping and handling, once the item is returned intact. Delivered items cannot be cancelled.
+
+## 5\. Failed or duplicate transactions
+
+If a payment fails but money is debited, or the same order is charged twice, the affected amount is refunded. Send the transaction reference and invoice number to [sales@dicot.tech](mailto:sales@dicot.tech). Bank or card charges may not be refundable.
+
+## 6\. Processing time
+
+Approved refunds are processed within 5–7 business days on our side. Your bank or card issuer may take longer to credit the amount. We cannot guarantee a specific credit date once the refund leaves us.
+
+## 7\. Partial cancellations
+
+Where an order includes multiple items and only some are cancelled, the refund corresponds to the cancelled part.
+
+## 8\. Changes
+
+We may update this policy. The version on this page applies to orders placed after its effective date.
+
+## 9\. Contact
+
+Dicot Innovations Private Limited  
+A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India  
+[sales@dicot.tech](mailto:sales@dicot.tech) · +91 90166 83114
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/legal/refund/. Questions: sales@dicot.tech
+
+
+---
+title: "Cookie Policy | Dicot Innovations"
+description: "Which cookies and local storage dicot.tech uses, what each one does, how long it lasts, and how to change your consent choice."
+url: "https://dicot.tech/legal/cookies/"
+markdown_url: "https://dicot.tech/legal/cookies/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/legal/cookies/. The HTML page remains the source of truth. -->
+Legal · updated 18 November 2026
+
+# Cookie Policy
+
+We keep cookies to a minimum. Essential storage runs the site; analytics and support chat load only after you accept them, and we do not run advertising cookies.
+
+**Effective date:** 18 November 2026 · **Version:** 2.0
+
+## What we use
+
+| Name | Type | Purpose | Duration | Consent |
+| --- | --- | --- | --- | --- |
+| dicot\_consent\_v1 | Local storage | Remembers your cookie choice so we do not ask on every page | Until you clear browser storage | Essential |
+| \_\_cf\_bm | Cookie | Cloudflare bot management and security | 30 minutes | Essential |
+| \_ga | Cookie | Google Analytics 4 — distinguishes browsers for aggregate usage reporting | Up to 2 years | Analytics |
+| \_ga\_<container> | Cookie | Google Analytics 4 — keeps session state | Up to 2 years | Analytics |
+| \_\_tawkuuid | Cookie | Tawk.to live chat — recognises a returning chat visitor | Up to 6 months | Support chat |
+| TawkConnectionTime | Cookie | Tawk.to live chat — manages the chat connection | Session | Support chat |
+| tawk\_uuid\_<property> | Cookie | Tawk.to live chat — keeps the chat session across pages | Up to 6 months | Support chat |
+
+We do not currently set advertising or marketing cookies. If that changes, we will add the category here and ask for consent before setting them.
+
+## Third-party services
+
+The partner application link opens a Google Form. Once you visit Google, Google’s cookies and privacy terms apply. Our fonts are self-hosted, so loading a page does not contact Google Fonts. The Tawk.to live-chat widget is loaded from Tawk.to only if you enable “Support chat” in the cookie preferences; its own cookies and privacy terms apply to the chat service. The contact form loads Cloudflare Turnstile to prevent automated spam; Cloudflare processes the verification token and IP address under its [privacy policy](https://www.cloudflare.com/privacypolicy/).
+
+## How to change your choice
+
+Use the “Cookie settings” link in the footer to reopen the banner and change analytics, support-chat or marketing consent. You can also block or delete cookies in your browser settings; blocking essential storage may make the consent banner reappear on each visit.
+
+Rejecting analytics or chat does not restrict any part of the site. The contact form and downloads work without either.
+
+## Do Not Track and AI crawlers
+
+We do not use a separate Do Not Track response. Automated crawlers are governed by our [robots.txt](/robots.txt); we allow standard search engines and AI assistants to read public pages.
+
+## More information
+
+For the wider picture of how we handle personal data, see the [privacy policy](/legal/privacy/) or write to [privacy@dicot.tech](mailto:privacy@dicot.tech).
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/legal/cookies/. Questions: sales@dicot.tech
+
+
+---
+title: "Careers at Dicot | Industrial Software, Ahmedabad"
+description: "Work on SCADA and IIoT software used in 1,000+ plants. See open roles at Dicot Innovations in Ahmedabad, or send your CV to careers@dicot.tech."
+url: "https://dicot.tech/careers/"
+markdown_url: "https://dicot.tech/careers/index.md"
+updated: "2026-11-20"
+---
+
+<!-- Markdown mirror of https://dicot.tech/careers/. The HTML page remains the source of truth. -->
+Careers
+
+# Build software that runs the plant floor.
+
+Dicot is a six-person core team in Ahmedabad building SCADA and IIoT products used in more than 1,000 deployments. Small team, short decisions, real customers.
+
+### Own a product, not a ticket
+
+Engineers here talk to the plant, not just to a backlog. What you build is commissioned by someone you can call.
+
+### Industrial scale, startup speed
+
+Your work reaches hundreds of manufacturers without passing through five approval layers.
+
+### Ahmedabad, on-site
+
+We work from the Makarba office. Roles are listed with their location when they open.
+
+Open roles
+
+## Current openings.
+
+Roles are added here as they open. If nothing fits today, send your CV anyway.
+
+**No open roles right now.**
+
+We still read every application. Send your CV and a short note about what you want to work on to [careers@dicot.tech](mailto:careers@dicot.tech).
+
+[Email your CV](mailto:careers@dicot.tech?subject=Application%20%E2%80%94%20Dicot)
+
+## How we hire.
+
+A conversation about your work, a practical discussion around a real problem, and a meeting with the team you would join.
+
+Send applications to [careers@dicot.tech](mailto:careers@dicot.tech). We keep CVs for 12 months unless you ask us to delete them.
+
+---
+
+Generated 2026-11-20 from https://dicot.tech/careers/. Questions: sales@dicot.tech
+

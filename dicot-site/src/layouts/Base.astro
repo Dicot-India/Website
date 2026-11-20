@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Consent from "../components/Consent.astro";
+import WebMcp from "../components/WebMcp.astro";
 import { site } from "../data/site";
 
 interface Props {
@@ -16,6 +17,8 @@ interface Props {
 const { title, description, image = "/images/og-default.png", noindex = false, schema = [] } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const ogImage = new URL(image, site.url).href;
+// Every indexable page has a Markdown mirror written by scripts/generate-markdown.mjs.
+const markdownHref = `${canonical}index.md`;
 
 const organisation = {
   "@context": "https://schema.org",
@@ -71,6 +74,13 @@ const graph = [organisation, website, ...schema];
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {!noindex && (
+      <>
+        <link rel="alternate" type="text/markdown" href={markdownHref} />
+        <link rel="describedby" href="/llms.txt" />
+        <link rel="alternate" type="application/json" href="/.well-known/mcp/server-card.json" />
+      </>
+    )}
     <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"} />
     <meta name="theme-color" content="#0a0a28" />
     <meta name="author" content={site.name} />
@@ -107,5 +117,6 @@ const graph = [organisation, website, ...schema];
     </main>
     <Footer />
     <Consent />
+    <WebMcp />
   </body>
 </html>

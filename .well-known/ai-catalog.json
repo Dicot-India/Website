@@ -1,0 +1,10 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:dicot.tech:mcp:products",
+      "type": "application/mcp-server-card+json",
+      "url": "https://dicot.tech/.well-known/mcp/server-card.json"
+    }
+  ]
+}
