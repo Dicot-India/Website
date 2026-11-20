@@ -186,6 +186,7 @@ const PRIORITY = [
   "pricing",
   "downloads",
   "downloads/vision-s",
+  "support",
   "solutions",
   "industries",
   "alternatives",

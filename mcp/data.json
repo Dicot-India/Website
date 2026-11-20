@@ -697,6 +697,8 @@
     "alternatives": "https://dicot.tech/alternatives/",
     "about": "https://dicot.tech/about/",
     "contact": "https://dicot.tech/contact/",
+    "support": "https://dicot.tech/support/",
+    "supportPortal": "https://helpdesk.dicot.tech/portal/dicot",
     "privacy": "https://dicot.tech/legal/privacy/",
     "llms": "https://dicot.tech/llms.txt",
     "markdownExample": "https://dicot.tech/index.md",

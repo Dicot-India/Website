@@ -33,6 +33,16 @@ export const site = {
   ],
   blog: "/blog/",
   visionWebLogin: "https://vision-web.tech",
+  // Customer support portal (Open Helpdesk). `embed` is the portal's own
+  // widget mode: a bare ticket form that posts "ohd:submitted" to the parent,
+  // so it can be framed. Keep both in sync with the CSP frame-src in .htaccess.
+  support: {
+    portal: "https://helpdesk.dicot.tech/portal/dicot",
+    embed: "https://helpdesk.dicot.tech/portal/dicot?mode=widget",
+    origin: "https://helpdesk.dicot.tech",
+    kb: "https://helpdesk.dicot.tech/portal/dicot/kb",
+    privacy: "https://helpdesk.dicot.tech/privacy",
+  },
   partnerForm: "https://forms.gle/nEM8FH92WSQyTh4k8",
   gaId: "G-CLGWSRY8FE",
   // Extracted from the current dicot.in site. Loaded only after chat consent.
@@ -49,5 +59,6 @@ export const nav = [
   { label: "Partners", href: "/partners/" },
   { label: "About", href: "/about/" },
   { label: "Blog", href: "/blog/" },
+  { label: "Support", href: "/support/" },
   { label: "Contact", href: "/contact/" },
 ];

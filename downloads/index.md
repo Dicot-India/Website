@@ -52,7 +52,7 @@ Files are hosted on dicot.tech and dicot.in. If a link fails, email [sales@dicot
 
 Send your product, licence ID and the version you are running. We will route it to the right person.
 
-[Contact support](/contact/) [See plans](/pricing/)
+[Contact support](/support/) [See plans](/pricing/)
 
 ---
 

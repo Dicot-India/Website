@@ -13,7 +13,7 @@ Legal · updated 20 November 2026
 
 This policy explains what personal data we collect, why we collect it, how long we keep it and how you can exercise your rights under India's Digital Personal Data Protection Act, 2023 and the DPDP Rules, 2025.
 
-**Effective date:** 20 November 2026 · **Version:** 2.1
+**Effective date:** 20 November 2026 · **Version:** 2.2
 
 ## 1\. Who we are
 
@@ -25,7 +25,7 @@ Dicot Innovations Private Limited (“Dicot”, “we”, “us”) is the Data 
 
 ## 2\. Scope
 
-This policy covers personal data processed through **dicot.tech** and **dicot.in**, including our contact form, partner application link, careers applications, downloads, blog and analytics. Our customer platform at vision-web.tech may have a separate notice; where it does, that notice applies to that service.
+This policy covers personal data processed through **dicot.tech** and **dicot.in**, including our contact form, partner application link, careers applications, downloads, blog, support portal and analytics. Our customer platform at vision-web.tech may have a separate notice; where it does, that notice applies to that service.
 
 This policy does not cover personal data in customer plant data that we process as a processor under a customer contract.
 
@@ -41,11 +41,14 @@ This policy does not cover personal data in customer plant data that we process 
 | Support chat (with consent) | Name and message you type in the Tawk.to chat, chat identifiers and the pages viewed during the chat | To answer your question and keep the conversation in context |
 | Contact form anti-spam check | IP address and CAPTCHA verification token | Cloudflare Turnstile uses these to verify contact-form submissions and reduce spam |
 | Vision S download requests | Name, company, work email, optional phone, the build selected, the consent text and its timestamp, IP address and CAPTCHA token | To send the download link or start the download, help with installation, and prevent automated abuse |
+| Support tickets | Name, email, subject, description, department, attachments you add, ticket number, replies and status history | To record, answer and track your support request |
 | Security logs | IP address, user agent, request time and status | To keep the site available and investigate abuse |
 
-We do not intentionally collect sensitive personal data such as health, biometric, caste, religious or political information through this website. Please do not send it through the contact form.
+We do not intentionally collect sensitive personal data such as health, biometric, caste, religious or political information through this website. Please do not send it through the contact form or a support ticket.
 
 **Vision S downloads.** The installers are large files, so before sending a temporary link or starting a download we ask for your name, company and work email, and optionally a phone number. We record the build you chose, the time of the request and the consent you give, and we use your IP address only to stop automated abuse. We use this data to deliver the file, help with installation and keep the form from being misused. It is not used for unrelated advertising, and the marketing opt-in on that form is optional and separate.
+
+**Support tickets.** The ticket form on our support page runs in our own helpdesk at helpdesk.dicot.tech. When you open a ticket we collect your name, email address, the subject and description you write, the department you choose and any attachments you add, and we keep the replies and status changes on that ticket. We use it to answer you, to keep the history of the issue for your site, and to see whether the same fault is recurring. That portal is a separate service and shows its own privacy notice.
 
 ## 4\. How we use personal data
 
@@ -65,7 +68,7 @@ Where we rely on consent, we ask for it separately and do not pre-tick the box. 
 
 ## 6\. Cookies and analytics
 
-Essential storage keeps your consent choice and the site working. Google Analytics 4 loads only after you accept analytics, and the Tawk.to chat widget loads only after you enable support chat. Neither loads if you reject or ignore the banner. See the [cookie policy](/legal/cookies/) for the specific cookies and durations.
+Essential storage keeps your consent choice and the site working. Google Analytics 4 loads only after you accept analytics, and the Tawk.to chat widget loads only after you enable support chat. Neither loads if you reject or ignore the banner. See the [cookie policy](/legal/cookies/) for the specific cookies and durations. Our support portal runs on its own domain and keeps its own session storage there; it is not readable by dicot.tech.
 
 ## 7\. Sharing and processors
 
@@ -74,6 +77,7 @@ We share personal data only where needed, with:
 | Recipient | Purpose | Location |
 | --- | --- | --- |
 | Hostinger | Website hosting and email | EU / India, per plan |
+| Dicot support portal (self-hosted) | Support ticket intake, tracking and replies | Same hosting and email providers as this website |
 | Cloudflare | DNS, CDN and security | Global |
 | Google (Analytics, Forms) | Consented analytics; partner application form | Global |
 | Tawk.to | Live chat, only when you enable support chat | Global |
@@ -91,6 +95,7 @@ Processors act on our instructions under contract. Some may process data outside
 | Vision S download requests | 24 months from last contact |
 | Job applications | 12 months, unless you ask us to delete earlier |
 | Customer, licence and support records | For the contract term and as required by law |
+| Support tickets | 24 months from the last update on the ticket |
 | Analytics | Up to 14 months in Google Analytics |
 | Support chat transcripts | Up to 12 months from the last message |
 | Security logs | Up to 90 days |

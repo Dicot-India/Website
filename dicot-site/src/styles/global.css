@@ -244,7 +244,7 @@ pre {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 20px;
 }
 .nav .nav-link {
   font-size: 0.94rem;
@@ -1993,6 +1993,17 @@ ul.card[role="list"] {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Nine nav items plus the login link and the CTA need a little more room
+   between 1120px (where the menu collapses) and ~1320px. */
+@media (max-width: 1320px) {
+  .nav {
+    gap: 14px;
+  }
+  .nav .nav-link {
+    font-size: 0.88rem;
+  }
 }
 
 @media (max-width: 1120px) {

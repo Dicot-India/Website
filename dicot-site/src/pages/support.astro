@@ -1,0 +1,431 @@
+---
+import Base from "../layouts/Base.astro";
+import Cta from "../components/Cta.astro";
+import { site } from "../data/site";
+
+const title = "Support | Dicot Helpdesk tickets & help centre";
+const description =
+  "Open a support ticket for Vision C, Vision S, Vision Web or VGraphic. Track it in the Dicot helpdesk, browse the help centre, or call the Ahmedabad office for a production issue.";
+
+const supportPage = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Dicot customer support",
+  description,
+  url: `${site.url}/support/`,
+  mainEntity: {
+    "@type": "Service",
+    name: "Dicot customer support",
+    provider: { "@id": `${site.url}/#organization` },
+    availableChannel: { "@type": "ServiceChannel", serviceUrl: site.support.portal },
+  },
+};
+
+const include = [
+  "The product and version — for example Vision S Version 2026, or your Vision C build.",
+  "Your licence ID, or the key label colour for Vision S.",
+  "The Windows version on the machine that is failing.",
+  "What you expected, what happened, and any error text.",
+  "A screenshot of the screen or alarm, if you can take one.",
+  "Whether production has stopped, slowed, or is still running.",
+];
+
+const steps = [
+  {
+    step: "Step 01",
+    title: "You open a ticket",
+    text: "The form goes straight into the Dicot helpdesk, not a shared inbox, so the request is recorded with a number.",
+  },
+  {
+    step: "Step 02",
+    title: "We triage it",
+    text: "Production stops come first. You get a reply on the ticket and a tracking link by email.",
+  },
+  {
+    step: "Step 03",
+    title: "Fix, patch or a call",
+    text: "Most issues close on the ticket. If it needs a person at the plant, we arrange a call or a site visit.",
+  },
+];
+---
+
+<Base title={title} description={description} schema={[supportPage]}>
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol><li><a href="/">Home</a></li><li>Support</li></ol>
+    </nav>
+  </div>
+
+  <section class="page-hero support-hero">
+    <div class="wrap support-hero__grid">
+      <div>
+        <span class="eyebrow">Customer support</span>
+        <h1>A plant issue should not wait in an inbox.</h1>
+        <p class="lede">
+          Support runs on our own helpdesk. Open a ticket here and it is recorded, assigned and tracked until it closes —
+          for Vision C, Vision S, Vision Web and VGraphic. Licence keys, renewals and install help start in the same
+          place.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#ticket">Open a ticket</a>
+          <a class="btn btn--ghost" href={site.support.kb} rel="noopener" target="_blank">Browse the help centre</a>
+        </div>
+      </div>
+      <div class="channels">
+        <a class="channel" href={site.support.portal} rel="noopener" target="_blank">
+          <span class="channel__label">Helpdesk</span>
+          <span class="channel__value">Open a ticket or track one</span>
+          <span class="channel__meta">helpdesk.dicot.tech ↗</span>
+        </a>
+        <a class="channel" href={`mailto:${site.emails.sales}`}>
+          <span class="channel__label">Email</span>
+          <span class="channel__value">{site.emails.sales}</span>
+          <span class="channel__meta">Attach logs or screenshots</span>
+        </a>
+        <a class="channel" href={`tel:${site.phones[0].href}`}>
+          <span class="channel__label">Phone</span>
+          <span class="channel__value">{site.phones[0].label}</span>
+          <span class="channel__meta">Say it is a production issue</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="ticket">
+    <div class="wrap split split--support">
+      <div>
+        <span class="eyebrow">New ticket</span>
+        <h2 class="support-h2">Tell us what the software is doing.</h2>
+
+        <div class="ticket-panel">
+          <div class="ticket-panel__bar">
+            <span class="ticket-panel__dot" aria-hidden="true"></span>
+            <span class="ticket-panel__title">Dicot helpdesk · new ticket</span>
+            <a class="ticket-panel__open" href={site.support.portal} rel="noopener" target="_blank">
+              Open in a new tab
+              <svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+          </div>
+
+          <iframe
+            class="ticket-panel__frame"
+            src={site.support.embed}
+            title="Dicot support — open a ticket"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          >
+            <p>The ticket form could not be embedded. Open https://helpdesk.dicot.tech/portal/dicot to raise a ticket.</p>
+          </iframe>
+        </div>
+
+        <p class="ticket-status" id="ticket-status" role="status" hidden>
+          <strong>Ticket created.</strong> The helpdesk has emailed you a link to track it and to reply. Nothing arrived
+          within a few minutes? Check spam, then call or email us with the ticket number.
+        </p>
+
+        <p class="form-note mt-2">
+          Tickets are handled in the support portal, a separate service with its own
+          <a href={site.support.privacy} rel="noopener" target="_blank">privacy notice</a>. Please do not send plant
+          passwords or other people's personal data in a ticket.
+        </p>
+      </div>
+
+      <aside class="support-aside">
+        <div class="card">
+          <h2 class="aside-h">What to include</h2>
+          <ul role="list" class="mb-0">
+            {include.map((line) => <li>{line}</li>)}
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="aside-h">Already raised a ticket?</h2>
+          <p>
+            Reply to the confirmation email to add to it, or use the tracking link the helpdesk sent you. Keep the ticket
+            number in any call about the issue.
+          </p>
+          <a class="btn btn--ghost btn--small" href={site.support.portal} rel="noopener" target="_blank">
+            Go to the helpdesk
+          </a>
+        </div>
+
+        <div class="card">
+          <h2 class="aside-h">Before you raise it</h2>
+          <p class="mb-0">
+            Some questions are already answered: installers and manuals on <a href="/downloads/">downloads</a>, what the
+            build needs on the <a href="/downloads/vision-s/">Vision S page</a>, and licence models on
+            <a href="/pricing/">pricing</a>.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section support-flow">
+    <div class="wrap">
+      <div class="section-head section-head--sub">
+        <div>
+          <span class="eyebrow">From ticket to fix</span>
+          <h2>What happens after you submit.</h2>
+        </div>
+      </div>
+      <ol class="flow-path">
+        {steps.map((s) => (
+          <li>
+            <span class="flow-step">{s.step}</span>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <Cta
+    title="Buying, not fixing?"
+    text="Demos, quotes, dealer routing and new projects go through the contact form, so the right person answers."
+    primaryLabel="Contact sales"
+    secondaryLabel="Find a dealer"
+  />
+</Base>
+
+<script>
+  // The embedded portal posts JSON to the parent when a ticket is created.
+  // Only trust messages from the helpdesk origin.
+  const PORTAL_ORIGIN = "https://helpdesk.dicot.tech";
+  const status = document.getElementById("ticket-status");
+
+  window.addEventListener("message", (event) => {
+    if (event.origin !== PORTAL_ORIGIN || !status) return;
+    let data: { type?: string; ticketReference?: string } = {};
+    try {
+      data = typeof event.data === "string" ? JSON.parse(event.data) : (event.data ?? {});
+    } catch {
+      return;
+    }
+    if (data?.type !== "ohd:submitted") return;
+    if (data.ticketReference) status.querySelector("strong")!.textContent = `Ticket ${data.ticketReference} created.`;
+    status.removeAttribute("hidden");
+    status.scrollIntoView({ block: "center", behavior: "smooth" });
+  });
+</script>
+
+<style>
+  .support-hero__grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: end;
+  }
+  .support-hero h1 {
+    max-width: 22ch;
+  }
+
+  /* Support channels read as an index, not a card wall. */
+  .channels {
+    border-top: 1px solid var(--ink);
+  }
+  .channel {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 2px 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    color: inherit;
+  }
+  .channel__label {
+    grid-row: span 2;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 4px;
+  }
+  .channel__value {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .channel__meta {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+  }
+  .channel:hover .channel__value {
+    color: var(--red);
+  }
+
+  .support-h2 {
+    font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+    margin-bottom: 22px;
+  }
+
+  /* The portal renders its own form; this frame only provides chrome. */
+  .ticket-panel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    overflow: hidden;
+    box-shadow: 0 18px 50px rgba(10, 10, 40, 0.07);
+  }
+  .ticket-panel__bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    padding: 10px 14px;
+    background: var(--paper-2);
+    border-bottom: 1px solid var(--line);
+  }
+  .ticket-panel__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    flex: none;
+  }
+  .ticket-panel__title {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .ticket-panel__open {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .ticket-panel__frame {
+    display: block;
+    width: 100%;
+    height: 660px;
+    border: 0;
+    background: #fff;
+  }
+  .ticket-status {
+    margin: 18px 0 0;
+    border: 1px solid #9bd3b4;
+    background: #f1fbf6;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+
+  .support-aside {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+  }
+  .support-aside .card p {
+    margin-bottom: 14px;
+  }
+  .aside-h {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+
+  .support-flow {
+    background: var(--paper-2);
+  }
+  .support-flow .section-head {
+    margin-bottom: 40px;
+  }
+  .support-flow .eyebrow {
+    color: var(--red);
+  }
+  .flow-path {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--ink);
+  }
+  .flow-path li {
+    position: relative;
+    padding: 28px 32px 0 0;
+  }
+  .flow-path li::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background: var(--red);
+    box-shadow: 0 0 0 4px rgba(203, 0, 0, 0.12);
+  }
+  .flow-path li + li {
+    border-left: 1px solid var(--line);
+    padding-left: 32px;
+  }
+  .flow-path li + li::before {
+    left: 29px;
+  }
+  .flow-step {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
+  }
+  .flow-path h3 {
+    font-size: 1.22rem;
+    margin-bottom: 8px;
+  }
+  .flow-path p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 1000px) {
+    .support-hero__grid,
+    .split--support {
+      grid-template-columns: 1fr;
+    }
+    .channels {
+      margin-top: 8px;
+    }
+    .flow-path {
+      grid-template-columns: 1fr;
+    }
+    .flow-path li,
+    .flow-path li + li {
+      border-left: 0;
+      padding: 26px 0 0;
+    }
+    .flow-path li + li {
+      border-top: 1px solid var(--line);
+      margin-top: 26px;
+    }
+    .flow-path li + li::before {
+      left: 0;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .channel {
+      grid-template-columns: 1fr;
+    }
+    .channel__label {
+      grid-row: auto;
+      padding-top: 0;
+      margin-bottom: 4px;
+    }
+    .ticket-panel__frame {
+      height: 780px;
+    }
+  }
+</style>
+
+

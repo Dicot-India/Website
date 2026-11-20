@@ -20,6 +20,8 @@ const software = {
   description:
     "Enterprise SCADA for Windows. Two installers are published: the green-key build and the Vision S Version 2026 grey-key build.",
 };
+
+const [greenKey, greyKey] = visionSBuilds;
 ---
 
 <Base title={title} description={description} schema={[software]}>
@@ -29,25 +31,91 @@ const software = {
     </nav>
   </div>
 
-  <section class="page-hero">
-    <div class="wrap">
-      <span class="eyebrow">Vision S · installers</span>
-      <h1>Download the Vision S build that matches your key.</h1>
-      <p class="lede">
-        Two installers are published. Choose the one that matches the licence key you were issued. The files are large
-        ({visionSBuilds[0].size} and {visionSBuilds[1].size}), so tell us who you are and we will either email a
-        temporary link valid for {downloadPolicy.linkHours} hours or start the download now.
-      </p>
-      <p class="form-note mb-0">
-        The installers do not include a licence. Vision S still needs a valid key, issued by your dealer or by our sales
-        team.
-      </p>
+  <section class="vs-hero">
+    <div class="wrap vs-hero__grid">
+      <div class="vs-hero__copy">
+        <div class="vs-index"><span>Vision S</span><span>Installers</span><span>Windows</span></div>
+        <h1>Download the build that matches your key.</h1>
+        <p class="lede">
+          Two installers are published. Choose the one that matches the licence key you were issued — the green-key
+          build, or the Vision S Version 2026 grey-key build. Tell us who you are and we either email a temporary link
+          valid for {downloadPolicy.linkHours} hours or start the download now.
+        </p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#request">Choose your build</a>
+          <a class="btn btn--ghost" href="#keys">Which key do I have?</a>
+        </div>
+        <div class="hero-meta">
+          <span>{greenKey.size} · green key</span>
+          <span>{greyKey.size} · grey key</span>
+          <span>ISO · Windows 7 and 10</span>
+          <span>{downloadPolicy.linkHours}-hour link</span>
+        </div>
+      </div>
+
+      <div class="vs-builds">
+        {visionSBuilds.map((build) => (
+          <a class={`vs-build vs-build--${build.id}`} href="#request">
+            <span class="vs-build__band" aria-hidden="true" />
+            <span class="vs-build__head">
+              <span class="vs-build__key">{build.key}</span>
+              {build.id === "grey" && <span class="vs-build__badge">Version 2026</span>}
+            </span>
+            <strong class="vs-build__name">{build.name}</strong>
+            <span class="vs-build__file">{build.file}</span>
+            <span class="vs-build__facts">
+              <span>{build.size}</span>
+              <span>File dated {build.updated}</span>
+            </span>
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap split">
+  <section class="section section--white vs-keys" id="keys">
+    <div class="wrap vs-keys__grid">
       <div>
+        <span class="eyebrow">Which key do I have?</span>
+        <h2>The key label states its colour.</h2>
+        <p class="lede">
+          Choose the build with the same colour as your key; the other build will not accept it. If you are unsure, send
+          a photo of the key label to <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> before downloading
+          a large file.
+        </p>
+        <p class="form-note mb-0">
+          The installers do not include a licence. Vision S still needs a valid key, issued by your dealer or by our
+          sales team.
+        </p>
+      </div>
+      <div class="spec-box vs-keys__table">
+        <div class="table-wrap vs-keys__scroll">
+          <table class="spec-table">
+            <thead>
+              <tr><th scope="col">Installer</th><th scope="col">Green key</th><th scope="col">Grey key</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Release</th><td>Vision S</td><td>Vision S Version 2026</td></tr>
+              <tr><th scope="row">File</th><td class="mono-cell">{greenKey.file}</td><td class="mono-cell">{greyKey.file}</td></tr>
+              <tr><th scope="row">Size</th><td>{greenKey.size}</td><td>{greyKey.size}</td></tr>
+              <tr><th scope="row">File dated</th><td>{greenKey.updated}</td><td>{greyKey.updated}</td></tr>
+              <tr><th scope="row">Use it if</th><td>your key label is green</td><td>your key label is grey</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section vs-request" id="request">
+    <div class="wrap vs-request__grid">
+      <div class="vs-panel">
+        <span class="eyebrow">Request the installer</span>
+        <h2 class="vs-h2">Four steps, then the file.</h2>
+        <p class="vs-sub">
+          Both builds are large. We record who asked for which build, so we can help if the install needs it.
+        </p>
+
         <div class="form-error" id="download-error" hidden>
           <strong>We could not start the download.</strong>
           <span id="download-error-detail">Please try again, or email <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> with the build you need.</span>
@@ -76,13 +144,14 @@ const software = {
           toolname="request_vision_s_download"
           tooldescription="Request a Vision S installer download link. Requires the person's own name, company, work email and consent; the form does not submit itself."
         >
-          <fieldset class="field">
-            <legend>1. Which build do you need? <span class="req">*</span></legend>
+          <fieldset class="field vs-block">
+            <legend><span class="vs-step">01</span> Which build do you need? <span class="req">*</span></legend>
             <div class="build-grid">
-              {visionSBuilds.map((build, index) => (
-                <label class="build-card">
-                  <input type="radio" name="build" value={build.id} checked={index === 0} required />
+              {visionSBuilds.map((build) => (
+                <label class={`build-card build-card--${build.id}`}>
+                  <input type="radio" name="build" value={build.id} checked={build.id === "green"} required />
                   <span class="build-card__body">
+                    <span class="build-card__band" aria-hidden="true" />
                     <span class="build-card__key">{build.key}</span>
                     <span class="build-card__name">{build.name}</span>
                     <span class="build-card__meta">{build.size} · file dated {build.updated}</span>
@@ -93,89 +162,99 @@ const software = {
             </div>
           </fieldset>
 
-          <fieldset class="field">
-            <legend>2. How should we deliver it? <span class="req">*</span></legend>
-            <label class="choice">
-              <input type="radio" name="mode" value="email" checked required />
-              <span>
-                <strong>Email me a temporary link</strong>
-                <span class="choice__hint">Valid {downloadPolicy.linkHours} hours. Best on a slow or shared connection.</span>
-              </span>
-            </label>
-            <label class="choice">
-              <input type="radio" name="mode" value="direct" />
-              <span>
-                <strong>Start the download now</strong>
-                <span class="choice__hint">Downloads in this browser straight away.</span>
-              </span>
-            </label>
+          <fieldset class="field vs-block">
+            <legend><span class="vs-step">02</span> How should we deliver it? <span class="req">*</span></legend>
+            <div class="choice-stack">
+              <label class="choice">
+                <input type="radio" name="mode" value="email" checked required />
+                <span>
+                  <strong>Email me a temporary link</strong>
+                  <span class="choice__hint">Valid {downloadPolicy.linkHours} hours. Best on a slow or shared connection.</span>
+                </span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="mode" value="direct" />
+                <span>
+                  <strong>Start the download now</strong>
+                  <span class="choice__hint">Downloads in this browser straight away.</span>
+                </span>
+              </label>
+            </div>
           </fieldset>
 
-          <div class="grid-2">
-            <div class="field">
-              <label for="name">Name <span class="req">*</span></label>
-              <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" />
+          <fieldset class="field vs-block">
+            <legend><span class="vs-step">03</span> Who are you? <span class="req">*</span></legend>
+            <div class="grid-2">
+              <div class="field">
+                <label for="name">Name <span class="req">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" />
+              </div>
+              <div class="field">
+                <label for="company">Company <span class="req">*</span></label>
+                <input id="company" name="company" type="text" autocomplete="organization" required maxlength="120" />
+              </div>
+              <div class="field">
+                <label for="email">Work email <span class="req">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
+              </div>
             </div>
-            <div class="field">
-              <label for="company">Company <span class="req">*</span></label>
-              <input id="company" name="company" type="text" autocomplete="organization" required maxlength="120" />
-            </div>
-            <div class="field">
-              <label for="email">Work email <span class="req">*</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" />
-            </div>
-            <div class="field">
-              <label for="phone">Phone (optional)</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
-            </div>
-          </div>
+          </fieldset>
 
           <div class="honeypot" aria-hidden="true">
             <label for="website">Website</label>
             <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
           </div>
 
-          <div class="dl-notice" id="privacy-notice">
-            <h2 class="dl-notice__title">Before you download</h2>
-            <p class="mb-1">
-              <strong>What we collect:</strong> your name, company, work email and, if you add it, your phone number; the
-              build you chose, the time of the request, and a Cloudflare Turnstile security token. Your IP address is used
-              only to stop repeated automated requests.
-            </p>
-            <p class="mb-1">
-              <strong>Why:</strong> to send the download link or start the download, to help you if the install needs it,
-              and to keep this form from being abused. We do not sell your data and we do not use it for unrelated
-              advertising.
-            </p>
-            <p class="mb-1">
-              <strong>How long:</strong> {downloadPolicy.retention}. Security logs are kept for up to 90 days.
-            </p>
-            <p class="mb-1">
-              <strong>Your rights:</strong> you can ask for access, correction or erasure, and you can withdraw consent at
-              any time. Withdrawing is as easy as giving it: use the link in your confirmation email or write to
-              <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>. Grievance Officer:
-              <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>. Full detail in the
-              <a href={downloadPolicy.privacyPath}>privacy policy</a> (version 2.1).
-            </p>
-            <p class="mb-0 form-note">
-              This form is for business users aged 18 or over. Please do not send personal or sensitive data about anyone
-              else.
-            </p>
-          </div>
 
-          <label class="consent-field">
-            <input type="checkbox" name="consent" value="yes" required />
-            <span>
-              I agree that Dicot Innovations may use these details to send my Vision S download link and to contact me
-              about this download. I have read the <a href={downloadPolicy.privacyPath}>privacy policy</a>.
-              <span class="req">*</span>
-            </span>
-          </label>
+          <fieldset class="vs-block vs-consent">
+            <legend><span class="vs-step">04</span> Consent</legend>
 
-          <label class="consent-field consent-field--optional">
-            <input type="checkbox" name="updates" value="yes" />
-            <span>Send me occasional product updates. Optional, and I can unsubscribe at any time.</span>
-          </label>
+            <div class="dl-notice" id="privacy-notice">
+              <h3 class="dl-notice__title">Before you download</h3>
+              <p class="mb-1">
+                <strong>What we collect:</strong> your name, company, work email and, if you add it, your phone number; the
+                build you chose, the time of the request, and a Cloudflare Turnstile security token. Your IP address is used
+                only to stop repeated automated requests.
+              </p>
+              <p class="mb-1">
+                <strong>Why:</strong> to send the download link or start the download, to help you if the install needs it,
+                and to keep this form from being abused. We do not sell your data and we do not use it for unrelated
+                advertising.
+              </p>
+              <p class="mb-1">
+                <strong>How long:</strong> {downloadPolicy.retention}. Security logs are kept for up to 90 days.
+              </p>
+              <p class="mb-1">
+                <strong>Your rights:</strong> you can ask for access, correction or erasure, and you can withdraw consent at
+                any time. Withdrawing is as easy as giving it: use the link in your confirmation email or write to
+                <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>. Grievance Officer:
+                <a href={`mailto:${site.emails.privacy}`}>{site.emails.privacy}</a>. Full detail in the
+                <a href={downloadPolicy.privacyPath}>privacy policy</a> (version 2.2).
+              </p>
+              <p class="mb-0 form-note">
+                This form is for business users aged 18 or over. Please do not send personal or sensitive data about anyone
+                else.
+              </p>
+            </div>
+
+            <label class="consent-field">
+              <input type="checkbox" name="consent" value="yes" required />
+              <span>
+                I agree that Dicot Innovations may use these details to send my Vision S download link and to contact me
+                about this download. I have read the <a href={downloadPolicy.privacyPath}>privacy policy</a>.
+                <span class="req">*</span>
+              </span>
+            </label>
+
+            <label class="consent-field consent-field--optional">
+              <input type="checkbox" name="updates" value="yes" />
+              <span>Send me occasional product updates. Optional, and I can unsubscribe at any time.</span>
+            </label>
+          </fieldset>
 
           {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey} data-theme="light"></div>}
 
@@ -204,44 +283,63 @@ const software = {
         </noscript>
       </div>
 
-      <aside>
-        <div class="card">
-          <h2 class="h3">Which key do I have?</h2>
-          <p>
-            The key label states its colour. Choose the build with the same colour; the other build will not accept it.
-            If you are unsure, send a photo of the key label to
-            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a> before downloading a large file.
-          </p>
-          <ul class="mb-0">
-            {visionSBuilds.map((build) => (
-              <li><strong>{build.key}</strong> — {build.file}, {build.size}, file dated {build.updated}</li>
-            ))}
-          </ul>
-        </div>
 
-        <div class="card mt-2">
-          <h2 class="h3">Before you install</h2>
-          <ul class="mb-0">
+      <aside class="vs-aside">
+        <div class="vs-note">
+          <span class="vs-note__label">Before you install</span>
+          <ol class="vs-steps">
             <li>Windows 7 or Windows 10, 4 GB RAM recommended (1 GB minimum).</li>
             <li>PostgreSQL is needed for historical logging.</li>
             <li>Mount the ISO, or write it to a DVD, then run the setup inside.</li>
             <li>Keep your licence key and licence ID to hand.</li>
-          </ul>
+          </ol>
         </div>
 
-        <div class="card mt-2">
-          <h2 class="h3">Need help?</h2>
-          <p>
-            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a><br />
+        <div class="vs-note">
+          <span class="vs-note__label">Need help?</span>
+          <p class="vs-note__text">Include the build, your licence ID and the Windows version so we can help faster.</p>
+          <p class="vs-contact">
+            <a href={`mailto:${site.emails.sales}`}>{site.emails.sales}</a>
             {site.phones.map((phone) => (
-              <><a href={`tel:${phone.href}`}>{phone.label}</a>{phone.primary ? " (primary)" : ""}<br /></>
+              <>
+                <br /><a href={`tel:${phone.href}`}>{phone.label}</a>{phone.primary ? " (primary)" : ""}
+              </>
             ))}
           </p>
-          <p class="form-note mb-0">
-            Include the build, your licence ID and the Windows version so we can help faster.
-          </p>
+          <a class="btn btn--ghost btn--small" href="/support/">Open a support ticket</a>
         </div>
       </aside>
+    </div>
+  </section>
+
+  <section class="section vs-next">
+    <div class="wrap">
+      <div class="section-head section-head--sub">
+        <div>
+          <span class="eyebrow">After you submit</span>
+          <h2>From request to installed.</h2>
+        </div>
+      </div>
+      <ol class="vs-path">
+        <li>
+          <span class="vs-path__step">01</span>
+          <h3>Request</h3>
+          <p>Build, delivery and your details. The request and the consent you gave are recorded together.</p>
+        </li>
+        <li>
+          <span class="vs-path__step">02</span>
+          <h3>Link or download</h3>
+          <p>
+            A signed link is emailed to you and stays valid for {downloadPolicy.linkHours} hours, or the file starts in
+            this browser.
+          </p>
+        </li>
+        <li>
+          <span class="vs-path__step">03</span>
+          <h3>Install</h3>
+          <p>Mount the ISO or write it to a DVD, run the setup, then enter the licence key from your dealer.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -306,73 +404,416 @@ const software = {
   window.addEventListener("pageshow", restoreSubmit);
 </script>
 
+
 <style>
-  .download-form fieldset { border: 0; padding: 0; margin: 0; }
-  .download-form legend { padding: 0; font-size: 0.82rem; font-weight: 600; }
-  .download-form legend .req { color: var(--red); }
-  .build-grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-  .build-card { position: relative; display: block; cursor: pointer; }
-  .build-card input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-  .build-card__body {
+  /* Hero: a release band, not a paragraph about installers. */
+  .vs-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
+    color: #fff;
+    padding: clamp(32px, 4vw, 52px) 0 clamp(48px, 6vw, 80px);
+  }
+  .vs-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 72px 72px;
+    mask-image: linear-gradient(90deg, #000, transparent 85%);
+    pointer-events: none;
+  }
+  .vs-hero .wrap {
+    position: relative;
+    z-index: 1;
+  }
+  .vs-hero__grid {
     display: grid;
-    gap: 4px;
-    padding: 16px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+  .vs-index {
+    display: flex;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ff6b6b;
+    margin-bottom: 26px;
+  }
+  .vs-index span + span {
+    color: #8f8fb0;
+  }
+  .vs-index span + span::before {
+    content: "/";
+    margin-right: 12px;
+    color: #4c4c7a;
+  }
+  .vs-hero h1 {
+    max-width: 15ch;
+    font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+    text-wrap: balance;
+  }
+  .vs-hero .lede {
+    color: #bfbfd4;
+    max-width: 52ch;
+  }
+  .vs-hero .hero-meta {
+    border-top: 1px solid var(--line-dark);
+    padding-top: 20px;
+    margin-top: 34px;
+  }
+  /* Global .btn--ghost assumes a light background; the hero is navy. */
+  .vs-hero .btn--ghost {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  .vs-hero .btn--ghost:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  .vs-builds {
+    display: grid;
+    gap: 14px;
+  }
+  .vs-build {
+    position: relative;
+    display: grid;
+    gap: 5px;
+    padding: 20px 22px 20px 28px;
+    background: #14143a;
+    border: 1px solid #2b2b5c;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: #e9e9f2;
+    overflow: hidden;
+    transition: border-color 0.18s, transform 0.18s;
+  }
+  .vs-build:hover {
+    border-color: rgba(203, 0, 0, 0.6);
+    transform: translateY(-2px);
+  }
+  .vs-build__band {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: var(--green);
+  }
+  .vs-build--grey .vs-build__band {
+    background: #9295a3;
+  }
+  .vs-build__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .vs-build__key {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .vs-build--green .vs-build__key {
+    color: #58d29b;
+  }
+  .vs-build--grey .vs-build__key {
+    color: #b6b6c6;
+  }
+  .vs-build__badge {
+    margin-left: auto;
+    font-family: var(--mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: #fff;
+    border-radius: 999px;
+    padding: 3px 9px;
+  }
+  .vs-build__name {
+    font-family: var(--display);
+    font-size: 1.1rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #fff;
+  }
+  .vs-build__file {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: #8f8fb0;
+  }
+  .vs-build__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 6px;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #b9b9cd;
+  }
+
+  /* Key comparison */
+  .vs-keys__grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  .vs-keys__table {
+    padding: 0;
+    overflow: hidden;
+  }
+  .vs-keys__scroll {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+  }
+  .vs-keys__scroll .spec-table {
+    min-width: 460px;
+  }
+  .vs-keys__table .spec-table th {
+    width: auto;
+  }
+  .vs-keys__table .spec-table th[scope="col"] {
+    background: var(--paper-2);
+    color: var(--ink);
+    border-bottom-color: var(--line);
+  }
+  .mono-cell {
+    font-family: var(--mono);
+    font-size: 0.76rem;
+  }
+
+  /* Request */
+  .vs-request__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.85fr);
+    gap: clamp(28px, 4vw, 56px);
+    align-items: start;
+  }
+  .vs-panel {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: clamp(22px, 3vw, 36px);
+  }
+  .vs-h2 {
+    font-size: clamp(1.6rem, 2.6vw, 2.05rem);
+    margin-bottom: 8px;
+  }
+  .vs-sub {
+    color: var(--muted);
+    font-size: 0.94rem;
+    margin-bottom: 26px;
+  }
+
+  .download-form {
+    gap: 0;
+  }
+  .download-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .vs-block {
+    border-top: 1px solid var(--line);
+    padding-top: 26px;
+    margin: 0 0 26px;
+    min-width: 0;
+  }
+  .vs-block:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .vs-block legend {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin-bottom: 14px;
+    font-size: 0.84rem;
+    font-weight: 600;
+  }
+  .vs-block legend .req {
+    color: var(--red);
+  }
+  .vs-step {
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    color: var(--red);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+
+  .build-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+  .build-card {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .build-card input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .build-card__body {
+    position: relative;
+    display: grid;
+    gap: 5px;
+    padding: 18px 18px 18px 22px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--white);
     height: 100%;
+    overflow: hidden;
+    transition: border-color 0.16s, box-shadow 0.16s, background 0.16s;
   }
-  .build-card input:checked + .build-card__body { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue) inset; }
-  .build-card input:focus-visible + .build-card__body { outline: 3px solid var(--blue); outline-offset: 2px; }
+  .build-card__band {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--green);
+  }
+  .build-card--grey .build-card__band {
+    background: #a8a8b2;
+  }
+  .build-card input:checked + .build-card__body {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 1px var(--blue) inset;
+    background: #f7f7ff;
+  }
+  .build-card input:focus-visible + .build-card__body {
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
+  }
   .build-card__key {
     font-family: var(--mono);
-    font-size: 0.7rem;
+    font-size: 0.64rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--red);
   }
-  .build-card__name { font-weight: 600; }
-  .build-card__meta { font-family: var(--mono); font-size: 0.74rem; color: var(--muted); }
-  .build-card__note { font-size: 0.88rem; color: var(--muted); }
+  .build-card--green .build-card__key {
+    color: #14885a;
+  }
+  .build-card--grey .build-card__key {
+    color: #6d6d7a;
+  }
+  .build-card__name {
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .build-card__meta {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+  .build-card__note {
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+
+  .choice-stack {
+    display: grid;
+    gap: 10px;
+  }
   .choice {
     display: flex;
     gap: 10px;
     align-items: flex-start;
-    padding: 12px 14px;
+    padding: 13px 15px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--white);
     cursor: pointer;
+    transition: border-color 0.16s;
   }
-  .choice + .choice { margin-top: 8px; }
   /* The fieldset carries .field, whose global rule sizes every input to 100%:
      reset the radio so it stays a small control beside its label. */
   .choice input[type="radio"] {
     flex: none;
     width: 18px;
     height: 18px;
-    margin: 4px 0 0;
+    margin: 3px 0 0;
     padding: 0;
     border: 0;
     border-radius: 0;
     background: none;
     accent-color: var(--blue);
   }
-  .choice > span { flex: 1 1 auto; min-width: 0; }
-  .choice__hint { display: block; font-size: 0.82rem; color: var(--muted); }
-  .choice:has(input:checked) { border-color: var(--blue); }
+  .choice > span {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .choice__hint {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .choice:has(input:checked) {
+    border-color: var(--blue);
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
   .dl-notice {
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: var(--paper-2);
+    background: var(--paper);
     padding: 18px 20px;
+    margin-bottom: 16px;
   }
-  .dl-notice__title { font-size: 1rem; margin-bottom: 10px; }
-  .dl-notice p { font-size: 0.9rem; }
-  .consent-field { display: flex; gap: 10px; align-items: flex-start; font-size: 0.92rem; }
-  .consent-field input { margin-top: 4px; flex: none; }
-  .consent-field--optional { color: var(--muted); }
-  .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .dl-notice__title {
+    font-family: var(--display);
+    font-size: 1rem;
+    margin: 0 0 10px;
+  }
+  .dl-notice p {
+    font-size: 0.86rem;
+  }
+  .dl-notice .mb-1 {
+    margin-bottom: 0.65em;
+  }
+  .consent-field {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+  .consent-field input {
+    margin-top: 4px;
+    flex: none;
+    accent-color: var(--red);
+  }
+  .consent-field--optional {
+    color: var(--muted);
+  }
+
   .form-success {
     border: 1px solid #9bd3b4;
     background: #f1fbf6;
@@ -380,8 +821,149 @@ const software = {
     padding: 14px 16px;
     margin-bottom: 18px;
   }
-  .dl-notice .mb-1 { margin-bottom: 0.65em; }
-  .h3 { font-size: 1.1rem; }
-</style>
+  .form-error {
+    margin-bottom: 18px;
+  }
 
+  .vs-aside {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+  }
+  .vs-note {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--white);
+    padding: 22px 24px;
+  }
+  .vs-note__label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
+  }
+  .vs-steps {
+    margin: 0;
+    padding-left: 1.15em;
+    display: grid;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .vs-note__text {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .vs-contact {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  /* After you submit */
+  .vs-next {
+    background: var(--navy);
+    color: #e9e9f2;
+  }
+  .vs-next .section-head {
+    margin-bottom: 40px;
+  }
+  .vs-next h2,
+  .vs-next h3 {
+    color: #fff;
+  }
+  .vs-next .eyebrow {
+    color: #ff7676;
+  }
+  .vs-path {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #3b3b73;
+  }
+  .vs-path li {
+    position: relative;
+    padding: 28px 32px 0 0;
+  }
+  .vs-path li::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background: var(--red);
+    box-shadow: 0 0 0 4px rgba(203, 0, 0, 0.16);
+  }
+  .vs-path li + li {
+    border-left: 1px solid #2c2c58;
+    padding-left: 32px;
+  }
+  .vs-path li + li::before {
+    left: 29px;
+  }
+  .vs-path__step {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ff6b6b;
+    margin-bottom: 14px;
+  }
+  .vs-path h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .vs-path p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #b9b9cd;
+  }
+
+  @media (max-width: 1000px) {
+    .vs-hero__grid,
+    .vs-keys__grid,
+    .vs-request__grid {
+      grid-template-columns: 1fr;
+    }
+    .vs-hero h1 {
+      max-width: none;
+    }
+    .vs-path {
+      grid-template-columns: 1fr;
+    }
+    .vs-path li,
+    .vs-path li + li {
+      border-left: 0;
+      padding: 26px 0 0;
+    }
+    .vs-path li + li {
+      border-top: 1px solid #2c2c58;
+      margin-top: 26px;
+    }
+    .vs-path li + li::before {
+      left: 0;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .vs-index {
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+    .build-grid {
+      grid-template-columns: 1fr;
+    }
+    .vs-hero .hero-meta {
+      gap: 8px 16px;
+    }
+  }
+</style>
 

@@ -35,6 +35,8 @@ const company = {
   privacyEmail: site.emails.privacy,
   phone: site.phones[0].label,
   address: site.address.full,
+  supportUrl: `${site.url}/support/`,
+  supportPortal: site.support.portal,
 };
 ---
 <script define:vars={{ productIndex, installers, company }}>
@@ -139,14 +141,14 @@ const company = {
     {
       name: "open_dicot_contact",
       description:
-        "Return Dicot's contact details and the URL of the contact form. Does not submit anything.",
+        "Return Dicot's contact details, the contact form URL and the support portal URL. Does not submit anything.",
       inputSchema: { type: "object", additionalProperties: false },
       annotations: { readOnlyHint: true, openWorldHint: false },
       execute() {
         return {
           ...company,
           contactUrl: `${company.url}/contact/`,
-          note: "The contact form needs the person to submit it themselves.",
+          note: "The contact form needs the person to submit it themselves. Existing customers raise support tickets at supportUrl, or directly in the support portal; the ticket form is never submitted on their behalf.",
         };
       },
     },

@@ -58,6 +58,8 @@ Dealers, integrators and OEMs can apply through the partner form. Tell us your t
 
 For licence keys, renewals and support, include your product and licence ID so we can find the record faster.
 
+[Open a support ticket ↗](/support/)
+
 Channel partners
 
 ## Talk to a dealer near you.

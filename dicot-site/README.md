@@ -25,7 +25,7 @@ src/
   data/downloads.ts         Vision S builds, sizes, consent version, retention
   data/content.ts           stats, industries, testimonials, team, downloads
   lib/sitemap-lastmod.mjs   per-route <lastmod> from git history
-  pages/                    routes (includes /downloads/vision-s/, /mcp/ docs and /mcp/data.json)
+  pages/                    routes (includes /downloads/vision-s/, /support/, /mcp/ docs and /mcp/data.json)
   content/careers/*.json    one file per open role
 public/
   images/                   logo, screenshots, customer logos, OG images

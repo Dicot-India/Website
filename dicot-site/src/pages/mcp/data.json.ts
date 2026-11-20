@@ -77,6 +77,8 @@ const payload = {
     alternatives: `${site.url}/alternatives/`,
     about: `${site.url}/about/`,
     contact: `${site.url}/contact/`,
+    support: `${site.url}/support/`,
+    supportPortal: site.support.portal,
     privacy: `${site.url}/legal/privacy/`,
     llms: `${site.url}/llms.txt`,
     markdownExample: `${site.url}/index.md`,

@@ -37,6 +37,7 @@
 - [Downloads](https://dicot.tech/downloads/): installers and manuals. The two Vision S builds are gated at [downloads/vision-s](https://dicot.tech/downloads/vision-s/).
 - [About](https://dicot.tech/about/)
 - [Contact](https://dicot.tech/contact/)
+- [Support](https://dicot.tech/support/): existing customers open and track tickets in the Dicot helpdesk (helpdesk.dicot.tech), with a help centre and the Ahmedabad office phone for production issues.
 - [Careers](https://dicot.tech/careers/)
 - [Privacy policy](https://dicot.tech/legal/privacy/)
 - [Cookie policy](https://dicot.tech/legal/cookies/)
