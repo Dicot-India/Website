@@ -5,6 +5,7 @@ import { site } from "../data/site";
 const title = "Careers at Dicot | Industrial Software, Ahmedabad";
 const description =
   "Work on SCADA and IIoT software used in 1,000+ plants. See open roles at Dicot Innovations in Ahmedabad, or send your CV to careers@dicot.tech.";
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 
 type Role = {
   title: string;
@@ -13,6 +14,7 @@ type Role = {
   type?: string;
   experience: string;
   description: string;
+  salary?: string;
   posted: string;
 };
 
@@ -58,16 +60,96 @@ const roles = Object.values(modules).sort((a, b) => (b.posted || "").localeCompa
       ) : (
         <div>
           {roles.map((role) => (
-            <a class="role" href={`mailto:${site.emails.careers}?subject=${encodeURIComponent(`Application — ${role.title}`)}`}>
-              <div>
-                <h3>{role.title}</h3>
-                <span class="mono">{role.department} · {role.location} · {role.type ?? "Full-time"} · {role.experience}</span>
+            <details class="role">
+              <summary>
+                <span>
+                  <span class="role__title">{role.title}</span>
+                  <span class="mono">{role.department} · {role.location} · {role.type ?? "Full-time"} · {role.experience}</span>
+                </span>
+                <span class="btn btn--ghost btn--small">Details &amp; apply</span>
+              </summary>
+              <div class="role__body">
+                <p>{role.description}</p>
+                {role.salary && <p class="role__salary"><strong>Salary / stipend:</strong> {role.salary}</p>}
+                <a class="btn btn--primary btn--small" href="#apply" data-role={role.title}>Apply for this role</a>
               </div>
-              <span class="btn btn--ghost btn--small">Apply</span>
-            </a>
+            </details>
           ))}
         </div>
       )}
+    </div>
+  </section>
+
+  <section class="section" id="apply">
+    <div class="wrap narrow">
+      <span class="eyebrow">Apply</span>
+      <h2>Apply here.</h2>
+      <p class="lede">One form, one resume upload, no account. Every application is read by a person.</p>
+
+      <div class="form-error mt-2" id="form-error" hidden>
+        Your application did not go through. Try again, or email it to <a href={`mailto:${site.emails.careers}`}>{site.emails.careers}</a>.
+      </div>
+      {!turnstileSiteKey && (
+        <div class="form-error mt-2">
+          Online applications are temporarily unavailable. Please email your CV to <a href={`mailto:${site.emails.careers}`}>{site.emails.careers}</a>.
+        </div>
+      )}
+
+      <form class="form mt-2" action="/careers-apply.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        <div class="field">
+          <label for="role">Role <span class="req">*</span></label>
+          <select id="role" name="role" required>
+            {roles.map((role) => <option value={role.title}>{role.title}</option>)}
+            <option value="Open application">Other / open application</option>
+          </select>
+        </div>
+        <div class="grid-2">
+          <div class="field">
+            <label for="name">Name <span class="req">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="100" />
+          </div>
+          <div class="field">
+            <label for="phone">Contact number <span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="40" />
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" />
+          </div>
+          <div class="field">
+            <label for="resume">Resume <span class="req">*</span></label>
+            <input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx" required />
+            <p class="form-note mb-0">PDF, DOC or DOCX, up to 5 MB.</p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="fit">What makes you uniquely positioned to succeed in this role? <span class="req">*</span></label>
+          <textarea id="fit" name="fit" required maxlength="3000"></textarea>
+        </div>
+        <div class="field">
+          <label for="obsession">
+            What is an obsession, rabbit hole, or random skill you’ve spent hours mastering on your own, outside of
+            college classes, and what does that say about how you work? <span class="req">*</span>
+          </label>
+          <textarea id="obsession" name="obsession" required maxlength="3000"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+        <label class="check">
+          <input type="checkbox" name="consent" value="yes" required />
+          <span>I agree that Dicot may use these details and my resume to assess this application, as described in the <a href="/legal/privacy/">privacy policy</a>. <span class="req">*</span></span>
+        </label>
+        {turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey}></div>}
+        <div>
+          <button class="btn btn--primary" type="submit" disabled={!turnstileSiteKey}>Submit application</button>
+        </div>
+        <p class="form-note">
+          We keep applications for 12 months unless you ask us to delete them. Required fields are marked with
+          <span class="req">*</span>. Prefer email? Send your CV to <a href={`mailto:${site.emails.careers}`}>{site.emails.careers}</a>.
+        </p>
+      </form>
     </div>
   </section>
 
@@ -81,4 +163,22 @@ const roles = Object.values(modules).sort((a, b) => (b.posted || "").localeCompa
       <p class="small muted">Send applications to <a href={`mailto:${site.emails.careers}`}>{site.emails.careers}</a>. We keep CVs for 12 months unless you ask us to delete them.</p>
     </div>
   </section>
+
+  {turnstileSiteKey && <script async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>}
 </Base>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  if (params.get("error") === "1") {
+    document.getElementById("form-error")?.removeAttribute("hidden");
+    document.getElementById("apply")?.scrollIntoView();
+  }
+
+  // A "Apply for this role" link preselects the role in the shared form.
+  const roleSelect = document.getElementById("role") as HTMLSelectElement | null;
+  document.querySelectorAll<HTMLElement>("[data-role]").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (roleSelect) roleSelect.value = link.dataset.role ?? roleSelect.value;
+    });
+  });
+</script>

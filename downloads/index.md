@@ -3,7 +3,7 @@ title: "Software Downloads | Dicot Vision C, Vision S, Vision Web, VGraphic"
 description: "Download Dicot software: Vision C setup, the Vision S green-key and grey-key installers, Vision Web Windows and Android clients, VGraphic setup and manuals, plus the RS-485 driver."
 url: "https://dicot.tech/downloads/"
 markdown_url: "https://dicot.tech/downloads/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/downloads/. The HTML page remains the source of truth. -->
@@ -56,4 +56,4 @@ Send your product, licence ID and the version you are running. We will route it 
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/downloads/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/downloads/. Questions: sales@dicot.tech

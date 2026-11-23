@@ -3,7 +3,7 @@ title: "Refund & Cancellation Policy | Dicot Innovations"
 description: "Refund and cancellation rules for Dicot software licences, cloud subscriptions and duplicate transactions, including processing timelines."
 url: "https://dicot.tech/legal/refund/"
 markdown_url: "https://dicot.tech/legal/refund/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/refund/. The HTML page remains the source of truth. -->
@@ -55,4 +55,4 @@ A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/refund/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/refund/. Questions: sales@dicot.tech

@@ -3,7 +3,7 @@ title: "Vision Web Cloud SCADA & IIoT Platform | Dicot"
 description: "Vision Web is a hosted cloud SCADA platform with up to 20,000 tags, 50–100 ms updates, two-year history and SMS, email, WhatsApp and Telegram alarms."
 url: "https://dicot.tech/products/vision-web/"
 markdown_url: "https://dicot.tech/products/vision-web/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-web/. The HTML page remains the source of truth. -->
@@ -177,4 +177,4 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-web/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-web/. Questions: sales@dicot.tech

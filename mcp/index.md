@@ -3,7 +3,7 @@ title: "Dicot MCP API | Read-only SCADA data for AI agents"
 description: "JSON-RPC 2.0 endpoint serving published Dicot product facts, download options and contact details. No auth, read-only, no personal data, 60 requests per minute per IP."
 url: "https://dicot.tech/mcp/"
 markdown_url: "https://dicot.tech/mcp/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/mcp/. The HTML page remains the source of truth. -->
@@ -88,4 +88,4 @@ For quotes, demos or integration questions, use the [contact form](/contact/) or
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/mcp/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/mcp/. Questions: sales@dicot.tech

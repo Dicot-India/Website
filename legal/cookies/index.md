@@ -3,7 +3,7 @@ title: "Cookie Policy | Dicot Innovations"
 description: "Which cookies and local storage dicot.tech uses, what each one does, how long it lasts, and how to change your consent choice."
 url: "https://dicot.tech/legal/cookies/"
 markdown_url: "https://dicot.tech/legal/cookies/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/cookies/. The HTML page remains the source of truth. -->
@@ -49,4 +49,4 @@ For the wider picture of how we handle personal data, see the [privacy policy](/
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/cookies/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/cookies/. Questions: sales@dicot.tech

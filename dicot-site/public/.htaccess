@@ -137,7 +137,7 @@ ErrorDocument 429 /429.html
   </FilesMatch>
 
   # Form and MCP endpoints must never be cached or indexed.
-  <FilesMatch "^(contact|download|mcp)\.php$">
+  <FilesMatch "^(careers-apply|contact|download|mcp)\.php$">
     Header set Cache-Control "no-store"
     Header set X-Robots-Tag "noindex, nofollow"
   </FilesMatch>

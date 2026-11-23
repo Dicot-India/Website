@@ -3,7 +3,7 @@ title: "SCADA & IIoT Software Built in India | Dicot"
 description: "Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Vision C, Vision S and Vision Web run in 1,000+ plants. Book a demo."
 url: "https://dicot.tech/"
 markdown_url: "https://dicot.tech/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/. The HTML page remains the source of truth. -->
@@ -267,4 +267,4 @@ Tell us your tag count, deployment type and timeline. We will route you to the r
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/. Questions: sales@dicot.tech

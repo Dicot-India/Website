@@ -3,7 +3,7 @@ title: "Privacy Policy | Dicot Innovations"
 description: "How Dicot Innovations collects, uses, shares and protects personal data under India's DPDP Act 2023 and DPDP Rules 2025. Rights, retention and grievance contact."
 url: "https://dicot.tech/legal/privacy/"
 markdown_url: "https://dicot.tech/legal/privacy/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/privacy/. The HTML page remains the source of truth. -->
@@ -144,4 +144,4 @@ Phone: +91 90166 83114
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/privacy/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/privacy/. Questions: sales@dicot.tech

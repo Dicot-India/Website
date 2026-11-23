@@ -3,7 +3,7 @@ title: "SCADA Dealer & OEM Partner Programme | Dicot"
 description: "Become a Dicot dealer, system integrator or OEM partner. Sell and support Vision C, Vision S and Vision Web with dealer pricing, training and white-label options."
 url: "https://dicot.tech/partners/"
 markdown_url: "https://dicot.tech/partners/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/partners/. The HTML page remains the source of truth. -->
@@ -71,4 +71,4 @@ Apply once and we will map the right partnership model to your business.
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/partners/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/partners/. Questions: sales@dicot.tech

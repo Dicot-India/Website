@@ -3,7 +3,7 @@ title: "Terms of Use | Dicot Innovations"
 description: "Terms governing use of dicot.tech and dicot.in, software licensing, acceptable use, intellectual property and the governing law for Dicot Innovations."
 url: "https://dicot.tech/legal/terms/"
 markdown_url: "https://dicot.tech/legal/terms/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/terms/. The HTML page remains the source of truth. -->
@@ -65,4 +65,4 @@ A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/terms/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/terms/. Questions: sales@dicot.tech

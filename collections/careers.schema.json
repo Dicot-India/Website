@@ -23,6 +23,9 @@
         "description": {
           "type": "string"
         },
+        "salary": {
+          "type": "string"
+        },
         "posted": {
           "type": "string"
         },

@@ -3,7 +3,7 @@ title: "Download Vision S | Green key and grey key installers"
 description: "Download the Vision S installer that matches your key: the green-key build or the Vision S Version 2026 grey-key build. Request a temporary email link or start the download."
 url: "https://dicot.tech/downloads/vision-s/"
 markdown_url: "https://dicot.tech/downloads/vision-s/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/downloads/vision-s/. The HTML page remains the source of truth. -->
@@ -120,4 +120,4 @@ After you submit
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/downloads/vision-s/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/downloads/vision-s/. Questions: sales@dicot.tech

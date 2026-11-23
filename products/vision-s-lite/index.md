@@ -3,7 +3,7 @@ title: "Vision S Lite — Lightweight Vision S SCADA | Dicot"
 description: "Vision S Lite is a lighter edition of Vision S with fewer protocols and a smaller design library, built for cost-sensitive SCADA applications. In development."
 url: "https://dicot.tech/products/vision-s-lite/"
 markdown_url: "https://dicot.tech/products/vision-s-lite/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-s-lite/. The HTML page remains the source of truth. -->
@@ -156,4 +156,4 @@ Tell us the application and tag scope. We will share availability, editions and 
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-s-lite/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-s-lite/. Questions: sales@dicot.tech

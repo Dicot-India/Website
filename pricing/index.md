@@ -3,7 +3,7 @@ title: "SCADA Software Pricing & Licensing | Dicot"
 description: "See how Dicot SCADA products are licensed: Vision C term or perpetual, Vision S tag-based runtime and development, Vision Web yearly cloud subscriptions. Vision S Lite is in development. Quotes via dealers."
 url: "https://dicot.tech/pricing/"
 markdown_url: "https://dicot.tech/pricing/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/pricing/. The HTML page remains the source of truth. -->
@@ -129,4 +129,4 @@ Send tag count, protocols and whether you need on-premise or cloud. We will rout
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/pricing/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/pricing/. Questions: sales@dicot.tech

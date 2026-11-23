@@ -1950,21 +1950,42 @@ ul.card[role="list"] {
 
 /* Careers */
 .role {
+  border-bottom: 1px solid var(--line);
+}
+.role > summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 20px 0;
-  border-bottom: 1px solid var(--line);
-  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
 }
-.role h3 {
-  margin: 0 0 4px;
+.role > summary::-webkit-details-marker {
+  display: none;
+}
+.role > summary .btn {
+  flex: none;
+}
+.role__title {
+  display: block;
+  margin-bottom: 4px;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 .role .mono {
   color: var(--muted);
   font-size: 0.62rem;
+}
+.role__body {
+  max-width: 70ch;
+  padding-bottom: 24px;
+}
+.role__body p {
+  margin: 0 0 12px;
+}
+.role__salary {
+  color: var(--ink);
 }
 .empty {
   border: 1px dashed var(--line);

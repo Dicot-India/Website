@@ -3,7 +3,7 @@ title: "About Dicot Innovations | SCADA Company in India"
 description: "Dicot Innovations is an Ahmedabad-based SCADA and IIoT software company founded in 2022. 800+ customers, 1,000+ deployments, backed by Startup India and i-Hub."
 url: "https://dicot.tech/about/"
 markdown_url: "https://dicot.tech/about/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/about/. The HTML page remains the source of truth. -->
@@ -119,4 +119,4 @@ A demo is the fastest way to judge whether we fit your plant. Bring your tag lis
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/about/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/about/. Questions: sales@dicot.tech

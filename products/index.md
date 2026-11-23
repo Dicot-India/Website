@@ -3,7 +3,7 @@ title: "SCADA, IIoT & Report Software | Dicot Products"
 description: "Compare Dicot's product suite: Vision C mini-SCADA, Vision S enterprise SCADA, Vision S Lite (in development), Vision Web cloud SCADA and VGraphic report generator."
 url: "https://dicot.tech/products/"
 markdown_url: "https://dicot.tech/products/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/. The HTML page remains the source of truth. -->
@@ -106,4 +106,4 @@ Tell us the tag count, protocols and whether you need cloud or on-premise. We wi
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/. Questions: sales@dicot.tech

@@ -12,9 +12,19 @@ if (isset($_SERVER['SCRIPT_FILENAME']) && realpath($_SERVER['SCRIPT_FILENAME']) 
 /**
  * Sends one plain-text message through the Zoho SMTP account.
  *
+ * An optional file (the applicant's resume) is attached from disk; it is never
+ * copied or stored by the site.
+ *
  * @return string|null Null on success, a short error description otherwise.
  */
-function dicot_send_mail(string $to, string $subject, string $body, string $replyTo = ''): ?string
+function dicot_send_mail(
+    string $to,
+    string $subject,
+    string $body,
+    string $replyTo = '',
+    string $attachmentPath = '',
+    string $attachmentName = ''
+): ?string
 {
     $host = dicot_setting('SMTP_HOST');
     $username = dicot_setting('SMTP_USERNAME');
@@ -56,6 +66,9 @@ function dicot_send_mail(string $to, string $subject, string $body, string $repl
         }
         $mailer->Subject = $subject;
         $mailer->Body = $body;
+        if ($attachmentPath !== '' && is_file($attachmentPath)) {
+            $mailer->addAttachment($attachmentPath, $attachmentName !== '' ? $attachmentName : basename($attachmentPath));
+        }
         $mailer->send();
         return null;
     } catch (Throwable $error) {

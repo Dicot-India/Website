@@ -3,7 +3,7 @@ title: "SCADA & IIoT Solutions for Manufacturers | Dicot"
 description: "OEM white-labelling, integration and panel building, Industry 4.0 consulting and custom SCADA development from Dicot. Start with a pilot on one machine, then scale across the plant."
 url: "https://dicot.tech/solutions/"
 markdown_url: "https://dicot.tech/solutions/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/solutions/. The HTML page remains the source of truth. -->
@@ -102,4 +102,4 @@ Send us the equipment list and the outcome you need. We will tell you what is po
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/solutions/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/solutions/. Questions: sales@dicot.tech

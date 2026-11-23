@@ -3,7 +3,7 @@ title: "Support | Dicot Helpdesk tickets & help centre"
 description: "Open a support ticket for Vision C, Vision S, Vision Web or VGraphic. Track it in the Dicot helpdesk, browse the help centre, or call the Ahmedabad office for a production issue."
 url: "https://dicot.tech/support/"
 markdown_url: "https://dicot.tech/support/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/support/. The HTML page remains the source of truth. -->
@@ -75,4 +75,4 @@ Demos, quotes, dealer routing and new projects go through the contact form, so t
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/support/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/support/. Questions: sales@dicot.tech

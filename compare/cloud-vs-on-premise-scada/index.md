@@ -3,7 +3,7 @@ title: "Cloud SCADA vs On-Premise SCADA | Dicot"
 description: "Cloud SCADA or on-premise? Compare latency, offline operation, cost, security, remote access and scale — and see when a hybrid architecture is the right answer."
 url: "https://dicot.tech/compare/cloud-vs-on-premise-scada/"
 markdown_url: "https://dicot.tech/compare/cloud-vs-on-premise-scada/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/compare/cloud-vs-on-premise-scada/. The HTML page remains the source of truth. -->
@@ -81,4 +81,4 @@ Tell us the sites, the tags and what happens when the link drops. We will draw t
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/compare/cloud-vs-on-premise-scada/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/compare/cloud-vs-on-premise-scada/. Questions: sales@dicot.tech

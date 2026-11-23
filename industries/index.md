@@ -3,7 +3,7 @@ title: "SCADA & IIoT by Industry | Dicot"
 description: "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC plants."
 url: "https://dicot.tech/industries/"
 markdown_url: "https://dicot.tech/industries/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/industries/. The HTML page remains the source of truth. -->
@@ -131,4 +131,4 @@ If it has machines, sensors and a person who needs to know when something drifts
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/industries/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/industries/. Questions: sales@dicot.tech

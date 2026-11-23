@@ -105,6 +105,41 @@ try {
     "303 /thank-you/?type=vision-s"
   );
 
+  // --- careers-apply.php ---
+  response = await get("/careers-apply.php");
+  check("Careers GET redirects to the page", `${response.status} ${response.headers.get("location")}`, "303 /careers/");
+
+  const application = {
+    role: "Growth Associate/BDE (Fresher)",
+    name: "Smoke Test",
+    phone: "+91 90000 00000",
+    email: "smoke@example.com",
+    fit: "Smoke test answer.",
+    obsession: "Smoke test answer.",
+    consent: "yes",
+  };
+
+  response = await post("/careers-apply.php", { ...application, consent: "" });
+  check(
+    "Application without consent is rejected (DPDP)",
+    `${response.status} ${response.headers.get("location")}`,
+    (value) => value.startsWith("303 ") && value.includes("reason=fields")
+  );
+
+  response = await post("/careers-apply.php", { ...application, phone: "call me" });
+  check(
+    "Application with an invalid phone is rejected",
+    `${response.status} ${response.headers.get("location")}`,
+    (value) => value.includes("reason=fields")
+  );
+
+  response = await post("/careers-apply.php", { ...application, website: "spam" });
+  check(
+    "Career honeypot gets a silent success",
+    `${response.status} ${response.headers.get("location")}`,
+    "303 /thank-you/"
+  );
+
   // --- mcp.php ---
   response = await get("/mcp.php");
   check("MCP GET returns 405", response.status, 405);

@@ -3,7 +3,7 @@ title: "Vision C Mini-SCADA & Data Logger | Dicot"
 description: "Vision C is a lightweight Windows mini-SCADA and data logger for up to 100 tags. Modbus TCP/IP, RTU, BCD, AIBUS, 8 languages and one-click Vision Web connectivity."
 url: "https://dicot.tech/products/vision-c/"
 markdown_url: "https://dicot.tech/products/vision-c/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-c/. The HTML page remains the source of truth. -->
@@ -172,4 +172,4 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-c/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-c/. Questions: sales@dicot.tech

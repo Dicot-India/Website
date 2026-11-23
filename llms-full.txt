@@ -1,6 +1,6 @@
 # Dicot Innovations — full site text
 
-> Generated 2026-11-20 from https://dicot.tech. HTML pages are canonical.
+> Generated 2026-11-23 from https://dicot.tech. HTML pages are canonical.
 > Products: Vision C (mini-SCADA), Vision S (enterprise SCADA), Vision Web (hosted cloud SCADA) and VGraphic (cloud report generator).
 > Prices are shared through authorised dealers and are not published. Vision S Lite is in development.
 
@@ -9,7 +9,7 @@ title: "SCADA & IIoT Software Built in India | Dicot"
 description: "Dicot builds SCADA, IIoT and data-acquisition software for manufacturers. Vision C, Vision S and Vision Web run in 1,000+ plants. Book a demo."
 url: "https://dicot.tech/"
 markdown_url: "https://dicot.tech/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/. The HTML page remains the source of truth. -->
@@ -273,7 +273,7 @@ Tell us your tag count, deployment type and timeline. We will route you to the r
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/. Questions: sales@dicot.tech
 
 
 ---
@@ -281,7 +281,7 @@ title: "SCADA, IIoT & Report Software | Dicot Products"
 description: "Compare Dicot's product suite: Vision C mini-SCADA, Vision S enterprise SCADA, Vision S Lite (in development), Vision Web cloud SCADA and VGraphic report generator."
 url: "https://dicot.tech/products/"
 markdown_url: "https://dicot.tech/products/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/. The HTML page remains the source of truth. -->
@@ -384,7 +384,7 @@ Tell us the tag count, protocols and whether you need cloud or on-premise. We wi
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/. Questions: sales@dicot.tech
 
 
 ---
@@ -392,7 +392,7 @@ title: "Vision C Mini-SCADA & Data Logger | Dicot"
 description: "Vision C is a lightweight Windows mini-SCADA and data logger for up to 100 tags. Modbus TCP/IP, RTU, BCD, AIBUS, 8 languages and one-click Vision Web connectivity."
 url: "https://dicot.tech/products/vision-c/"
 markdown_url: "https://dicot.tech/products/vision-c/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-c/. The HTML page remains the source of truth. -->
@@ -561,7 +561,7 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-c/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-c/. Questions: sales@dicot.tech
 
 
 ---
@@ -569,7 +569,7 @@ title: "Vision S Enterprise SCADA Software | Dicot"
 description: "Vision S enterprise SCADA scales to 60,000 tags with 4,000+ protocols, OPC UA/DA, 21 CFR audit trails, PostgreSQL history, C scripting and web clients."
 url: "https://dicot.tech/products/vision-s/"
 markdown_url: "https://dicot.tech/products/vision-s/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-s/. The HTML page remains the source of truth. -->
@@ -739,7 +739,7 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-s/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-s/. Questions: sales@dicot.tech
 
 
 ---
@@ -747,7 +747,7 @@ title: "Vision Web Cloud SCADA & IIoT Platform | Dicot"
 description: "Vision Web is a hosted cloud SCADA platform with up to 20,000 tags, 50–100 ms updates, two-year history and SMS, email, WhatsApp and Telegram alarms."
 url: "https://dicot.tech/products/vision-web/"
 markdown_url: "https://dicot.tech/products/vision-web/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-web/. The HTML page remains the source of truth. -->
@@ -921,7 +921,7 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-web/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-web/. Questions: sales@dicot.tech
 
 
 ---
@@ -929,7 +929,7 @@ title: "Vision S Lite — Lightweight Vision S SCADA | Dicot"
 description: "Vision S Lite is a lighter edition of Vision S with fewer protocols and a smaller design library, built for cost-sensitive SCADA applications. In development."
 url: "https://dicot.tech/products/vision-s-lite/"
 markdown_url: "https://dicot.tech/products/vision-s-lite/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-s-lite/. The HTML page remains the source of truth. -->
@@ -1082,7 +1082,7 @@ Tell us the application and tag scope. We will share availability, editions and 
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-s-lite/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-s-lite/. Questions: sales@dicot.tech
 
 
 ---
@@ -1090,7 +1090,7 @@ title: "VGraphic Industrial Report Generator | Dicot"
 description: "VGraphic turns Excel, CSV, SQL and DAT plant data into branded PDF reports and graphs. Cloud-based, mobile and desktop, with time and file filters."
 url: "https://dicot.tech/products/vgraphic/"
 markdown_url: "https://dicot.tech/products/vgraphic/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vgraphic/. The HTML page remains the source of truth. -->
@@ -1248,7 +1248,7 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vgraphic/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vgraphic/. Questions: sales@dicot.tech
 
 
 ---
@@ -1256,7 +1256,7 @@ title: "SCADA Software Pricing & Licensing | Dicot"
 description: "See how Dicot SCADA products are licensed: Vision C term or perpetual, Vision S tag-based runtime and development, Vision Web yearly cloud subscriptions. Vision S Lite is in development. Quotes via dealers."
 url: "https://dicot.tech/pricing/"
 markdown_url: "https://dicot.tech/pricing/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/pricing/. The HTML page remains the source of truth. -->
@@ -1382,7 +1382,7 @@ Send tag count, protocols and whether you need on-premise or cloud. We will rout
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/pricing/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/pricing/. Questions: sales@dicot.tech
 
 
 ---
@@ -1390,7 +1390,7 @@ title: "Software Downloads | Dicot Vision C, Vision S, Vision Web, VGraphic"
 description: "Download Dicot software: Vision C setup, the Vision S green-key and grey-key installers, Vision Web Windows and Android clients, VGraphic setup and manuals, plus the RS-485 driver."
 url: "https://dicot.tech/downloads/"
 markdown_url: "https://dicot.tech/downloads/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/downloads/. The HTML page remains the source of truth. -->
@@ -1443,7 +1443,7 @@ Send your product, licence ID and the version you are running. We will route it 
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/downloads/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/downloads/. Questions: sales@dicot.tech
 
 
 ---
@@ -1451,7 +1451,7 @@ title: "Download Vision S | Green key and grey key installers"
 description: "Download the Vision S installer that matches your key: the green-key build or the Vision S Version 2026 grey-key build. Request a temporary email link or start the download."
 url: "https://dicot.tech/downloads/vision-s/"
 markdown_url: "https://dicot.tech/downloads/vision-s/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/downloads/vision-s/. The HTML page remains the source of truth. -->
@@ -1568,7 +1568,7 @@ After you submit
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/downloads/vision-s/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/downloads/vision-s/. Questions: sales@dicot.tech
 
 
 ---
@@ -1576,7 +1576,7 @@ title: "Support | Dicot Helpdesk tickets & help centre"
 description: "Open a support ticket for Vision C, Vision S, Vision Web or VGraphic. Track it in the Dicot helpdesk, browse the help centre, or call the Ahmedabad office for a production issue."
 url: "https://dicot.tech/support/"
 markdown_url: "https://dicot.tech/support/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/support/. The HTML page remains the source of truth. -->
@@ -1648,7 +1648,7 @@ Demos, quotes, dealer routing and new projects go through the contact form, so t
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/support/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/support/. Questions: sales@dicot.tech
 
 
 ---
@@ -1656,7 +1656,7 @@ title: "SCADA & IIoT Solutions for Manufacturers | Dicot"
 description: "OEM white-labelling, integration and panel building, Industry 4.0 consulting and custom SCADA development from Dicot. Start with a pilot on one machine, then scale across the plant."
 url: "https://dicot.tech/solutions/"
 markdown_url: "https://dicot.tech/solutions/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/solutions/. The HTML page remains the source of truth. -->
@@ -1755,7 +1755,7 @@ Send us the equipment list and the outcome you need. We will tell you what is po
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/solutions/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/solutions/. Questions: sales@dicot.tech
 
 
 ---
@@ -1763,7 +1763,7 @@ title: "SCADA & IIoT by Industry | Dicot"
 description: "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC plants."
 url: "https://dicot.tech/industries/"
 markdown_url: "https://dicot.tech/industries/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/industries/. The HTML page remains the source of truth. -->
@@ -1891,7 +1891,7 @@ If it has machines, sensors and a person who needs to know when something drifts
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/industries/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/industries/. Questions: sales@dicot.tech
 
 
 ---
@@ -1899,7 +1899,7 @@ title: "SCADA Alternatives in India: Buyer's Guide (2026) | Dicot"
 description: "Compare SCADA alternatives in India: traditional enterprise SCADA, mini-SCADA and cloud SCADA. Tag limits, licensing, offline operation and when each fits."
 url: "https://dicot.tech/alternatives/"
 markdown_url: "https://dicot.tech/alternatives/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/alternatives/. The HTML page remains the source of truth. -->
@@ -2023,7 +2023,7 @@ Send the tag count, protocols and site constraints. We will tell you which shape
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/alternatives/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/alternatives/. Questions: sales@dicot.tech
 
 
 ---
@@ -2031,7 +2031,7 @@ title: "Cloud SCADA vs On-Premise SCADA | Dicot"
 description: "Cloud SCADA or on-premise? Compare latency, offline operation, cost, security, remote access and scale — and see when a hybrid architecture is the right answer."
 url: "https://dicot.tech/compare/cloud-vs-on-premise-scada/"
 markdown_url: "https://dicot.tech/compare/cloud-vs-on-premise-scada/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/compare/cloud-vs-on-premise-scada/. The HTML page remains the source of truth. -->
@@ -2109,7 +2109,7 @@ Tell us the sites, the tags and what happens when the link drops. We will draw t
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/compare/cloud-vs-on-premise-scada/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/compare/cloud-vs-on-premise-scada/. Questions: sales@dicot.tech
 
 
 ---
@@ -2117,7 +2117,7 @@ title: "About Dicot Innovations | SCADA Company in India"
 description: "Dicot Innovations is an Ahmedabad-based SCADA and IIoT software company founded in 2022. 800+ customers, 1,000+ deployments, backed by Startup India and i-Hub."
 url: "https://dicot.tech/about/"
 markdown_url: "https://dicot.tech/about/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/about/. The HTML page remains the source of truth. -->
@@ -2233,7 +2233,7 @@ A demo is the fastest way to judge whether we fit your plant. Bring your tag lis
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/about/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/about/. Questions: sales@dicot.tech
 
 
 ---
@@ -2241,7 +2241,7 @@ title: "SCADA Dealer & OEM Partner Programme | Dicot"
 description: "Become a Dicot dealer, system integrator or OEM partner. Sell and support Vision C, Vision S and Vision Web with dealer pricing, training and white-label options."
 url: "https://dicot.tech/partners/"
 markdown_url: "https://dicot.tech/partners/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/partners/. The HTML page remains the source of truth. -->
@@ -2309,7 +2309,7 @@ Apply once and we will map the right partnership model to your business.
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/partners/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/partners/. Questions: sales@dicot.tech
 
 
 ---
@@ -2317,7 +2317,7 @@ title: "Contact Dicot | Dealers in Gujarat, Tamil Nadu & Mumbai"
 description: "Talk to Dicot about SCADA, IIoT or data-acquisition software. Ahmedabad office, +91 90166 83114, sales@dicot.tech. Channel partners in Gujarat, Tamil Nadu and Mumbai."
 url: "https://dicot.tech/contact/"
 markdown_url: "https://dicot.tech/contact/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/contact/. The HTML page remains the source of truth. -->
@@ -2418,7 +2418,7 @@ Partner details are listed for enquiries about Dicot products. Dealer pricing an
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/contact/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/contact/. Questions: sales@dicot.tech
 
 
 ---
@@ -2426,7 +2426,7 @@ title: "Blog | SCADA, IIoT and Licensing Notes | Dicot"
 description: "Articles from Dicot Innovations on SCADA sizing, licensing, data acquisition and product updates. Written for machine builders and plant teams."
 url: "https://dicot.tech/blog/"
 markdown_url: "https://dicot.tech/blog/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/blog/. The HTML page remains the source of truth. -->
@@ -2458,7 +2458,7 @@ Read: https://dicot.tech/blog/?post=vision-s-lite-in-development
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/blog/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/blog/. Questions: sales@dicot.tech
 
 
 ---
@@ -2466,7 +2466,7 @@ title: "Dicot MCP API | Read-only SCADA data for AI agents"
 description: "JSON-RPC 2.0 endpoint serving published Dicot product facts, download options and contact details. No auth, read-only, no personal data, 60 requests per minute per IP."
 url: "https://dicot.tech/mcp/"
 markdown_url: "https://dicot.tech/mcp/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/mcp/. The HTML page remains the source of truth. -->
@@ -2551,7 +2551,7 @@ For quotes, demos or integration questions, use the [contact form](/contact/) or
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/mcp/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/mcp/. Questions: sales@dicot.tech
 
 
 ---
@@ -2559,7 +2559,7 @@ title: "Privacy Policy | Dicot Innovations"
 description: "How Dicot Innovations collects, uses, shares and protects personal data under India's DPDP Act 2023 and DPDP Rules 2025. Rights, retention and grievance contact."
 url: "https://dicot.tech/legal/privacy/"
 markdown_url: "https://dicot.tech/legal/privacy/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/privacy/. The HTML page remains the source of truth. -->
@@ -2700,7 +2700,7 @@ Phone: +91 90166 83114
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/privacy/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/privacy/. Questions: sales@dicot.tech
 
 
 ---
@@ -2708,7 +2708,7 @@ title: "Terms of Use | Dicot Innovations"
 description: "Terms governing use of dicot.tech and dicot.in, software licensing, acceptable use, intellectual property and the governing law for Dicot Innovations."
 url: "https://dicot.tech/legal/terms/"
 markdown_url: "https://dicot.tech/legal/terms/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/terms/. The HTML page remains the source of truth. -->
@@ -2770,7 +2770,7 @@ A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/terms/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/terms/. Questions: sales@dicot.tech
 
 
 ---
@@ -2778,7 +2778,7 @@ title: "Refund & Cancellation Policy | Dicot Innovations"
 description: "Refund and cancellation rules for Dicot software licences, cloud subscriptions and duplicate transactions, including processing timelines."
 url: "https://dicot.tech/legal/refund/"
 markdown_url: "https://dicot.tech/legal/refund/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/refund/. The HTML page remains the source of truth. -->
@@ -2830,7 +2830,7 @@ A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/refund/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/refund/. Questions: sales@dicot.tech
 
 
 ---
@@ -2838,7 +2838,7 @@ title: "Cookie Policy | Dicot Innovations"
 description: "Which cookies and local storage dicot.tech uses, what each one does, how long it lasts, and how to change your consent choice."
 url: "https://dicot.tech/legal/cookies/"
 markdown_url: "https://dicot.tech/legal/cookies/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/legal/cookies/. The HTML page remains the source of truth. -->
@@ -2884,7 +2884,7 @@ For the wider picture of how we handle personal data, see the [privacy policy](/
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/legal/cookies/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/legal/cookies/. Questions: sales@dicot.tech
 
 
 ---
@@ -2892,7 +2892,7 @@ title: "Careers at Dicot | Industrial Software, Ahmedabad"
 description: "Work on SCADA and IIoT software used in 1,000+ plants. See open roles at Dicot Innovations in Ahmedabad, or send your CV to careers@dicot.tech."
 url: "https://dicot.tech/careers/"
 markdown_url: "https://dicot.tech/careers/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/careers/. The HTML page remains the source of truth. -->
@@ -2920,11 +2920,63 @@ Open roles
 
 Roles are added here as they open. If nothing fits today, send your CV anyway.
 
-**No open roles right now.**
+Field Application & Deployment Intern Engineering & Deployments · Ahmedabad, Gujarat (On-site / Field Travel) · Internship · Students / Recent Graduates Details & apply
 
-We still read every application. Send your CV and a short note about what you want to work on to [careers@dicot.tech](mailto:careers@dicot.tech).
+Get hands-on industrial automation experience assisting with on-site installations, panel wiring checks, and protocol testing for Dicot Innovations' IIoT and SCADA platforms. You will shadow deployment engineers at client plants, help configure edge gateways and Vision S/Vision Web setups, and document field diagnostics.
 
-[Email your CV](mailto:careers@dicot.tech?subject=Application%20%E2%80%94%20Dicot)
+**Salary / stipend:** 5k - 10k per month
+
+[Apply for this role](#apply)
+
+Field Application Engineer (Fresher) Engineering & Deployments · Ahmedabad, Gujarat (On-site / Field Travel) · Full-time · 0-1 years (Freshers) Details & apply
+
+Lead on-site commissioning, hardware integration, and technical support for Dicot Innovations' Industrial IoT and SCADA systems (Vision S, Vision C, and Vision Web). You will work directly at manufacturing facilities to configure PLCs, sensors, and industrial communication protocols (Modbus, OPC UA, RS-485), troubleshoot edge deployments, and ensure seamless plant-floor operations.
+
+**Salary / stipend:** 3LPA + Performance Incentives
+
+[Apply for this role](#apply)
+
+Growth Associate/BDE (Fresher) Sales & Marketing · Ahmedabad, Gujarat (On-site) · Full-time · 0-1 years (Freshers) Details & apply
+
+Kickstart your B2B tech career by driving market adoption for Dicot Innovations' Industrial IoT, SCADA, and automation platforms (Vision S, Vision C, and Vision Web). You will handle outbound lead generation, coordinate product demos for manufacturing clients, assist with marketing campaigns, and build relationships across industrial sectors.
+
+**Salary / stipend:** 3.6LPA + Performance Incentives
+
+[Apply for this role](#apply)
+
+Business Development & Growth Intern Sales & Marketing · Ahmedabad, Gujarat (On-site) · Internship · Students / Recent Graduates Details & apply
+
+Gain hands-on experience in B2B industrial tech sales and marketing at Dicot Innovations. You will support market research, identify potential manufacturing leads, assist in preparing client proposals and digital outreach for Vision S and Vision Web, and shadow senior team members during client pitches.
+
+**Salary / stipend:** 5k - 10k per month
+
+[Apply for this role](#apply)
+
+Apply
+
+## Apply here.
+
+One form, one resume upload, no account. Every application is read by a person.
+
+Role \* Field Application & Deployment InternField Application Engineer (Fresher)Growth Associate/BDE (Fresher)Business Development & Growth Intern Other / open application
+
+Name \* 
+
+Contact number \* 
+
+Email \* 
+
+Resume \* 
+
+PDF, DOC or DOCX, up to 5 MB.
+
+What makes you uniquely positioned to succeed in this role? \*
+
+What is an obsession, rabbit hole, or random skill you’ve spent hours mastering on your own, outside of college classes, and what does that say about how you work? \*
+
+ I agree that Dicot may use these details and my resume to assess this application, as described in the [privacy policy](/legal/privacy/). \*
+
+We keep applications for 12 months unless you ask us to delete them. Required fields are marked with \*. Prefer email? Send your CV to [careers@dicot.tech](mailto:careers@dicot.tech).
 
 ## How we hire.
 
@@ -2934,5 +2986,5 @@ Send applications to [careers@dicot.tech](mailto:careers@dicot.tech). We keep CV
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/careers/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/careers/. Questions: sales@dicot.tech
 

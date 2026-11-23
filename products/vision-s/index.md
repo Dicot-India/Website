@@ -3,7 +3,7 @@ title: "Vision S Enterprise SCADA Software | Dicot"
 description: "Vision S enterprise SCADA scales to 60,000 tags with 4,000+ protocols, OPC UA/DA, 21 CFR audit trails, PostgreSQL history, C scripting and web clients."
 url: "https://dicot.tech/products/vision-s/"
 markdown_url: "https://dicot.tech/products/vision-s/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vision-s/. The HTML page remains the source of truth. -->
@@ -173,4 +173,4 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vision-s/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vision-s/. Questions: sales@dicot.tech

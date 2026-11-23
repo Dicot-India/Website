@@ -3,7 +3,7 @@ title: "VGraphic Industrial Report Generator | Dicot"
 description: "VGraphic turns Excel, CSV, SQL and DAT plant data into branded PDF reports and graphs. Cloud-based, mobile and desktop, with time and file filters."
 url: "https://dicot.tech/products/vgraphic/"
 markdown_url: "https://dicot.tech/products/vgraphic/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/products/vgraphic/. The HTML page remains the source of truth. -->
@@ -161,4 +161,4 @@ A 30-minute demo with your tags, your protocols and your questions. No slide dec
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/products/vgraphic/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/products/vgraphic/. Questions: sales@dicot.tech

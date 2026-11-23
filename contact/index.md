@@ -3,7 +3,7 @@ title: "Contact Dicot | Dealers in Gujarat, Tamil Nadu & Mumbai"
 description: "Talk to Dicot about SCADA, IIoT or data-acquisition software. Ahmedabad office, +91 90166 83114, sales@dicot.tech. Channel partners in Gujarat, Tamil Nadu and Mumbai."
 url: "https://dicot.tech/contact/"
 markdown_url: "https://dicot.tech/contact/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/contact/. The HTML page remains the source of truth. -->
@@ -104,4 +104,4 @@ Partner details are listed for enquiries about Dicot products. Dealer pricing an
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/contact/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/contact/. Questions: sales@dicot.tech

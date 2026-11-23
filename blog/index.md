@@ -3,7 +3,7 @@ title: "Blog | SCADA, IIoT and Licensing Notes | Dicot"
 description: "Articles from Dicot Innovations on SCADA sizing, licensing, data acquisition and product updates. Written for machine builders and plant teams."
 url: "https://dicot.tech/blog/"
 markdown_url: "https://dicot.tech/blog/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/blog/. The HTML page remains the source of truth. -->
@@ -35,4 +35,4 @@ Read: https://dicot.tech/blog/?post=vision-s-lite-in-development
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/blog/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/blog/. Questions: sales@dicot.tech

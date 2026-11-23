@@ -3,7 +3,7 @@ title: "SCADA Alternatives in India: Buyer's Guide (2026) | Dicot"
 description: "Compare SCADA alternatives in India: traditional enterprise SCADA, mini-SCADA and cloud SCADA. Tag limits, licensing, offline operation and when each fits."
 url: "https://dicot.tech/alternatives/"
 markdown_url: "https://dicot.tech/alternatives/index.md"
-updated: "2026-11-20"
+updated: "2026-11-23"
 ---
 
 <!-- Markdown mirror of https://dicot.tech/alternatives/. The HTML page remains the source of truth. -->
@@ -127,4 +127,4 @@ Send the tag count, protocols and site constraints. We will tell you which shape
 
 ---
 
-Generated 2026-11-20 from https://dicot.tech/alternatives/. Questions: sales@dicot.tech
+Generated 2026-11-23 from https://dicot.tech/alternatives/. Questions: sales@dicot.tech
