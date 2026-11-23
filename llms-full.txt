@@ -15,7 +15,7 @@ updated: "2026-11-23"
 <!-- Markdown mirror of https://dicot.tech/. The HTML page remains the source of truth. -->
 # SCADA and IIoT software, _built in India_ for the world.
 
-Connect the shop floor to the top floor with Vision C, Vision S and Vision Web. One suite for data logging, remote monitoring and regulated manufacturing — deployed in 1,000+ plants across nine industries.
+Connect the shop floor to the top floor with Vision C, Vision S and Vision Web. One suite for data logging, remote monitoring and regulated manufacturing — deployed in 1,000+ plants across twelve industries.
 
 [Book a demo](/contact/) [Explore the suite](/products/)
 
@@ -207,7 +207,25 @@ Distributed monitoring](/industries/#railway) [09
 
 Track AHU temperatures, humidity and energy use, and alert facility teams when a space drifts out of range.
 
-Comfort and energy visibility](/industries/#hvac)
+Comfort and energy visibility](/industries/#hvac) [10
+
+### Chemicals
+
+Log reactor, distillation and batch data with alarms on deviation, and keep the batch record auditors and customers ask for.
+
+Batch records and audit trail](/industries/#chemical) [11
+
+### Oil and Gas
+
+Watch wells, pipelines and compressor stations from one screen, with local logging where the network is poor.
+
+Remote site monitoring](/industries/#oil-gas) [12
+
+### Packaging
+
+Count output, track speed and rejects, and show where each shift lost time on the line.
+
+Line output and downtime](/industries/#packaging)
 
 In their words
 
@@ -263,7 +281,7 @@ Dicot sells through an authorised dealer network, so prices are shared by your n
 
 Which industries use Dicot software?
 
-Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC. Deployments range from a single machine to multi-line plants.
+Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC, chemicals, oil and gas and packaging. Deployments range from a single machine to multi-line plants.
 
 ## Put your plant on the screen.
 
@@ -1760,7 +1778,7 @@ Generated 2026-11-23 from https://dicot.tech/solutions/. Questions: sales@dicot.
 
 ---
 title: "SCADA & IIoT by Industry | Dicot"
-description: "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC plants."
+description: "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC, chemicals, oil and gas and packaging plants."
 url: "https://dicot.tech/industries/"
 markdown_url: "https://dicot.tech/industries/index.md"
 updated: "2026-11-23"
@@ -1769,11 +1787,11 @@ updated: "2026-11-23"
 <!-- Markdown mirror of https://dicot.tech/industries/. The HTML page remains the source of truth. -->
 Industries
 
-# Nine industries. One data layer.
+# Twelve industries. One data layer.
 
 The equipment changes; the problem does not. Collect reliable data, keep it safe, show it to the right person and raise an alarm when it drifts. Here is how that looks in each industry we serve.
 
-[Pharmaceuticals](#pharma)[Textiles](#textiles)[Food & beverage](#food-beverage)[Machine tools](#machine-tools)[Water treatment](#water-treatment)[Foundry](#foundry)[Ceramics](#ceramics)[Railway](#railway)[HVAC](#hvac)
+[Pharmaceuticals](#pharma)[Textiles](#textiles)[Food & beverage](#food-beverage)[Machine tools](#machine-tools)[Water treatment](#water-treatment)[Foundry](#foundry)[Ceramics](#ceramics)[Railway](#railway)[HVAC](#hvac)[Chemicals](#chemical)[Oil and Gas](#oil-gas)[Packaging](#packaging)
 
 Industry / 01
 
@@ -1882,6 +1900,42 @@ Comfort complaints and energy bills rarely arrive with the same owner. Vision We
 -   AHU and room condition monitoring
 -   Humidity and temperature alarms
 -   Trends for energy reviews
+
+Industry / 10
+
+## Chemicals
+
+Reactors, distillation columns and batch processes punish a missed setpoint. Dicot software logs temperature, pressure and pH continuously, alarms on deviation and keeps the batch record for audits and customers.
+
+[Built on Vision S](/products/vision-s/) [Discuss your plant](/contact/)
+
+-   Reactor and batch trend logging
+-   Temperature, pressure and pH alarms
+-   Batch records with audit trail
+
+Industry / 11
+
+## Oil and Gas
+
+Wells, pipelines and compressor stations sit far from the control room. Vision C logs locally at the site and Vision Web brings flow, pressure and status back to one screen, with alarms when a line drifts.
+
+[Built on Vision Web](/products/vision-web/) [Discuss your plant](/contact/)
+
+-   Remote well and pipeline monitoring
+-   Store-and-forward on poor networks
+-   SMS and WhatsApp alarms
+
+Industry / 12
+
+## Packaging
+
+Every stop on a packing line costs output. Dicot software counts production, tracks speed and rejects, and shows where a shift lost time — without adding another historian.
+
+[Built on Vision C](/products/vision-c/) [Discuss your plant](/contact/)
+
+-   Line speed and output counts
+-   Downtime and reject tracking
+-   Shift and production reports
 
 ## Your industry not listed?
 

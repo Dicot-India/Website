@@ -9,7 +9,7 @@ updated: "2026-11-23"
 <!-- Markdown mirror of https://dicot.tech/. The HTML page remains the source of truth. -->
 # SCADA and IIoT software, _built in India_ for the world.
 
-Connect the shop floor to the top floor with Vision C, Vision S and Vision Web. One suite for data logging, remote monitoring and regulated manufacturing — deployed in 1,000+ plants across nine industries.
+Connect the shop floor to the top floor with Vision C, Vision S and Vision Web. One suite for data logging, remote monitoring and regulated manufacturing — deployed in 1,000+ plants across twelve industries.
 
 [Book a demo](/contact/) [Explore the suite](/products/)
 
@@ -201,7 +201,25 @@ Distributed monitoring](/industries/#railway) [09
 
 Track AHU temperatures, humidity and energy use, and alert facility teams when a space drifts out of range.
 
-Comfort and energy visibility](/industries/#hvac)
+Comfort and energy visibility](/industries/#hvac) [10
+
+### Chemicals
+
+Log reactor, distillation and batch data with alarms on deviation, and keep the batch record auditors and customers ask for.
+
+Batch records and audit trail](/industries/#chemical) [11
+
+### Oil and Gas
+
+Watch wells, pipelines and compressor stations from one screen, with local logging where the network is poor.
+
+Remote site monitoring](/industries/#oil-gas) [12
+
+### Packaging
+
+Count output, track speed and rejects, and show where each shift lost time on the line.
+
+Line output and downtime](/industries/#packaging)
 
 In their words
 
@@ -257,7 +275,7 @@ Dicot sells through an authorised dealer network, so prices are shared by your n
 
 Which industries use Dicot software?
 
-Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC. Deployments range from a single machine to multi-line plants.
+Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC, chemicals, oil and gas and packaging. Deployments range from a single machine to multi-line plants.
 
 ## Put your plant on the screen.
 

@@ -6,7 +6,7 @@ import { products } from "../data/products";
 
 const title = "SCADA & IIoT by Industry | Dicot";
 const description =
-  "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC plants.";
+  "Dicot SCADA and IIoT software runs in pharma, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC, chemicals, oil and gas and packaging plants.";
 
 const detail: Record<string, { text: string; points: string[]; product: string }> = {
   pharma: {
@@ -54,6 +54,21 @@ const detail: Record<string, { text: string; points: string[]; product: string }
     points: ["AHU and room condition monitoring", "Humidity and temperature alarms", "Trends for energy reviews"],
     product: "vision-web",
   },
+  chemical: {
+    text: "Reactors, distillation columns and batch processes punish a missed setpoint. Dicot software logs temperature, pressure and pH continuously, alarms on deviation and keeps the batch record for audits and customers.",
+    points: ["Reactor and batch trend logging", "Temperature, pressure and pH alarms", "Batch records with audit trail"],
+    product: "vision-s",
+  },
+  "oil-gas": {
+    text: "Wells, pipelines and compressor stations sit far from the control room. Vision C logs locally at the site and Vision Web brings flow, pressure and status back to one screen, with alarms when a line drifts.",
+    points: ["Remote well and pipeline monitoring", "Store-and-forward on poor networks", "SMS and WhatsApp alarms"],
+    product: "vision-web",
+  },
+  packaging: {
+    text: "Every stop on a packing line costs output. Dicot software counts production, tracks speed and rejects, and shows where a shift lost time — without adding another historian.",
+    points: ["Line speed and output counts", "Downtime and reject tracking", "Shift and production reports"],
+    product: "vision-c",
+  },
 };
 
 const bySlug = (slug: string) => products.find((p) => p.slug === slug)!;
@@ -64,7 +79,7 @@ const bySlug = (slug: string) => products.find((p) => p.slug === slug)!;
   <section class="page-hero">
     <div class="wrap">
       <span class="eyebrow">Industries</span>
-      <h1>Nine industries. One data layer.</h1>
+      <h1>Twelve industries. One data layer.</h1>
       <p class="lede">
         The equipment changes; the problem does not. Collect reliable data, keep it safe, show it to the right person
         and raise an alarm when it drifts. Here is how that looks in each industry we serve.

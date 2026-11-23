@@ -1,6 +1,6 @@
 # Dicot Innovations
 
-> Dicot Innovations Private Limited designs and sells SCADA, IIoT and data-acquisition software for manufacturers. Founded in Ahmedabad, India in 2022. 800+ customers, 1,000+ deployments across nine industries. Products: Vision C (mini-SCADA), Vision S (enterprise SCADA), Vision Web (hosted cloud SCADA) and VGraphic (cloud report generator). Vision S Lite, a lighter Vision S, is in development.
+> Dicot Innovations Private Limited designs and sells SCADA, IIoT and data-acquisition software for manufacturers. Founded in Ahmedabad, India in 2022. 800+ customers, 1,000+ deployments across twelve industries. Products: Vision C (mini-SCADA), Vision S (enterprise SCADA), Vision Web (hosted cloud SCADA) and VGraphic (cloud report generator). Vision S Lite, a lighter Vision S, is in development.
 
 ## Key facts
 
@@ -9,7 +9,7 @@
 - Headquarters: A-805, Siddhi Vinayak Towers, Off S. G. Road, B/H DCP Office, Makarba, Ahmedabad, Gujarat 380051, India
 - Core team: 6 people
 - Customers: 800+; deployments: 1,000+
-- Industries: pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC
+- Industries: pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC, chemicals, oil and gas, packaging
 - Recognition: Startup India, i-Hub (Gujarat Government enterprise), Wadhwani Foundation, Make in India
 - Contact: sales@dicot.tech, +91 90166 83114 (primary), +91 794 918 5398
 - Privacy and data requests: privacy@dicot.tech

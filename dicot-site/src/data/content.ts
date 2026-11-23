@@ -79,6 +79,24 @@ export const industries = [
     text: "Track AHU temperatures, humidity and energy use, and alert facility teams when a space drifts out of range.",
     proof: "Comfort and energy visibility",
   },
+  {
+    name: "Chemicals",
+    slug: "chemical",
+    text: "Log reactor, distillation and batch data with alarms on deviation, and keep the batch record auditors and customers ask for.",
+    proof: "Batch records and audit trail",
+  },
+  {
+    name: "Oil and Gas",
+    slug: "oil-gas",
+    text: "Watch wells, pipelines and compressor stations from one screen, with local logging where the network is poor.",
+    proof: "Remote site monitoring",
+  },
+  {
+    name: "Packaging",
+    slug: "packaging",
+    text: "Count output, track speed and rejects, and show where each shift lost time on the line.",
+    proof: "Line output and downtime",
+  },
 ];
 
 export const testimonials = [
@@ -153,7 +171,7 @@ export const homeFaqs = [
   },
   {
     q: "Which industries use Dicot software?",
-    a: "Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway and HVAC. Deployments range from a single machine to multi-line plants.",
+    a: "Pharmaceuticals, textiles, food and beverage, machine tools, water treatment, foundry, ceramics, railway, HVAC, chemicals, oil and gas and packaging. Deployments range from a single machine to multi-line plants.",
   },
 ];
 
