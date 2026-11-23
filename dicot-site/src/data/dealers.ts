@@ -48,4 +48,16 @@ export const dealers: Dealer[] = [
     phone: { label: "+91 98210 63652", href: "+919821063652" },
     email: "mbisolutions@gmail.com",
   },
+  {
+    company: "Technovision Automation",
+    territory: "Nashik",
+    city: "Nashik",
+    address: [
+      "3/Serve No. 192 Plot No. 48, Datir Nagar",
+      "Opposite Nashik Engineering Cluster (N.E.C.), M.I.D.C. Ambad",
+      "Nashik, Maharashtra 422010",
+    ],
+    phone: { label: "+91 72619 09000", href: "+917261909000" },
+    email: "sales.technovisionautomation@gmail.com",
+  },
 ];

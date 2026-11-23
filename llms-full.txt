@@ -2367,8 +2367,8 @@ Generated 2026-11-23 from https://dicot.tech/partners/. Questions: sales@dicot.t
 
 
 ---
-title: "Contact Dicot | Dealers in Gujarat, Tamil Nadu & Mumbai"
-description: "Talk to Dicot about SCADA, IIoT or data-acquisition software. Ahmedabad office, +91 90166 83114, sales@dicot.tech. Channel partners in Gujarat, Tamil Nadu and Mumbai."
+title: "Contact Dicot | Dealers in Gujarat, Tamil Nadu, Mumbai & Nashik"
+description: "Talk to Dicot about SCADA, IIoT or data-acquisition software. Ahmedabad office, +91 90166 83114, sales@dicot.tech. Channel partners in Gujarat, Tamil Nadu, Mumbai and Nashik."
 url: "https://dicot.tech/contact/"
 markdown_url: "https://dicot.tech/contact/index.md"
 updated: "2026-11-23"
@@ -2432,7 +2432,7 @@ Channel partners
 
 ## Talk to a dealer near you.
 
-Authorised Dicot partners for Gujarat, Tamil Nadu and Mumbai. For any other region, write to [sales@dicot.tech](mailto:sales@dicot.tech) and we will route your enquiry.
+Authorised Dicot partners for Gujarat, Tamil Nadu, Mumbai and Nashik. For any other region, write to [sales@dicot.tech](mailto:sales@dicot.tech) and we will route your enquiry.
 
 Gujarat
 
@@ -2467,6 +2467,17 @@ Mumbai, Maharashtra 400086
 
 [+91 98210 63652](tel:+919821063652)  
 [mbisolutions@gmail.com](mailto:mbisolutions@gmail.com)
+
+Nashik
+
+### Technovision Automation
+
+3/Serve No. 192 Plot No. 48, Datir Nagar  
+Opposite Nashik Engineering Cluster (N.E.C.), M.I.D.C. Ambad  
+Nashik, Maharashtra 422010  
+
+[+91 72619 09000](tel:+917261909000)  
+[sales.technovisionautomation@gmail.com](mailto:sales.technovisionautomation@gmail.com)
 
 Partner details are listed for enquiries about Dicot products. Dealer pricing and local taxes are handled by the partner in your territory.
 
